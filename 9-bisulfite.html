@@ -128,11 +128,11 @@
 						<div class="container">
 							<div class="row">
 								<div class="col-lg-12">
-									<h1 class="title">Genotyping-by-sequencing (GBS)</h1>
+									<h1 class="title">Bisulfite Sequencing</h1>
 									<ol class="breadcrumb">
 										<li><a href="index.html">Home</a></li>
 										<li><a href="page-services.html">services</a></li>
-										<li class="active">GBS</li>
+										<li class="active">Bisulfite</li>
 									</ol>
 								</div>
 							</div>
@@ -145,70 +145,76 @@
 								<div class="col-md-8">
 									<!-- Article start -->
 									<article class="post single">
-										<figure class="post-thumbnail"><img src="biocore-images/Dec/GBS.png" alt=""></figure>
+										<figure class="post-thumbnail"><img src="images/2250x1500.png" alt=""></figure>
 										<header class="article-header">
 
-											<h2 class="title">How Genotyping-by-sequencing (GBS) Works</h2>
+											<h2 class="title">How Bisulfite Sequencing Works</h2>
 										</header>
-										<p>GBS is marker-assisted selection (MAS) technology to accelerate plant breeding. This technology con-sists is the sequencing of a reduce representation of an entire genome. The sequencing is performed on samples from a population of interest, and this population is selected based on its variability for a certain set of yield traits or disease responses.</p>
-										<p>A reduce representation of the genome is obtained through digesting DNA samples with some restriction enzymes, then adaptors are ligated and library size is selected and sequenced. Focusing on those part of the genome around restriction enzyme, simplify data cost and complexity without sacrificing genotyping capabilities.</p>
-										<p>After  samples  are  sequenced,  they  go  through  a  comprehensive  bioinformatic  pipeline  that  ultimately can associate markers (or mutations) from different samples with phenotypic data, leading to the identi-fication of high-resolution molecular markers related with yield traits or disease responses.</p>
+										<p>Bisulfite sequencing is a technique that can determine DNA methylation patterns. The major difference from regular sequencing experiments is that, in bisulfite sequencing DNA is treated with bisulfite which converts cytosine residues to uracil, but leaves5-methylcytosine residues unaffected. By sequencing and aligning those converted DNA fragments it is possible to do methylation calls.</p>
+										<p><b><u>Bi-Sulfite Analysis Protocol</u></b></p>
+										<ul style="list-style-type: circle; padding: 0px; margin: 20px;">
+											<li>Perform quality control:</li>
+											<ul style="list-style-type: circle; padding: 0px 40px; margin: 0px;">
+												<li>Pooling</li>
+												<li>Sequence adapter trimming</li>
+												<li>contamination removal</li>
+											</ul>
+										</ul>
+										<ul style="list-style-type: circle; padding: 0px; margin: 20px;">
+											<li>Align reads with Bismark:</li>
+											<ul style="list-style-type: circle; padding: 0px 40px; margin: 0px;">
+												<li>Supports the alignment of bisulfite-treated reads (whole genome shotgun BS-Seq (WGSBS), reduced-representation BS-Seq (RRBS) or PBAT-Seq (Post-Bisulfite Adapter Tagging) for the following conditions:</li>
+												<li>Sequence format either FastQ or FastA-single-end or paired-end reads.  Files can be uncompressed or gzip-compressed (ending in .gz) -directional or non-directional BS-Seq libraries</li>
+												<ul style="list-style-type: circle; padding: 0px 40px; margin: 0px;">
+													<li>Read conversion: convert C to T for reads</li>
+													<li>Genome conversion: convert C to T for genomes</li>
+													<li>Align converted reads to converted genomes</li>
+													<li>Identify uniquely mapped reads</li>
+												</ul>
+											</ul>
+										</ul>
 										<figure class="preview fl-r"><a href="images/2250x1500.png" class="lightbox-images"><img src="images/2250x1500.png" alt=""></a>
 											<figcaption><strong>Figure #2:</strong> We focus on passion and leadership.</figcaption>
 										</figure>
 										<ul style="list-style-type: circle; padding: 0px; margin: 20px;">
-											<li><b>Demultiplexing & quality control:</b></li>
+											<li>MethylKit analysis</li>
 											<ul style="list-style-type: circle; padding: 0px 40px; margin: 0px;">
-												<li>Deconvolute sequencing library data into multiple samples</li>
-												<li>Insert length determination</li>
-												<li>Contamination removal</li>
-												<li>Low quality sequence trimming</li>
-												<li>Sequence quality report</li>
-											</ul>
-											<li><b>Map reads to the reference:</b></li>
-											<ul style="list-style-type: circle; padding: 0px 40px; margin: 0px;">
-												<li>Alignment of short-reads</li>
-												<li>BAM manipulation</li>
-												<li>Quality and coverage mapping report</li>
-											</ul>
-										</ul>
-										<ul style="list-style-type: circle; padding: 0px; margin: 20px;">
-											<li><b>Markers detection</b></li>
-											<ul style="list-style-type: circle; padding: 0px 40px; margin: 0px;">
-												<li>Multi sample variants detection</li>
-												<li>Variants filtering</li>
-												<li>Genotype imputation</li>
-												<li>Functional annotation of genomic variants</li>
-												<li>Summary variants report</li>
+												<li>Annotation of DNA methylation information:</li>
+												<ul style="list-style-type: circle; padding: 0px 40px; margin: 0px;">
+													<li>basic stats about the methylation data such as coverage and percent methylation</li>
+													<li>Samples Correlation</li>
+													<li>Samples Clustering</li>
+													<li>PCA  Analysis</li>
+													<li>Finding differentially methylated bases or regions.</li>
+													<li>Visualization of differential methylation events.</li>
+													<ul style="list-style-type: circle; padding: 0px 40px; margin: 0px;">
+														<li>Horizontal bar plots show the number of hyper-and hypomethylation events per chromosome, as a percent of the sites with the minimum coverage and differential. By default this is a 25% change in methylation and all samples with 10X coverage.</li>
+													</ul>
+													<li>Annotation ofdifferentially methylated bases or regions</li>
+												</ul>
 											</ul>
 										</ul>
 										<blockquote>
 											<p>" Do the difficult things while they are easy and do the great things while they are small. A jorney of a thousand miles begin with a single step. "</p>
 											<footer>Lao Tzu</footer>
 										</blockquote>
-										<ul style="list-style-type: circle; padding: 0px; margin: 20px;">
-											<li><b>Diversity analyses</b></li>
-											<ul style="list-style-type: circle; padding: 0px 40px; margin: 0px;">
-												<li>Genetic distance matrix calculation</li>
-												<li>Population structure analysis</li>
-												<li>PCA, K-Means, Hierarchical clustering</li>
-												<li>Phylogeny</li>
-												<li>Population diversity report</li>
-											</ul>
-										</ul>
-										<ul style="list-style-type: circle; padding: 0px; margin: 20px;">
-											<li><b>Genotype-Phenotype associations (Optional)</b></li>
-											<ul style="list-style-type: circle; padding: 0px 40px; margin: 0px;">
-												<li>Variants filtering</li>
-												<li>Genome wide association studies</li>
-												<li>Filtering of variants associated with phenotype</li>
-												<li>Statistical analysis of markers associated with traits</li>
-												<li>Final report</li>
-											</ul>
-										</ul>
-										<p>GBS is an ultimate marker-assisted selection (MAS) technology to accelerate plant breeding.Some more details.....</p>
-										<p>Steps: Write down here....</p>
-										<footer class="article-footer"><a href="7-RNA-seq.html" class="btn btn-4"><i class="fa fa-angle-left"></i> Prev post</a><a href="9-bisulfite.html" class="btn btn-4">Next post <i class="fa fa-angle-right"></i></a></footer>
+										<h2>Methylation analysis Report</h2>
+										<p><b>MethylationStats.xls:</b> Report ofthe basic stats about the methylation data such as coverage and percent methylation.</p>
+										<p><b>Histogram of % CpG Methylation Plot:</b> numbers on bars denote what percentage of locations are contained in that bin. Typically, percent methylation histogram should have two peaks on both ends. In any given cell, any given base are either methylated or not. Therefore, looking at many cells should yield a similar pattern where we see lots of locations with high methylation and lots of locations with low methylation.</p>
+										<p><b>Histogram of CpG Coverage Plot:</b> We can also plot the read coverage per base information in a similar way, again numbers on bars denote what percentage of locations are contained in that bin. Experiments that are highly suffering from PCR duplication bias will have a secondary peak towards the right hand side of the histogram.</p>
+										<p><b>CpG Base Pearson Cor. Plot:</b> check the correlation betweenhigh and low samples. Shows Scatter plots for all samples.  Numbers on upper right corner denote pair-wise Pearson's correlation scores. The histograms on the diagonal are %methylation histograms</p>
+										<p><b>CpG Methylation Clustering Plot:</b> cluster the samples based on the similarity of their methylation profiles. Hierarchical clustering of methylation profiles of the samples using Pearson's correlation distance.,  Samples closer to each other in principal component space are similar in their methylation profiles.</p>
+										<p><b>Methylation_Per_Bases.xls:</b> contains methylation information for regions/bases that are covered in all samples.</p>
+										<p><b>MethylationsCounts_Per_Regions.xls:</b> summarize methylation information over tiling windows rather than doing base-pair resolution analysis.  adds up C and T counts from each covered cytosine and returns a total C and T count for each tile(win.size=1000).</p>
+										<p><b>All_DiffMeth_report.xls:</b> Report all differential methylation calculation.  The logistic regression basedmodeling and test is used to calculate P-values.  P-values are adjusted to Q-values using SLIM method(Wang, Tuominen, and Tsai 2011).</P>
+										<p><b>DiffMeth25p_Report.xls:</b> Report of  the differentially methylated regions/bases based on q-value <0.01 and percent methylation difference larger than 25%.</P>
+										<p><b>Hypo_DiffMeth_Report.xls:</b> bases/regions with lower methylation</P>
+										<p><b>Hyper_DiffMeth_Report.xls:</b> bases/regions with higher methylation</p>
+										<p><b>diffMethPerChr.xls:</b> visualization of the  the distribution of hypo/hyper-methylated bases/regions per chromosome using the following function. The listshows percentages of hypo/hyper methylated bases over all the covered bases in a given chromosome.</p>
+										<p><b>PromoterCounts.xls:</b> summarize methylation information over a set of defined promoters.</p>
+										<p><b>FeatureTargetStats.xls:</b> a report of the percentage of intron/exon/promoters regions that overlap with differentially methylated bases.</p>
+										<p><b>GetAnnatationWithTSS.xls:</b> annotation of differentially methylated regions with  the distance to TSS and nearest gene name.</p>
+										<footer class="article-footer"><a href="8-GBS.html" class="btn btn-4"><i class="fa fa-angle-left"></i> Prev post</a><a href="10-bisulfite2.html" class="btn btn-4">Next post <i class="fa fa-angle-right"></i></a></footer>
 									</article><!-- Article end -->
 									</div>
 

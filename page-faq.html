@@ -508,87 +508,82 @@
 										</div>
 										<div data-rt-accordion-item class="rt-accordion-item">
 											<header>
-												<p class="title"></p>
+												<p class="title">How do I choose aligner for methyl-seq data?</p>
 											</header>
 											<div class="content">
-												<p></p>
+												<p>Choosing your aligner depends on the type of data. If using RRBS and WGBS data, bismark is a good one to use. When you need to align Methylated DNA immunoprecipitation(MeDIP or mDIP) MeQA, or MEDIPS pipelines are useful. </p>
 												<p></p>
 											</div>
 										</div>
 										<div data-rt-accordion-item class="rt-accordion-item">
 											<header>
-												<p class="title"></p>
+												<p class="title">How do you ensure best output and visualization of methylation data?</p>
 											</header>
 											<div class="content">
-												<p></p>
+												<p>Pre-processing of sequencing reads is a must for best possible output and the visualization of the methylation data.</p>
 												<p></p>
 											</div>
 										</div>
 										<div data-rt-accordion-item class="rt-accordion-item">
 											<header>
-												<p class="title"></p>
+												<p class="title">What isgood sequencing coverage for Methyl-Seq Sequencing?</p>
 											</header>
 											<div class="content">
-												<p></p>
-												<p></p>
-											</div>
-										</div>
-									</div>	
-									<div data-rt-accordion data-rt-accordion-toggle="on" class="rt-accordion">
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title"></p>
-											</header>
-											<div class="content">
-												<p></p>
-												<p></p>
+												<ul style="list-style-type: circle; padding: 0px; margin: 20px;">
+													<li>Large target regions: Probes should cover several hundred kilobases to several megabases of contiguous  sequence  including  exons,  introns, 5’ regulatory  regions, 3’ regulatory  regions,  and flanking regions.</li>
+													<li>Great specificityhavinglonger probes (200-300bp)</li>
+													<li>Coverageof the targeted region including repeats</li>
+												</ul>
 											</div>
 										</div>
 										<div data-rt-accordion-item class="rt-accordion-item">
 											<header>
-												<p class="title"></p>
+												<p class="title">Non-directional or paired-end RRBS libraries?</p>
 											</header>
 											<div class="content">
-												<p></p>
-												<p></p>
+												<p>Non-directional bisulfite sequencing is less common, but has been performed in a number of studies(Cokus et al. (2008), Popp et al. (2010), Smallwood et al. (2011), Hansen et al. (2011), Kobayashi al.(2012)). In this type of library, sequence reads may originate from all four possible bisulfite DNAstrands (original top (OT), complementary to OT (CTOT), original bottom (OB) or complementary toOB (CTOB)) with roughly the same likelihood.Paired-end reads do by definition contain one read from one of the original strands as well as onecomplementary strand. Please note that the CTOT or CTOB strands in a read pair are reversecomplements of the OT or OB strands, respectively, and thus they carry methylation information for
+												the exact same strand as their partner read but not for the other original DNA strand. Similar todirectional single-end libraries, the first read of directional paired-end libraries always comes fromeither the OT or OB strand. The first read of non-directional paired-end libraries may originate fromany of the four possible bisulfite strands.(see <a>http://www.bioinformatics.bbsrc.ac.uk/projects/seqmonk</a>)</p>
 											</div>
 										</div>
 										<div data-rt-accordion-item class="rt-accordion-item">
 											<header>
-												<p class="title"></p>
+												<p class="title"> What is CpG methylation?</p>
 											</header>
 											<div class="content">
-												<p></p>
-												<p></p>
-											</div>
-										</div>
-									</div>	
-									<div data-rt-accordion data-rt-accordion-toggle="on" class="rt-accordion">
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title"></p>
-											</header>
-											<div class="content">
-												<p></p>
+												<p>CpG islands are defined as stretches of DNA 500–1500 bp long with a CG: GC ratio of more than 0.6, and they are normally found at promoters and contain the 5′ end of the transcript (reviewed in Cross and Bird, 1995). From: Advances in Genetics, 2002.</p>
 												<p></p>
 											</div>
 										</div>
 										<div data-rt-accordion-item class="rt-accordion-item">
 											<header>
-												<p class="title"></p>
+												<p class="title">How do I identify CpG islands?</p>
 											</header>
 											<div class="content">
-												<p></p>
-												<p></p>
+												<p>CpG islands are defined as sequence ranges where the Obs/Exp value is greater than 0.6 and the GC content is greater than 50%. The expected number of CpG dimers in a window is calculated as the number of  'C's  in  the  window  multiplied  by  the  number  of  'G's  in  the  window,  divided  by  the  window length</p>
+												<p><a>www.sciencedirect.com › topics › neuroscience › cpg-island</a></p>
 											</div>
 										</div>
 										<div data-rt-accordion-item class="rt-accordion-item">
 											<header>
-												<p class="title"></p>
+												<p class="title">Resources for methylation Analysis:</p>
 											</header>
 											<div class="content">
-												<p></p>
-												<p></p>
+												<p><a>https://www.ucl.ac.uk/cancer/medicalgenomics/medusaproject</a></p>
+												<p><a>http://www.ihec-epigenomes.org/</a></p>
+												<P><a>https://groups.google.com/forum/#!forum/methylkit_discussion/</a></P>
+												<p><a>http://www.bioinformatics.bbsrc.ac.uk/projects/seqmonk</a></p>
+											</div>
+										</div>
+										<div data-rt-accordion-item class="rt-accordion-item">
+											<header>
+												<p class="title">How do we account for bias in Methylation data?</p>
+											</header>
+											<div class="content">
+												<p>There are several hurdles to cross when analysing Methyl-seq data, particularly during the identification of DMRs. Normalization of read counts contribute to eliminate biases as a result of variability in sequencing depth between samples. While, global read count normalization can help address this problem, it does not account for ‘competition’ effects. For example, in RNA-seq  specific highly expressed genes can lead to a depressed read count in other genes introducing a bias when comparing samples. Same situation can be 
+												found with MeDIP-seq, where sample-specific repeat methylation could potentially diminish reads in other genomic regions and introduce bias tothe analysis. Methods for calculating methylation have proven to be useful when identifying large global changes, for example hypomethylation, or hypermethylation regions of a given sample. However, these methods have not provided a framework for determining the location of DMRs in a statistically rigorous manner just yet. By using methods such as 
+												<b>DESeq</b> that estimate variance in a local fashion, it is possible to remove potential selection biases. Additionally, DESeq estimates a flexible, mean-dependent local regression rather than attempting to reliably estimate both the variance and mean parameters of the distribution from limited numbers of replicates. Finally, False positive could be included in the  interpretation  of  your  data  by  differences  in  DNA  fragment  size  distributions  between  samples. Performing 
+												<b>fragment length normalization</b> through read sub-sampling to equalize the distributions can eliminate this potential bias. Additional tools such as <b>EdgeR</b>, or <b>methylkit</b> can also be used.</p>
+												<p><a>https://www.ncbi.nlm.nih.gov/books/NBK402335/</a></p>
 											</div>
 										</div>
 									</div>		
