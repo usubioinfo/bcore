@@ -28,9 +28,9 @@ app.use(baseUrl + 'scss', sass({
 
 app.use(cors());
 
-app.use('/public/css', express.static(path.join(__dirname, 'public/css')));
+app.use(baseUrl + 'public/css', express.static(path.join(__dirname, '/../public/css')));
 
-// Images can be retrieved with http://url/biotec/img/:imagename
+// Images can be retrieved with http://url/biotec/image/:imagename
 app.use(baseUrl + 'images/', express.static(__dirname + '/../images'));
 app.use(baseUrl + 'biocore-images/', express.static(__dirname + '/../biocore-images'));
 app.use(baseUrl + 'js/', express.static(__dirname + '/../js'));
@@ -60,8 +60,10 @@ app.get(baseUrl + 'services/:servicename', (req, res) => {
   res.render(__dirname + serviceString);
 });
 
-app.get(baseUrl + 'software', (req, res) => {
-  res.render(__dirname + '/views/pages/software/software.njk');
+//RESOURCES
+app.get(baseUrl + 'resources/:rscname', (req, res) => {
+  const rscString = `/views/resources/${req.params.rscname}/${req.params.rscname}.njk`;
+  res.render(__dirname + rscString);
 });
 
 app.listen(port, () => {
