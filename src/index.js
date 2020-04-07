@@ -31,11 +31,33 @@ app.use(cors());
 app.use('/public/css', express.static(path.join(__dirname, 'public/css')));
 
 // Images can be retrieved with http://url/biotec/img/:imagename
-app.use(baseUrl + 'img/', express.static(__dirname + '/../images'));
-app.use(baseUrl + 'bioimg/', express.static(__dirname + '/../biocore-images'));
+app.use(baseUrl + 'images/', express.static(__dirname + '/../images'));
+app.use(baseUrl + 'biocore-images/', express.static(__dirname + '/../biocore-images'));
+app.use(baseUrl + 'js/', express.static(__dirname + '/../js'));
+app.use(baseUrl + 'css/', express.static(__dirname + '/../css'));
+app.use(baseUrl + 'fonts/', express.static(__dirname + '/../fonts'));
 
+// Pages
 app.get(baseUrl, (req, res) => {
-  res.render(__dirname + '/views/index.njk');
+  res.render(__dirname + '/views/pages/index/index.njk');
+});
+
+app.get(baseUrl + 'faq', (req, res) => {
+  res.render(__dirname + '/views/pages/faq/faq.njk');
+});
+
+app.get(baseUrl + 'contact', (req, res) => {
+  res.render(__dirname + '/views/pages/contact/contact.njk');
+});
+
+// SERVICES
+app.get(baseUrl + 'services/', (req, res) => {
+  res.render(__dirname + '/views/services/services.njk');
+});
+
+app.get(baseUrl + 'services/:servicename', (req, res) => {
+  const serviceString = `/views/services/${req.params.servicename}/${req.params.servicename}.njk`;
+  res.render(__dirname + serviceString);
 });
 
 app.get(baseUrl + 'software', (req, res) => {
