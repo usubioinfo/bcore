@@ -1,0 +1,10 @@
+@import 'globals';
+@import 'colors';
+@import 'kbl-import';
+
+@import '../views/resources/software/software';
+@import '../views/resources/hardware/hardware';
+
+.no-select {
+  pointer-events: none;
+}

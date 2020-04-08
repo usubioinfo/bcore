@@ -1,0 +1,121 @@
+{% set abyss = {name: 'ABySS', link: 'https://github.com/bcgsc/abyss', versions: ['abyss/2.1.2']} %}
+{% set alignGraph = {name: 'AlignGraph', link: 'https://github.com/baoe/AlignGraph', versions: ['AlignGraph/2014']} %}
+{% set anaconda3 = {name: 'Anaconda 3', link: 'https://docs.anaconda.com/anaconda/packages/old-pkg-lists/5.3.0/py3.6_win-64/', versions: ['anaconda3/5.3.0']} %}
+{% set bamTools = {name: 'Bamtools', link: 'https://github.com/pezmaster31/bamtools', versions: ['bamtools/2.5.1']} %}
+{% set bioPython = {name: 'Biopython', link: 'https://github.com/biopython/biopython', versions: ['biopython/1.72']} %}
+
+{% set blast = {
+  name: 'BLAST',
+  link: 'https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastHome',
+  versions: ['blast/2.2.24+', 'blast/2.7.1+']}
+%}
+
+{% set boost = {name: 'boost', link: 'https://www.boost.org', versions: ['boost/1.68.0']} %}
+{% set bowtie2 = {name: 'Bowtie 2', link: 'https://github.com/BenLangmead/bowtie2', versions: ['bowtie/2.3.4.2']} %}
+{% set bwa = {name: 'BWA', link: 'https://github.com/lh3/bwa', versions: ['bwa/0.7.17']} %}
+
+{% set cap3 = {name: 'CAP3', link: 'http://seq.cs.iastate.edu/cap3.html', versions: ['cap3/2.10.15']} %}
+
+{% set capmirseq = {
+  name: 'CAP-miRSeq',
+  link: 'http://bioinformaticstools.mayo.edu/downloads/cap-mirna/CAP-miRSeq_UserGuide.pdf',
+  versions: ['CAP-miRSeq']}
+%}
+
+{% set cdhit = {name: 'CD-HIT', link: 'https://github.com/weizhongli/cdhit', versions: ['CD-HIT/4.7']} %}
+{% set cgMapTools = {name: 'CGmapTools', link: 'https://github.com/guoweilong/cgmaptools', versions: ['cgmaptools/0.1.1']} %}
+{% set clust = {name: 'Clust', link: 'https://github.com/BaselAbujamous/clust', versions: ['clust/1.10.7']} %}
+{% set cmake = {name: 'CMake', link: 'https://cmake.org', versions: ['cmake/3.12.2']} %}
+{% set cufflinks = {name: 'Cufflinks', link: 'https://github.com/cole-trapnell-lab/cufflinks', versions: ['cufflinks/2.2.1']} %}
+
+{% set diamond = {name: 'DIAMOND', link: 'http://www.diamondsearch.org/index.php', versions: ['diamond/0.9.24']} %}
+{% set djangoCelery = {name: 'Celery', link: 'http://www.celeryproject.org', versions: ['django-celery/3.2.2']} %}
+
+{% set fast = {name: 'FAST', link: 'https://www.frontiersin.org/articles/10.3389/fgene.2015.00172/full', versions: ['FAST/1.06']} %}
+{% set fastQC = {name: 'FastQC', link: 'http://www.bioinformatics.babraham.ac.uk/projects/fastqc/', versions: ['FastQC/1.0']} %}
+{% set gcc = {name: 'GCC', link: 'https://gcc.gnu.org', versions: ['gcc/5.5.0', 'gcc/7.4.0']} %}
+{% set glimmer = {name: 'Glimmer', link: 'http://www.cbcb.umd.edu/software/glimmer/glimmer2.jun01.shtml', versions: ['glimmer/3.02-3']} %}
+{% set hisat2 = {name: 'HISAT2', link: 'http://daehwankimlab.github.io/hisat2/', versions: ['hisat2/2.1.0']} %}
+{% set hmmer = {name: 'HMMER', link: 'http://hmmer.org', versions: ['hmmer/2.3.2', 'hmmer/3.2.1']} %}
+{% set htop = {name: 'htop', link: 'https://hisham.hm/htop/', versions: ['2.2.0']} %}
+
+{% set igvTools = {name: 'igvtools', link: 'https://software.broadinstitute.org/software/igv/igvtools', versions: ['IGVTools/2.4.14']} %}
+{% set jellyfish = {name: 'Jellyfish', link: 'https://github.com/gmarcais/Jellyfish', versions: ['jellyfish/1.1.12', 'jellyfish/2.2.10']} %}
+{% set kent = {name: 'Kent', link: 'https://github.com/ucscGenomeBrowser/kent', versions: ['kent/350', 'kent/376']} %}
+
+{% set maker = {name: 'MAKER', link: 'https://www.yandell-lab.org/software/maker.html', versions: ['maker/2.31.10']} %}
+{% set matlab = {name: 'MATLAB', link: 'https://www.mathworks.com/products/matlab.html', versions: ['matlab/R2018b']} %}
+{% set matplotlib = {name: 'Matplotlib', link: 'https://matplotlib.org', versions: ['matplotlib/3.0.2']} %}
+{% set mpich = {name: 'MPICH', link: 'https://www.mpich.org', versions: []} %} <!-- Doesn't exist -->
+{% set mvapich2 = {name: 'MVAPICH', link: '', versions: []} %} <!-- Doesn't exist -->
+
+{% set openMPI = {name: 'OpenMPI', link: '', versions: []} %} <!-- Doesn't exist -->
+{% set pantherScore = {name: 'pantherScore', link: 'https://bio.tools/pantherscore', versions: ['pantherScore/2.1']} %}
+{% set parallel = {name: 'GNU Parallel', link: 'https://www.gnu.org/software/parallel/', versions: ['parallel/20190422']} %}
+{% set php = {name: 'PHP', link: 'https://www.php.net', versions: ['php/7.3.3']} %}
+{% set picard = {name: 'Picard', link: 'https://broadinstitute.github.io/picard/', versions: ['picard/2.20.0']} %}
+{% set python2 = {name: 'Python 2 (deprecated)', link: 'https://www.python.org/doc/sunset-python-2/', versions: ['python2/2.7.15']} %}
+{% set python3 = {name: 'Python 3', link: 'https://www.python.org', versions: ['python3/3.7.0']} %}
+{% set py2Matlotlib = {name: 'Matplotlib (Python 2)', link: 'https://matplotlib.org', versions: ['python2/mtaplotlib/2.2.3']} %}
+{% set py3Regex = {name: 'regex (Python 3)', link: 'https://pypi.org/project/regex/', versions: ['python3/regex/2018.08.29']} %}
+
+{% set qiime2 = {name: 'QIIME', link: 'http://qiime.org', versions: ['qiime2/2018.11.0']} %}
+{% set quast = {name: 'QUAST', link: 'http://bioinf.spbau.ru/quast', versions: ['quast/5.0.1']} %}
+{% set R = {name: 'R', link: 'https://www.r-project.org', versions: ['R/3.5.1', 'R/3.6.3']} %}
+{% set repeatMasker = {name: 'RepeatMasker', link: 'http://www.repeatmasker.org', versions: ['repeatmasker/1.332']} %}
+{% set rstudio = {name: 'RStudio', link: 'https://rstudio.com', versions: ['rstudio/1.1.463']} %}
+
+{% set salmon = {name: 'Salmon', link: 'https://github.com/COMBINE-lab/salmon', versions: ['salmon/0.11.3']} %}
+{% set samtools = {name: 'Samtools', link: 'http://www.htslib.org', versions: ['samtools/1.9']} %}
+{% set sickle = {name: 'Sickle', link: 'https://github.com/najoshi/sickle', versions: ['sickle/1.33']} %}
+
+{% set soapDenovo = {
+  name: 'SOAPdenovo',
+  link: 'https://www.animalgenome.org/bioinfo/resources/manuals/SOAP.html',
+  versions: ['SOAPdenovo/2.04']}
+%}
+
+{% set soapSuite = {name: 'SOAP Suite', link: 'https://bio.tools/soap', versions: ['SOAPsuite']} %}
+{% set spades = {name: 'SPAdes', link: 'http://cab.spbu.ru/software/spades/', versions: ['SPAdes/3.13.0']} %}
+{% set sparseHash = {name: 'SparseHash', link: 'https://github.com/sparsehash/sparsehash', versions: ['sparsehash']} %}
+{% set star = {name: 'STAR', link: 'https://github.com/alexdobin/STAR', versions: ['star/2.6.1b']} %}
+
+{% set tmux = {name: 'tmux', link: 'https://github.com/tmux/tmux', versions: ['tmux/2.7']} %}
+{% set topHat = {name: 'TopHat', link: 'http://ccb.jhu.edu/software/tophat/manual.shtml', versions: ['tophat/2.1.1']} %}
+{% set trimGalore = {name: 'Trim Galore', link: 'https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/', versions: ['TrimGalore/0.5.0']} %}
+{% set trinity = {name: 'Trinity Desktop Environment', link: 'https://www.trinitydesktop.org', versions: ['Trinity/2.8.5']} %}
+{% set vim = {name: 'Vim', link: 'https://www.vim.org', versions: ['vim/8.1.578']} %}
+
+{% set allSoftware = [abyss, alignGraph, anaconda3, bamTools, bioPython, blast, boost, bowtie2, bwa, cap3, capmirseq, cdhit, cgMapTools,
+  clust, cmake, cufflinks, diamond, djangoCelery, fast, fastQC, gcc, glimmer, hisat2, hmmer, htop, igvTools, jellyfish, kent, maker, matlab,
+  matplotlib, mpich, mvapich2, openMPI, pantherScore, parallel, php, picard, python2, python3, py2Matlotlib, py3Regex, qiime2, quast, R,
+  repeatMasker, rstudio, salmon, samtools, sickle, soapDenovo, soapSuite, spades, sparseHash, star, tmux, topHat, trimGalore, trinity, vim]
+%}
+
+<!-- Start of actual template -->
+
+{% for software in allSoftware %}
+  <div class="col-sm-4">
+    <div class="pkbl-card hover card-padding">
+      <div class="mb-sm-2">
+        <a href="{{ software.link }}" target="_blank" rel="noopener noreferrer" class="module-title">
+          {{ software.name }}
+        </a>
+      </div>
+
+      <div class="mb-1">
+        <span class="avail-mods no-select">Available Modules:</span>
+      </div>
+
+      <div class="mb-1 module">
+        {% if software.versions.length %}
+          {% for version in software.versions %}
+            {{ version }}
+          {% endfor %}
+        {% else %}
+          No available modules
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endfor %}

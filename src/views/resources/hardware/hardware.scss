@@ -1,0 +1,23 @@
+@import '../../../scss/colors';
+@import '../../../scss/globals';
+
+.guru-img {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.guru-text {
+  padding-top: 40px;
+  font-weight: $font-weight-medium;
+  font-size: 160%;
+  color: #656565;
+}
+
+.spec-title {
+  font-weight: $font-weight-heavy;
+  font-size: 130%;
+}
+
+.bottom-margin-large {
+  margin-bottom: 50px;
+}
