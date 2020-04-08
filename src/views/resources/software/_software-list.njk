@@ -95,10 +95,10 @@
 <!-- Start of actual template -->
 
 {% for software in allSoftware %}
-  <div class="col-sm-6 p-2">
-    <div class="pkbl-card hover py-1 px-2">
+  <div class="col-sm-4">
+    <div class="pkbl-card hover card-padding">
       <div class="mb-sm-2">
-        <a href="{{ software.link }}" target="_blank" rel="noopener noreferrer" class="card-heading">
+        <a href="{{ software.link }}" target="_blank" rel="noopener noreferrer" class="module-title">
           {{ software.name }}
         </a>
       </div>
@@ -107,7 +107,7 @@
         <span class="avail-mods no-select">Available Modules:</span>
       </div>
 
-      <div class="mb-1">
+      <div class="mb-1 module">
         {% if software.versions.length %}
           {% for version in software.versions %}
             {{ version }}

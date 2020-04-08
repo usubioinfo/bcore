@@ -1,3 +1,4 @@
+{% macro header(bs4=false, scss=false) %}
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,18 @@
   </script>
   -->
   <link rel="stylesheet" href="public/css/style.css">
+  {% if scss %}
+    <link rel="stylesheet" type="text/css" href="/biotec/scss/biotec/css/style.css">
+  {% endif %}
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,800" rel="stylesheet">
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/style-1.css" id="template-skin">
+  {% if bs4 %}
+  <!--
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  -->
+  <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+  {%  endif %}
 </head>
+
+{% endmacro %}

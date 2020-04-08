@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-	{% include "universal/_header.njk" %}
+	{% import "universal/_header-macro.njk" as headerMacro %}
+  {{ headerMacro.header(bs4=false, scss=false) }}
 	<body>
 		{% include "universal/_preload.njk" %}
-    {% include "universal/_navbar.njk" %}
+		<div id="page" class="page">
+			<div id="content-wrapper" class="content-wrapper">
+				<div class="content-wrapper-inner">
+					{% include "universal/_navbar.njk" %}
 
-    <div style="background: #efefef;" class="pb-5 container-fluid">
-      <div class="row justify-content-center pt-3 pb-4">
-        <div class="col-sm-6">
-          <h3 class="pkbl-header-primary pb-3">Software</h3>
-          <p class="intro-text">
-            The USU HPC has a large amount of software installed, so we use a module system that allows users to customize their
-            work environment and use only the software they need for their projects. If you would like to know more about
-            working with modules, please see “Introducing Modules”. You will find a list of available modules below, as well as
-            their respective version. If there is software that you don’t see but would like added, please contact our
-            system administrator.
-          </p>
-        </div>
-      </div>
+					<div style="background: #efefef;" class="container-fluid" >
+			      <div class="row justify-content-center">
+			        <div class="col-sm-8 col-sm-offset-2">
+			          <h3 class="software-header">Software</h3>
+			          <p class="software-intro-text">
+			            The USU HPC has a large amount of software installed, so we use a module system that allows users to customize their
+			            work environment and use only the software they need for their projects. If you would like to know more about
+			            working with modules, please see “Introducing Modules”. You will find a list of available modules below, as well as
+			            their respective version. If there is software that you don’t see but would like added, please contact our
+			            system administrator.
+			          </p>
+			        </div>
+			      </div>
 
-      <div class="row justify-content-center">
-        <div class="col-sm-6">
-          <div class="row justify-content-center">
-            {% include "resources/software/_software-list.njk" %}
-          </div>
-        </div>
-      </div>
-    </div>
+			      <div class="row justify-content-center bottom-margin row-no-gutters">
+			        <div class="col-sm-8 col-sm-offset-2">
+			          <div class="row justify-content-center row-no-gutters">
+			            {% include "resources/software/_software-list.njk" %}
+			          </div>
+			        </div>
+			      </div>
+			    </div>
 
-    {% include "universal/_footer.njk" %}
-		{% include "universal/_footer-scripts.njk" %}
+				</div>
+				{% include "universal/_footer.njk" %}
+			</div>
+		{% import "universal/_scripts-macro.njk" as scriptsMacro %}
+    {{ scriptsMacro.scripts(bs4=true, mapsApi=false) }}
 	</body>
 </html>
