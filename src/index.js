@@ -5,21 +5,38 @@ const https = require('https');
 const path = require('path');
 const nunjucks = require('nunjucks');
 const sass = require('node-sass-middleware');
+const SetAsyncExtension = require('nunjucks-setasync');
 
 const baseUrl = '/biotec/'
 const port = 3000;
 
 const app = express();
 
-nunjucks.configure(__dirname + '/views', {
+let nunEnv = nunjucks.configure(__dirname + '/views', {
   autoescape: true,
   express: app
 });
 
+const getPDFs = function(callback) {
+  let fileArray = [];
+  fs.readdir(path.join(__dirname, '/../pdf'), (err, files) => {
+    files.forEach(file => {
+      let name = file.split('-').join(' ');
+      name = path.parse(name).name;
+      let fileObj = {name: name, link: '/biotec/pdf/' + file};
+      fileArray.push(fileObj);
+    });
+    callback(null, fileArray);
+  });
+}
+
+nunEnv.addGlobal('getPDFs', getPDFs);
+nunEnv.addExtension('SetAsyncExtension', new SetAsyncExtension());
+
 app.use(baseUrl + 'scss', sass({
     /* Options */
     src: path.join(__dirname, 'scss'),
-    includePaths: ['scss'],
+    includePaths: ['scss', 'views'],
     dest: path.join(__dirname, '/../public/css'),
     debug: true,
     outputStyle: 'compressed',
@@ -36,6 +53,18 @@ app.use(baseUrl + 'biocore-images/', express.static(__dirname + '/../biocore-ima
 app.use(baseUrl + 'js/', express.static(__dirname + '/../js'));
 app.use(baseUrl + 'css/', express.static(__dirname + '/../css'));
 app.use(baseUrl + 'fonts/', express.static(__dirname + '/../fonts'));
+app.use(baseUrl + 'pdf/', express.static(__dirname + '/../pdf'));
+
+// Get PDFs
+app.get(baseUrl + 'pdf/', (req, res) => {
+  let fileArray = [];
+  fs.readdir(path.join(__dirname, '/../pdf'), (err, files) => {
+    files.forEach(file => {
+      fileArray.push(file);
+    });
+    res.json({files: fileArray});
+  });
+});
 
 // Pages
 app.get(baseUrl, (req, res) => {
