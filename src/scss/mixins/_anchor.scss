@@ -1,0 +1,8 @@
+@mixin anchor-underline($color, $border-width) {
+  border-bottom: solid $border-width rgb(255, 255, 255);
+  border-bottom: solid $border-width rgba($color, 0);
+}
+
+@mixin anchor-underline-h($color) {
+  border-color: $color;
+}

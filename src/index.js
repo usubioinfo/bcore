@@ -23,7 +23,7 @@ const getPDFs = function(callback) {
     files.forEach(file => {
       let name = file.split('-').join(' ');
       name = path.parse(name).name;
-      let fileObj = {name: name, link: '/biotec/pdf/' + file};
+      let fileObj = {name: name, link: '/biotec/pdf/' + file, downloadLink: '/biotec/download/pdf/' + file};
       fileArray.push(fileObj);
     });
     callback(null, fileArray);
@@ -64,6 +64,11 @@ app.get(baseUrl + 'pdf/', (req, res) => {
     });
     res.json({files: fileArray});
   });
+});
+
+app.get(baseUrl + 'download/pdf/:filename', (req, res) => {
+  const pdfFile = path.join(__dirname, '/../pdf/') + req.params.filename;
+  res.download(pdfFile);
 });
 
 // Pages

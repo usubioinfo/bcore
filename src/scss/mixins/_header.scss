@@ -1,0 +1,8 @@
+@import '../globals';
+@import '../colors';
+
+@mixin title-main($text-size, $text-color) {
+  font-size: $text-size;
+  color: $text-color;
+  font-weight: $font-weight-heavy;
+}

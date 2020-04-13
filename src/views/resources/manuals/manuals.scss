@@ -1,3 +1,41 @@
-.papa {
-  background: white;
+@import '../../../scss/kbl/kbl-card';
+@import '../../../scss/mixins/anchor';
+@import '../../../scss/mixins/header';
+@import '../../../scss/colors';
+
+.manual-container {
+  margin-bottom: 40px;
+  padding-right: 90px;
+  padding-left: 90px;
+  margin-top: 40px;
+}
+
+.manual-card-container {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.pdf-title {
+  @include kbl-card-title(20px, $primary-text);
+  @include anchor-underline($primary-text, 2px);
+}
+
+.pdf-title:hover {
+  @include kbl-card-title-h($link-color);
+  @include anchor-underline-h($link-color);
+}
+
+.pdf-title:visited {
+  @include kbl-card-title-v($link-visited-color);
+  @include anchor-underline-h($link-visited-color);
+}
+
+.hide-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.manual-page-title {
+  @include title-main(35px, $primary-text);
 }
