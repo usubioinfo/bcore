@@ -1,64 +1,59 @@
 <header class="site-header site-header-1">
   <!-- Top bar start -->
-  <div class="top-bar">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 top-bar-content">
-          <ul>
-            <li><a href="#">our team</a></li>
-
-            <li><a href="#">newsroom</a></li>
-            <li><a href="#">careers</a></li>
-            <li><a href="#">contact us</a></li>
-          </ul>
-          <div class="lang-and-social-buttons">
-            <ul>
-              <li><a href="https://www.facebook.com/BioinfoCore-at-Utah-State-University-102633644416841"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="https://twitter.com/Bioinfocore2"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="https://www.linkedin.com/company/bioinfocore"><i class="fa fa-linkedin"></i></a></li>
-              <!-- commented out instagram
-              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-              -->
-            </ul>
-          </div>
-        </div>
+  <article class="container-fluid navbar-side-padding" style="background: #f1f9fb!important;">
+    <div class="row">
+      <div class="col-lg-12 py-2">
+        <section class="d-inline-block">
+          <span class="mx-2"><a href="#" class="navbar-quick-link">Our Team</a></span>
+          <span class="mx-2"><a href="#" class="navbar-quick-link">Newsroom</a></span>
+          <span class="mx-2"><a href="#" class="navbar-quick-link">Careers</a></span>
+          <span class="mx-2"><a href="#" class="navbar-quick-link">Contact Us</a></span>
+        </section>
+        <section class="d-inline-block float-right text-right">
+          {% set facebookLink = "https://www.facebook.com/BioinfoCore-at-Utah-State-University-102633644416841" %}
+          <span class="mx-2"><a href="{{ facebookLink}}" class="navbar-social-media-icon"><i class="fa fa-facebook"></i></a></span>
+          <span class="mx-2"><a href="https://twitter.com/Bioinfocore2" class="navbar-social-media-icon"><i class="fa fa-twitter"></i></a></span>
+          <span class="mx-2"><a href="https://www.linkedin.com/company/bioinfocore" class="navbar-social-media-icon"><i class="fa fa-linkedin"></i></a></span>
+        </section>
       </div>
     </div>
-  </div>
+  </article>
   <!-- Main bar start -->
-  <div class="main-bar" style="background: #fff!important;">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 main-bar-content">
-          <!-- Logo start --><a href="index.html" title="Walton" class="site-logo">
-            <div class="logo-img"><img src="biocore-images/pictures3/slide10.png" alt="Utah State" style="max-height:60px;"></div>
-            <div class="name-and-tagline">
-          <!--		<div class="name">BioinfoCore</div>
-              <div class="tagline">Utah State University</div>  -->
-            </div>
-          </a><!-- Logo end -->
-          <div class="contacts-and-button">
-            <!-- Contacts start -->
-            <div class="header-contacts">
-              <div class="header-contacts-item hidden-md hidden-sm hidden-xs">
-                <div class="title"><span class="wicon-iconmonstr-mail-thin"></span> Email</div>
-                <div class="content"><a href="#">biocore.usu.edu@mail.com</a></div>
-              </div>
-              <div class="header-contacts-item hidden-sm hidden-xs">
-                <div class="title"><span class="wicon-iconmonstr-phone-thin"></span> Telephone</div>
-                <div class="content">(435) 797-2753</div>
-              </div>
-              <div class="header-contacts-item">
-                <div class="title"><span class="wicon-iconmonstr-location-pin-thin"></span>Logan, UT 84322-4700 </div>
-                <div class="content">4700 Old Main Hill </div>
-              </div>
-            </div><!-- Contacts end -->
-            <!-- Button start --><a href="#quote" class="btn btn-primary">get a quotation</a><!-- Button end -->
-          </div>
+  <article class="container-fluid navbar-side-padding" style="background: #fff!important;">
+    <div class="row">
+      <section class="col-auto nav-site-logo">
+        <a href="/biotec" title="USU BioinfoCore">
+          <img src="biocore-images/pictures3/slide10.png" alt="Utah State" style="max-height:60px;">
+        </a>
+      </section>
+
+      <section class="col-lg col-xl-auto my-auto nav-contact-col px-4">
+        <div class="nav-content-wrapper">
+          <div class="nav-contact-title">Email</div>
+          <div class="nav-contact-content"><a href="#">biocore.usu.edu@mail.com</a></div>
         </div>
-      </div>
+      </section>
+
+      <section class="col-lg col-xl-auto my-auto nav-contact-col px-4">
+        <div class="nav-content-wrapper">
+          <div class="nav-contact-title">Telephone</div>
+          <div class="nav-contact-content">(435) 797-2753</div>
+        </div>
+      </section>
+
+      <section class="col-lg col-xl-auto my-auto nav-contact-col px-4">
+        <div class="nav-content-wrapper">
+          <div class="nav-contact-title d-none d-xl-block">Logan, UT 84322-4700</div>
+          <div class="nav-contact-title d-xl-none" title="Logan, UT 84322-4700">Logan, UT</div>
+          <div class="nav-contact-content">4700 Old Main Hill </div>
+        </div>
+      </section>
+
+      <section class="col my-auto text-right">
+        <a href="#quote" class="btn btn-primary">get a quotation</a>
+      </section>
     </div>
-  </div><!-- Main bar end -->
+  </article><!-- Main bar end -->
   <!-- Menu bar start -->
   <div id="sticked-bar" class="menu-bar">
     <div class="container">

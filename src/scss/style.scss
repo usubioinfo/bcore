@@ -6,6 +6,12 @@
 @import '../views/resources/hardware/hardware';
 @import '../views/resources/manuals/manuals';
 
+@import '../views/universal/navbar';
+
 .no-select {
   pointer-events: none;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
 }

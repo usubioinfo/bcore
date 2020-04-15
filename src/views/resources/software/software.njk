@@ -1,13 +1,15 @@
 <!DOCTYPE html>
+{% set bs4 = false %}
 <html lang="en">
 	{% import "universal/_header-macro.njk" as headerMacro %}
-  {{ headerMacro.header(bs4=false, scss=false) }}
+	{{ headerMacro.header(bs4=bs4, scss=false) }}
 	<body>
 		{% include "universal/_preload.njk" %}
 		<div id="page" class="page">
 			<div id="content-wrapper" class="content-wrapper">
 				<div class="content-wrapper-inner">
-					{% include "universal/_navbar.njk" %}
+					{% from "universal/_navbar-switch.njk" import navbar %}
+					{{ navbar(bs4=bs4) }}
 
 					<div style="background: #efefef;" class="container-fluid" >
 			      <div class="row justify-content-center">
@@ -33,9 +35,10 @@
 			    </div>
 
 				</div>
-				{% include "universal/_footer.njk" %}
+				{% from "universal/_footer-switch.njk" import footer %}
+				{{ footer() }}
 			</div>
 		{% import "universal/_scripts-macro.njk" as scriptsMacro %}
-    {{ scriptsMacro.scripts(bs4=true, mapsApi=false) }}
+    {{ scriptsMacro.scripts(bs4=bs4, mapsApi=false) }}
 	</body>
 </html>

@@ -1,0 +1,82 @@
+@import '../../scss/kbl/kbl-card';
+@import '../../scss/mixins/anchor';
+@import '../../scss/mixins/header';
+@import '../../scss/colors';
+@import '../../scss/globals';
+
+.navbar-social-media-icon {
+  color: $primary-text;
+  transition: 0.3s;
+  font-size: 100%;
+}
+
+.navbar-social-media-icon:hover {
+  color: $link-color;
+}
+
+.navbar-quick-link {
+  text-decoration: underline;
+  font-size: 100%;
+  transition: 0.3s;
+  color: $primary-text;
+}
+
+.navbar-quick-link:hover {
+  color: $link-color;
+  text-decoration: none;
+}
+
+.nav-site-logo {
+  margin-top: 1.3rem;
+  margin-bottom: 1.3rem;
+}
+
+.navbar-side-padding {
+  $padding: 3%;
+  padding-left: $padding!important;
+  padding-right: $padding!important;
+}
+
+.nav-contact-col {
+  border-right: solid 1px #d5f0ff;
+}
+
+.nav-contact-title {
+  font-weight: $font-weight-heavy;
+  color: $link-color;
+  font-size: 87%;
+}
+
+.nav-contact-content {
+  font-weight: $font-weight-light;
+  color: $primary-text;
+  font-size: 100%;
+}
+
+// Media Queries
+@media only screen and (min-width: 1500px) {
+  .nav-site-logo {
+    margin-right: 6%;
+  }
+}
+
+@media only screen and (min-width: 1390px) {
+  .nav-content-wrapper {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 1389px) {
+  .nav-content-wrapper {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1299px) {
+  .nav-content-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
