@@ -4,6 +4,21 @@
 @import '../../scss/colors';
 @import '../../scss/globals';
 
+.quote-button {
+  font-family: 'Open Sans', sans-serif!important;
+  font-weight: $font-weight-heavy!important;
+  color: white!important;
+  background: #00b1f5!important;
+  border-radius: 0!important;
+  font-size: 85%!important;
+  transition: 0.3s!important;
+  padding: 0.8rem 1.9rem!important;
+}
+
+.quote-button:hover {
+  background: #0391c7!important;
+}
+
 .navbar-social-media-icon {
   color: $primary-text;
   transition: 0.3s;
@@ -16,7 +31,7 @@
 
 .navbar-quick-link {
   text-decoration: underline;
-  font-size: 100%;
+  font-size: 95%;
   transition: 0.3s;
   color: $primary-text;
 }
@@ -32,7 +47,7 @@
 }
 
 .navbar-side-padding {
-  $padding: 3%;
+  $padding: 6%;
   padding-left: $padding!important;
   padding-right: $padding!important;
 }
@@ -50,27 +65,61 @@
 .nav-contact-content {
   font-weight: $font-weight-light;
   color: $primary-text;
-  font-size: 100%;
+  font-size: 90%;
+}
+
+// Menu Bar
+.menu-header {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: $font-weight-heavy;
+}
+
+.site-menu li a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: $font-weight-light;
 }
 
 // Media Queries
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1600px) {
   .nav-site-logo {
     margin-right: 6%;
   }
+
+  .nav-contact-content {
+    font-size: 110%
+  }
 }
 
-@media only screen and (min-width: 1390px) {
+@media only screen and (min-width: 1490px) {
   .nav-content-wrapper {
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+  }
+
+  .nav-contact-content {
+    font-size: 110%
+  }
+}
+
+@media only screen and (min-width: 1390px) and (max-width: 1489px) {
+  .nav-content-wrapper {
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+  }
+
+  .nav-contact-content {
+    font-size: 110%
   }
 }
 
 @media only screen and (min-width: 1300px) and (max-width: 1389px) {
   .nav-content-wrapper {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+  }
+
+  .nav-contact-content {
+    font-size: 110%
   }
 }
 
@@ -78,5 +127,15 @@
   .nav-content-wrapper {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .nav-contact-content {
+    font-size: 84%
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .navbar-quick-link {
+    font-size: 84%;
   }
 }
