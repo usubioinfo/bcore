@@ -1,5 +1,6 @@
 {% macro navbar(bs4=false) %}
-  {% if bs4 %}
+  {% set override = false %}
+  {% if bs4 or override %}
     {% include "universal/_navbar-bs4.njk" %}
   {% else %}
     {% include "universal/_navbar.njk" %}
