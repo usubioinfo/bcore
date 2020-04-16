@@ -63,7 +63,8 @@
 										</ol>
 										<p>conclusion</p>
 										<p>hello</p>
-										<footer class="article-footer"><a href="4-16S-RNA-seq.html" class="btn btn-4"><i class="fa fa-angle-left"></i> Prev post</a><a href="6-Eukaryotes-Assembly.html" class="btn btn-4">Next post <i class="fa fa-angle-right"></i></a></footer>
+										{% from "components/svc-prev-next/svc-prev-next.njk" import switch %}
+										{{ switch("services/16srnaseq", "services/eukassembly") }}
 									</article><!-- Article end -->
 									</div>
 
