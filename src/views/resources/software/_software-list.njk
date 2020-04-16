@@ -96,16 +96,14 @@
 
 {% for software in allSoftware %}
   <div class="col-sm-4">
-    <div class="kbl-card hover card-padding">
-      <div class="mb-sm-2">
+    <div class="kbl-card hover mx-2 my-3">
+      <div class="mb-2">
         <a href="{{ software.link }}" target="_blank" rel="noopener noreferrer" class="module-title">
           {{ software.name }}
         </a>
       </div>
 
-      <div class="mb-1">
-        <span class="avail-mods no-select">Available Modules:</span>
-      </div>
+      <div class="avail-mods no-select">Available Modules:</div>
 
       <div class="mb-1 module">
         {% if software.versions.length %}

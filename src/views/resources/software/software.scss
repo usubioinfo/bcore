@@ -1,11 +1,6 @@
 @import '../../../scss/colors';
 @import '../../../scss/globals';
 
-// Shameless hack...
-.bs4 {
-  // @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css');
-}
-
 // Variable names are hard when you're wrestling with the template's CSS.
 // It's gotta go, but for now, here we are.
 .software-header {
@@ -17,7 +12,6 @@
 // Plus they use CSS which is kinda dumb in 2020...use SCSS.
 .software-intro-text {
   color: $primary-text;
-  margin-bottom: 30px;
 }
 
 .module-title {
@@ -43,16 +37,4 @@
 .module {
   color: $kbl-black;
   font-weight: $font-weight-light;
-}
-
-// I'm using padding as a margin. Sue me.
-.card-padding {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  padding-right: -10px;
-  padding-left: -10px;
-}
-
-.bottom-margin {
-  margin-bottom: 12px;
 }

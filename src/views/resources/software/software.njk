@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-{% set bs4 = false %}
+{% set bs4 = true %}
 <html lang="en">
-	{% import "universal/_header-macro.njk" as headerMacro %}
-	{{ headerMacro.header(bs4=bs4, scss=false) }}
+	{% from "universal/_header-macro.njk" import header %}
+	{{ header(bs4=bs4, scss=false) }}
 	<body>
 		{% include "universal/_preload.njk" %}
 		<div id="page" class="page">
@@ -12,8 +12,8 @@
 					{{ navbar(bs4=bs4) }}
 
 					<div style="background: #efefef;" class="container-fluid" >
-			      <div class="row justify-content-center">
-			        <div class="col-sm-8 col-sm-offset-2">
+			      <div class="row justify-content-center my-4">
+			        <div class="col-sm-8">
 			          <h3 class="software-header">Software</h3>
 			          <p class="software-intro-text">
 			            The USU HPC has a large amount of software installed, so we use a module system that allows users to customize their
@@ -25,9 +25,9 @@
 			        </div>
 			      </div>
 
-			      <div class="row justify-content-center bottom-margin row-no-gutters">
-			        <div class="col-sm-8 col-sm-offset-2">
-			          <div class="row justify-content-center row-no-gutters">
+			      <div class="row justify-content-center mb-5 no-gutters">
+			        <div class="col-sm-8">
+			          <div class="row justify-content-center no-gutters">
 			            {% include "resources/software/_software-list.njk" %}
 			          </div>
 			        </div>
@@ -36,7 +36,7 @@
 
 				</div>
 				{% from "universal/_footer-switch.njk" import footer %}
-				{{ footer() }}
+				{{ footer(bs4=bs4) }}
 			</div>
 		{% import "universal/_scripts-macro.njk" as scriptsMacro %}
     {{ scriptsMacro.scripts(bs4=bs4, mapsApi=false) }}
