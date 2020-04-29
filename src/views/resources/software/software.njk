@@ -11,15 +11,17 @@
 					{% from "universal/_navbar-switch.njk" import navbar %}
 					{{ navbar(bs4=bs4) }}
 
+					{% from "resources/software/_software-list.njk" import allSoftware %}
+
 					<div style="background: #efefef;" class="container-fluid" >
 			      <div class="row justify-content-center my-4">
 			        <div class="col-sm-8">
 			          <h3 class="software-header">Software</h3>
 			          <p class="software-intro-text">
-			            The USU HPC has a large amount of software installed, so we use a module system that allows users to customize their
-			            work environment and use only the software they need for their projects. If you would like to know more about
-			            working with modules, please see “Introducing Modules”. You will find a list of available modules below, as well as
-			            their respective version. If there is software that you don’t see but would like added, please contact our
+			            The USU HPC uses module system that allows users to customize their work environment and use only the software they
+									need for their projects. This is because we have so many available modules ({{ allSoftware.length }} currently). If you would like to know more about
+			            working with modules, please see <a href="resources/manuals">Manuals</a> page. You will find a list of available modules below, as well as
+			            their respective version. If there is a module that you don’t see but would like added, please contact our
 			            system administrator.
 			          </p>
 			        </div>
