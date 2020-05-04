@@ -7,7 +7,7 @@ const nunjucks = require('nunjucks');
 const sass = require('node-sass-middleware');
 const SetAsyncExtension = require('nunjucks-setasync');
 
-const baseUrl = '/biotec/'
+const baseUrl = '/'
 const port = 3000;
 
 const app = express();
