@@ -2,3 +2,4 @@ node_modules
 public/css
 pdf/*
 !pdf/Pokemon:-Platinum.pdf
+env.njk
