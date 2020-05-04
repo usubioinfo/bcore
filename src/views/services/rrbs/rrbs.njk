@@ -109,7 +109,8 @@
 										<p><b>PromoterCounts.xls:</b> summarize methylation information over a set of defined promoters.</p>
 										<p><b>FeatureTargetStats.xls:</b> a report of the percentage of intron/exon/promoters regions that overlap with differentially methylated bases.</p>
 										<p><b>GetAnnatationWithTSS.xls:</b> annotation of differentially methylated regions with  the distance to TSS and nearest gene name.</p>
-										<footer class="article-footer"><a href="9-MEDips-methyl" class="btn btn-4"><i class="fa fa-angle-left"></i> Prev post</a><a href="11-miRNA.html" class="btn btn-4">Next post <i class="fa fa-angle-right"></i></a></footer>
+										{% from "components/svc-prev-next/svc-prev-next.njk" import switch %}
+										{{ switch("services/medips", "services/mirna") }}
 									</article><!-- Article end -->
 									</div>
 

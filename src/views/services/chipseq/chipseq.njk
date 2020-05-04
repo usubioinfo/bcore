@@ -55,7 +55,8 @@
 										<p>stuff</p>
 										<p>stuff</p>
 										<p>1 more</p>
-										<footer class="article-footer"><a href="1-VAR-seq.html" class="btn btn-4"><i class="fa fa-angle-left"></i> Prev post</a><a href="3-Metagenomics.html" class="btn btn-4">Next post <i class="fa fa-angle-right"></i></a></footer>
+										{% from "components/svc-prev-next/svc-prev-next.njk" import switch %}
+										{{ switch("services/varseq", "services/metagenomics") }}
 									</article><!-- Article end -->
 									</div>
 
