@@ -23,7 +23,7 @@ const getPDFs = function(callback) {
     files.forEach(file => {
       let name = file.split('-').join(' ');
       name = path.parse(name).name;
-      let fileObj = {name: name, link: '/biotec/pdf/' + file, downloadLink: '/biotec/download/pdf/' + file};
+      let fileObj = {name: name, link: '/pdf/' + file, downloadLink: '/download/pdf/' + file};
       fileArray.push(fileObj);
     });
     callback(null, fileArray);
@@ -40,7 +40,7 @@ app.use(baseUrl + 'scss', sass({
     dest: path.join(__dirname, '/../public/css'),
     debug: true,
     outputStyle: 'compressed',
-    prefix:  '/biotec/css'  // Where prefix is at <link rel="stylesheets" href="prefix/style.css"/>
+    prefix:  '/css'  // Where prefix is at <link rel="stylesheets" href="prefix/style.css"/>
 }));
 
 app.use(cors());
