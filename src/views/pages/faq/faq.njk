@@ -3,534 +3,489 @@
 	{% include "universal/_header.njk" %}
 	<body>
 		{% include "universal/_preload.njk" %}
-		<div id="page" class="page">
-			<div id="content-wrapper" class="content-wrapper">
-				<div class="content-wrapper-inner">
-					{% include "universal/_navbar.njk" %}
+		{% include "universal/_navbar.njk" %}
 
-					<!-- Page titlebar start -->
-					<div class="content-section decorated-bg page-titlebar">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-12">
-									<h1 class="title">frequently asked questions</h1>
-									<ol class="breadcrumb">
-										<li><a href="#">Home</a></li>
-										<li><a href="#">Site Templates</a></li>
-										<li><a href="#">Business</a></li>
-										<li><a href="#">Corporate</a></li>
-										<li class="active">Walton Consulting</li>
-									</ol>
-								</div>
-							</div>
-						</div>
-					</div><!-- Page titlebar end -->
-					<!-- Intro start -->
-					<div class="content-section">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-6">
-									<p class="text-decor-1">Welcome to USU bioinformatics core facility</p>
-									<p class="text-decor-2">Ideas and breakthroughs fueled by computational prediction and next generation sequencing.</p>
-								</div>
-								<div class="col-md-6">
-									<p>Our unit has been contributing to different research projects by providing, (i) Support and expertise in programming
-										and advanced data analysis, focusing primarily on high-throughput genomics technologies including
-										microarrays, genotyping and next-generation sequencing (RNA-seq, ChIP-seq, SNP-seq, etc.), (ii) Virtual
-										server environments, secure and public web portals, and a large suite of open source applications, (iii)
-										Instruction of hands-on tutorials and workshops on a wide variety of informatics topics, (iv) Custom data
-										analysis and consultation services, and (v) Establishment of research collaborations with experimental
-										scientists from different departments.</p>
-									<p><a href="page-contacts.html#contact-form" class="btn btn-1"><i class="fa fa-file"></i> get a quotation</a><a href="page-contacts.html#contact-form" class="btn btn-2">get in touch</a></p>
-								</div>
-							</div>
-						</div>
-					</div><!-- Intro end -->
-					<!-- Page content start -->
-					<div class="content-section">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-8">
-									<h2>Frequently Asked Questions</h2>
-									<h3 class="faq-header">RNA-seq</h3>
-									<div class="clearfix"></div>
-									<div data-rt-accordion data-rt-accordion-toggle="on" class="rt-accordion">
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">How much sequencing depth (number of reads) needed for a Differential Gene Expression (DEG) analysis?</p>
-											</header>
-											<div class="content">
-												<ul style="list-style-type:disc;">
-												<li>The  amount  of  sequencing  needed  for  a  given  sample  is  determined  by  the  goals  of  the experiment and the nature of the RNA sample.</li>
-												<li>Experiments  whose  purpose  is  to  evaluate  the  similarity  between  the  transcriptional  profiles  of two polyA+ samples may require only modest depths of sequencing (e.g. 30M pair-end reads of length > 30NT, of which 20-25M are 3 mappable to the genome or known transcriptome.</li>
-												<li>Experiments   whose   purpose   is   the   discovery   of   noveltranscribed   elements   and   strong quantification   of   known   transcriptisoforms   requires   more   extensive   sequencing.   The   ability   to detectreliably low copy number transcripts / isoforms depends upon the depthof sequencing and on a sufficiently complex library.</li>
-												<li>For   experimentsfrom   a   typical   mammalian   tissue   or   in   which   sensitivity   of  detectionis important, a minimum depth of 100-200 M 2 x 76 bp or longer readsis currently recommended.</li>
-												<li>Specialized  studies  in  which  theprevalence  of  different  RNAs  has  been  intentionally  altered (e.g.“normalizing” using DSN) as part of sample preparation need more than the read amounts (>30M paired-end reads) used for simple comparison. Reasons for this include: (1) overamplification ofinserts as  a  result  of  an  additional  round  of  PCR  after  DSN,  and  (2)much  more  broad  coverage  given  the nature of A(-) and low abundance transcripts.2.Paired-end or Single-</li>
-												</ul>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">Paired-end or Single-end reads? </p>
-											</header>
-											<div class="content">
-												<ul style="list-style-type:disc;">
-												<li>Single-end is fine for simple RNA-Seq analysis. </li>
-												<li>Paired-end would be required if we are looking for novel transcripts. </li>
-												</ul>
-												<p><i>Paired-end   RNA sequencing (RNA-Seq) enables discovery applications such as detecting gene fusions in cancer and characterizing novel splice isoforms. For paired-end RNA-Seq, use the TruSeq RNA Library Prep  Kits  with  an  alternate  fragmentation  method,  followed  by  standard  Illumina  paired-end cluster generation and sequencing.</i></p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">In  terms  of  coverage  /  amount  of  data  generated,  how  does  one  lane  of  NextSeq  compare  with one lane of HiSeq?</p>
-											</header>
-											<div class="content">
-												<p>The HiSeq maximum yield isabout 200 mil reads. Roughly, one could figure 160 to 180 mil reads to be a safe count. This is enough for a 4 to 6 plex samples at 30M reads per RNA sample. The NextSeq has a max of about 400M reads. Figure  360M to  be safe. This is enough for a  10  to  12 plex at 30M reads per  RNA  sample.  Yes,  the  NextSeq  do  twice  the  plex  level  as  the  HiSeq.  Plus  it  does  a  75bp  read  as opposed to a 50bp read. So it is cheaper per base.</p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">Length of reads?</p>
-											</header>
-											<div class="content">
-												<p>50bp is sufficient for simple RNA-Seq analysis</p>
-												<p></p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">How many biological replicates are needed?</p>
-											</header>
-											<div class="content">
-												<p>At least 3 (more if you can afford)</p>
-												<p></p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">Do we need to include spike-in controls for RNA-seq normalization?</p>
-											</header>
-											<div class="content">
-												<p>here  is  no  standard  whether  to  use  spike-in  control  or  not,  I  guess  it  varies  case  to  case.  During sequencing  there  are  so  many  unknown  factors  one  can’t  control,  so  including  a  spike-in  would  be better as this would allow to evaluate performance of library preparation and sequencing, and thus less
-												unbiased  call  for  differential  gene  expression  in  later  stages.  However,  there  have  been studies  that says  the  spike-in  controlled  data  may  be  very  biased  to  various  degree  unless  the  experiments  are designed in a careful way to preserve and capture true biological variations represented in your sample. As  the  spike-in  datasets  represent  only technical  replicates  with  minimal  variation,  this  could  be complemented  with  more  practical  comparisons  in  real  datasets  with  true  biological  replicates.  For example,  this  study  (<a>http://europepmc.org/articles/pmc4404308</a>)  reports  that  spike-ins  are  not  reliable enough to be used in standard global-scaling or regression-based normalization procedures. One of the advantages  of  using  spike  controls  for  normalization  is  the  possibility  of  relaxing  the  common assumption that majority of the genes are not DE between the conditions under study. So if you want to use  the  spike-ins  for  normalization,  two  conditions  must  be  satisfied:  (i)  spike-in  read  counts  are  not affected  by  the  biological  factors  of  interest,    and  (ii)  the  unwanted  variation  should  affect  the  spike-in and gene read counts similarly.</p>
-												<p>One should  not confuse  with the definition  of spike-ins,  the  one between PhiX (used for  quality-control during  sequencing)  and  the  spike-ins  for  normalization purposes.  To  some  extent,  both  are  useful  for quality control and for library-size normalization. There is an External RNA Control Consortium (ERCC) that  had  developed  a  set  of  92  synthetic  spike-in  standards  that  are  commercially  available  and relatively easy  to  add  to  a  typical  library  preparation.  So  you  can  select  various  formulation  mixes  of controls  from  these  kits  (or  could  be  custom  made)  and  use  in  your  experiments.  Ambion  (Life Technologies) is the only company that manufactures such spike-in controls for normalization purpose. You can find step-by-step details here on how and when to use Spike-ins <a>https://tools.thermofisher.com/content/sfs/manuals/cms_086340.pdf</a>. The main idea here is to achieve a standard measure for data comparison across gene expression experiments, measure sensitivity (lower the limit of detection) and dynamic range of an experiment, and quantitate differential gene expression.</p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">How important is the use of Spike-ins?</p>
-											</header>
-											<div class="content">
-												<p>In  the  view  of  DE  analysis,  all  the  normalization  methods  what  we  employ  during  the bioinformatics analysis downstream for between-sample normalizations thus far work properly, because we assume that majority of the genes are NOT differentially expressed between conditions under study, a  reasonable  assumption  in  most  applications.  Note  that  in  practice,  most  of  the  normalization procedures (bioinfo based, not spike-in based) work well even when a high proportion of genes are DE, provided that they are roughly equally distributed between up-and down-regulation. However, in cases where  there  is  a  major  global  shift  in  expression,  the  usual  between-sample  normalization  procedures will  fail.  In  this  case,  normalization  based  on  control  sequences  (spike-ins)  may  be  the  only  option. There  is  a  very  nice  book  chapter  here  (<a>http://link.springer.com/chapter/10.1007%2F978-3-319-07212-8_9#page-1</a>) where it explains in detail about the role of spike-ins for normalization of RNA-seq.</p>
-												<p></p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">Is it standard to use spike-ins in every RNA-seq experiment?</p>
-											</header>
-											<div class="content">
-												<p>It  depends  on  a  case  to  case  basis.  Although  there  are  very  few  reports  in  literature  where people have actually used spike-ins in real experiments. This is surprising. Maybe because of time and money, this is not always possible. Because most of the major RNA-seq guidelines and forums strongly recommend using spike-ins during the experiment designing and sequencing. The approach is strongly recommended by the ENCODE consortium (<a>http://genome.ucsc.edu/ENCODE/protocols/dataStandards/ENCODE_RNAseq_Standards_V1.0.pdf</a>). Then  there  is  one  recent  paper  just  published  in  2016  (A  survey  of  best  practices  for  RNA-seq)(<a>https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8</a>) which also recommends including the spike-ins for both the quality control as well as for library-size normalization. Another good read is (Synthetic spike-in standards for RNA-seq experiments) (<a>http://www.ncbi.nlm.nih.gov/pubmed/21816910</a>),   and   Revisiting   global   gene   expression   analysis (<a>http://www.sciencedirect.com/science/article/pii/S0092867412012263</a>).</p>
-												<p>n any case, it is essential to ensure that spike-in standards behave as expected and to develop a set of controls that are stable enough across the replicate libraries and robust to both the differences in library composition as well as library preparation methods.</p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">How do we check the quality and trim/filter low quality reads?</p>
-											</header>
-											<div class="content">
-												<p>One can run FastQC and FASTX tool kit</p>
-												<p></p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">Reference genome or Transcriptome?</p>
-											</header>
-											<div class="content">
-												<ul style="list-style-type:disc;">
-													<li>Depends on the purpose of the experiment</li>
-													<li>Build a reference transcriptome if not available (Trinity, Trans-ABySS, Velvet / Oases)</li>
-													<li><p>What if I don’t have a good reference genome?</p>
-													<p>To  determine  whetherthe  reference  genome  is  well  annotated  or  not;  one  approach  could  be, for  example,  take  a  random  sample  of  raw  reads  (100  or  so)  from  both  the  first  and  second strand  of  your  paired-end  data  and  BLAST  them.  If  the  genome  assembly  is  poor,  you  would see that one pair of the read map to a different scaffold of the other read. Usually in the paired-end RNA-seq data, the reads must be less than 1000 bases apart on the same chromosome, or much  closer.  If  this  technique  does  not  work,  then  you  have  to  do de  novoassembly  of  your reads  and  then  align  your  reads  against  this  transcriptome.  I  think  you  can  combine  both approaches.  It  is  common  to  perform de  novoassembly  when  reference  genome  is  not available  or  is  poorly  annotated.  Basically  you  are  assembling  yourreads  into  longer  contigs and  then  to  treat  those  contigs  as  the  expressed  transcriptome  to  which  the  raw  reads  are mapped back again for quantification. There are several tools available for this.</p></li>
-												</ul>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">What alignment program one can use to map the reads to a reference genome?</p>
-											</header>
-											<div class="content">
-												<p>TopHat, Bowtie2, BWA</p>
-												<p></p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">Unique or multiple mapping?</p>
-											</header>
-											<div class="content">
-												<p>Unique</p>
-												<p>A good mapping % is between 70 to 90%</p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">How to get read counts?</p>
-											</header>
-											<div class="content">
-												<p>HTSeq with using the option ‘union’</p>
-												<p></p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">What statistical methods one can use for DEG analysis?</p>
-											</header>
-											<div class="content">
-												<p></p>
-												<p></p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">Why do we use more than one method?</p>
-											</header>
-											<div class="content">
-												<p>All  the  DEG  analysis  tools  are  developed  based  on  different  normalization  methods  and assumptions. There is no single tool that can be declared better over other.</p>
-												<p></p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">How to select genes?</p>
-											</header>
-											<div class="content">
-												<p>FDR (1% to 5%), Fold Change (FC), Pathway</p>
-												<p></p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">What is RPKM and how itis calculated?</p>
-											</header>
-											<div class="content">
-												<p>C = Number of reads mapped to a gene</p>
-												<p>N = Total mapped reads in the experiment</p>
-												<p>L = exon length in base-pairs for a gene</p>
-												<p>Equation = RPKM = (10^9 * C)/(N * L)</p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">What is the difference between RPKM and FPKM?</p>
-											</header>
-											<div class="content">
-												<p>FPKM=RPKM if we have single-end reads</p>
-												<p>FPKM  is  very  similar  to  RPKM.  RPKM  was  made  for  single-end  RNA-seq,  where  every  read corresponded to a single fragment that was sequenced. FPKM was made for paired-end RNA-seq. With paired-end RNA-seq, two reads can correspond to a single fragment, or, if one read in the pair did not map, one read can correspond to a single fragment. The only difference between RPKM and FPKM is that  FPKM  takes  into  account  that  two  reads  can  map  to  one  fragment  (and  soit doesn’t count this fragment twice).</p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">In the  output file, what the  five  different  columns  represent  / means  in a  usual edgeR  pair-wise DEG analysis?</p>
-											</header>
-											<div class="content">
-												<ul style="list-style-type:disc;">
-													<li><p>Column-1  (logFC): <i>"For  a  particular  gene,  a  log2  fold  change  of  −1  for  condition  treated  vs untreated  means that the treatment induces a change in observed expression level of 2^−1 = 0.5 compared to the untreated condition.</i></p>
-													<p><i>logFC -Fold change, generally refers to the ratio of average expression between two groups. edgeR uses exactTest() performs pair-wise tests for differential expression between two groups. log2FC=Log2(B)-Log2(A)</i></p>
-													<p><i>When you're comparing two things: A and B, the fold change is A/B. A and B could be data sets reflecting gene expression measured under different conditions. If gene1 is 2-fold higher in A, the A/B ratio for gene1 is 2. If gene2 is 2-fold higher in B than A, the gene2 ratio is 0.5. However, edgeR displays the log2 of the ratio. Therefore genes up or down by a given amount (i.e. two-fold) have the same distance from equality, but the sign (+/-) changes. Thus gene1 would have logFC: 1, and gene2 would have logFC: -1, reflecting 2-fold up or down respectively. In log2 space the numbers are close enough. For instance: -2 is 4-fold down, -1 is 2-fold down, 0 is equal in A and B (a ratio of 1), 1 is 2-fold up, 2 is 4-fold up, etc. To convert the logFC value from edgeR (which are essentially ratios of the normalized count values per gene) into an up or down ratio, you simply take 2 to the power of the logFC number. e.g. for a gene with logFC of 0.5 or -0.5: the ratio is 2^0.5 = 1.4, or 2^-0.5 = 0.7, respectively.</i></p>
-													<p><i>Let's say there are 50 read counts in control and 100 read counts in treatment for gene A. This means  gene A is  expressing twice in treatment as compared to control (100 divided by 50 =2) or  fold  change  is  2.  This  works  well  for  over  expressed  genes  as  the  number  directly corresponds  to  how  many  times  a  gene  is  overexpressed. But when  it  is  other  way  round  (i.e, treatment  50,  control  100),  the  value  of  fold  change  will  be  0.5  (all  underexpressed  genes  will have values between 0 to 1, while overexpressed genes will have values from 1 to infinity). To make this leveled, we use log2 for expressing the fold change. I.e, log2 of 2 is 1 and log2 of 0.5 is -1.</i></p>
-													<p><b>The log Fold change value is calculated by taking the log2 of avg CPM value of mutant vs control. log2(avg.cpm.mut)/(avg.cpm.wt)</b></p>
-													<p><a>http://seqanswers.com/forums/showthread.php?t=26610</a></p></li>
-													<li><P>Column-2 (logCPM):</P>
-													<p>log CPM refers to log (Counts per million reads). </p>
-													<p>To calculate CPM manually in R it would be :</p>
-													<p>cpm <-apply(countmatrix,2, function(x) (x/sum(x))*1000000) </p>
-													<p># the 1 added to log function is to avoid log 0 values</p>
-													<p>log.cpm <-log(cpm + 1)</p></li>
-													<li><p>Column-3 (LR): Log Ratio / Likelihood Ratio: log2(X1 RPKM/ X2 RPKM).</p>
-													<p>But, edgeR does not use RPKM, instead it calculates CPM (Counts per million). edgeR does not consider the  length  of  the  gene  for  normalization.  Read  counts  can  generally  be  expected  to  be  proportional  to length  as  well  as  to  expression  for  any  transcript,  but  edgeR  does  not  generally  need  to  adjust  for  gene length because gene length has the same relative influence on the read counts for each RNA sample. For this  reason,  normalization  issues  arise  only  to  the  extent  that  technical  factors  have  sample-specific effects.</p></li>
-													<li>Column-4 (PValue): </li>
-													<li>Column-5  (FDR): FDR  values  were  calculated  using  the  method  of  Benjamini  and  Hochberg  from  the distribution  of  2-way  ANOVA  p-values,  and  fold-change  values  were  calculated  on  a  linear  scale  using least squares mean.</li>
-											</div>
-										</div>
+		<article class="kbl-content-wrapper">
+			<!-- Page titlebar start -->
+			<section class="content-section decorated-bg page-titlebar">
+			  <div class="container">
+			    <div class="row">
+			      <div class="col-lg-12">
+			        <h1 class="title">frequently asked questions</h1>
+			        <ol class="breadcrumb">
+			          <li class="active">FAQ</li>
+			        </ol>
+			      </div>
+			    </div>
+			  </div>
+			</section><!-- Page titlebar end -->
+			<!-- Intro start -->
+			<section class="content-section">
+			  <div class="container">
+			    <div class="row">
+			      <div class="col-md-6">
+			        <p class="text-decor-1">Welcome to USU bioinformatics core facility</p>
+			        <p class="text-decor-2">Ideas and breakthroughs fueled by computational prediction and next generation sequencing.</p>
+			      </div>
+			      <div class="col-md-6">
+			        <p>Our unit has been contributing to different research projects by providing, (i) Support and expertise in programming
+			          and advanced data analysis, focusing primarily on high-throughput genomics technologies including
+			          microarrays, genotyping and next-generation sequencing (RNA-seq, ChIP-seq, SNP-seq, etc.), (ii) Virtual
+			          server environments, secure and public web portals, and a large suite of open source applications, (iii)
+			          Instruction of hands-on tutorials and workshops on a wide variety of informatics topics, (iv) Custom data
+			          analysis and consultation services, and (v) Establishment of research collaborations with experimental
+			          scientists from different departments.</p>
+			        <p><a href="page-contacts.html#contact-form" class="btn btn-1"><i class="fa fa-file"></i> get a quotation</a><a href="page-contacts.html#contact-form" class="btn btn-2">get in touch</a></p>
+			      </div>
+			    </div>
+			  </div>
+			</section><!-- Intro end -->
+			<!-- Page content start -->
+			<div class="content-section">
+			  <div class="container">
+			    <div class="row">
+			      <div class="col-md-8">
+			        <h2>Frequently Asked Questions</h2>
+			        <h3 class="faq-header">RNA-seq</h3>
+			        <div class="clearfix"></div>
+			        <div data-rt-accordion data-rt-accordion-toggle="on" class="rt-accordion">
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">How much sequencing depth (number of reads) needed for a Differential Gene Expression (DEG) analysis?</p>
+			            </header>
+			            <div class="content">
+			              <ul style="list-style-type:disc;">
+			              <li>The  amount  of  sequencing  needed  for  a  given  sample  is  determined  by  the  goals  of  the experiment and the nature of the RNA sample.</li>
+			              <li>Experiments  whose  purpose  is  to  evaluate  the  similarity  between  the  transcriptional  profiles  of two polyA+ samples may require only modest depths of sequencing (e.g. 30M pair-end reads of length > 30NT, of which 20-25M are 3 mappable to the genome or known transcriptome.</li>
+			              <li>Experiments   whose   purpose   is   the   discovery   of   noveltranscribed   elements   and   strong quantification   of   known   transcriptisoforms   requires   more   extensive   sequencing.   The   ability   to detectreliably low copy number transcripts / isoforms depends upon the depthof sequencing and on a sufficiently complex library.</li>
+			              <li>For   experimentsfrom   a   typical   mammalian   tissue   or   in   which   sensitivity   of  detectionis important, a minimum depth of 100-200 M 2 x 76 bp or longer readsis currently recommended.</li>
+			              <li>Specialized  studies  in  which  theprevalence  of  different  RNAs  has  been  intentionally  altered (e.g.“normalizing” using DSN) as part of sample preparation need more than the read amounts (>30M paired-end reads) used for simple comparison. Reasons for this include: (1) overamplification ofinserts as  a  result  of  an  additional  round  of  PCR  after  DSN,  and  (2)much  more  broad  coverage  given  the nature of A(-) and low abundance transcripts.2.Paired-end or Single-</li>
+			              </ul>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">Paired-end or Single-end reads? </p>
+			            </header>
+			            <div class="content">
+			              <ul style="list-style-type:disc;">
+			              <li>Single-end is fine for simple RNA-Seq analysis. </li>
+			              <li>Paired-end would be required if we are looking for novel transcripts. </li>
+			              </ul>
+			              <p><i>Paired-end   RNA sequencing (RNA-Seq) enables discovery applications such as detecting gene fusions in cancer and characterizing novel splice isoforms. For paired-end RNA-Seq, use the TruSeq RNA Library Prep  Kits  with  an  alternate  fragmentation  method,  followed  by  standard  Illumina  paired-end cluster generation and sequencing.</i></p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">In  terms  of  coverage  /  amount  of  data  generated,  how  does  one  lane  of  NextSeq  compare  with one lane of HiSeq?</p>
+			            </header>
+			            <div class="content">
+			              <p>The HiSeq maximum yield isabout 200 mil reads. Roughly, one could figure 160 to 180 mil reads to be a safe count. This is enough for a 4 to 6 plex samples at 30M reads per RNA sample. The NextSeq has a max of about 400M reads. Figure  360M to  be safe. This is enough for a  10  to  12 plex at 30M reads per  RNA  sample.  Yes,  the  NextSeq  do  twice  the  plex  level  as  the  HiSeq.  Plus  it  does  a  75bp  read  as opposed to a 50bp read. So it is cheaper per base.</p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">Length of reads?</p>
+			            </header>
+			            <div class="content">
+			              <p>50bp is sufficient for simple RNA-Seq analysis</p>
+			              <p></p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">How many biological replicates are needed?</p>
+			            </header>
+			            <div class="content">
+			              <p>At least 3 (more if you can afford)</p>
+			              <p></p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">Do we need to include spike-in controls for RNA-seq normalization?</p>
+			            </header>
+			            <div class="content">
+			              <p>here  is  no  standard  whether  to  use  spike-in  control  or  not,  I  guess  it  varies  case  to  case.  During sequencing  there  are  so  many  unknown  factors  one  can’t  control,  so  including  a  spike-in  would  be better as this would allow to evaluate performance of library preparation and sequencing, and thus less
+			              unbiased  call  for  differential  gene  expression  in  later  stages.  However,  there  have  been studies  that says  the  spike-in  controlled  data  may  be  very  biased  to  various  degree  unless  the  experiments  are designed in a careful way to preserve and capture true biological variations represented in your sample. As  the  spike-in  datasets  represent  only technical  replicates  with  minimal  variation,  this  could  be complemented  with  more  practical  comparisons  in  real  datasets  with  true  biological  replicates.  For example,  this  study  (<a>http://europepmc.org/articles/pmc4404308</a>)  reports  that  spike-ins  are  not  reliable enough to be used in standard global-scaling or regression-based normalization procedures. One of the advantages  of  using  spike  controls  for  normalization  is  the  possibility  of  relaxing  the  common assumption that majority of the genes are not DE between the conditions under study. So if you want to use  the  spike-ins  for  normalization,  two  conditions  must  be  satisfied:  (i)  spike-in  read  counts  are  not affected  by  the  biological  factors  of  interest,    and  (ii)  the  unwanted  variation  should  affect  the  spike-in and gene read counts similarly.</p>
+			              <p>One should  not confuse  with the definition  of spike-ins,  the  one between PhiX (used for  quality-control during  sequencing)  and  the  spike-ins  for  normalization purposes.  To  some  extent,  both  are  useful  for quality control and for library-size normalization. There is an External RNA Control Consortium (ERCC) that  had  developed  a  set  of  92  synthetic  spike-in  standards  that  are  commercially  available  and relatively easy  to  add  to  a  typical  library  preparation.  So  you  can  select  various  formulation  mixes  of controls  from  these  kits  (or  could  be  custom  made)  and  use  in  your  experiments.  Ambion  (Life Technologies) is the only company that manufactures such spike-in controls for normalization purpose. You can find step-by-step details here on how and when to use Spike-ins <a>https://tools.thermofisher.com/content/sfs/manuals/cms_086340.pdf</a>. The main idea here is to achieve a standard measure for data comparison across gene expression experiments, measure sensitivity (lower the limit of detection) and dynamic range of an experiment, and quantitate differential gene expression.</p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">How important is the use of Spike-ins?</p>
+			            </header>
+			            <div class="content">
+			              <p>In  the  view  of  DE  analysis,  all  the  normalization  methods  what  we  employ  during  the bioinformatics analysis downstream for between-sample normalizations thus far work properly, because we assume that majority of the genes are NOT differentially expressed between conditions under study, a  reasonable  assumption  in  most  applications.  Note  that  in  practice,  most  of  the  normalization procedures (bioinfo based, not spike-in based) work well even when a high proportion of genes are DE, provided that they are roughly equally distributed between up-and down-regulation. However, in cases where  there  is  a  major  global  shift  in  expression,  the  usual  between-sample  normalization  procedures will  fail.  In  this  case,  normalization  based  on  control  sequences  (spike-ins)  may  be  the  only  option. There  is  a  very  nice  book  chapter  here  (<a>http://link.springer.com/chapter/10.1007%2F978-3-319-07212-8_9#page-1</a>) where it explains in detail about the role of spike-ins for normalization of RNA-seq.</p>
+			              <p></p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">Is it standard to use spike-ins in every RNA-seq experiment?</p>
+			            </header>
+			            <div class="content">
+			              <p>It  depends  on  a  case  to  case  basis.  Although  there  are  very  few  reports  in  literature  where people have actually used spike-ins in real experiments. This is surprising. Maybe because of time and money, this is not always possible. Because most of the major RNA-seq guidelines and forums strongly recommend using spike-ins during the experiment designing and sequencing. The approach is strongly recommended by the ENCODE consortium (<a>http://genome.ucsc.edu/ENCODE/protocols/dataStandards/ENCODE_RNAseq_Standards_V1.0.pdf</a>). Then  there  is  one  recent  paper  just  published  in  2016  (A  survey  of  best  practices  for  RNA-seq)(<a>https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8</a>) which also recommends including the spike-ins for both the quality control as well as for library-size normalization. Another good read is (Synthetic spike-in standards for RNA-seq experiments) (<a>http://www.ncbi.nlm.nih.gov/pubmed/21816910</a>),   and   Revisiting   global   gene   expression   analysis (<a>http://www.sciencedirect.com/science/article/pii/S0092867412012263</a>).</p>
+			              <p>n any case, it is essential to ensure that spike-in standards behave as expected and to develop a set of controls that are stable enough across the replicate libraries and robust to both the differences in library composition as well as library preparation methods.</p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">How do we check the quality and trim/filter low quality reads?</p>
+			            </header>
+			            <div class="content">
+			              <p>One can run FastQC and FASTX tool kit</p>
+			              <p></p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">Reference genome or Transcriptome?</p>
+			            </header>
+			            <div class="content">
+			              <ul style="list-style-type:disc;">
+			                <li>Depends on the purpose of the experiment</li>
+			                <li>Build a reference transcriptome if not available (Trinity, Trans-ABySS, Velvet / Oases)</li>
+			                <li><p>What if I don’t have a good reference genome?</p>
+			                <p>To  determine  whetherthe  reference  genome  is  well  annotated  or  not;  one  approach  could  be, for  example,  take  a  random  sample  of  raw  reads  (100  or  so)  from  both  the  first  and  second strand  of  your  paired-end  data  and  BLAST  them.  If  the  genome  assembly  is  poor,  you  would see that one pair of the read map to a different scaffold of the other read. Usually in the paired-end RNA-seq data, the reads must be less than 1000 bases apart on the same chromosome, or much  closer.  If  this  technique  does  not  work,  then  you  have  to  do de  novoassembly  of  your reads  and  then  align  your  reads  against  this  transcriptome.  I  think  you  can  combine  both approaches.  It  is  common  to  perform de  novoassembly  when  reference  genome  is  not available  or  is  poorly  annotated.  Basically  you  are  assembling  yourreads  into  longer  contigs and  then  to  treat  those  contigs  as  the  expressed  transcriptome  to  which  the  raw  reads  are mapped back again for quantification. There are several tools available for this.</p></li>
+			              </ul>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">What alignment program one can use to map the reads to a reference genome?</p>
+			            </header>
+			            <div class="content">
+			              <p>TopHat, Bowtie2, BWA</p>
+			              <p></p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">Unique or multiple mapping?</p>
+			            </header>
+			            <div class="content">
+			              <p>Unique</p>
+			              <p>A good mapping % is between 70 to 90%</p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">How to get read counts?</p>
+			            </header>
+			            <div class="content">
+			              <p>HTSeq with using the option ‘union’</p>
+			              <p></p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">What statistical methods one can use for DEG analysis?</p>
+			            </header>
+			            <div class="content">
+			              <p></p>
+			              <p></p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">Why do we use more than one method?</p>
+			            </header>
+			            <div class="content">
+			              <p>All  the  DEG  analysis  tools  are  developed  based  on  different  normalization  methods  and assumptions. There is no single tool that can be declared better over other.</p>
+			              <p></p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">How to select genes?</p>
+			            </header>
+			            <div class="content">
+			              <p>FDR (1% to 5%), Fold Change (FC), Pathway</p>
+			              <p></p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">What is RPKM and how itis calculated?</p>
+			            </header>
+			            <div class="content">
+			              <p>C = Number of reads mapped to a gene</p>
+			              <p>N = Total mapped reads in the experiment</p>
+			              <p>L = exon length in base-pairs for a gene</p>
+			              <p>Equation = RPKM = (10^9 * C)/(N * L)</p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">What is the difference between RPKM and FPKM?</p>
+			            </header>
+			            <div class="content">
+			              <p>FPKM=RPKM if we have single-end reads</p>
+			              <p>FPKM  is  very  similar  to  RPKM.  RPKM  was  made  for  single-end  RNA-seq,  where  every  read corresponded to a single fragment that was sequenced. FPKM was made for paired-end RNA-seq. With paired-end RNA-seq, two reads can correspond to a single fragment, or, if one read in the pair did not map, one read can correspond to a single fragment. The only difference between RPKM and FPKM is that  FPKM  takes  into  account  that  two  reads  can  map  to  one  fragment  (and  soit doesn’t count this fragment twice).</p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">In the  output file, what the  five  different  columns  represent  / means  in a  usual edgeR  pair-wise DEG analysis?</p>
+			            </header>
+			            <div class="content">
+			              <ul style="list-style-type:disc;">
+			                <li><p>Column-1  (logFC): <i>"For  a  particular  gene,  a  log2  fold  change  of  −1  for  condition  treated  vs untreated  means that the treatment induces a change in observed expression level of 2^−1 = 0.5 compared to the untreated condition.</i></p>
+			                <p><i>logFC -Fold change, generally refers to the ratio of average expression between two groups. edgeR uses exactTest() performs pair-wise tests for differential expression between two groups. log2FC=Log2(B)-Log2(A)</i></p>
+			                <p><i>When you're comparing two things: A and B, the fold change is A/B. A and B could be data sets reflecting gene expression measured under different conditions. If gene1 is 2-fold higher in A, the A/B ratio for gene1 is 2. If gene2 is 2-fold higher in B than A, the gene2 ratio is 0.5. However, edgeR displays the log2 of the ratio. Therefore genes up or down by a given amount (i.e. two-fold) have the same distance from equality, but the sign (+/-) changes. Thus gene1 would have logFC: 1, and gene2 would have logFC: -1, reflecting 2-fold up or down respectively. In log2 space the numbers are close enough. For instance: -2 is 4-fold down, -1 is 2-fold down, 0 is equal in A and B (a ratio of 1), 1 is 2-fold up, 2 is 4-fold up, etc. To convert the logFC value from edgeR (which are essentially ratios of the normalized count values per gene) into an up or down ratio, you simply take 2 to the power of the logFC number. e.g. for a gene with logFC of 0.5 or -0.5: the ratio is 2^0.5 = 1.4, or 2^-0.5 = 0.7, respectively.</i></p>
+			                <p><i>Let's say there are 50 read counts in control and 100 read counts in treatment for gene A. This means  gene A is  expressing twice in treatment as compared to control (100 divided by 50 =2) or  fold  change  is  2.  This  works  well  for  over  expressed  genes  as  the  number  directly corresponds  to  how  many  times  a  gene  is  overexpressed. But when  it  is  other  way  round  (i.e, treatment  50,  control  100),  the  value  of  fold  change  will  be  0.5  (all  underexpressed  genes  will have values between 0 to 1, while overexpressed genes will have values from 1 to infinity). To make this leveled, we use log2 for expressing the fold change. I.e, log2 of 2 is 1 and log2 of 0.5 is -1.</i></p>
+			                <p><b>The log Fold change value is calculated by taking the log2 of avg CPM value of mutant vs control. log2(avg.cpm.mut)/(avg.cpm.wt)</b></p>
+			                <p><a>http://seqanswers.com/forums/showthread.php?t=26610</a></p></li>
+			                <li><P>Column-2 (logCPM):</P>
+			                <p>log CPM refers to log (Counts per million reads). </p>
+			                <p>To calculate CPM manually in R it would be :</p>
+			                <p>cpm <-apply(countmatrix,2, function(x) (x/sum(x))*1000000) </p>
+			                <p># the 1 added to log function is to avoid log 0 values</p>
+			                <p>log.cpm <-log(cpm + 1)</p></li>
+			                <li><p>Column-3 (LR): Log Ratio / Likelihood Ratio: log2(X1 RPKM/ X2 RPKM).</p>
+			                <p>But, edgeR does not use RPKM, instead it calculates CPM (Counts per million). edgeR does not consider the  length  of  the  gene  for  normalization.  Read  counts  can  generally  be  expected  to  be  proportional  to length  as  well  as  to  expression  for  any  transcript,  but  edgeR  does  not  generally  need  to  adjust  for  gene length because gene length has the same relative influence on the read counts for each RNA sample. For this  reason,  normalization  issues  arise  only  to  the  extent  that  technical  factors  have  sample-specific effects.</p></li>
+			                <li>Column-4 (PValue): </li>
+			                <li>Column-5  (FDR): FDR  values  were  calculated  using  the  method  of  Benjamini  and  Hochberg  from  the distribution  of  2-way  ANOVA  p-values,  and  fold-change  values  were  calculated  on  a  linear  scale  using least squares mean.</li>
+			            </div>
+			          </div>
 
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">In a DEG analysis using edgeR, I noticed that few genes show ‘NA’ in the output file. What does this represent, and how it is calculated within edgeR?</p>
-											</header>
-											<div class="content">
-												<p>edgeR  uses  a  filtering  criteriato  remove  the  genes  with  low  filter  counts. Please  refer  to  page 11 of the edgeR user guide.</p>
-												<p><a>https://www.bioconductor.org/packages/3.3/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf</a></p>
-												<p><i>“A requirement for expression in two or more libraries is used as the minimum number of samples in each  group  is  two”. This ensures that a gene will be retained if it is only expressed in at least two groups.  Internally,  edgeR  is  using  the  following  code  to  filter  out  the  genes  based  on  the  CPM (Counts per million) values.</i></p>
-												<p>> keep <-rowSums(cpm(y)>1) >= 2</p>
-												<p>> y <-y[keep, , keep.lib.sizes=FALSE]</p>
-												<p>So by default, the cases that do not contain CPM of 1 or greater for at least 2 replicates, will be filtered out and thus gives ‘NA’ in the results file. Generally, it is preferred to use 3 replicates for RNA-Seq analysis, so a threshold of 2 works fine. In any case, if one would like to use a threshold of 1, the code could be modified.</p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">How much total RNA is required for RNA-Seq projects?</p>
-											</header>
-											<div class="content">
-												<p>The following specifications apply to total RNA samples:</p>
-												<ul style="list-style-type:disc;">
-													<li>Total amount: ≥ 5 μg</li>
-													<li>Concentration: ≥ 80 ng/μl</li>
-													<li>OD260/280 Range: 1.8-2.2</li>
-													<li>Re-suspended in nuclease-free water</li>
-												</ul>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">Resources for RNA-Seq analysis:</p>
-											</header>
-											<div class="content">
-												<ul style="list-style-type:disc;">
-													<li>SEQanswers (<a href="http://seqanswers.com/">http://seqanswers.com/</a>)</li>
-													<li>BioStars (<a href="https://www.biostars.org/">https://www.biostars.org/</a>)</li>
-													<li>Bioinformatics, Oxford Journals (<a href="http://www.oxfordjournals.org/our_journals/bioinformatics/nextgenerationsequencing.html">http://www.oxfordjournals.org/our_journals/bioinformatics/nextgenerationsequencing.html</a>)</li>
-													<li>RNA-Seq Blog (<a href="http://www.rna-seqblog.com/">http://www.rna-seqblog.com/</a>)</li>
-												</ul>
-											</div>
-										</div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">In a DEG analysis using edgeR, I noticed that few genes show ‘NA’ in the output file. What does this represent, and how it is calculated within edgeR?</p>
+			            </header>
+			            <div class="content">
+			              <p>edgeR  uses  a  filtering  criteriato  remove  the  genes  with  low  filter  counts. Please  refer  to  page 11 of the edgeR user guide.</p>
+			              <p><a>https://www.bioconductor.org/packages/3.3/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf</a></p>
+			              <p><i>“A requirement for expression in two or more libraries is used as the minimum number of samples in each  group  is  two”. This ensures that a gene will be retained if it is only expressed in at least two groups.  Internally,  edgeR  is  using  the  following  code  to  filter  out  the  genes  based  on  the  CPM (Counts per million) values.</i></p>
+			              <p>> keep <-rowSums(cpm(y)>1) >= 2</p>
+			              <p>> y <-y[keep, , keep.lib.sizes=FALSE]</p>
+			              <p>So by default, the cases that do not contain CPM of 1 or greater for at least 2 replicates, will be filtered out and thus gives ‘NA’ in the results file. Generally, it is preferred to use 3 replicates for RNA-Seq analysis, so a threshold of 2 works fine. In any case, if one would like to use a threshold of 1, the code could be modified.</p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">How much total RNA is required for RNA-Seq projects?</p>
+			            </header>
+			            <div class="content">
+			              <p>The following specifications apply to total RNA samples:</p>
+			              <ul style="list-style-type:disc;">
+			                <li>Total amount: ≥ 5 μg</li>
+			                <li>Concentration: ≥ 80 ng/μl</li>
+			                <li>OD260/280 Range: 1.8-2.2</li>
+			                <li>Re-suspended in nuclease-free water</li>
+			              </ul>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">Resources for RNA-Seq analysis:</p>
+			            </header>
+			            <div class="content">
+			              <ul style="list-style-type:disc;">
+			                <li>SEQanswers (<a href="http://seqanswers.com/">http://seqanswers.com/</a>)</li>
+			                <li>BioStars (<a href="https://www.biostars.org/">https://www.biostars.org/</a>)</li>
+			                <li>Bioinformatics, Oxford Journals (<a href="http://www.oxfordjournals.org/our_journals/bioinformatics/nextgenerationsequencing.html">http://www.oxfordjournals.org/our_journals/bioinformatics/nextgenerationsequencing.html</a>)</li>
+			                <li>RNA-Seq Blog (<a href="http://www.rna-seqblog.com/">http://www.rna-seqblog.com/</a>)</li>
+			              </ul>
+			            </div>
+			          </div>
 
-									</div>
-									<h3 class="faq-header">Gene Ontology Enrichment Analysis</h3>
-									<div class="clearfix"></div>
-									<div data-rt-accordion data-rt-accordion-toggle="on" class="rt-accordion">
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">Background Frequency and Sample Frequency</p>
-											</header>
-											<div class="content">
-												<p>Background frequencyis the number of genes annotated to a GO term in the entire background set, while sample frequencyis the number of genes annotated to that GO term in the input list. For example, if the
-												input  list  contains  10  genes  and  the  enrichment  is  done  for  biological  process  in S.  cerevisiaewhose background  set  contains  6442  genes,  then  if  5  out  of  the  10  input  genes  are  annotated  to  the  GO  term: DNA  repair,  then  the  sample  frequency  for  DNA  repair  will  be  5/10.  Whereas  if  there  are  100  genes annotated  to  DNA  repair  in  all  of  the S.  cerevisiaegenome,  then  the  background  frequency  will  be 100/6442.</p>
-												<p></p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">P-value</p>
-											</header>
-											<div class="content">
-												<p>P-valueis the probability or chance of seeing at least x number of genes out of the total n genes in the list annotated to a particular GO term, given the proportion of genes in the whole genome that are annotated to  that  GO  Term.  That  is,  the  GO  terms  shared  by  the  genes  in  the  user's  list  are  compared  to  the background distribution of annotation. The closer the p-value is to zero, the more significant the particular GO term associated with the group of genes is (i.e. the less likely the observed annotation of the particular GO term to a group of genes occurs by chance).</p>
-												<p>In other words, when searching the process ontology, if all of the genes in a group were associated with "DNA  repair",  this  term  would  be  significant.  However,  since  all  genes  in  the  genome  (with  GO annotations)  are  indirectly  associated  with  the  top  level  term  "biological_process",  this  would  not  be significant if all the genes in a group were associated with this very high level term.</p>
-											</div>
-										</div>
-									</div>
-										<h3 class="faq-header">SNP-Seq</h3>
-									<div class="clearfix"></div>
-									<div data-rt-accordion data-rt-accordion-toggle="on" class="rt-accordion">
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title"></p>
-											</header>
-											<div class="content">
-												<p></p>
-												<p></p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title"></p>
-											</header>
-											<div class="content">
-												<p></p>
-												<p></p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title"></p>
-											</header>
-											<div class="content">
-												<p></p>
-												<p></p>
-											</div>
-										</div>
-									</div>
-									<h3 class="faq-header">Methyl-Seq</h3>
-									<div class="clearfix"></div>
-										<div data-rt-accordion data-rt-accordion-toggle="on" class="rt-accordion">
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">What is methyl-Seq?</p>
-											</header>
-											<div class="content">
-												<p>Is a technique that can determine DNA methylation patterns. The major difference from regular sequencing experiments is that, in bisulfite sequencing DNA is treated with bisulfite which convert cytosine residues to uracil, but leaves 5-methylcytosine residues unaffected. By sequencing and aligning those converted DNA fragments it is possible to call methylation status on the methylation states of individual cytosines.</p>
-												<p></p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">What are the different types of Bi-sulfite sequencing?</p>
-											</header>
-											<div class="content">
-												<ul style="list-style-type: circle; padding: 0px; margin: 20px;">
-													<li>Targeted Bisulfite Sequencing (TBS): Bisulfite sequencing method to detect base resolution DNA methylation at a targeted region of interest.</li>
-													<li> Reduced  Representation  Bi-sulfite  Sequencing  (RRBS): Bisulfite  sequencing  method  utilized  to detect nearly all CpG sites across the entiregenome at base resolution detail.</li>
-													<li>Whole  Genome  Bi-sulfite  Sequencing  (WGBS): Complete  genome  coverage  of  methylation  at every CpG site and less common non-CpG sites such as CNG.</li>
-												</ul>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">What alignment program one can use to map the reads to a reference genome?</p>
-											</header>
-											<div class="content">
-												<p>Bismark, BSMAP, and RMAPBS</p>
-												<p></p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">How do I choose aligner for methyl-seq data?</p>
-											</header>
-											<div class="content">
-												<p>Choosing your aligner depends on the type of data. If using RRBS and WGBS data, bismark is a good one to use. When you need to align Methylated DNA immunoprecipitation(MeDIP or mDIP) MeQA, or MEDIPS pipelines are useful. </p>
-												<p></p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">How do you ensure best output and visualization of methylation data?</p>
-											</header>
-											<div class="content">
-												<p>Pre-processing of sequencing reads is a must for best possible output and the visualization of the methylation data.</p>
-												<p></p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">What isgood sequencing coverage for Methyl-Seq Sequencing?</p>
-											</header>
-											<div class="content">
-												<ul style="list-style-type: circle; padding: 0px; margin: 20px;">
-													<li>Large target regions: Probes should cover several hundred kilobases to several megabases of contiguous  sequence  including  exons,  introns, 5’ regulatory  regions, 3’ regulatory  regions,  and flanking regions.</li>
-													<li>Great specificityhavinglonger probes (200-300bp)</li>
-													<li>Coverageof the targeted region including repeats</li>
-												</ul>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">Non-directional or paired-end RRBS libraries?</p>
-											</header>
-											<div class="content">
-												<p>Non-directional bisulfite sequencing is less common, but has been performed in a number of studies(Cokus et al. (2008), Popp et al. (2010), Smallwood et al. (2011), Hansen et al. (2011), Kobayashi al.(2012)). In this type of library, sequence reads may originate from all four possible bisulfite DNAstrands (original top (OT), complementary to OT (CTOT), original bottom (OB) or complementary toOB (CTOB)) with roughly the same likelihood.Paired-end reads do by definition contain one read from one of the original strands as well as onecomplementary strand. Please note that the CTOT or CTOB strands in a read pair are reversecomplements of the OT or OB strands, respectively, and thus they carry methylation information for
-												the exact same strand as their partner read but not for the other original DNA strand. Similar todirectional single-end libraries, the first read of directional paired-end libraries always comes fromeither the OT or OB strand. The first read of non-directional paired-end libraries may originate fromany of the four possible bisulfite strands.(see <a>http://www.bioinformatics.bbsrc.ac.uk/projects/seqmonk</a>)</p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title"> What is CpG methylation?</p>
-											</header>
-											<div class="content">
-												<p>CpG islands are defined as stretches of DNA 500–1500 bp long with a CG: GC ratio of more than 0.6, and they are normally found at promoters and contain the 5′ end of the transcript (reviewed in Cross and Bird, 1995). From: Advances in Genetics, 2002.</p>
-												<p></p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">How do I identify CpG islands?</p>
-											</header>
-											<div class="content">
-												<p>CpG islands are defined as sequence ranges where the Obs/Exp value is greater than 0.6 and the GC content is greater than 50%. The expected number of CpG dimers in a window is calculated as the number of  'C's  in  the  window  multiplied  by  the  number  of  'G's  in  the  window,  divided  by  the  window length</p>
-												<p><a>www.sciencedirect.com › topics › neuroscience › cpg-island</a></p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">Resources for methylation Analysis:</p>
-											</header>
-											<div class="content">
-												<p><a>https://www.ucl.ac.uk/cancer/medicalgenomics/medusaproject</a></p>
-												<p><a>http://www.ihec-epigenomes.org/</a></p>
-												<P><a>https://groups.google.com/forum/#!forum/methylkit_discussion/</a></P>
-												<p><a>http://www.bioinformatics.bbsrc.ac.uk/projects/seqmonk</a></p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">How do we account for bias in Methylation data?</p>
-											</header>
-											<div class="content">
-												<p>There are several hurdles to cross when analysing Methyl-seq data, particularly during the identification of DMRs. Normalization of read counts contribute to eliminate biases as a result of variability in sequencing depth between samples. While, global read count normalization can help address this problem, it does not account for ‘competition’ effects. For example, in RNA-seq  specific highly expressed genes can lead to a depressed read count in other genes introducing a bias when comparing samples. Same situation can be
-												found with MeDIP-seq, where sample-specific repeat methylation could potentially diminish reads in other genomic regions and introduce bias tothe analysis. Methods for calculating methylation have proven to be useful when identifying large global changes, for example hypomethylation, or hypermethylation regions of a given sample. However, these methods have not provided a framework for determining the location of DMRs in a statistically rigorous manner just yet. By using methods such as
-												<b>DESeq</b> that estimate variance in a local fashion, it is possible to remove potential selection biases. Additionally, DESeq estimates a flexible, mean-dependent local regression rather than attempting to reliably estimate both the variance and mean parameters of the distribution from limited numbers of replicates. Finally, False positive could be included in the  interpretation  of  your  data  by  differences  in  DNA  fragment  size  distributions  between  samples. Performing
-												<b>fragment length normalization</b> through read sub-sampling to equalize the distributions can eliminate this potential bias. Additional tools such as <b>EdgeR</b>, or <b>methylkit</b> can also be used.</p>
-												<p><a>https://www.ncbi.nlm.nih.gov/books/NBK402335/</a></p>
-											</div>
-										</div>
-									</div>
-									<h3 class="faq-header">payment options</h3>
-									<div class="clearfix"></div>
-									<div data-rt-accordion data-rt-accordion-toggle="on" class="rt-accordion">
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">How Walton Became A Globally Well-Known Brand</p>
-											</header>
-											<div class="content">
-												<p>Etiam vel leo lacus. Fusce vestibulum viverra justo, vel dictum lorem venenatis at. Sed eleifend, quam sed commodo varius, mauris magna tristique justo, et volutpat leo urna eget justo. Mauris iaculis dolor quis porta finibus. </p>
-												<p>Donec id molestie nisl. Suspendisse nisi leo, elementum eu suscipit non, mollis id sapien. Nunc at nibh urna. </p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">Why Is Everyone Talking About Walton?</p>
-											</header>
-											<div class="content">
-												<p>Etiam vel leo lacus. Fusce vestibulum viverra justo, vel dictum lorem venenatis at. Sed eleifend, quam sed commodo varius, mauris magna tristique justo, et volutpat leo urna eget justo. Mauris iaculis dolor quis porta finibus. </p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">7 Unexpected Ways Walton Can Make Your Life Better</p>
-											</header>
-											<div class="content">
-												<p>Etiam vel leo lacus. Fusce vestibulum viverra justo, vel dictum lorem venenatis at. Sed eleifend, quam sed commodo varius, mauris magna tristique justo, et volutpat leo urna eget justo. Mauris iaculis dolor quis porta finibus. </p>
-												<p>Donec id molestie nisl. Suspendisse nisi leo, elementum eu suscipit non, mollis id sapien. Nunc at nibh urna. </p>
-											</div>
-										</div>
-										<div data-rt-accordion-item class="rt-accordion-item">
-											<header>
-												<p class="title">Seven Latest Developments In Walton</p>
-											</header>
-											<div class="content">
-												<p>Etiam vel leo lacus. Fusce vestibulum viverra justo, vel dictum lorem venenatis at. Sed eleifend, quam sed commodo varius, mauris magna tristique justo, et volutpat leo urna eget justo. Mauris iaculis dolor quis porta finibus. </p>
-												<p>Donec id molestie nisl. Suspendisse nisi leo, elementum eu suscipit non, mollis id sapien. Nunc at nibh urna. </p>
-											</div>
-										</div>
-									</div>
-								</div><!-- Sidebar start -->
-								<div class="col-md-4">
-									<div class="sidebar">
-										<div class="widget image-bg image-bg-M1">
-											<h3 class="widget-title">Hiring Researchers</h3>
-											<div class="widget-content">
-												<p>From experienced researchers to interested graduate students, BioinfoCore may have a place for you</p>
-												<p><a href="page-contacts.html#contact-form" class="btn btn-1">join our team</a></p>
-											</div>
-										</div>
-										<div class="widget palette-2-bg">
-											<h3 class="widget-title">contact us</h3>
-											<div class="widget-content">
-												<p>At USU’s high-performance computing and bioinformatics facility, we have developed a series of parallel-, multi-core-CPU-based open-source pipelines for large-scale -omics data analysis, which enables efficient and parallel analysis of multiple datasets in a short time. </p>
-												<p><a href="page-contacts.html#contact-form" class="btn btn-1">get in touch</a></p>
-											</div>
-										</div>
-									</div>
-								</div><!-- Sidebar end -->
-							</div>
-						</div>
-					</div><!-- Page content end -->
-									</div><!-- Footer start -->
-				{% include "universal/_footer.njk" %}
+			        </div>
+			        <h3 class="faq-header">Gene Ontology Enrichment Analysis</h3>
+			        <div class="clearfix"></div>
+			        <div data-rt-accordion data-rt-accordion-toggle="on" class="rt-accordion">
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">Background Frequency and Sample Frequency</p>
+			            </header>
+			            <div class="content">
+			              <p>Background frequencyis the number of genes annotated to a GO term in the entire background set, while sample frequencyis the number of genes annotated to that GO term in the input list. For example, if the
+			              input  list  contains  10  genes  and  the  enrichment  is  done  for  biological  process  in S.  cerevisiaewhose background  set  contains  6442  genes,  then  if  5  out  of  the  10  input  genes  are  annotated  to  the  GO  term: DNA  repair,  then  the  sample  frequency  for  DNA  repair  will  be  5/10.  Whereas  if  there  are  100  genes annotated  to  DNA  repair  in  all  of  the S.  cerevisiaegenome,  then  the  background  frequency  will  be 100/6442.</p>
+			              <p></p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">P-value</p>
+			            </header>
+			            <div class="content">
+			              <p>P-valueis the probability or chance of seeing at least x number of genes out of the total n genes in the list annotated to a particular GO term, given the proportion of genes in the whole genome that are annotated to  that  GO  Term.  That  is,  the  GO  terms  shared  by  the  genes  in  the  user's  list  are  compared  to  the background distribution of annotation. The closer the p-value is to zero, the more significant the particular GO term associated with the group of genes is (i.e. the less likely the observed annotation of the particular GO term to a group of genes occurs by chance).</p>
+			              <p>In other words, when searching the process ontology, if all of the genes in a group were associated with "DNA  repair",  this  term  would  be  significant.  However,  since  all  genes  in  the  genome  (with  GO annotations)  are  indirectly  associated  with  the  top  level  term  "biological_process",  this  would  not  be significant if all the genes in a group were associated with this very high level term.</p>
+			            </div>
+			          </div>
+			        </div>
+			          <h3 class="faq-header">SNP-Seq</h3>
+			        <div class="clearfix"></div>
+			        <div data-rt-accordion data-rt-accordion-toggle="on" class="rt-accordion">
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title"></p>
+			            </header>
+			            <div class="content">
+			              <p></p>
+			              <p></p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title"></p>
+			            </header>
+			            <div class="content">
+			              <p></p>
+			              <p></p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title"></p>
+			            </header>
+			            <div class="content">
+			              <p></p>
+			              <p></p>
+			            </div>
+			          </div>
+			        </div>
+			        <h3 class="faq-header">Methyl-Seq</h3>
+			        <div class="clearfix"></div>
+			          <div data-rt-accordion data-rt-accordion-toggle="on" class="rt-accordion">
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">What is methyl-Seq?</p>
+			            </header>
+			            <div class="content">
+			              <p>Is a technique that can determine DNA methylation patterns. The major difference from regular sequencing experiments is that, in bisulfite sequencing DNA is treated with bisulfite which convert cytosine residues to uracil, but leaves 5-methylcytosine residues unaffected. By sequencing and aligning those converted DNA fragments it is possible to call methylation status on the methylation states of individual cytosines.</p>
+			              <p></p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">What are the different types of Bi-sulfite sequencing?</p>
+			            </header>
+			            <div class="content">
+			              <ul style="list-style-type: circle; padding: 0px; margin: 20px;">
+			                <li>Targeted Bisulfite Sequencing (TBS): Bisulfite sequencing method to detect base resolution DNA methylation at a targeted region of interest.</li>
+			                <li> Reduced  Representation  Bi-sulfite  Sequencing  (RRBS): Bisulfite  sequencing  method  utilized  to detect nearly all CpG sites across the entiregenome at base resolution detail.</li>
+			                <li>Whole  Genome  Bi-sulfite  Sequencing  (WGBS): Complete  genome  coverage  of  methylation  at every CpG site and less common non-CpG sites such as CNG.</li>
+			              </ul>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">What alignment program one can use to map the reads to a reference genome?</p>
+			            </header>
+			            <div class="content">
+			              <p>Bismark, BSMAP, and RMAPBS</p>
+			              <p></p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">How do I choose aligner for methyl-seq data?</p>
+			            </header>
+			            <div class="content">
+			              <p>Choosing your aligner depends on the type of data. If using RRBS and WGBS data, bismark is a good one to use. When you need to align Methylated DNA immunoprecipitation(MeDIP or mDIP) MeQA, or MEDIPS pipelines are useful. </p>
+			              <p></p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">How do you ensure best output and visualization of methylation data?</p>
+			            </header>
+			            <div class="content">
+			              <p>Pre-processing of sequencing reads is a must for best possible output and the visualization of the methylation data.</p>
+			              <p></p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">What isgood sequencing coverage for Methyl-Seq Sequencing?</p>
+			            </header>
+			            <div class="content">
+			              <ul style="list-style-type: circle; padding: 0px; margin: 20px;">
+			                <li>Large target regions: Probes should cover several hundred kilobases to several megabases of contiguous  sequence  including  exons,  introns, 5’ regulatory  regions, 3’ regulatory  regions,  and flanking regions.</li>
+			                <li>Great specificityhavinglonger probes (200-300bp)</li>
+			                <li>Coverageof the targeted region including repeats</li>
+			              </ul>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">Non-directional or paired-end RRBS libraries?</p>
+			            </header>
+			            <div class="content">
+			              <p>Non-directional bisulfite sequencing is less common, but has been performed in a number of studies(Cokus et al. (2008), Popp et al. (2010), Smallwood et al. (2011), Hansen et al. (2011), Kobayashi al.(2012)). In this type of library, sequence reads may originate from all four possible bisulfite DNAstrands (original top (OT), complementary to OT (CTOT), original bottom (OB) or complementary toOB (CTOB)) with roughly the same likelihood.Paired-end reads do by definition contain one read from one of the original strands as well as onecomplementary strand. Please note that the CTOT or CTOB strands in a read pair are reversecomplements of the OT or OB strands, respectively, and thus they carry methylation information for
+			              the exact same strand as their partner read but not for the other original DNA strand. Similar todirectional single-end libraries, the first read of directional paired-end libraries always comes fromeither the OT or OB strand. The first read of non-directional paired-end libraries may originate fromany of the four possible bisulfite strands.(see <a>http://www.bioinformatics.bbsrc.ac.uk/projects/seqmonk</a>)</p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title"> What is CpG methylation?</p>
+			            </header>
+			            <div class="content">
+			              <p>CpG islands are defined as stretches of DNA 500–1500 bp long with a CG: GC ratio of more than 0.6, and they are normally found at promoters and contain the 5′ end of the transcript (reviewed in Cross and Bird, 1995). From: Advances in Genetics, 2002.</p>
+			              <p></p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">How do I identify CpG islands?</p>
+			            </header>
+			            <div class="content">
+			              <p>CpG islands are defined as sequence ranges where the Obs/Exp value is greater than 0.6 and the GC content is greater than 50%. The expected number of CpG dimers in a window is calculated as the number of  'C's  in  the  window  multiplied  by  the  number  of  'G's  in  the  window,  divided  by  the  window length</p>
+			              <p><a>www.sciencedirect.com › topics › neuroscience › cpg-island</a></p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">Resources for methylation Analysis:</p>
+			            </header>
+			            <div class="content">
+			              <p><a>https://www.ucl.ac.uk/cancer/medicalgenomics/medusaproject</a></p>
+			              <p><a>http://www.ihec-epigenomes.org/</a></p>
+			              <P><a>https://groups.google.com/forum/#!forum/methylkit_discussion/</a></P>
+			              <p><a>http://www.bioinformatics.bbsrc.ac.uk/projects/seqmonk</a></p>
+			            </div>
+			          </div>
+			          <div data-rt-accordion-item class="rt-accordion-item">
+			            <header>
+			              <p class="title">How do we account for bias in Methylation data?</p>
+			            </header>
+			            <div class="content">
+			              <p>There are several hurdles to cross when analysing Methyl-seq data, particularly during the identification of DMRs. Normalization of read counts contribute to eliminate biases as a result of variability in sequencing depth between samples. While, global read count normalization can help address this problem, it does not account for ‘competition’ effects. For example, in RNA-seq  specific highly expressed genes can lead to a depressed read count in other genes introducing a bias when comparing samples. Same situation can be
+			              found with MeDIP-seq, where sample-specific repeat methylation could potentially diminish reads in other genomic regions and introduce bias tothe analysis. Methods for calculating methylation have proven to be useful when identifying large global changes, for example hypomethylation, or hypermethylation regions of a given sample. However, these methods have not provided a framework for determining the location of DMRs in a statistically rigorous manner just yet. By using methods such as
+			              <b>DESeq</b> that estimate variance in a local fashion, it is possible to remove potential selection biases. Additionally, DESeq estimates a flexible, mean-dependent local regression rather than attempting to reliably estimate both the variance and mean parameters of the distribution from limited numbers of replicates. Finally, False positive could be included in the  interpretation  of  your  data  by  differences  in  DNA  fragment  size  distributions  between  samples. Performing
+			              <b>fragment length normalization</b> through read sub-sampling to equalize the distributions can eliminate this potential bias. Additional tools such as <b>EdgeR</b>, or <b>methylkit</b> can also be used.</p>
+			              <p><a>https://www.ncbi.nlm.nih.gov/books/NBK402335/</a></p>
+			            </div>
+			          </div>
+			        </div>
+			      </div><!-- Sidebar start -->
+			      <div class="col-md-4">
+			        <div class="sidebar">
+			          <div class="widget image-bg image-bg-M1">
+			            <h3 class="widget-title">Hiring Researchers</h3>
+			            <div class="widget-content">
+			              <p>From experienced researchers to interested graduate students, BioinfoCore may have a place for you</p>
+			              <p><a href="page-contacts.html#contact-form" class="btn btn-1">join our team</a></p>
+			            </div>
+			          </div>
+			          <div class="widget palette-2-bg">
+			            <h3 class="widget-title">contact us</h3>
+			            <div class="widget-content">
+			              <p>At USU’s high-performance computing and bioinformatics facility, we have developed a series of parallel-, multi-core-CPU-based open-source pipelines for large-scale -omics data analysis, which enables efficient and parallel analysis of multiple datasets in a short time. </p>
+			              <p><a href="page-contacts.html#contact-form" class="btn btn-1">get in touch</a></p>
+			            </div>
+			          </div>
+			        </div>
+			      </div><!-- Sidebar end -->
+			    </div>
+			  </div>
 			</div>
-		{% include "universal/_footer-scripts.njk" %}
 
+		</article>
+
+		{% include "universal/_footer.njk" %}
+		{% include "universal/_footer-scripts.njk" %}
 	</body>
 </html>
