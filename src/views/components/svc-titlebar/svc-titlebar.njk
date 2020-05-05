@@ -1,0 +1,16 @@
+{% macro titlebar(name, linkName) %}
+<div class="content-section decorated-bg page-titlebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="title">{{ name }}</h1>
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="page-services.html">Services</a></li>
+          <li class="active">{{ linkName }}</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+{% endmacro %}
