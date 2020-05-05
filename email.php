@@ -2,8 +2,8 @@
 	ini_set( 'display_errors', 1 );
     error_reporting( E_ALL );
     $sender_email = $_POST['email'];
-    $to = "machyu32@hotmail.com";
-    $subject = "New mail from biocore";
+    $to = "smccowan33@gmail.com";
+    $subject = "BioinfoCore - New Message";
     $message = $_POST['message']."\n".$sender_name = $_POST['name']."\n".$sender_email."\n".$sender_phone = $_POST['phone']."\n";
     $headers = "From:" . $sender_email;
     mail($to,$subject,$message, $headers);

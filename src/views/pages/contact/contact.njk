@@ -3,71 +3,64 @@
 	{% include "universal/_header.njk" %}
 	<body>
 		{% include "universal/_preload.njk" %}
-		<div id="page" class="page">
-			<div id="content-wrapper" class="content-wrapper">
-				<div class="content-wrapper-inner">
-					{% include "universal/_navbar.njk" %}
+		{% include "universal/_navbar.njk" %}
 
-          <!-- Page titlebar start -->
-					<div class="content-section decorated-bg page-titlebar">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-12">
-									<h1 class="title">contact us</h1>
-									<ol class="breadcrumb">
-										<li><a href="#">Home</a></li>
-										<li><a href="#">Site Templates</a></li>
-										<li><a href="#">Business</a></li>
-										<li><a href="#">Corporate</a></li>
-										<li class="active">Walton Consulting</li>
-									</ol>
-								</div>
-							</div>
+		<section class="kbl-content-wrapper">
+			<!-- Page titlebar start -->
+			<article class="content-section decorated-bg page-titlebar">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<h1 class="title">contact us</h1>
+							<ol class="breadcrumb">
+								<li class="active">Contact</li>
+							</ol>
 						</div>
-					</div><!-- Page titlebar end -->
-					<!-- Map start -->
-					<div id="map-canvas" class="map-canvas content-section"></div><!-- Map end -->
-					<!-- Contacts start -->
-					<div class="content-section contacts-page-section">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-12">
-									<div class="contacts-page-content">
-										<div class="content-block palette-2-bg left">
-											<h3>Contact us</h3>
-											<div class="widget widget-contacts">
-												<div class="widget-content">
-													<p class="title text-heading">Bioinformatics and HPC facility</p>
-													<p class="address">4700 Old Main Hill<br>Logan, UT 84322-4700 </p>
-													<p class="phone">1 (435) 797-2753</p>
-													<p class="email"><a href="#contact-form">biocore.usu.edu@mail.com</a></p>
-												</div>
-											</div>
-										</div>
-								<a name="contact-form" id="contact-form"></a>
-										<div class="content-block palette-4-bg right">
-											<h3>send us a message</h3>
-											<p>Feel free to drop us a line below.</p>
-											<div class="row">
-												<form id="contact-form">
-													<div class="form-group contacts-form-result"><strong></strong></div>
-													<div class="form-group"><input type="text" placeholder="Your name..." name="comment-name" class="form-control"></div>
-													<div class="form-group"><input type="email" placeholder="Your e-mail..." name="comment-email" class="form-control"></div>
-													<div class="form-group"><input type="tel" placeholder="Your phone..." name="comment-phone" class="form-control"></div>
-													<div class="form-group"><textarea rows="10" placeholder="Your message..." name="comment-message" class="form-control"></textarea></div>
-													<div class="form-group text-center"><button type="submit" class="btn btn-1">Send Your Request</button></div>
-												</form>
-											</div>
+					</div>
+				</div>
+			</article><!-- Page titlebar end -->
+			<!-- Map start -->
+			<div id="map-canvas" class="map-canvas content-section"></div><!-- Map end -->
+			<!-- Contacts start -->
+			<article class="content-section contacts-page-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="contacts-page-content">
+								<section class="content-block palette-2-bg left">
+									<h3>Contact us</h3>
+									<div class="widget widget-contacts">
+										<div class="widget-content">
+											<p class="title text-heading">Bioinformatics and HPC facility</p>
+											<p class="address">4700 Old Main Hill<br>Logan, UT 84322-4700 </p>
+											<p class="phone">1 (435) 797-2753</p>
+											<p class="email"><a href="#contact-form">biocore.usu.edu@mail.com</a></p>
 										</div>
 									</div>
-								</div>
+								</section>
+						<a name="contact-form" id="contact-form"></a>
+								<section class="content-block palette-4-bg right">
+									<h3>send us a message</h3>
+									<p>Feel free to drop us a line below.</p>
+									<div class="row">
+										<form id="contact-form">
+											<div class="form-group contacts-form-result"><strong></strong></div>
+											<div class="form-group"><input type="text" placeholder="Your name..." name="comment-name" class="form-control"></div>
+											<div class="form-group"><input type="email" placeholder="Your e-mail..." name="comment-email" class="form-control"></div>
+											<div class="form-group"><input type="tel" placeholder="Your phone..." name="comment-phone" class="form-control"></div>
+											<div class="form-group"><textarea rows="10" placeholder="Your message..." name="comment-message" class="form-control"></textarea></div>
+											<div class="form-group text-center"><button type="submit" class="btn btn-1">Send Your Request</button></div>
+										</form>
+									</div>
+								</section>
 							</div>
 						</div>
-					</div><!-- Contacts end -->
+					</div>
+				</div>
+			</article>
+		</section>
 
-				</div><!-- Footer start -->
-				{% include "universal/_footer.njk" %}
-			</div>
+		{% include "universal/_footer.njk" %}
 		{% include "universal/_footer-scripts.njk" %}
 	</body>
 </html>

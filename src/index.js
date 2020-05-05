@@ -49,6 +49,7 @@ app.use(baseUrl + 'public/css', express.static(path.join(__dirname, '/../public/
 
 // Images can be retrieved with http://url/biotec/image/:imagename
 app.use(baseUrl + 'images/', express.static(__dirname + '/../images'));
+app.use(baseUrl + 'img/', express.static(__dirname + '/../img'));
 app.use(baseUrl + 'biocore-images/', express.static(__dirname + '/../biocore-images'));
 app.use(baseUrl + 'js/', express.static(__dirname + '/../js'));
 app.use(baseUrl + 'css/', express.static(__dirname + '/../css'));

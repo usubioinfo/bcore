@@ -9,10 +9,17 @@
 @import '../views/universal/navbar';
 @import '../views/universal/footer';
 
+@import '../views/services/services';
+
 .no-select {
   pointer-events: none;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
+}
+
+.kbl-content-wrapper {
+  background: white;
+  text-align: left;
 }
