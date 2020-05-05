@@ -8,21 +8,9 @@
 				<div class="content-wrapper-inner">
 					{% include "universal/_navbar.njk" %}
 
-          <!-- Page titlebar start -->
-					<div class="content-section decorated-bg page-titlebar">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-12">
-									<h1 class="title">DNA Methylation (RRBS)l</h1>
-									<ol class="breadcrumb">
-										<li><a href="index.html">Home</a></li>
-										<li><a href="page-services.html">services</a></li>
-										<li class="active">RRBS type</li>
-									</ol>
-								</div>
-							</div>
-						</div>
-					</div><!-- Page titlebar end -->
+					{%  from "components/svc-titlebar/svc-titlebar.njk" import titlebar %}
+					{{ titlebar("DNA Methylation (RRBS)", "RRBS") }}
+          
 					<!-- Page content start -->
 					<div class="content-section" style="padding-bottom: 0px;">
 						<div class="container">
