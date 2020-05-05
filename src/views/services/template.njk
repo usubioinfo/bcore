@@ -1,0 +1,37 @@
+{% macro service(filename, titleName, linkName) %}
+{% set file = "services/" + filename + "/content.njk" %}
+<!DOCTYPE html>
+<html lang="en">
+	{% include "universal/_header.njk" %}
+	<body>
+		{% include "universal/_preload.njk" %}
+		<div id="page" class="page">
+			<div id="content-wrapper" class="content-wrapper">
+				<div class="content-wrapper-inner">
+					{% include "universal/_navbar.njk" %}
+
+					{%  from "components/svc-titlebar/svc-titlebar.njk" import titlebar %}
+					{{ titlebar(titleName, linkName) }}
+
+					<!-- Page content start -->
+					<div class="content-section">
+						<div class="container">
+							<div class="row">
+								<section class="col-md-8">
+									{% include (file) %}
+								</section>
+
+								<section class="col-md-4">
+									{% include "components/svc-sidebar/svc-sidebar.njk" %}
+								</section>
+							</div>
+						</div>
+					</div><!-- Page content end -->
+
+				</div><!-- Footer start -->
+				{% include "universal/_footer.njk" %}
+			</div>
+		{% include "universal/_footer-scripts.njk" %}
+	</body>
+</html>
+{% endmacro %}
