@@ -350,7 +350,8 @@
 		</article>
 
 		{% include "universal/_footer.njk" %}
-		{% include "universal/_footer-scripts.njk" %}
+		{% from "universal/_scripts-macro.njk" import scripts %}
+		{{ scripts() }}
 
 	</body>
 </html>
