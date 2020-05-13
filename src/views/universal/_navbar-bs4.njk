@@ -82,7 +82,7 @@
                 <ul>
                   {% from "./nav/nav.services.njk" import services %}
                   {% for service in services %}
-                    <li><a href="services/{{service.url}}">{{ service.name }}</a></li>
+                    <li><a href="services/{{service.url}}">{{ service.navName }}</a></li>
                   {% endfor %}
                 </ul>
               </li>

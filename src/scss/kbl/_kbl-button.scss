@@ -1,0 +1,24 @@
+@import '../globals';
+@import '../colors';
+
+@mixin kbl-btn($btn-color, $btn-color-hvr, $btn-txt-color, $font-weight: $font-weight-heavy) {
+  border-radius: 0px!important;
+  color: $btn-txt-color!important;
+  padding: 10px 30px!important;
+  transition: all $time-mid;
+  background: $btn-color!important;
+  font-family: 'Open Sans', sans-serif!important;
+  font-weight: $font-weight!important;
+
+  &:hover {
+    background: $btn-color-hvr!important;
+  }
+}
+
+.kbl-btn-1 {
+  @include kbl-btn($palette-1, $palette-1-dark, #fff);
+}
+
+.kbl-btn-2 {
+  @include kbl-btn($palette-2, $palette-2-light, #fff);
+}
