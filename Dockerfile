@@ -3,6 +3,7 @@ WORKDIR	~/apps/bioinftest
 COPY package*.json ./
 
 RUN npm	install
+RUN npm run sass:build
 
 COPY . .
 
