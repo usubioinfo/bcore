@@ -8022,52 +8022,52 @@ form .contacts-form-result.show {
   color: #00b1f5;
 }
 .image-bg-1 {
-  background-image: url("../images/2250x1500.png");
+  background-image: url("/images/2250x1500.png");
 }
 .image-bg-2 {
-  background-image: url("../images/2250x1500.png");
+  background-image: url("/images/2250x1500.png");
 }
 .image-bg-3 {
-  background-image: url("../images/2250x1500.png");
+  background-image: url("/images/2250x1500.png");
 }
 .image-bg-4 {
-  background-image: url("../images/2250x1500.png");
+  background-image: url("/images/2250x1500.png");
 }
 .image-bg-5 {
-  background-image: url("../images/2250x1500.png");
+  background-image: url("/images/2250x1500.png");
 }
 .image-bg-6 {
-  background-image: url("../images/2250x1500.png");
+  background-image: url("/images/2250x1500.png");
 }
 .image-bg-7 {
-  background-image: url("../images/2250x1500.png");
+  background-image: url("/images/2250x1500.png");
 }
 .image-bg-8 {
-  background-image: url("../images/2250x1500.png");
+  background-image: url("/images/2250x1500.png");
 }
 .image-bg-9 {
-  background-image: url("../images/2250x1500.png");
+  background-image: url("/images/2250x1500.png");
 }
 .image-bg-10 {
-  background-image: url("../biocore-images/biochain.jpg");
+  background-image: url("/biocore-images/biochain.jpg");
 }
 .image-bg-11 {
-  background-image: url("../biocore-images/cloud-v5.png");
+  background-image: url("/biocore-images/cloud-v5.jpg");
 }
 .image-bg-12 {
-  background-image: url("../images/2250x1500.png");
+  background-image: url("/images/2250x1500.png");
 }
 .image-bg-13 {
-  background-image: url("../images/2250x1500.png");
+  background-image: url("/images/2250x1500.png");
 }
 .image-bg-14 {
-  background-image: url("../images/2250x1500.png");
+  background-image: url("/images/2250x1500.png");
 }
 .image-bg-M1 {
-  background-image: url("../biocore-images/picture4/slide4.jpg");
+  background-image: url("/biocore-images/picture4/slide4.jpg");
 }
 .image-bg-M2 {
-  background-image: url("../biocore-images/picture4/slide5.jpg");
+  background-image: url("/biocore-images/picture4/slide5.jpg");
 }
 .image-bg {
   background-position: center;
@@ -10777,4 +10777,3 @@ fieldset[disabled] a.post.single .share-article a {
 
 #contact-form::before {
 	}
-
