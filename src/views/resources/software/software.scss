@@ -20,7 +20,7 @@
   font-weight: 800;
   border-bottom: solid 2px rgb(255, 255, 255);
   border-bottom: solid 2px rgba(255, 255, 255, 0);
-  transition: 0.2s;
+  transition: $time-mid;
 }
 
 .module-title:hover {

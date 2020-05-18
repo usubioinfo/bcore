@@ -1,0 +1,16 @@
+@import '../colors';
+@import '../globals';
+
+a {
+  transition: $time-mid;
+
+  &.palette-2 {
+    color: $palette-2;
+    text-decoration: underline;
+
+    &:hover {
+      color: $link-color;
+      text-decoration: none;
+    }
+  }
+}

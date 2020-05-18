@@ -1,15 +1,18 @@
 <!DOCTYPE html>
+{% set bs4 = true %}
 <html lang="en">
-	{% include "universal/_header.njk" %}
+	{% from "universal/_header-macro.njk" import header %}
+	{{ header(bs4=bs4) }}
 	<body>
 		{% include "universal/_preload.njk" %}
-		{% include "universal/_navbar.njk" %}
+		{% from "universal/_navbar-switch.njk" import navbar %}
+		{{ navbar(bs4=bs4) }}
 
 		<article class="kbl-content-wrapper">
 			<!-- Page titlebar start -->
 			<section class="content-section decorated-bg page-titlebar">
-			  <div class="container">
-			    <div class="row">
+			  <div class="container-fluid px-5">
+			    <div class="row px-5">
 			      <div class="col-lg-12">
 			        <h1 class="title">frequently asked questions</h1>
 			        <ol class="breadcrumb">
@@ -21,29 +24,33 @@
 			</section><!-- Page titlebar end -->
 			<!-- Intro start -->
 			<section class="content-section">
-			  <div class="container">
-			    <div class="row">
+			  <div class="container-fluid px-5">
+			    <div class="row px-5">
 			      <div class="col-md-6">
 			        <p class="text-decor-1">Welcome to USU bioinformatics core facility</p>
 			        <p class="text-decor-2">Ideas and breakthroughs fueled by computational prediction and next generation sequencing.</p>
 			      </div>
 			      <div class="col-md-6">
-			        <p>Our unit has been contributing to different research projects by providing, (i) Support and expertise in programming
+			        <p class="block">Our unit has been contributing to different research projects by providing, (i) Support and expertise in programming
 			          and advanced data analysis, focusing primarily on high-throughput genomics technologies including
 			          microarrays, genotyping and next-generation sequencing (RNA-seq, ChIP-seq, SNP-seq, etc.), (ii) Virtual
 			          server environments, secure and public web portals, and a large suite of open source applications, (iii)
 			          Instruction of hands-on tutorials and workshops on a wide variety of informatics topics, (iv) Custom data
 			          analysis and consultation services, and (v) Establishment of research collaborations with experimental
-			          scientists from different departments.</p>
-			        <p><a href="page-contacts.html#contact-form" class="btn btn-1"><i class="fa fa-file"></i> get a quotation</a><a href="page-contacts.html#contact-form" class="btn btn-2">get in touch</a></p>
+			          scientists from different departments.
+							</p>
+							<p>
+								<a href="#quote" class="btn kbl-btn-1"><i class="fa fa-file"></i> get a quotation</a>
+								<a href="#" class="btn kbl-btn-2">Get In Touch</a>
+							</p>
 			      </div>
 			    </div>
 			  </div>
 			</section><!-- Intro end -->
 			<!-- Page content start -->
 			<div class="content-section">
-			  <div class="container">
-			    <div class="row">
+			  <div class="container-fluid px-5">
+			    <div class="row px-5">
 			      <div class="col-md-8">
 			        <h2>Frequently Asked Questions</h2>
 			        <h3 class="faq-header">RNA-seq</h3>
@@ -467,14 +474,14 @@
 			            <h3 class="widget-title">Hiring Researchers</h3>
 			            <div class="widget-content">
 			              <p>From experienced researchers to interested graduate students, BioinfoCore may have a place for you</p>
-			              <p><a href="page-contacts.html#contact-form" class="btn btn-1">join our team</a></p>
+			              <p><a href="/contact#contact-form" class="btn kbl-btn-1">join our team</a></p>
 			            </div>
 			          </div>
 			          <div class="widget palette-2-bg">
 			            <h3 class="widget-title">contact us</h3>
 			            <div class="widget-content">
 			              <p>At USU’s high-performance computing and bioinformatics facility, we have developed a series of parallel-, multi-core-CPU-based open-source pipelines for large-scale -omics data analysis, which enables efficient and parallel analysis of multiple datasets in a short time. </p>
-			              <p><a href="page-contacts.html#contact-form" class="btn btn-1">get in touch</a></p>
+			              <p><a href="/contact#contact-form" class="btn kbl-btn-1">get in touch</a></p>
 			            </div>
 			          </div>
 			        </div>
@@ -485,7 +492,9 @@
 
 		</article>
 
-		{% include "universal/_footer.njk" %}
-		{% include "universal/_footer-scripts.njk" %}
+		{% from "universal/_footer-switch.njk" import footer %}
+		{{ footer(bs4=bs4) }}
+		{% from "universal/_scripts-macro.njk" import scripts %}
+		{{ scripts(bs4=bs4) }}
 	</body>
 </html>
