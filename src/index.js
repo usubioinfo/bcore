@@ -33,8 +33,9 @@ const getPDFs = function(callback) {
 nunEnv.addGlobal('getPDFs', getPDFs);
 nunEnv.addExtension('SetAsyncExtension', new SetAsyncExtension());
 
+/*
 app.use(baseUrl + 'scss', sass({
-    /* Options */
+    // Options
     src: path.join(__dirname, 'scss'),
     includePaths: ['scss', 'views'],
     dest: path.join(__dirname, '/../public/css'),
@@ -42,6 +43,7 @@ app.use(baseUrl + 'scss', sass({
     outputStyle: 'compressed',
     prefix:  '/css'  // Where prefix is at <link rel="stylesheets" href="prefix/style.css"/>
 }));
+*/
 
 app.use(cors());
 

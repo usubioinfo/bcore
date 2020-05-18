@@ -9,14 +9,14 @@
 		{{ navbar(bs4=bs4) }}
 
 		<article class="row manual-container">
-			<div class="col-xs-12">
+			<div class="col-12">
 				<span class="manual-page-title">Manuals</span>
 			</div>
 
 			{% setAsync('pdfs', getPDFs, []) %}
 			{% for pdf in pdfs %}
 				<div class="col-sm-6">
-					<div class="col-xs-12 hide-overflow">
+					<div class="col-12 hide-overflow">
 						<a href="{{ pdf.link }}" title="{{ pdf.name }}" target="_blank" rel="noopener noreferrer" class="pdf-title">
 							{{ pdf.name }}
 						</a>

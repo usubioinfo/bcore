@@ -1,18 +1,21 @@
 {% macro service(filename, titleName, linkName) %}
 {% set file = "services/" + filename + "/content.njk" %}
 <!DOCTYPE html>
+{% set bs4 = true %}
 <html lang="en">
-	{% include "universal/_header.njk" %}
+	{% from "universal/_header-macro.njk" import header %}
+	{{ header(bs4=bs4) }}
 	<body>
 		{% include "universal/_preload.njk" %}
-		{% include "universal/_navbar.njk" %}
+		{% from "universal/_navbar-switch.njk" import navbar %}
+		{{ navbar(bs4=bs4) }}
 
 		<div class="service-wrapper">
 			{%  from "components/svc-titlebar/svc-titlebar.njk" import titlebar %}
 			{{ titlebar(titleName, linkName) }}
 
-			<article class="container">
-				<div class="row">
+			<article class="container-fluid px-5">
+				<div class="row px-5">
 					<section class="col-md-8 pt-40">
 						{% include (file) %}
 					</section>
@@ -24,8 +27,10 @@
 			</article>
 		</div>
 
-		{% include "universal/_footer.njk" %}
-		{% include "universal/_footer-scripts.njk" %}
+		{% from "universal/_footer-switch.njk" import footer %}
+		{{ footer(bs4=bs4) }}
+		{% from "universal/_scripts-macro.njk" import scripts %}
+		{{ scripts(bs4=bs4) }}
 	</body>
 </html>
 {% endmacro %}

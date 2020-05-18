@@ -50,7 +50,7 @@
 }
 
 .nav-contact-col {
-  border-right: solid 1px #d5f0ff;
+  border-right: solid 1px #bfe6fb;
 }
 
 .nav-contact-title {
@@ -63,6 +63,17 @@
   font-weight: $font-weight-light;
   color: $primary-text;
   font-size: 90%;
+
+  a {
+    transition: $time-mid;
+    text-decoration: underline;
+    color: $text-main;
+
+    &:hover {
+      color: $palette-1;
+      text-decoration: none;
+    }
+  }
 }
 
 // Menu Bar

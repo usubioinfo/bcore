@@ -1,6 +1,9 @@
 @import 'globals';
 @import 'colors';
 @import 'kbl-import';
+@import 'default/export';
+
+@import '../views/pages/index/index';
 
 @import '../views/resources/software/software';
 @import '../views/resources/hardware/hardware';
@@ -10,6 +13,8 @@
 @import '../views/universal/footer';
 
 @import '../views/services/services';
+
+@import './old-rules';
 
 .no-select {
   pointer-events: none;
@@ -22,4 +27,14 @@ body {
 .kbl-content-wrapper {
   background: white;
   text-align: left;
+}
+
+// Icon Monster Stuff (placeholder)
+.mstr-icon {
+  font-size: 300%;
+  color: $palette-1!important;
+}
+
+h3 + p {
+  font-size: 110%!important;
 }

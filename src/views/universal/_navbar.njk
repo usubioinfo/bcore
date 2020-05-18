@@ -72,17 +72,10 @@
               </li>
               <li><a href="services/">Services</a>
                 <ul>
-                  <li><a href="services/rnaseq">RNA-seq</a></li>
-                  <li><a href="services/varseq">VAR-seq</a></li>
-                  <li><a href="services/chipseq">ChIP-seq</a></li>
-                  <li><a href="services/metagenomics">Metagenomics</a></li>
-                  <li><a href="services/16srnaseq">16S-RNA-seq</a></li>
-                  <li><a href="services/prokassembly">Prokaryotes Assembly</a></li>
-                  <li><a href="services/eukassembly">Eukaryotes Assembly</a></li>
-                  <li><a href="services/gbs">GBS</a></li>
-                  <li><a href="services/medips">Methylation (MEDips)</a></li>
-                  <li><a href="services/rrbs">Methylation (RRBS)</a></li>
-                  <li><a href="services/mirna">miRNA</a></li>
+                  {% from "./nav/nav.services.njk" import services %}
+                  {% for service in services %}
+                    <li><a href="services/{{service.url}}">{{ service.navName }}</a></li>
+                  {% endfor %}
                 </ul>
               </li>
               <li><a href="#">News</a>
