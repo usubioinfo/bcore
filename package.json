@@ -13,11 +13,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/chaosreader/bioinfocore.git"
+    "url": "https://github.com/MusicDev33/bioinfocore.git"
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/chaosreader/bioinfocore#readme",
+  "homepage": "https://github.com/MusicDev33/bioinfocore#readme",
   "dependencies": {
     "autoprefixer": "^9.8.0",
     "chokidar-cli": "^2.1.0",

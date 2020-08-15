@@ -1,5 +1,4 @@
-{% set 16s = {navName: '16S-RNA-Seq', url: '16srnaseq'} %}
-{% set 18s = {navName: '18S-RNA-Seq', url: '18srnaseq'} %}
+{% set amplicon = {navName: 'Amplicon Analysis', 'url': 'amplicon'} %}
 
 {% set chipSeq = {navName: 'ChIP-Seq', url: 'chipseq'} %}
 {% set rnaSeq = {navName: 'RNA-Seq', url: 'rnaseq'} %}
@@ -10,7 +9,6 @@
 {% set prokAss = {navName: 'Prokaryotes Assembly', url: 'prokassembly'} %}
 
 {% set gbs = {navName: 'GBS', url: 'gbs'} %}
-{% set its = {navName: 'ITS', url: 'its'} %}
 {% set metagenomics = {navName: 'Metagenomics', url: 'metagenomics'} %}
 {% set mirna = {navName: 'MiRNA', url: 'mirna'} %}
 
@@ -19,4 +17,4 @@
 {% set rrbs = {navName: 'Methylation (RRBS)', url: 'rrbs'} %}
 {% set wgbs = {navName: 'Methylation (WGBS)', url: 'wgbs'} %}
 
-{% set services = [16s, 18s, chipSeq, rnaSeq, varSeq, eukAss, prokAss, gbs, its, metagenomics, mirna, medips, rrbs, wgbs] %}
+{% set services = [amplicon, chipSeq, rnaSeq, varSeq, eukAss, prokAss, gbs, metagenomics, mirna, medips, rrbs, wgbs] %}

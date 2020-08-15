@@ -1,0 +1,71 @@
+{% extends "templates/service.template.njk" %}
+{%  from "components/svc-titlebar/svc-titlebar.njk" import titlebar %}
+
+{% block title %}
+  {{ titlebar('16S/18S/ITS Amplicon', 'Amplicon') }}
+{% endblock %}
+
+{% block content %}
+<article>
+  <p>
+    In genomics, 16S/18S/ITS gene sequencing (or simply amplicon analysis) is used to identify or classify bacterial species. 16SrRNA is a DNA sequence encoding in a
+    small subunit of rRNA in prokaryotes. It is mainly used to analuze the diversity of bacteria and archaea. 18SrRNA is the same thing, but in eukaryotes,
+    mostly used for it v4 region information abundance. ITs sequencing is mainly used for phylogenetic analysis of fungi. 16SrDNA, 18SrDNA, and ITS
+    sequencing tools are used for experimental design, prediction-based and homogeny-based taxonomic classification, and data pre-processing.
+  </p>
+  <h3>Metagenomics is not Amplicon Analysis!</h3>
+  <p>
+    Metagenomics tools allow population analysis of unculturable or previously unknown microbes. This is important because only about 1-2% of all
+    bacteria can be cultured in a lab. Metagenomics is the study of the functional genomes of microbial communities while amplicon analysis offers
+    a phylogenetic survey on the diversity of a single ribosomal gene.
+  </p>
+
+  <h6>16S rRNA Analysis Workflow</h6>
+
+  <ol>
+    <li>Read pre-processing and quality control</li>
+    <li>Read trimming and filtering</li>
+    <li>Sequencing and PCR error correction</li>
+    <li>Chimera detection</li>
+    <li>Read alignment with DADA2 or mothur</li>
+    <li>Cluster and classify sequences into OTUs with database of choices (SILVA, RDP, Greengenes, UNITE2)</li>
+    <li>
+      Statistical analysis:
+      <ul>
+        <li>Alpha/Beta diversity</li>
+        <li>Describe biodiversity of groups</li>
+        <li>Describe biodiversity of at phylum and OTUs level</li>
+        <li>Multivariate analysis</li>
+      </ul>
+    </li>
+    <li>Annotation</li>
+    <li>
+      Data Visualization:
+      <ul>
+        <li>Phylogenetic tree</li>
+        <li>Box plots</li>
+        <li>PCA analysis</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h2>Databases for Taxonomic Binning (SILVA, Greengenes, NCBI)</h2>
+  <p>
+    The SILVA database has taxonomic information for organisms in the domains Bacteria, Archaea, and Eukarya. It is manually curated and can be used for
+    16SRNA and 18SRNA analysis.
+  </p>
+
+  <p>
+    The RDP database is based on 16S rRNA sequences from the aforementioned domains, and includes fungi.
+  </p>
+
+  <p>
+    The Greengenes taxonomy is used for the Bacteria and Arachaea domains. A phylogenetic tree is constructed from 16SRNA sequences found freom public databases
+    and is passed through a quality filter. See https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-017-3501-4
+  </p>
+
+  <p>
+    NCBI is also manually curated and contains the names of all organisms submitted to the NCBI sequence database
+  </p>
+</article>
+{% endblock %}
