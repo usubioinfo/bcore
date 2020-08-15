@@ -1,5 +1,5 @@
 FROM node:12
-WORKDIR	~/apps/bioinftest
+WORKDIR	~/apps/bioinfocore
 COPY package*.json ./
 
 RUN npm	install
