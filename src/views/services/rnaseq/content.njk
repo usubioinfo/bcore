@@ -53,10 +53,7 @@
       </ul>
     </ul>
   </section>
-  <h3>When a reference genome is NOT available, then follow de novo assembly-based protocol:</h3>
-  <p>(assemble the reads de novoto make an assembled transcriptome and use that as a reference)</p>
-  <p>Step 1</p>
-  <p>Step 2</p>
+  <h3>When a reference genome is NOT available, then follow de novo assembly-based protocol.</h3>
 
   {% from "components/svc-prev-next/svc-prev-next.njk" import switch %}
   {{ switch("services/mirna", "services/varseq") }}
