@@ -7,3 +7,16 @@ $font-weight-heavy: 800;
 $time-slow: 0.35s;
 $time-mid: 0.3s;
 $time-fast: 0.2s;
+
+:root {
+  --border-radius: 0;
+  --border-radius-1: 5px;
+
+  --fw-light: 400;
+  --fw-medium: 600;
+  --fw-heavy: 800;
+
+  --time-slow: 0.35s;
+  --time-mid: 0.3s;
+  --time-fast: 0.2s;
+}
