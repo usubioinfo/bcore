@@ -1,13 +1,15 @@
 {% macro titlebar(name, linkName) %}
+<!-- content-section decorated-bg page-titlebar -->
+<!-- kbl-svc-title-container -->
 <div class="content-section decorated-bg page-titlebar">
   <div class="container-fluid px-5">
     <div class="row px-5">
       <div class="col-lg-12 px-3">
         <h1 class="title">{{ name }}</h1>
         <ol class="breadcrumb">
-          <li><a href="/">Home</a></li>
-          <li><a href="/services">Services</a></li>
-          <li class="active">{{ linkName }}</li>
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="/services">Services</a></li>
+          <li class="breadcrumb-item active">{{ linkName }}</li>
         </ol>
       </div>
     </div>

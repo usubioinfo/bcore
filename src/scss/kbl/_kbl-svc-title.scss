@@ -1,0 +1,14 @@
+.kbl-svc-title-container {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  background: var(--palette-3);
+  overflow: hidden;
+  color: var(--text-main);
+
+  .title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: var(--fw-heavy);
+    font-size: 320%;
+  }
+}
