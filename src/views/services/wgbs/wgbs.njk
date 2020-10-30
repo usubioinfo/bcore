@@ -1,3 +1,10 @@
-{% from "services/template.njk" import service %}
+{% extends "templates/service.template.njk" %}
+{%  from "components/svc-titlebar/svc-titlebar.njk" import titlebar %}
 
-{{ service("wgbs", "Whole-Genome Bisulfite Sequencing", "WGBS") }}
+{% block title %}
+  {{ titlebar('Whole-Genome Bisulfite Sequencing', 'WGBS') }}
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}

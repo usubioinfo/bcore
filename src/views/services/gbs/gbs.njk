@@ -1,3 +1,76 @@
-{% from "services/template.njk" import service %}
+{% extends "templates/service.template.njk" %}
+{%  from "components/svc-titlebar/svc-titlebar.njk" import titlebar %}
 
-{{ service("gbs", "Genotyping-by-sequencing (GBS)", "GBS") }}
+{% block title %}
+  {{ titlebar('Genotyping by Sequencing (GBS)', 'GBS') }}
+{% endblock %}
+
+{% block content %}
+  <article class="post single">
+    <figure class="post-thumbnail"><img src="biocore-images/Dec/GBS.png" alt=""></figure>
+    <header class="article-header">
+
+      <h2 class="title">How Genotyping-by-sequencing (GBS) Works</h2>
+    </header>
+    <p>GBS is marker-assisted selection (MAS) technology to accelerate plant breeding. This technology con-sists is the sequencing of a reduce representation of an entire genome. The sequencing is performed on samples from a population of interest, and this population is selected based on its variability for a certain set of yield traits or disease responses.</p>
+    <p>A reduce representation of the genome is obtained through digesting DNA samples with some restriction enzymes, then adaptors are ligated and library size is selected and sequenced. Focusing on those part of the genome around restriction enzyme, simplify data cost and complexity without sacrificing genotyping capabilities.</p>
+    <p>After  samples  are  sequenced,  they  go  through  a  comprehensive  bioinformatic  pipeline  that  ultimately can associate markers (or mutations) from different samples with phenotypic data, leading to the identi-fication of high-resolution molecular markers related with yield traits or disease responses.</p>
+    <figure class="preview fl-r"><a href="images/2250x1500.png" class="lightbox-images"><img src="images/2250x1500.png" alt=""></a>
+      <figcaption><strong>Figure #2:</strong> We focus on passion and leadership.</figcaption>
+    </figure>
+    <ul style="list-style-type: circle; padding: 0px; margin: 20px;">
+      <li><b>Demultiplexing & quality control:</b></li>
+      <ul style="list-style-type: circle; padding: 0px 40px; margin: 0px;">
+        <li>Deconvolute sequencing library data into multiple samples</li>
+        <li>Insert length determination</li>
+        <li>Contamination removal</li>
+        <li>Low quality sequence trimming</li>
+        <li>Sequence quality report</li>
+      </ul>
+      <li><b>Map reads to the reference:</b></li>
+      <ul style="list-style-type: circle; padding: 0px 40px; margin: 0px;">
+        <li>Alignment of short-reads</li>
+        <li>BAM manipulation</li>
+        <li>Quality and coverage mapping report</li>
+      </ul>
+    </ul>
+    <ul style="list-style-type: circle; padding: 0px; margin: 20px;">
+      <li><b>Markers detection</b></li>
+      <ul style="list-style-type: circle; padding: 0px 40px; margin: 0px;">
+        <li>Multi sample variants detection</li>
+        <li>Variants filtering</li>
+        <li>Genotype imputation</li>
+        <li>Functional annotation of genomic variants</li>
+        <li>Summary variants report</li>
+      </ul>
+    </ul>
+    <blockquote>
+      <p>" Do the difficult things while they are easy and do the great things while they are small. A jorney of a thousand miles begin with a single step. "</p>
+      <footer>Lao Tzu</footer>
+    </blockquote>
+    <ul style="list-style-type: circle; padding: 0px; margin: 20px;">
+      <li><b>Diversity analyses</b></li>
+      <ul style="list-style-type: circle; padding: 0px 40px; margin: 0px;">
+        <li>Genetic distance matrix calculation</li>
+        <li>Population structure analysis</li>
+        <li>PCA, K-Means, Hierarchical clustering</li>
+        <li>Phylogeny</li>
+        <li>Population diversity report</li>
+      </ul>
+    </ul>
+    <ul style="list-style-type: circle; padding: 0px; margin: 20px;">
+      <li><b>Genotype-Phenotype associations (Optional)</b></li>
+      <ul style="list-style-type: circle; padding: 0px 40px; margin: 0px;">
+        <li>Variants filtering</li>
+        <li>Genome wide association studies</li>
+        <li>Filtering of variants associated with phenotype</li>
+        <li>Statistical analysis of markers associated with traits</li>
+        <li>Final report</li>
+      </ul>
+    </ul>
+    <p>GBS is an ultimate marker-assisted selection (MAS) technology to accelerate plant breeding.Some more details.....</p>
+    <p>Steps: Write down here....</p>
+    {% from "components/svc-prev-next/svc-prev-next.njk" import switch %}
+    {{ switch("services/eukassembly", "services/medips") }}
+  </article>
+{% endblock %}

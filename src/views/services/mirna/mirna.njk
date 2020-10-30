@@ -1,3 +1,38 @@
-{% from "services/template.njk" import service %}
+{% extends "templates/service.template.njk" %}
+{%  from "components/svc-titlebar/svc-titlebar.njk" import titlebar %}
 
-{{ service("mirna", "miRNA Analysis", "miRNA") }}
+{% block title %}
+  {{ titlebar('Metagenomics: Whole Genome or Shotgun Sequencing Analysis', 'Metagenomics') }}
+{% endblock %}
+
+{% block content %}
+  <article class="post single">
+    <figure class="post-thumbnail"><img src="images/2250x1500.png" alt=""></figure>
+    <header class="article-header">
+
+      <h2 class="title"></h2>
+    </header>
+    <p><b>MicroRNA sequencing(miRNA-seq)</b>, is the use of next-generation sequencing or massively parallel high-throughput
+      DNA sequencing to sequence microRNAs, also called miRNAs. <b>miRNA-seq</b> differs from other forms of RNA-seqin that
+      in-put material is often enriched for small RNAs.
+    </p>
+    <figure class="preview fl-r"><a href="images/2250x1500.png" class="lightbox-images"><img src="images/2250x1500.png" alt=""></a>
+      <figcaption><strong>Figure #2:</strong> We focus on passion and leadership.</figcaption>
+    </figure>
+    <ol>
+      <li><b>Step1.</b> Reads Alignment</li>
+      <li><b>Step2.</b> Quantify known and novel micro RNA (miRNA) from small RNA sequencing (RNAseq).</li>
+      <li><b>Step5.</b> Statistical analysis:estimate variance-mean dependence in miRNA count data and test for differential expression.</li>
+      <li><b>Step6.</b> miRNA expression Analysis.</li>
+      <li><b>Step3.</b> Normalization of count datasets.</li>
+      <li><b>Step4.</b> Samples clustering.</li>
+      <li><b>Step7.</b> Target Gene prediction</li>
+      <li><b>Step8.</b> Functional Annotation (GO and pathway analysis)</li>
+    </ol>
+    <p><i>****Receive full package:  mapped bam files, FastQC quality insight, count expression table, and differential
+      miRNAs analysis, and targeted genes annotation.</i>
+    </p>
+    {% from "components/svc-prev-next/svc-prev-next.njk" import switch %}
+    {{ switch("services/rrbs", "services/rnaseq") }}
+  </article>
+{% endblock %}

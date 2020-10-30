@@ -1,3 +1,37 @@
-{% from "services/template.njk" import service %}
+{% extends "templates/service.template.njk" %}
+{%  from "components/svc-titlebar/svc-titlebar.njk" import titlebar %}
 
-{{ service("chipseq", "ChIP-Seq Data Analysis", "ChIP-Seq") }}
+{% block title %}
+  {{ titlebar('ChIP-Seq Analysis', 'ChIP-Seq') }}
+{% endblock %}
+
+{% block content %}
+  <article class="post single">
+    <figure class="post-thumbnail"><img src="img/services/chipseq.png" alt=""></figure>
+    <header class="article-header">
+
+      <h2 class="title">How ChIP-seq data analysis works</h2>
+    </header>
+    <p>Chromatin immunoprecipitation coupled with sequencing (ChIP-seq) is a genomics and epigenomics method to study
+      DNA-protein interactions.ChIP-Seq involves the isolation and sequencing of genomic DNA bound by transcription factors,
+      histones, chaperones and other nuclear proteins. Explain more.....
+    </p>
+    <p><u><b>data analysis steps:</b></u></p>
+    <p>Step 1:</p>
+    <p>Step 2:</p>
+    <p>Next</p>
+    <figure class="preview fl-r"><a href="images/2250x1500.png" class="lightbox-images"><img src="images/2250x1500.png" alt=""></a>
+      <figcaption><strong>Figure #2:</strong> We focus on passion and leadership.</figcaption>
+    </figure>
+    <p>More</p>
+    <p>More</p>
+    <p>more<p>
+    <h3>Header</h3>
+    <p>conclusion</p>
+    <p>stuff</p>
+    <p>stuff</p>
+    <p>1 more</p>
+    {% from "components/svc-prev-next/svc-prev-next.njk" import switch %}
+    {{ switch("services/varseq", "services/metagenomics") }}
+  </article>
+{% endblock %}
