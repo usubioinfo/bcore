@@ -22,6 +22,11 @@ nunEnv.addGlobal(`RaikouServer`, 'http://bioinfocore.usu.edu/raikou');
 const getPDFs = function(callback) {
   let fileArray = [];
   fs.readdir(path.join(__dirname, '/../pdf'), (err, files) => {
+    if (!files) {
+      callback(null, []);
+      return;
+    }
+
     files.forEach(file => {
       let name = file.split('-').join(' ');
       name = path.parse(name).name;
