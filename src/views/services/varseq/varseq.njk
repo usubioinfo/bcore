@@ -12,44 +12,52 @@
 
       <h2 class="title">How VAR-seq data analysis works</h2>
     </header>
-    <p>Detection  of  single  nucleotide  polymorphisms  (SNPs)  is  an  important  step  in  understanding  the relationship  between  a  genotype  and
+    <p>
+      Detection  of  single  nucleotide  polymorphisms  (SNPs)  is  an  important  step  in  understanding  the relationship  between  a  genotype  and
       phenotype.  A  likely  workflow  in  genetic  variation  studies  is  the analysis and identification of variants associated with a specific trait or
       population.  Input data could be
       from whole genome or whole exome sequencing. SNPs are useful in a sense that they provide
       information about polymorphism within a population, genetic changes influencing common disease, and
       drug efficacy.
     </p>
-    <p><u><b>SNP-seq data analysis including and not limited to:</b></u></p>
-    <p>Step 1: Data Management/Quality Control and Trimming</p>
-    <p>Step 2: Alignment to Reference Genome</p>
-    <p>Step 3: Variant Detection</p>
-    <p>Variant Filtering</p>
-    <p>Data Visualization</p>
+
+    <section class="service-steps">
+      <h5>SNP-seq data analysis includes but is not limited to:</h5>
+      <ul>
+        <li>Data Management/Quality Control and Trimming</li>
+        <li>Alignment to Reference Genome</li>
+        <li>Variant Detection</li>
+        <li>Variant Filtering</li>
+        <li>Data Visualization</li>
+      </ul>
+    </section>
 
     <h4>Genome Wide Association Studies (GWAS)</h4>
-    <h6>Sample QC Task Checking</h6>
-    <ul>
-      <li>Discordant sex information</li>
-      <li>Calculating missingness</li>
-      <li>Heterozygosity scores</li>
-      <li>Relatedness</li>
-    </ul>
+    <section class="service-steps">
+      <h5>Sample QC Task Checking</h5>
+      <ul>
+        <li>Discordant sex information</li>
+        <li>Calculating missingness</li>
+        <li>Heterozygosity scores</li>
+        <li>Relatedness</li>
+      </ul>
 
-    <h6>Batch Reports</h6>
-    <ul>
-      <li>Remove duplicates</li>
-      <li>Minor allele frequencies</li>
-      <li>SNP missingness</li>
-      <li>Differential missingness</li>
-      <li>Hardy-Weinberg equilibrium deviations</li>
-    </ul>
+      <h5>Batch Reports</h5>
+      <ul>
+        <li>Remove duplicates</li>
+        <li>Minor allele frequencies</li>
+        <li>SNP missingness</li>
+        <li>Differential missingness</li>
+        <li>Hardy-Weinberg equilibrium deviations</li>
+      </ul>
 
-    <h6>Basic PLINK association tests, producing manhattan and qplots</h6>
-    <ul>
-      <li>CMH association test - association analysis, account for clusters</li>
-      <li>Permutation testing</li>
-      <li>Logistic regression</li>
-    </ul>
+      <h5>Basic PLINK association tests, producing manhattan and qplots</h5>
+      <ul>
+        <li>CMH association test - association analysis, account for clusters</li>
+        <li>Permutation testing</li>
+        <li>Logistic regression</li>
+      </ul>
+    </section>
     {% from "components/svc-prev-next/svc-prev-next.njk" import switch %}
     {{ switch("services/rnaseq", "services/chipseq") }}
   </article>

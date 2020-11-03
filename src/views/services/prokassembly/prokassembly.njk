@@ -16,27 +16,34 @@
       by an assembler and putting them back together to create the original assembly. Our De Novoassembly pipeline for
       Prokaryotes consists of two parts:
     </p>
-    <h3>Pre Assembly Analysis:</h3>
-    <ol style="list-style-type: upper-roman;">
-      <li>Raw sub-reads overlapping for error correction</li>
-      <li>Pre-assembly and error correction</li>
-      <li>Overlapping detection of the error corrected reads</li>
-      <li>Overlap filtering</li>
-      <li>Construct graph from overlaps</li>
-      <li>Construct contig from graph</li>
-      <li>Construct Scaffolds or chromosome</li>
-    </ol>
+
+    <section class="service-steps">
+      <h5>Pre Assembly Analysis</h5>
+      <ul>
+        <li>Raw sub-reads overlapping for error correction</li>
+        <li>Pre-assembly and error correction</li>
+        <li>Overlapping detection of the error corrected reads</li>
+        <li>Overlap filtering</li>
+        <li>Construct graph from overlaps</li>
+        <li>Construct contig from graph</li>
+        <li>Construct Scaffolds or chromosome</li>
+      </ul>
+    </section>
+
     <figure class="preview fl-r"><a href="biocore-images/picture4/slide3.jpg" class="lightbox-images"><img src="biocore-images/picture4/slide3.jpg" alt=""></a>
       <figcaption><strong>Figure #2:</strong> We focus on passion and leadership.</figcaption>
     </figure>
-    <h3>Post assembly analysis:</h3>
-    <ol style="list-style-type: none;">
-      <li>Step 1. Assembly QC assessment</li>
-      <li>Step 2. Gene Prediction</li>
-      <li>Step 3. Protein coding regions identification</li>
-      <li>Step 4. Functional annotation</li>
-      <li>Step 5. Results as tables, mapping BAM files, and summary statistics</li>
-    </ol>
+
+    <section class="service-steps">
+      <h5>Post assembly analysis:</h5>
+      <ul>
+        <li>Step 1 - Assembly QC assessment</li>
+        <li>Step 2 - Gene Prediction</li>
+        <li>Step 3 - Protein coding regions identification</li>
+        <li>Step 4 - Functional annotation</li>
+        <li>Step 5 - Results as tables, mapping BAM files, and summary statistics</li>
+      </ul>
+    </section>
     {% from "components/svc-prev-next/svc-prev-next.njk" import switch %}
     {{ switch("services/16srnaseq", "services/eukassembly") }}
   </article>
