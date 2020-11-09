@@ -1,0 +1,21 @@
+
+.kbl-switch {
+  color: var(--text-main)!important;
+  font-weight: var(--fw-medium)!important;
+  border-radius: var(--border-radius)!important;
+  transition: var(--time-mid)!important;
+
+  &:not(.current):hover {
+    background: var(--palette-1-bg)!important;
+  }
+
+  &.current {
+    background: var(--palette-1)!important;
+    color: white!important;
+  }
+
+  &:focus {
+    box-shadow: none!important;
+    outline: none!important;
+  }
+}

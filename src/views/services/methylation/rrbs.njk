@@ -1,0 +1,88 @@
+<figure class="post-thumbnail"><img src="img/services/methylation.png" alt=""></figure>
+<header class="article-header">
+
+  <h2 class="title">Bisulfite Analysis Protocol</h2>
+</header>
+<p>
+  Bisulfite conversion is a technique used to study DNA methylation by converting unmethylated cytosines to uracil while leaving
+  5-methylcytosine (5-mC) intact. Sequencing and aligning converted DNA fragments make it possible to analyze
+  methylation status on an individual cytosine.
+</p>
+<p>
+  <b>Whole Genome Bisulfite Sequencing (WGBS)</b> is a complete genome coverage of methylation to detect
+  every CpG and less common non-CpG sites like CNG across the entire genome.
+</p>
+<ol>
+  <li>Step 1. Sequencing quality and trimming</li>
+  <li>Step 2. Alignment to the genome</li>
+  <li>Step 3. Remove PCR bias (deduplication)</li>
+  <li>Step 3. CpG Island extraction</li>
+  <li>Step 4. Visualization & Clustering/PCA</li>
+  <li>Step 5. Differential methylation regions analysis</li>
+  <li>Step 6. Annotation for DMRs/DMCs</li>
+  <li>Step 7. Results as tables, mapping bam files, and summary statistics</li>
+</ol>
+<p>
+  <b>Reduced Representation Bisulfite Sequencing (RRBS)</b> is commonly used to focus on the areas of the genome
+  that have nearly all CpG content at base resolution detail.
+</p>
+<ol>
+  <li>Step 1. Sequencing quality and trimming</li>
+  <li>Step 2. Align to the genome</li>
+  <li>Step 3. Remove PCR bias (Coverage filtering)</li>
+  <li>Step 3. CpGIslands extraction</li>
+  <li>Step 4. Visualization & Clustering/PCA</li>
+  <li>Step 5. Differential methylation regions analysis</li>
+  <li>Step 6. Annotation for DMRs/DMCs</li>
+  <li>Step 7. Results as tables, mapping bam files, and summary statistics</li>
+</ol>
+<p>
+  <b>Targeted Bisulfite Sequencing (TBS)</b> is a method that detects based resolution DNA at regions of interest.
+</p>
+<ol>
+  <li>Step 1. Sequencing quality and trimming</li>
+  <li>Step 2. Align to the genome</li>
+  <li>Step 3. Remove PCR bias (Coverage filtering)</li>
+  <li>Step 4. CpG Islands extraction</li>
+  <li>Step 5. Visualization & Clustering/PCA</li>
+  <li>Step 6. Methylation segmentation</li>
+  <li>Step 7. Differential methylation regions analysis</li>
+  <li>Step 8. Annotation for DMRs/DMCs</li>
+  <li>Step 9. Results as tables, mapping bam files, and summary statistics</li>
+</ol>
+<p>
+  <b>Methylated DNA Immunoprecipitation (MeDIP-Seq or mDIP)</b> is a large scale (chromosome or genome-wide) purification
+  technique used to isolate methylated DNA fragments via an antibody raised against 5-methylcytosine (5mC).
+  MeDIP-Seq requires a different type of software analysis than WGBS and RRBS, as the methodology varies significicantly.
+</p>
+<figure class="preview fl-r"><a href="img/methylatedcytosine.png" class="lightbox-images"><img src="img/methylatedcytosine.png" alt=""></a>
+  <figcaption><strong>Figure #2:</strong> A methylated cytosine.</figcaption>
+</figure>
+<ol>
+  <li>Step 1. Reads Alignment</li>
+  <li>Step 2. Statistical Analysis</li>
+  <li>Step 3. Genomic locations</li>
+  <li>Step 4. CpG density</li>
+  <li>Step 5. Read count per samples</li>
+  <li>Step 6. Normalized read count per sample</li>
+  <li>Step 7. Mean value per group</li>
+  <li>Step 8. LogFC between groups</li>
+  <li>Step 9. P-value and adjusted p-value</li>
+  <li>Step 10. Results as tables, mapping bam files, and summary statistics</li>
+</ol>
+<h2>Methylation analysis Report</h2>
+<p><b>MethylationStats.xls:</b> Report ofthe basic stats about the methylation data such as coverage and percent methylation.</p>
+<p><b>Histogram of % CpG Methylation Plot:</b> numbers on bars denote what percentage of locations are contained in that bin. Typically, percent methylation histogram should have two peaks on both ends. In any given cell, any given base are either methylated or not. Therefore, looking at many cells should yield a similar pattern where we see lots of locations with high methylation and lots of locations with low methylation.</p>
+<p><b>Histogram of CpG Coverage Plot:</b> We can also plot the read coverage per base information in a similar way, again numbers on bars denote what percentage of locations are contained in that bin. Experiments that are highly suffering from PCR duplication bias will have a secondary peak towards the right hand side of the histogram.</p>
+<p><b>CpG Base Pearson Cor. Plot:</b> check the correlation betweenhigh and low samples. Shows Scatter plots for all samples.  Numbers on upper right corner denote pair-wise Pearson's correlation scores. The histograms on the diagonal are %methylation histograms</p>
+<p><b>CpG Methylation Clustering Plot:</b> cluster the samples based on the similarity of their methylation profiles. Hierarchical clustering of methylation profiles of the samples using Pearson's correlation distance.,  Samples closer to each other in principal component space are similar in their methylation profiles.</p>
+<p><b>Methylation_Per_Bases.xls:</b> contains methylation information for regions/bases that are covered in all samples.</p>
+<p><b>MethylationsCounts_Per_Regions.xls:</b> summarize methylation information over tiling windows rather than doing base-pair resolution analysis.  adds up C and T counts from each covered cytosine and returns a total C and T count for each tile(win.size=1000).</p>
+<p><b>All_DiffMeth_report.xls:</b> Report all differential methylation calculation.  The logistic regression basedmodeling and test is used to calculate P-values.  P-values are adjusted to Q-values using SLIM method(Wang, Tuominen, and Tsai 2011).</P>
+<p><b>DiffMeth25p_Report.xls:</b> Report of  the differentially methylated regions/bases based on q-value < 0.01 and percent methylation difference larger than 25%.</p>
+<p><b>Hypo_DiffMeth_Report.xls:</b> bases/regions with lower methylation</P>
+<p><b>Hyper_DiffMeth_Report.xls:</b> bases/regions with higher methylation</p>
+<p><b>diffMethPerChr.xls:</b> visualization of the  the distribution of hypo/hyper-methylated bases/regions per chromosome using the following function. The listshows percentages of hypo/hyper methylated bases over all the covered bases in a given chromosome.</p>
+<p><b>PromoterCounts.xls:</b> summarize methylation information over a set of defined promoters.</p>
+<p><b>FeatureTargetStats.xls:</b> a report of the percentage of intron/exon/promoters regions that overlap with differentially methylated bases.</p>
+<p><b>GetAnnatationWithTSS.xls:</b> annotation of differentially methylated regions with  the distance to TSS and nearest gene name.</p>

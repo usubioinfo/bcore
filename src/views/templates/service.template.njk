@@ -11,7 +11,7 @@
 		<div class="service-wrapper">
 			{%  from "components/svc-titlebar/svc-titlebar.njk" import titlebar %}
       {% block title %}
-        
+
       {% endblock %}
 
 			<article class="container-fluid px-5">
@@ -33,5 +33,9 @@
 		{{ footer(bs4=bs4) }}
 		{% from "universal/_scripts-macro.njk" import scripts %}
 		{{ scripts(bs4=bs4) }}
+
+		{% block scripts %}
+
+		{% endblock %}
 	</body>
 </html>

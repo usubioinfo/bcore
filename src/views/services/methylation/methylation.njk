@@ -1,0 +1,44 @@
+{% extends "templates/service.template.njk" %}
+{%  from "components/svc-titlebar/svc-titlebar.njk" import titlebar %}
+
+{% block title %}
+  {{ titlebar('Methylation', 'Methylation') }}
+{% endblock %}
+
+{% block content %}
+  <article class="post single">
+
+    <div class="container-fluid mb-5">
+      <div class="row">
+        <div class="col text-center">
+          <button class="btn kbl-switch px-5 py-2">MeDIPS</button>
+        </div>
+        <div class="col text-center">
+          <button class="btn kbl-switch px-5 py-2">RRBS</button>
+        </div>
+        <div class="col text-center">
+          <button class="btn kbl-switch px-5 py-2">WGBS</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="medips" class="met-section">
+      {% include './medips.njk' %}
+    </div>
+
+    <div id="rrbs" class="met-section d-none">
+      {% include './rrbs.njk' %}
+    </div>
+
+    <div id="wgbs" class="met-section d-none">
+      {% include './wgbs.njk' %}
+    </div>
+
+    {% from "components/svc-prev-next/svc-prev-next.njk" import switch %}
+    {{ switch("services/chipseq", "services/16srnaseq") }}
+  </article>
+{% endblock %}
+
+{% block scripts %}
+  <script src="js/kbl/met-switch.js"></script>
+{% endblock %}
