@@ -2,22 +2,49 @@
 {%  from "components/svc-titlebar/svc-titlebar.njk" import titlebar %}
 
 {% block title %}
-  {{ titlebar('Metagenomics: Whole Genome or Shotgun Sequencing Analysis', 'Metagenomics') }}
+  {{ titlebar('Metagenomics', 'Metagenomics') }}
 {% endblock %}
 
 {% block content %}
   <article class="post single">
     <figure class="post-thumbnail"><img src="img/services/metagenomics.png" alt=""></figure>
     <header class="article-header">
-      <h2 class="title">How whole genome sequencing works</h2>
+      <h2 class="title">How metagenomics sequencing works</h2>
     </header>
     <p>
-      As  sequencing  costs  drop,  microbiome  research  is moving  from  16S  rRNA  gene  sequencing  to  more
-      comprehensive  functional  representations  via  whole  genome  or  shotgun  metagenomics  sequencing.
-      Shotgun  metagenomic  sequencing  is  a  relatively  new  environmental  sequencing  approach  used  to examine
-      thousands  of  organisms  in  parallel  and  comprehensively  sample  all  genes,  providing  insight into
-      community  biodiversity  and  function.  Following  are  the  steps  we  follow  to  analyze  the Metagenomics WGS samples:
+      As  sequencing  costs  drop,  microbiome  research  is  moving  from  16S rRNA  gene  sequencing  to
+      more comprehensive  functional  representations via whole genome  or  shotgun  metagenomics
+      sequencing. Shotgun  metagenomic sequencing is a relatively  new  environmental  sequencing
+      approach  used  to examine  thousands  of  organisms  in  parallel  and  comprehensively  sample
+      all  genes,  providing  insight into   community   biodiversity   and   function.
+      The following   are   the   steps   we   follow   to   analyze  metagenomics WGS samples:
     </p>
+
+    <section class="service-steps">
+      <h5>Step 1 - Quality Control/Trimming</h5>
+      <h5>Step 2 - Run Assembly</h5>
+      <h5>Step 3 - Run Coassembly</h5>
+      <h5>Step 4 - Run Reference Assembly</h5>
+      <h5>Step 5 - Comparative Analysis</h5>
+      <ul>
+        <li>Contigs Selection</li>
+        <li>Gene Calling</li>
+        <li>Taxonomic and Functional Annotation of Genes</li>
+      </ul>
+      <h5>Step 6 - Coverage Binning</h5>
+      <ul>
+        <li>Back map contigs on their own reads to create .sam and .bam files using BBMAP</li>
+        <li>Find occurrence of uncultivated microbial populations</li>
+      </ul>
+      <h5>Step 7 - Bin Refinement</h5>
+      <ul>
+        <li>Clean up contamination</li>
+        <li>Select good quality bin</li>
+      </ul>
+      <h5>Step 8 - Bin Taxonomic Classification</h5>
+      <h5>Step 9 - Functional Taxonomic Classification</h5>
+    </section>
+
     {% from "components/svc-prev-next/svc-prev-next.njk" import switch %}
     {{ switch("services/chipseq", "services/16srnaseq") }}
   </article>
