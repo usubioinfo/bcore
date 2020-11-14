@@ -4,7 +4,7 @@
   const switches = document.querySelectorAll('.kbl-switch');
   switches[0].classList.add('current');
 
-  let currentPage = switches[0].textContent.trim();
+  let currentPage = switches[0].textContent.trim().toLowerCase();
   console.log(currentPage);
 
   switches.forEach((el) => {

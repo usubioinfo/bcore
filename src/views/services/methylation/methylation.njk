@@ -11,23 +11,20 @@
     <div class="container-fluid mb-5">
       <div class="row">
         <div class="col text-center">
+          <button class="btn kbl-switch px-5 py-2">WGBS/RRBS</button>
+        </div>
+        <div class="col text-center">
           <button class="btn kbl-switch px-5 py-2">MeDIPS</button>
-        </div>
-        <div class="col text-center">
-          <button class="btn kbl-switch px-5 py-2">RRBS</button>
-        </div>
-        <div class="col text-center">
-          <button class="btn kbl-switch px-5 py-2">WGBS</button>
         </div>
       </div>
     </div>
 
-    <div id="medips" class="met-section">
-      {% include './medips.njk' %}
+    <div id="wgbs/rrbs" class="met-section">
+      {% include './rrbs.njk' %}
     </div>
 
-    <div id="rrbs" class="met-section d-none">
-      {% include './rrbs.njk' %}
+    <div id="medips" class="met-section d-none">
+      {% include './medips.njk' %}
     </div>
 
     <div id="wgbs" class="met-section d-none">
