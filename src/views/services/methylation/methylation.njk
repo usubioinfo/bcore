@@ -27,10 +27,6 @@
       {% include './medips.njk' %}
     </div>
 
-    <div id="wgbs" class="met-section d-none">
-      {% include './wgbs.njk' %}
-    </div>
-
     {% from "components/svc-prev-next/svc-prev-next.njk" import switch %}
     {{ switch("services/chipseq", "services/16srnaseq") }}
   </article>
