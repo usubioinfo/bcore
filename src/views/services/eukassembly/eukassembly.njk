@@ -10,13 +10,34 @@
     <figure class="post-thumbnail"><img src="img/services/eukaryotes.jpg" alt=""></figure>
     <header class="article-header">
 
-      <h2 class="title">How Eukaryotes <i>de novo</i> genome Assembly and Annotation Works</h2>
+      <h2 class="title">How Eukaryote <i>de novo</i> genome Assembly and Annotation Works</h2>
     </header>
     <p>
       Genome assembly is the process of taking many individual disconnected graphs (pieces of the DNA) that are processed
-      independently by an assembler and putting them back together to create the original assembly. Our De Novoassembly
-      pipeline for Eukaryotes consists of the following parts:
+      independently by an assembler and putting them back together to create the original assembly.
     </p>
+
+    <h3>Eukaryote de Novo Assembly</h3>
+
+    <section class="service-steps">
+      <h5>Step 1 - Assess quality of sequenced reads</h5>
+      <h5>Step 2 - Preprocess raw data</h5>
+      <ul>
+        <li>Adapter removal</li>
+        <li>Trimming</li>
+      </ul>
+      <h5>Step 3 - Genome assembly</h5>
+      <ul>
+        <li>Short reads assembly with de Bruijn assembly</li>
+        <li>Long reads genome assembly</li>
+      </ul>
+      <h5>Step 4 - Assembly evaluation</h5>
+      <ul>
+        <li>Compare assemblies, pick one with highest percentage of complete genes</li>
+      </ul>
+      <h5>Step 5 - Scaffolding and gap filling</h5>
+      <h5>Step 6 - Functional Annotation</h5>
+    </section>
 
     {% from "components/svc-prev-next/svc-prev-next.njk" import switch %}
     {{ switch("services/prokassembly", "services/gbs") }}
