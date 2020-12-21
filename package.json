@@ -9,7 +9,9 @@
     "sass:build": "npm-run-all -p build-task:*",
     "sass:watch": "chokidar 'src/**/*.scss' -c 'npm run sass:build'",
     "dev-scss": "npm-run-all -p sass:*",
-    "dev-js": "nodemon src/index.js"
+    "dev-js": "nodemon src/index.js",
+    "docker:build": "docker build -t testing/bioinfocore .",
+    "docker:test": "docker run -p 3000:3000 -d testing/bioinfocore"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,7 @@
   "license": "ISC",
   "homepage": "https://github.com/MusicDev33/bioinfocore#readme",
   "dependencies": {
-    "autoprefixer": "^10.0.4",
+    "autoprefixer": "^10.1.0",
     "chokidar-cli": "^2.1.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -31,8 +33,8 @@
     "nunjucks": "^3.2.2",
     "nunjucks-setasync": "^1.0.4",
     "path": "^0.12.7",
-    "postcss": "^8.1.10",
+    "postcss": "^8.2.1",
     "postcss-cli": "^8.3.0",
-    "sass": "^1.29.0"
+    "sass": "^1.30.0"
   }
 }

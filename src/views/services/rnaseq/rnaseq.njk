@@ -18,7 +18,7 @@
   </header>
   <p>RNA-Seq (RNA-sequencing) is a technique that can examine the quantity and sequences of RNA in a sample using next generation sequencing (NGS).  It analyzes the transcriptome of gene expression patterns encoded within the RNA.</p>
   <p>The following are the steps we follow in a usual RNA-seq data analysis; both reference-based and <i>de novo</i> assembly-based protocols are mentioned below: </p>
-  <h3>When a reference genome is available</h3>
+  <h3>A. When a reference genome is available</h3>
   <section class="service-steps">
     <h5>Step 1 - Quality Control/Trimming</h5>
     <ul>
@@ -53,7 +53,41 @@
       results and annotation data, e.g. on the IGV genome browser
     </p>
   </section>
-  <p>When a reference genome is NOT available, we follow de novo assembly-based protocol.</p>
+
+  <h3>B. When a Reference Genome is Not Available</h3>
+  <section class="service-steps">
+    <h5>Step 1 - Quality Control/Trimming</h5>
+    <ul>
+      <li>Adapter removal, trimming, pooling of samples</li>
+    </ul>
+    <h5>Step 2 - Assemble Reads de novo to Construct Reference Genome</h5>
+    <ul>
+      <li>Reads mapping with trinity, bowtie, another aligner if requested.</li>
+    </ul>
+    <h5>Step 3 - Assessing assembly quality</h5>
+    <ul>
+      <li>Alignment summary metrics</li>
+    </ul>
+    <h5>Step 4 - Expression Quantification</h5>
+    <ul>
+      <li>Generation of counts table of raw reads mapped based on chosen annotation feature (genes, exons, etc.)</li>
+      <li>Conversion of read counts into RPKM values (FPKM for paired-end data)</li>
+    </ul>
+    <h5>Step 5 - Sample Tree (Correlation Analysis)</h5>
+    <h5>Step 6 - Differential Expression (DE) Testing</h5>
+    <ul>
+      <li>Statistical identification of differentially expressed genes (DEGs) with edgeR or DESeq2</li>
+      <li>PCA plots, Venn diagram</li>
+      <li>Gene clustering and heatmaps</li>
+    </ul>
+    <h5>Step 7 - Functional Interpretation</h5>
+    <ul>
+      <li>Assign Unigene to assembled transcriptome</li>
+      <li>Annotation of Unigene by BLAST</li>
+      <li>Gene ontology (GO) term enrichment analysis</li>
+      <li>KEGG pathway analysis</li>
+    </ul>
+  </section>
 
   {% from "components/svc-prev-next/svc-prev-next.njk" import switch %}
   {{ switch("services/mirna", "services/varseq") }}
