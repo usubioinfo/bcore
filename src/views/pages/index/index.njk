@@ -224,18 +224,17 @@
 			          </div>
 			        </div>
 			      </div>
-			      <a name="quote"></a>
-			      <div class="col-md-6 col-lg-5 subsection-fix-sm subsection-fix-xs">
+			      <div class="col-md-6 col-lg-5">
 			        <div class="content-block palette-2-bg">
 
 			          <h3 class="text-center heavy">request a quotation</h3>
-			          <form id="contact-form" class="text-center">
+			          <form class="text-center">
 			            <div class="form-group contacts-form-result"><strong></strong></div>
-			            <input type="text" placeholder="Name" name="comment-name" class="form-control my-3 py-4 px-3">
-			            <input type="email" placeholder="Email" name="comment-email" class="form-control my-3 py-4 px-3">
-			            <input type="tel" placeholder="Phone" name="comment-phone" class="form-control my-3 py-4 px-3">
-			            <textarea rows="10" placeholder="Send us a message!" name="comment-message" class="form-control my-3 py-3 px-3"></textarea>
-			            <button type="submit" class="btn kbl-btn-1 my-2">Send Your Request</button>
+			            <input placeholder="Name" class="form-control my-3 py-4 px-3" id="form-name">
+			            <input placeholder="Email" class="form-control my-3 py-4 px-3" id="form-email">
+			            <input placeholder="Phone" class="form-control my-3 py-4 px-3" id="form-phone">
+			            <textarea rows="10" placeholder="Send us a message!" class="form-control my-3 py-3 px-3" id="form-body"></textarea>
+			            <button class="btn kbl-btn-1 my-2" id="send-button">Send Your Request</button>
 			          </form>
 
 			        </div>
@@ -264,6 +263,7 @@
 		{{ footer(bs4=bs4) }}
 		{% from "universal/_scripts-macro.njk" import scripts %}
 		{{ scripts(bs4=bs4) }}
+		<script src="js/kbl/email.js"></script>
 
 	</body>
 </html>
