@@ -1,20 +1,25 @@
 <!DOCTYPE html>
+{% set bs4 = true %}
 <html lang="en">
-	{% include "universal/_header.njk" %}
+	{% from "universal/_header-macro.njk" import header %}
+	{{ header(bs4=bs4) }}
 	<body>
 		{% include "universal/_preload.njk" %}
-		<div id="page" class="page">
-			<div id="content-wrapper" class="content-wrapper">
-				<div class="content-wrapper-inner">
-					{% include "universal/_navbar.njk" %}
+		{% from "universal/_navbar-switch.njk" import navbar %}
+		{{ navbar(bs4=bs4) }}
 
-					{% block content %}
+		<div class="container-fluid px-5 mt-4 mb-5">
+			{% block content %}
+			{% endblock %}
+		</div>
 
-					{% endblock %}
+		{% from "universal/_footer-switch.njk" import footer %}
+		{{ footer(bs4=bs4) }}
+		{% from "universal/_scripts-macro.njk" import scripts %}
+		{{ scripts(bs4=bs4) }}
 
-				</div><!-- Footer start -->
-				{% include "universal/_footer.njk" %}
-			</div>
-		{% include "universal/_footer-scripts.njk" %}
+		{% block scripts %}
+
+		{% endblock %}
 	</body>
 </html>

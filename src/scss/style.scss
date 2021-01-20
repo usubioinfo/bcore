@@ -35,6 +35,22 @@ body {
   color: $palette-1!important;
 }
 
+.fw-light {
+  font-weight: var(--fw-light);
+}
+
+.fw-medium {
+  font-weight: var(--fw-medium);
+}
+
+.fw-heavy {
+  font-weight: var(--fw-heavy);
+}
+
+.text-soft {
+  color: var(--color-text-soft);
+}
+
 h3 + p {
   font-size: 110%!important;
 }
@@ -65,6 +81,12 @@ h3 + p {
       color: #fff;
     }
   }
+}
+
+// News Stuff
+.news-card-background {
+  background: var(--color-bg-b);
+  border-radius: var(--border-radius-1);
 }
 
 ::-webkit-scrollbar {

@@ -1,1 +1,121 @@
 {% extends "template.njk" %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-3 text-center">
+      <h4 class="fw-heavy">
+        General
+      </h4>
+
+      <section class="news-card-background px-3 py-3">
+        <div class="py-2">
+          <div class="kbl-news-card text-left px-3 py-2 node-card">
+            <span class="date">Jan 20, 2021</span>
+            <h5 class="fw-medium heading">NodeJS on the Cluster</h5>
+          </div>
+        </div>
+        <div class="py-2">
+          <div class="kbl-news-card text-left px-3 py-2 php-card">
+            <span class="date">Jan 4, 2021</span>
+            <h5 class="fw-medium heading">PHP 7.3 support ending</h5>
+          </div>
+        </div>
+      </section>
+
+      <h4 class="fw-heavy mt-3">
+        Modules
+      </h4>
+
+      <section class="news-card-background px-3 py-3">
+        <div class="py-2">
+          <div class="kbl-news-card text-left px-3 py-2">
+            <span class="date">Jan 6, 2021</span>
+            <h5 class="fw-medium heading">AlignGraph2</h5>
+          </div>
+        </div>
+        <div class="py-2">
+          <div class="kbl-news-card text-left px-3 py-2">
+            <span class="date">Dec 30, 2020</span>
+            <h5 class="fw-medium heading">Parallel v20201222</h5>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <section class="col-6 text-center px-5 php7 d-none">
+      <h4 class="fw-heavy">
+        PHP 7.3 Support Ending
+      </h4>
+
+      <span class="text-soft">January 4th, 2021</span>
+
+      <div class="text-left mt-4">
+        <p>
+          Tech is heavily-guided by the larger tech companies around us. This can mean many things. The open source software we enjoy can often
+          benefit a lot from the involvement of large tech companies. On the other hand, these companies can decide the fate of a whole software ecosystem.
+          An important aspect of getting hired in tech is familiarity with the tech stacks.
+        </p>
+
+        <p>
+          Companies hire devs who know their tech stack, which means that
+          as companies move on to newer, more modern stacks, the pool of candidates is going to start looking to those technologies to get hired.
+          Facebook's HHVM has stopped supporting PHP, and in their newest website revamp, they abandoned PHP altogether and opted for ReactJS and GraphQL.
+          Microsoft has recently announced they will not be supporting PHP on Windows. Slack recently converted their entire codebase to Facebook's Hack,
+          which again, runs on the HHVM, which doesn't support PHP anymore.
+        </p>
+
+        <p>
+          This isn't to say that PHP is dead, or that the KAABiL will stop supporting it. We utilize it pretty heavily here, and it wouldn't make sense to abandon it
+          when we still use it. Instead, we will be taking a more measured and secure approach to PHP. PHP 7.3 has reached end of active support, so we will jump to version 8
+          of PHP, and from here on out, we will be aggressive with PHP updates. Our PHP update policy will be as follows:
+        </p>
+
+        <h5 class="fw-medium">Major Versions (1.x.x)</h5>
+        <ul>
+          <li>Starting with PHP 8, the old version will be available until end of active support of the latest minor version</li>
+          <li>The new major version will be available as soon as possible after release</li>
+        </ul>
+
+        <h5 class="fw-medium">Minor Versions (x.1.x)</h5>
+        <ul>
+          <li>Minor versions will be updated as soon as possible, and the old minor version will be removed 2 weeks after</li>
+          <li>If the new update comes with breaking changes, there will be a longer grace period until the old version is removed.</li>
+        </ul>
+
+        <h5 class="fw-medium">Patches (x.x.1)</h5>
+        <ul>
+          <li>Patches are almost always non-breaking, so there will be no notice for patch installation.</li>
+        </ul>
+
+        <p>
+          If you need to use a legacy version of PHP, it is recommended to install it locally in your home directory and use it from there.
+        </p>
+      </div>
+    </section>
+
+    <section class="col-6 text-center px-5 node">
+      <h4 class="fw-heavy">
+        NodeJS on the Cluster
+      </h4>
+
+      <span class="text-soft">January 20th, 2021</span>
+
+      <div class="text-left mt-4">
+        <p>
+          NodeJS powers the websites at the KAABiL, as well as many of our backend services that we use internally. Our immense resources allow us to
+          run clusters of Node instances on deployment to increase the speed of these services by entire orders of magnitude. Because we get so
+          much utility on our backend from Node, we have made it available on the cluster for those who would like to use Node as well.
+        </p>
+
+        <p>
+          Currently, only Node 14 is supported (14.15.4), but Node 16 releases on April 20th, and will be available sometime during the week of release.
+          Odd-numbered Node versions do not come with LTS, and will not be available as modules per our security policy. Because Node major versions typically
+          don't break anything, expect old Node versions to disappear about 2 weeks after they enter Maintenance LTS or after the newest version is installed on the cluster.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/kbl/news.js"></script>
+{% endblock %}
