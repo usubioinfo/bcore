@@ -90,6 +90,10 @@ app.get(baseUrl + 'faq', (req, res) => {
   res.render(__dirname + '/views/pages/faq/faq.njk');
 });
 
+app.get(baseUrl + 'news', (req, res) => {
+  res.render(__dirname + '/views/pages/news/news.njk');
+});
+
 app.get(baseUrl + 'contact', (req, res) => {
   res.render(__dirname + '/views/pages/contact/contact.njk');
 });
