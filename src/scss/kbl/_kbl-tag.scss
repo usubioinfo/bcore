@@ -1,0 +1,19 @@
+$padding: 1px 8px;
+
+.tag-update {
+  border-radius: var(--border-radius-1);
+  font-weight: var(--fw-medium);
+  background: var(--palette-2-bg);
+  color: var(--palette-2-light);
+  padding: $padding;
+  font-size: 90%;
+}
+
+.tag-new {
+  border-radius: var(--border-radius-1);
+  font-weight: var(--fw-medium);
+  background: var(--palette-1-bg);
+  color: var(--palette-1-dark);
+  padding: $padding;
+  font-size: 90%;
+}
