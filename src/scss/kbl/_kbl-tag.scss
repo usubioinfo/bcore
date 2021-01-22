@@ -1,4 +1,5 @@
 $padding: 1px 8px;
+$font-size: 90%;
 
 .tag-update {
   border-radius: var(--border-radius-1);
@@ -6,7 +7,7 @@ $padding: 1px 8px;
   background: var(--palette-2-bg);
   color: var(--palette-2-light);
   padding: $padding;
-  font-size: 90%;
+  font-size: $font-size;
 }
 
 .tag-new {
@@ -15,5 +16,5 @@ $padding: 1px 8px;
   background: var(--palette-1-bg);
   color: var(--palette-1-dark);
   padding: $padding;
-  font-size: 90%;
+  font-size: $font-size;
 }
