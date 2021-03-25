@@ -18,6 +18,12 @@ const nodeChainAppend = (node, child) => {
   return node;
 }
 
+const nodeChainAppendChild = (node, child) => {
+  node.appendChild(child);
+
+  return child;
+}
+
 (() => {
   const moduleCardContainer = document.getElementById('module-card-container');
 
@@ -27,7 +33,7 @@ const nodeChainAppend = (node, child) => {
 
     for (let module of res.data.payload) {
       // I should be arrested for doing this but it's okay
-      let kblCard = nodeChainAddClass(nodeChainAddClass(document.createElement('DIV'), 'col-sm-4'), 'kbl-card hover mx-2 my-3');
+      let kblCard = nodeChainAppendChild(nodeChainAddClass(document.createElement('DIV'), 'col-sm-4'), nodeChainAddClass(document.createElement('DIV'), 'kbl-card hover mx-2 my-3'));
 
       let anchorTitle = document.createElement('a')
       anchorTitle.classList.add('module-title');
