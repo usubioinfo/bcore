@@ -83,6 +83,16 @@ h3 + p {
   }
 }
 
+// module loader
+#module-card-container {
+  opacity: 0;
+  transition: 0.7s;
+
+  &.loaded {
+    opacity: 1;
+  }
+}
+
 // News Stuff
 .news-card-background {
   background: var(--color-bg-b);

@@ -56,7 +56,6 @@ const createModules = (modules) => {
 (() => {
   const moduleCardContainer = document.getElementById('module-card-container');
 
-  console.log('test')
   axios.get('http://bioinfocore.usu.edu/api/modfiles/modules').then(res => {
     console.log(res.data);
 
@@ -81,6 +80,9 @@ const createModules = (modules) => {
 
       moduleCardContainer.appendChild(column);
     }
+
+    document.getElementById('load-container').classList.add('d-none');
+    moduleCardContainer.classList.add('loaded');
   });
 
 })();
