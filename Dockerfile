@@ -3,6 +3,7 @@ WORKDIR	~/apps/bioinfocore
 COPY package*.json ./
 
 RUN npm	install
+RUN npm audit; exit 0 && npm audit fix
 
 COPY . .
 
