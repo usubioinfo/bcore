@@ -9,13 +9,20 @@
 
       <section class="news-card-background px-3 py-2">
         <div class="py-2">
-          <div class="kbl-news-card text-left px-3 py-2 node-card selected">
+          <div class="kbl-news-card text-left px-3 py-2 article-card" data-article-id="node16">
+            <span class="date">Jun 11, 2021</span>
+            <span class="float-right tag-update">Update</span>
+            <h5 class="fw-medium heading">NodeJS 16.3.0</h5>
+          </div>
+        </div>
+        <div class="py-2">
+          <div class="kbl-news-card text-left px-3 py-2 article-card" data-article-id="node">
             <span class="date">Jan 20, 2021</span>
             <h5 class="fw-medium heading">NodeJS on the Cluster</h5>
           </div>
         </div>
         <div class="py-2">
-          <div class="kbl-news-card text-left px-3 py-2 php-card">
+          <div class="kbl-news-card text-left px-3 py-2 article-card" data-article-id="php7">
             <span class="date">Jan 4, 2021</span>
             <h5 class="fw-medium heading">PHP 7.3 support ending</h5>
           </div>
@@ -45,7 +52,7 @@
 
     </div>
 
-    <section class="col-6 text-center px-5 php7 d-none">
+    <section class="col-6 text-center px-5 d-none article" id="php7">
       <h4 class="fw-heavy">
         PHP 7.3 Support Ending, PHP 8 Available
       </h4>
@@ -54,7 +61,7 @@
 
       <div class="text-left mt-4">
         <p>
-          Tech is heavily-guided by the larger tech companies around us. This can mean many things. The open source software we enjoy can often
+          Tech is heavily guided by the larger tech companies around us. This can mean many things. The open source software we enjoy can often
           benefit a lot from the involvement of large tech companies. On the other hand, these companies can decide the fate of a whole software ecosystem.
           An important aspect of getting hired in tech is familiarity with the tech stacks.
         </p>
@@ -96,7 +103,7 @@
       </div>
     </section>
 
-    <section class="col-6 text-center px-5 node">
+    <section class="col-6 text-center px-5 article d-none" id="node">
       <h4 class="fw-heavy">
         NodeJS on the Cluster
       </h4>
@@ -114,6 +121,27 @@
           Currently, only Node 14 is supported (14.15.4), but Node 16 releases on April 20th, and will be available sometime during the week of release.
           Odd-numbered Node versions do not come with LTS, and will not be available as modules per our security policy. Because Node major versions typically
           don't break anything, expect old Node versions to disappear about 2 weeks after they enter Maintenance LTS or after the newest version is installed on the cluster.
+        </p>
+      </div>
+    </section>
+
+    <section class="col-6 text-center px-5 article d-none" id="node16">
+      <h4 class="fw-heavy">
+        NodeJS 16.3.0
+      </h4>
+
+      <span class="text-soft">June 11th, 2021</span>
+
+      <div class="text-left mt-4">
+        <p>
+          Node 16 is here and is available on our HPC! Check out <a href="https://medium.com/the-node-js-collection/node-js-16-available-now-7f5099a97e70" target="_blank">this</a>
+          link to see what's new, and if you're curious about V8 9.0 features, <a href="https://v8.dev/blog/v8-release-90" target="_blank">this</a> is
+          another good resource. Do note that previous versions of Node are still available, but will have to be installed locally. New Node versions don't happen often,
+          as we only do LTS releases. Per the <a href="https://nodejs.org/en/about/releases/">Node Release Schedule</a>, Node 18 will be released in April 2022.
+        </p>
+        <p>
+          We try not to break things at the HPC, but when breaking changes are introduced, we're as transparent as possible. Breaking changes for Node 16
+          all have to do with <code>process.binding</code>, so if you do low-level work in Node, upgrading could break your software.
         </p>
       </div>
     </section>
