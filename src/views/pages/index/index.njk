@@ -49,15 +49,15 @@
 			          analysis and consultation services. We commit to the establishment of research collaborations with
 			          scientists from different departments.</p>
 			        <p>
-								<a href="#quote" class="btn kbl-btn-1"><i class="fa fa-file"></i> get a quotation</a>
-								<a href="#" class="btn kbl-btn-2">Get In Touch</a>
+								<a href="#quote" class="btn kbl-btn-1" data-toggle="modal" data-target="#quoteModal"><i class="fa fa-file"></i> get a quotation</a>
+								<a href="/contact" class="btn kbl-btn-2">Get In Touch</a>
 							</p>
 			      </div>
 			    </div>
 			  </div>
 			</section><!-- Intro end -->
 			<!-- Benefits start -->
-			<section class="container-fluid px-5 py-5" style="background: #e9e9e9;">
+			<section class="container-fluid p-5" style="background: #e9e9e9;">
 				<div class="row px-5">
 
 					<section class="col-4 px-4">
@@ -91,8 +91,8 @@
 								<p><a href="#" class="color-link">Read more...</a></p>
 							</div>
 						</div>
-					</div>
-				</section>
+					</section>
+				</div>
 
 			</section>
 
@@ -157,7 +157,7 @@
 			      <div class="col-lg-12">
 			        <p class="text-1">we help our collaborators</p>
 			        <p class="text-2">mine <i>-omics</i> data</p>
-			        <p><a href="#quote" class="btn kbl-btn-1"><i class="fa fa-file"></i> get a quotation</a></p>
+			        <p><a href="#quote" class="btn kbl-btn-1" data-toggle="modal" data-target="#quoteModal"><i class="fa fa-file"></i> get a quotation</a></p>
 			      </div>
 			    </div>
 			  </div>
@@ -243,6 +243,7 @@
 			    </div>
 			  </div>
 			</section><!-- Quick faq & contact form end -->
+
 			<!-- CTA start -->
 			<section class="content-section image-bg image-bg-11 cta v1">
 			  <div class="container">
@@ -251,11 +252,13 @@
 			        <p class="text-1">we're knowledgeable about</p>
 			        <p class="text-2">advancing <i>-Omics</i> Big Data science</p>
 			        <p>A leading provider of Bioinformatics data analysis and consulting.</p>
-			        <p><a href="#quote" class="btn kbl-btn-1"><i class="fa fa-file"></i> get a quotation</a></p>
+			        <p><a href="#quote" class="btn kbl-btn-1" data-toggle="modal" data-target="#quoteModal"><i class="fa fa-file"></i> get a quotation</a></p>
 			      </div>
 			    </div>
 			  </div>
 			</section><!-- CTA end -->
+
+			{% include "./quote-modal.njk" %}
 
 		</article>
 

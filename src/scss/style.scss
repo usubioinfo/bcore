@@ -83,6 +83,21 @@ h3 + p {
   }
 }
 
+.gmap-responsive {
+  overflow: hidden;
+  padding-bottom: 25%;
+  position: relative;
+  height: 0;
+}
+
+.gmap-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
 // module loader
 #module-card-container {
   opacity: 0;
