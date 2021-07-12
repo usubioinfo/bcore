@@ -1,0 +1,13 @@
+@import '../globals';
+@import '../colors';
+
+.kbl-pricing-item {
+  border: solid 2px var(--palette-1-light);
+
+  .name {
+    font-size: 160%;
+    font-weight: 600;
+  }
+
+
+}

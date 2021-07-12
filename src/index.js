@@ -76,6 +76,10 @@ app.get(baseUrl + 'faq', (req, res) => {
   res.render(__dirname + '/views/pages/faq/faq.njk');
 });
 
+app.get(baseUrl + 'pricing', (req, res) => {
+  res.render(__dirname + '/views/pages/pricing/pricing.njk');
+});
+
 app.get(baseUrl + 'news', (req, res) => {
   res.render(__dirname + '/views/pages/news/news.njk');
 });
