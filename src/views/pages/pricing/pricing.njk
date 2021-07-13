@@ -8,10 +8,10 @@
 		{% from "universal/_navbar-switch.njk" import navbar %}
 		{{ navbar(bs4=bs4) }}
 
-    <article class="container my-5">
+    <article class="container-fluid my-5">
       <section class="row justify-content-center">
         <div class="col-6 text-center">
-          <h2>Simple Pricing</h2>
+          <h2>Our Pricing</h2>
         </div>
       </section>
 
@@ -25,11 +25,119 @@
         </div>
       </section>
 
-      <section class="row justify-content-center mt-3">
-        <div class="col-4">
-          <div class="kbl-pricing-item text-center">
+      <section class="row justify-content-center mt-4">
+        <div class="col-2">
+          <div class="kbl-pricing-item text-center pt-3">
             <h4 class="name">RNA-Seq</h4>
+            <p class="subtitle">
+              Up to 10 samples
+            </p>
+
+            <ul class="ps-0 ms-0">
+              <li>Quality check FastQ reads</li>
+              <li>Trimming</li>
+              <li>DEG analysis</li>
+              <li>GO analysis</li>
+            </ul>
+
+            <h3 class="price">$400</h4>
           </div>
+        </div>
+
+        <div class="col-2">
+          <div class="kbl-pricing-item text-center pt-3">
+            <h4 class="name">miRNA-Seq</h4>
+            <p class="subtitle">
+              Up to 10 samples
+            </p>
+
+            <ul class="ps-0 ms-0">
+              <li>Quality check</li>
+              <li>MiRDeep 2</li>
+              <li>Differential analysis</li>
+              <li>Target gene indentification</li>
+            </ul>
+
+            <h3 class="price">$500</h4>
+          </div>
+        </div>
+
+        <div class="col-2">
+          <div class="kbl-pricing-item text-center pt-3">
+            <h4 class="name">SNP-Seq</h4>
+            <p class="subtitle">
+              Up to 10 samples
+            </p>
+
+            <ul class="ps-0 ms-0">
+              <li>Quality check raw reads</li>
+              <li>Filtering and read mapping</li>
+              <li>Variant calling</li>
+              <li>Annotate detected variants</li>
+            </ul>
+
+            <h3 class="price">$600</h4>
+          </div>
+        </div>
+
+        <div class="col-2">
+          <div class="kbl-pricing-item text-center pt-3">
+            <h4 class="name">ChIP-Seq</h4>
+            <p class="subtitle">
+              Up to 10 samples
+            </p>
+
+            <ul class="ps-0 ms-0">
+              <li>Quality check raw reads</li>
+              <li>Filtering and read mapping</li>
+              <li>Peak calling</li>
+              <li>Annotate peaks</li>
+            </ul>
+
+            <h3 class="price">$600</h4>
+          </div>
+        </div>
+
+        <div class="col-2">
+          <div class="kbl-pricing-item text-center pt-3">
+            <h4 class="name">Methyl-Seq</h4>
+            <p class="subtitle">
+              Up to 10 samples
+            </p>
+
+            <ul class="ps-0 ms-0">
+              <li>Quality control</li>
+              <li>Adapter trimming</li>
+              <li>Contamination removal</li>
+              <li>Align reads with Bismarck</li>
+            </ul>
+
+            <h3 class="price">$700</h4>
+          </div>
+        </div>
+
+        <div class="col-2">
+          <div class="kbl-pricing-item text-center pt-3">
+            <h4 class="name">Genome Assembly</h4>
+            <p class="subtitle">
+              Rates differ per project
+            </p>
+
+            <ul class="ps-0 ms-0">
+              <li>Any project accepted</li>
+              <li>Eukaryotes</li>
+              <li>Prokaryotes</li>
+              <li>Contact us</li>
+            </ul>
+
+            <h3 class="price">$50/hr</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="row mt-5">
+        <div class="col text-center">
+          <h4>Your Price: 0$</h4>
         </div>
       </section>
     </article>

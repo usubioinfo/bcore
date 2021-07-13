@@ -2,12 +2,47 @@
 @import '../colors';
 
 .kbl-pricing-item {
-  border: solid 2px var(--palette-1-light);
+  border: solid 2px #eaeaea;
+  cursor: pointer;
+  transition: 0.3s;
 
   .name {
     font-size: 160%;
     font-weight: 600;
+    font-family: 'Rubik', sans-serif;
+    text-transform: none;
+    letter-spacing: -1px;
   }
 
+  .subtitle {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    color: #969696;
+  }
 
+  .price {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  ul {
+    text-align: left;
+    margin-block-start: 0.5em;
+    padding-inline-start: 20px;
+
+    li {
+      text-indent: -0.3rem;
+
+      &:before {
+        content: "- ";
+        
+      }
+    }
+  }
+
+  &:hover {
+    border-color: var(--palette-1);
+  }
 }
