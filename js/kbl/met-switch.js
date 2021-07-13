@@ -20,9 +20,8 @@
         newEl.classList.remove('d-none');
         newEl.classList.add('d-none');
       });
-      console.log('#' + currentPage);
+
       document.getElementById(currentPage).classList.remove('d-none');
-      console.log(currentPage);
     });
   });
 })();
