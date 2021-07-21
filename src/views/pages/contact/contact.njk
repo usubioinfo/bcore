@@ -48,14 +48,14 @@
 									<h3 class="heavy">send us a message</h3>
 									<p>Feel free to drop us a line below.</p>
 									<div class="row">
-										<form id="contact-form" class="col-12">
+										<div id="contact-form" class="col-12">
 											<div class="form-group contacts-form-result"><strong></strong></div>
-											<div class="form-group"><input type="text" placeholder="Name" name="comment-name" class="form-control"></div>
-											<div class="form-group"><input type="email" placeholder="Email" name="comment-email" class="form-control"></div>
-											<div class="form-group"><input type="tel" placeholder="Phone" name="comment-phone" class="form-control"></div>
-											<div class="form-group"><textarea rows="10" placeholder="Send us a message!" name="comment-message" class="form-control"></textarea></div>
-											<div class="form-group text-center"><button type="submit" class="btn kbl-btn-1">Send Your Request</button></div>
-										</form>
+											<div class="form-group"><input type="text" id="formName" placeholder="Name" name="comment-name" class="form-control"></div>
+											<div class="form-group"><input type="email" id="formEmail" placeholder="Email" name="comment-email" class="form-control"></div>
+											<div class="form-group"><input type="tel" id="formPhone" placeholder="Phone" name="comment-phone" class="form-control"></div>
+											<div class="form-group"><textarea rows="10" id="formMessage" placeholder="Send us a message!" name="comment-message" class="form-control"></textarea></div>
+											<div class="form-group text-center"><button id="send" class="btn kbl-btn-1">Send Your Request</button></div>
+										</div>
 									</div>
 								</section>
 							</div>
@@ -69,5 +69,6 @@
 		{{ footer(bs4=bs4) }}
 		{% from "universal/_scripts-macro.njk" import scripts %}
 		{{ scripts(bs4=bs4, mapsApi=true) }}
+		<script src="js/kbl/contact.js"></script>
 	</body>
 </html>

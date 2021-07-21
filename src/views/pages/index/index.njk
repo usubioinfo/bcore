@@ -226,16 +226,15 @@
 			      </div>
 			      <div class="col-md-6 col-lg-5">
 			        <div class="content-block palette-2-bg">
-
-			          <h3 class="text-center heavy">request a quotation</h3>
-			          <form class="text-center">
-			            <div class="form-group contacts-form-result"><strong></strong></div>
-			            <input placeholder="Name" class="form-control my-3 py-4 px-3" id="form-name">
-			            <input placeholder="Email" class="form-control my-3 py-4 px-3" id="form-email">
-			            <input placeholder="Phone" class="form-control my-3 py-4 px-3" id="form-phone">
-			            <textarea rows="10" placeholder="Send us a message!" class="form-control my-3 py-3 px-3" id="form-body"></textarea>
-			            <button class="btn kbl-btn-1 my-2" id="send-button">Send Your Request</button>
-			          </form>
+								<div class="text-center">
+									<h3 class="text-center heavy">request a quotation</h3>
+									<div class="form-group contacts-form-result"><strong></strong></div>
+									<input placeholder="Name" class="form-control my-3 py-4 px-3" id="formName">
+									<input placeholder="Email" class="form-control my-3 py-4 px-3" id="formEmail">
+									<input placeholder="Phone" class="form-control my-3 py-4 px-3" id="formPhone">
+									<textarea rows="10" placeholder="Send us a message!" class="form-control my-3 py-3 px-3" id="formMessage"></textarea>
+									<button class="btn kbl-btn-1 my-2" id="send">Send Your Request</button>
+								</div>
 
 			        </div>
 
@@ -266,7 +265,7 @@
 		{{ footer(bs4=bs4) }}
 		{% from "universal/_scripts-macro.njk" import scripts %}
 		{{ scripts(bs4=bs4) }}
-		<script src="js/kbl/email.js"></script>
+		<script src="js/kbl/contact.js"></script>
 
 	</body>
 </html>
