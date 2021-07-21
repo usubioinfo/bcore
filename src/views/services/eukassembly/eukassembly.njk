@@ -40,7 +40,31 @@
         <li>Compare assemblies, pick one with highest percentage of complete genes</li>
       </ul>
       <h5>Step 5 - Scaffolding and gap filling</h5>
-      <h5>Step 6 - Functional Annotation</h5>
+      <ul>
+        <li>Remove reptitive contigs</li>
+        <li>Build scaffolds with longest contigs</li>
+        <li>Close large amount of gaps</li>
+      </ul>
+      <h5>Step 6 - Compare assembly metrics</h5>
+      <ul>
+        <li>Total number of contigs in assembly</li>
+        <li>Largest contig</li>
+        <li>Total number of bases in assembly</li>
+        <li>Number of misassembled contigs</li>
+        <li>Misassembled contigs length</li>
+      </ul>
+      <h5>Step 7 - Gene prediction</h5>
+      <ul>
+        <li>Predict novel genes</li>
+        <li>Final consensus gene models</li>
+      </ul>
+      <h5>Step 8 - functional annotation</h5>
+      <ul>
+        <li>Identify differentially expressed genes</li>
+        <li>Annotate gene</li>
+        <li>GO terms</li>
+        <li>KEGG Pathways</li>
+      </ul>
     </section>
 
     {% from "components/svc-prev-next/svc-prev-next.njk" import switch %}
