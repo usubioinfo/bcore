@@ -6,12 +6,25 @@
   cursor: pointer;
   transition: 0.3s;
 
+  &.selected {
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.12), 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-color: transparent;
+    border-radius: 4px;
+
+    .name,
+    .price {
+      color: var(--palette-2);
+    }
+  }
+
   .name {
     font-size: 160%;
     font-weight: 600;
     font-family: 'Rubik', sans-serif;
     text-transform: none;
     letter-spacing: -1px;
+    color: var(--color-text-soft);
+    transition: 0.3s;
   }
 
   .subtitle {
@@ -25,6 +38,8 @@
     font-weight: 600;
     letter-spacing: 0;
     text-transform: none;
+    color: var(--color-text-soft);
+    transition: 0.3s;
   }
 
   ul {
