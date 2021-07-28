@@ -2,7 +2,7 @@
 @import '../colors';
 
 @mixin kbl-btn($btn-color, $btn-color-hvr, $btn-txt-color, $font-weight: $font-weight-heavy) {
-  border-radius: 0px!important;
+  border-radius: var(--btn-radius)!important;
   color: $btn-txt-color!important;
   padding: 10px 30px!important;
   transition: all $time-mid;

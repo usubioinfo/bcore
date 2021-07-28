@@ -2,7 +2,7 @@
 .kbl-switch {
   color: var(--text-main)!important;
   font-weight: var(--fw-medium)!important;
-  border-radius: var(--border-radius)!important;
+  border-radius: var(--btn-radius)!important;
   transition: var(--time-mid)!important;
 
   &:not(.current):hover {
