@@ -1,0 +1,22 @@
+$mobile-nav-radius: 12px;
+
+.mobile-nav-wrapper {
+  bottom: -1px;
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  // padding-bottom: calc(.05rem + env(safe-area-inset-bottom));
+  z-index: 9999;
+}
+
+.mobile-nav {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-top-left-radius: $mobile-nav-radius;
+  border-top-right-radius: $mobile-nav-radius;
+  height: 100%!important;
+  background: white;
+
+  .icon-container {
+    line-height: 1px;
+  }
+}

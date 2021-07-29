@@ -16,6 +16,8 @@
 
 @import './old-rules';
 
+@import './mobile-nav';
+
 .no-select {
   pointer-events: none;
 }
@@ -133,7 +135,7 @@ h3 + p {
 ::-moz-placeholder {
   font-style: normal;
 }
-:-ms-input-placeholder {  
+:-ms-input-placeholder {
   font-style: normal;
 }
 
