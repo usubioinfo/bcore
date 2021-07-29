@@ -5,7 +5,6 @@ $mobile-nav-radius: 12px;
   position: fixed;
   height: 70px;
   width: 100%;
-  padding-bottom: calc(.05rem + env(safe-area-inset-bottom));
   z-index: 9999;
 }
 
@@ -15,6 +14,10 @@ $mobile-nav-radius: 12px;
   border-top-right-radius: $mobile-nav-radius;
   height: 100%!important;
   background: white;
+
+  .content {
+    margin-bottom: calc(.05rem + env(safe-area-inset-bottom));
+  }
 
   .icon-container {
     line-height: 1px;
