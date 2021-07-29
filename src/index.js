@@ -69,39 +69,73 @@ app.get(baseUrl + 'download/pdf/:filename', (req, res) => {
 
 // Pages
 app.get(baseUrl, (req, res) => {
-  res.render(__dirname + '/views/pages/index/index.njk');
+  let data = {
+    activeRoute: 'home'
+  }
+  console.log(data);
+  res.render(__dirname + '/views/pages/index/index.njk', data);
 });
 
 app.get(baseUrl + 'faq', (req, res) => {
-  res.render(__dirname + '/views/pages/faq/faq.njk');
+  let data = {
+    activeRoute: 'faq'
+  }
+
+  res.render(__dirname + '/views/pages/faq/faq.njk', data, (err, html) => {
+    res.send(html);
+  });
 });
 
 app.get(baseUrl + 'pricing', (req, res) => {
-  res.render(__dirname + '/views/pages/pricing/pricing.njk');
+  let data = {
+    activeRoute: 'pricing'
+  }
+
+  res.render(__dirname + '/views/pages/pricing/pricing.njk', data);
 });
 
 app.get(baseUrl + 'news', (req, res) => {
-  res.render(__dirname + '/views/pages/news/news.njk');
+  let data = {
+    activeRoute: 'news'
+  }
+
+  res.render(__dirname + '/views/pages/news/news.njk', data);
 });
 
 app.get(baseUrl + 'contact', (req, res) => {
-  res.render(__dirname + '/views/pages/contact/contact.njk');
+  let data = {
+    activeRoute: 'contact'
+  }
+
+  res.render(__dirname + '/views/pages/contact/contact.njk', data);
 });
 
 // SERVICES
 app.get(baseUrl + 'services/', (req, res) => {
-  res.render(__dirname + '/views/services/services.njk');
+  let data = {
+    activeRoute: 'services'
+  }
+
+  res.render(__dirname + '/views/services/services.njk', data);
 });
 
 app.get(baseUrl + 'services/:servicename', (req, res) => {
+  let data = {
+    activeRoute: 'services'
+  }
+
   const serviceString = `/views/services/${req.params.servicename}/${req.params.servicename}.njk`;
-  res.render(__dirname + serviceString);
+  res.render(__dirname + serviceString, data);
 });
 
 //RESOURCES
 app.get(baseUrl + 'resources/:rscname', (req, res) => {
+  let data = {
+    activeRoute: 'resources'
+  }
+
   const rscString = `/views/resources/${req.params.rscname}/${req.params.rscname}.njk`;
-  res.render(__dirname + rscString);
+  res.render(__dirname + rscString, data);
 });
 
 app.listen(port, () => {

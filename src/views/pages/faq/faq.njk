@@ -492,8 +492,7 @@
 
 		</article>
 
-		{% from "universal/_footer-switch.njk" import footer %}
-		{{ footer(bs4=bs4) }}
+		{% include "universal/_footer-bs4.njk" %}
 		{% from "universal/_scripts-macro.njk" import scripts %}
 		{{ scripts(bs4=bs4) }}
 	</body>
