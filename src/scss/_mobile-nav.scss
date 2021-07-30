@@ -1,0 +1,36 @@
+$mobile-nav-radius: 12px;
+
+.mobile-nav-wrapper {
+  bottom: -1px;
+  position: fixed;
+  height: calc(70px + env(safe-area-inset-bottom));
+  width: 100%;
+  z-index: 9999;
+}
+
+.mobile-nav {
+  box-shadow: 0 1px 5px rgba(0,0,0,0.16), 0 1px 4px rgba(0,0,0,0.28);
+  border-top-left-radius: $mobile-nav-radius;
+  border-top-right-radius: $mobile-nav-radius;
+  height: 100%!important;
+  background: white;
+  padding-bottom: env(safe-area-inset-bottom);
+
+  .mob-nav-link {
+    text-decoration: none!important;
+    color: #adadad;
+    transition: 0.3s;
+
+    &.active {
+      color: var(--palette-1);
+    }
+  }
+
+  .icon-container {
+    line-height: 1px;
+
+    .mob-nav-icon {
+      font-size: 130%;
+    }
+  }
+}
