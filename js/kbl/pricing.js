@@ -10,7 +10,10 @@
     genome: 50
   }
 
-  const switches = document.querySelectorAll('.kbl-switch');
+  const altPriceSwitches = document.querySelectorAll('.kbl-switch.s1');
+  altPriceSwitches[0].classList.add('current');
+
+  const switches = document.querySelectorAll('.kbl-switch.s2');
   switches[0].classList.add('current');
 
   let currentPage = switches[0].textContent.trim().toLowerCase();
@@ -18,7 +21,7 @@
 
   switches.forEach((el) => {
     el.addEventListener('click', (e) => {
-      document.querySelectorAll('.kbl-switch').forEach((newEl) => {
+      document.querySelectorAll('.kbl-switch.s2').forEach((newEl) => {
         newEl.classList.remove('current');
       });
 
@@ -31,6 +34,16 @@
       });
   
       document.getElementById(currentPage).classList.remove('d-none');
+    });
+  });
+
+  altPriceSwitches.forEach((el) => {
+    el.addEventListener('click', (e) => {
+      document.querySelectorAll('.kbl-switch.s1').forEach((newEl) => {
+        newEl.classList.remove('current');
+      });
+
+      el.classList.add('current');
     });
   });
 
