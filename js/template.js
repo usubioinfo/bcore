@@ -31,62 +31,10 @@
 			$header_2_search_icon = $( '#header2-search-icon' ),
 			$header_2_search_form = $( '#header2-search-form' ).hide(),
 			$mobile_menu_open = $( '#mobile-menu-open' ),
-        	$contact_form = $( '#contact-form' ),
 			images_counter = 0, API, apply_lightbox, offside_menu,
 			site_wrapper = imagesLoaded(  $page, { background: '.content-section' } );
 
 		$page.css( 'min-height', $window.height() );
-
-        $('iframe[src*="youtube"],iframe[src*="vimeo"]').parent().fitVids();
-
-		// Contact form validation
-		$contact_form.validate( {
-			debug: false,
-			errorClass: "label-form-error",
-			rules: {
-				"comment-name": "required",
-				"comment-message": "required",
-				"comment-email": {
-					required: true,
-					email: true
-				},
-			},
-			invalidHandler: function ( event, validator ) {
-				var errors = validator.numberOfInvalids(),
-					$result = $( 'strong', $( '.contacts-form-result', $contact_form ) );
-				if ( errors ) {
-					var message = errors == 1 ? 'You missed 1 field. It has been highlighted.' : 'You missed ' + errors + ' fields. They have been highlighted.';
-					$result.html( message );
-					$result.show();
-				} else {
-					$result.hide();
-				}
-			},
-			submitHandler: function () {
-				var $result = $( '.contacts-form-result', $contact_form ),
-					$strong = $( 'strong', $result );
-
-				$.ajax( {
-					method: 'POST',
-					url: './email.php',
-					data: {
-						name: $( 'input[name="comment-name"]', $contact_form ).val(),
-						email: $( 'input[name="comment-email"]', $contact_form ).val(),
-						phone: $( 'input[name="comment-phone"]', $contact_form ).val(),
-						message: $( 'textarea[name="comment-message"]', $contact_form ).val(),
-					}
-				} )
-				.always( function () {
-					$result.addClass( 'show' );
-				} )
-				.done( function ( msg ) {
-					$strong.html( '<p>' + msg + '</p>' );
-				} )
-				.fail( function () {
-					$strong.html( '<p>Fail...</p>' );
-				} );
-			}
-		} );
 
 		apply_lightbox = function( event ) {
 			var $context = ( event !== undefined ) ? $( event.currentTarget ) : $( 'body' );
