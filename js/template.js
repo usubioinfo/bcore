@@ -37,26 +37,6 @@
 
 		$page.css( 'min-height', $window.height() );
 
-		// Offside menu
-		$( '#site-menu' ).find( '> ul' ).clone().attr( 'class', '' ).appendTo( '#offcanvas-menu' );
-		offside_menu = offside( '#offcanvas-menu', {
-			slidingElementsSelector: '#page',
-			buttonsSelector: 'button[data-pushbar-target="left"]',
-			debug: true,
-		} );
-		$( '#page, [data-pushbar-close]' ).on( 'mousedown', function() {
-			offside_menu.close();
-		} );
-
-    // var myOffside = offside( '#offcanvas-menu', {
-
-    //     slidingElementsSelector:'#page',
-    //     buttonsSelector: 'button[data-pushbar-target="left"]',
-    // });
-
-    // $( '[data-pushbar-close]', '#offcanvas-menu' ).hide();
-    // 		$site_menu.clone().appendTo( '#offcanvas-menu' );
-
         $('iframe[src*="youtube"],iframe[src*="vimeo"]').parent().fitVids();
 
 		// Contact form validation
