@@ -1,0 +1,17 @@
+{% macro priceItem(data) %}
+  <div class="kbl-pricing-item text-center pt-3 mx-auto" id="{{ data.id }}">
+    <h4 class="name">{{ data.name }}</h4>
+    <p class="subtitle">
+      Up to 10 samples
+    </p>
+
+    <ul class="ps-0 ms-0">
+      <li>{{ data.bullets[0] }}</li>
+      <li>{{ data.bullets[1] }}</li>
+      <li>{{ data.bullets[2] }}</li>
+      <li>{{ data.bullets[3] }}</li>
+    </ul>
+
+    <h3 class="price">$<span class="price-data">{{ data.price }}</span></h4>
+  </div>
+{% endmacro %}

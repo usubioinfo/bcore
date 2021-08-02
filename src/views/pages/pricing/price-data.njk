@@ -1,0 +1,123 @@
+{% set rnaseq = {
+  name: "RNA-Seq",
+  id: "rnaseq",
+  bullets: [
+    "Quality check FastQC reads",
+    "Trimming",
+    "DEG analysis",
+    "GO analysis"
+  ],
+  price: 400
+}%}
+
+{% set mirna = {
+  name: "miRNA-Seq",
+  id: "mirna",
+  bullets: [
+    "Quality check",
+    "MiRDeep 2",
+    "Differential analysis",
+    "Target gene indentification"
+  ],
+  price: 500
+}%}
+
+{% set snpseq = {
+  name: "SNP-Seq",
+  id: "snpseq",
+  bullets: [
+    "Quality check raw reads",
+    "Filtering and read mapping",
+    "Variant calling",
+    "Annotate detected variants"
+  ],
+  price: 600
+}%}
+
+{% set chipseq = {
+  name: "ChIP-Seq",
+  id: "chipseq",
+  bullets: [
+    "Quality check raw reads",
+    "Filtering and read mapping",
+    "Peak calling",
+    "Annotate peaks"
+  ],
+  price: 600
+}%}
+
+{% set metseq = {
+  name: "Methyl-Seq",
+  id: "metseq",
+  bullets: [
+    "Quality control",
+    "Adapter trimming",
+    "Contamination removal",
+    "Align reads with Bismarck"
+  ],
+  price: 700
+}%}
+
+{% set template = {
+  name: "RNA",
+  id: "rnaseq",
+  bullets: [
+    "Quality",
+    "Trimming",
+    "DEG",
+    "GO"
+  ],
+  price: 400
+}%}
+
+{% set genome = {
+  name: "Genome Assembly",
+  id: "genome",
+  bullets: [
+    "Any project accepted",
+    "Eukaryotes",
+    "Prokaryotes",
+    "Additional annotation"
+  ],
+  price: "50/hr"
+}%}
+
+{% set gbs = {
+  name: "GBS",
+  id: "gbs",
+  bullets: [
+    "???",
+    "???",
+    "???",
+    "???"
+  ],
+  price: 500
+}%}
+
+{% set amplicon = {
+  name: "Amplicon Analysis",
+  id: "amplicon",
+  bullets: [
+    "???",
+    "???",
+    "???",
+    "???"
+  ],
+  price: 500
+}%}
+
+{% set metagenomics = {
+  name: "Metagenomics",
+  id: "metagenomics",
+  bullets: [
+    "???",
+    "???",
+    "???",
+    "???"
+  ],
+  price: 500
+}%}
+
+{% set priceData = [rnaseq, mirna, snpseq, chipseq, metseq, gbs, amplicon, metagenomics, genome] %}
+{% set rowOne = [rnaseq, mirna, snpseq, chipseq, metseq] %}
+{% set rowTwo = [gbs, amplicon, metagenomics, genome] %}

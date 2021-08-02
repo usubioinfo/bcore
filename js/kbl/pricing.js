@@ -56,7 +56,7 @@
       el.classList.add('selected');
 
       const pricingId = el.id;
-      const price = pricing[pricingId];
+      const price = document.querySelector(`#${pricingId} .price-data`).textContent;
       const priceEl = document.querySelector('#price');
       priceEl.textContent = price;
     });

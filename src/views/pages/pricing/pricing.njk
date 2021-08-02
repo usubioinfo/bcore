@@ -47,115 +47,25 @@
 
       <div id="sequencing" class="pricing-section">
         <section class="row justify-content-center mt-4 mb-5">
-          <div class="col-10 col-md-4 col-xl-3 my-2">
-            <div class="kbl-pricing-item text-center pt-3 mx-auto" id="rnaseq">
-              <h4 class="name">RNA-Seq</h4>
-              <p class="subtitle">
-                Up to 10 samples
-              </p>
+          {% from "components/price-item.njk" import priceItem %}
+          {% from "./price-data.njk" import rowOne, rowTwo %}
 
-              <ul class="ps-0 ms-0">
-                <li>Quality check FastQ reads</li>
-                <li>Trimming</li>
-                <li>DEG analysis</li>
-                <li>GO analysis</li>
-              </ul>
-
-              <h3 class="price">$400</h4>
+          {% for service in rowOne %}
+            <div class="col">
+              {{ priceItem(service) }}
             </div>
-          </div>
-
-          <div class="col-10 col-md-4 col-xl-3 my-2">
-            <div class="kbl-pricing-item text-center pt-3 mx-auto" id="mirna">
-              <h4 class="name">miRNA-Seq</h4>
-              <p class="subtitle">
-                Up to 10 samples
-              </p>
-
-              <ul class="ps-0 ms-0">
-                <li>Quality check</li>
-                <li>MiRDeep 2</li>
-                <li>Differential analysis</li>
-                <li>Target gene indentification</li>
-              </ul>
-
-              <h3 class="price">$500</h4>
-            </div>
-          </div>
-
-          <div class="col-10 col-md-4 col-xl-3 my-2">
-            <div class="kbl-pricing-item text-center pt-3 mx-auto" id="snpseq">
-              <h4 class="name">SNP-Seq</h4>
-              <p class="subtitle">
-                Up to 10 samples
-              </p>
-
-              <ul class="ps-0 ms-0">
-                <li>Quality check raw reads</li>
-                <li>Filtering and read mapping</li>
-                <li>Variant calling</li>
-                <li>Annotate detected variants</li>
-              </ul>
-
-              <h3 class="price">$600</h4>
-            </div>
-          </div>
+          {% endfor %}
         </section>
 
-        <section class="row justify-content-center my-2">
-          <div class="col-10 col-md-4 col-xl-3">
-            <div class="kbl-pricing-item text-center pt-3 mx-auto" id="chip">
-              <h4 class="name">ChIP-Seq</h4>
-              <p class="subtitle">
-                Up to 10 samples
-              </p>
+        <section class="row justify-content-center mt-4 mb-5">
+          {% from "components/price-item.njk" import priceItem %}
+          {% from "./price-data.njk" import rowOne, rowTwo %}
 
-              <ul class="ps-0 ms-0">
-                <li>Quality check raw reads</li>
-                <li>Filtering and read mapping</li>
-                <li>Peak calling</li>
-                <li>Annotate peaks</li>
-              </ul>
-
-              <h3 class="price">$600</h4>
+          {% for service in rowTwo %}
+            <div class="col">
+              {{ priceItem(service) }}
             </div>
-          </div>
-
-          <div class="col-10 col-md-4 col-xl-3 my-2">
-            <div class="kbl-pricing-item text-center pt-3 mx-auto" id="methyl">
-              <h4 class="name">Methyl-Seq</h4>
-              <p class="subtitle">
-                Up to 10 samples
-              </p>
-
-              <ul class="ps-0 ms-0">
-                <li>Quality control</li>
-                <li>Adapter trimming</li>
-                <li>Contamination removal</li>
-                <li>Align reads with Bismarck</li>
-              </ul>
-
-              <h3 class="price">$700</h4>
-            </div>
-          </div>
-
-          <div class="col-10 col-md-4 col-xl-3 my-2">
-            <div class="kbl-pricing-item text-center pt-3 mx-auto" id="genome">
-              <h4 class="name">Genome Assembly</h4>
-              <p class="subtitle">
-                Rates differ per project
-              </p>
-
-              <ul class="ps-0 ms-0">
-                <li>Any project accepted</li>
-                <li>Eukaryotes</li>
-                <li>Prokaryotes</li>
-                <li>Additional annotation</li>
-              </ul>
-
-              <h3 class="price">$50/hr</h4>
-            </div>
-          </div>
+          {% endfor %}
         </section>
 
         <section class="row mt-5">
