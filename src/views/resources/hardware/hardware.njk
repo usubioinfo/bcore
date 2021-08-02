@@ -1,63 +1,50 @@
-<!DOCTYPE html>
-{% set bs4 = true %}
-<html lang="en">
-{% from "universal/_header-macro.njk" import header %}
-{{ header(bs4=bs4, scss=false) }}
-	<body>
-		{% include "universal/_preload.njk" %}
-		{% from "universal/_navbar-switch.njk" import navbar %}
-		{{ navbar(bs4=bs4) }}
+{% extends "templates/main.template.njk" %}
 
-		<article class="container-fluid kbl-content-wrapper">
+{% block content %}
+	<article class="container-fluid kbl-content-wrapper">
 
-			<section class="row mt-4">
-				<div class="col-12">
-					<h3 class="text-center max-header">Welcome to the Bioinformatics Core High-Performance Computing Facility!</h3>
-				</div>
-			</section>
+		<section class="row mt-4">
+			<div class="col-12">
+				<h3 class="text-center max-header">Welcome to the Bioinformatics Core High-Performance Computing Facility!</h3>
+			</div>
+		</section>
 
-			<section class="row my-4 justify-content-center">
+		<section class="row my-4 justify-content-center">
 
-				<div class="col-11 col-md-6 col-lg-6">
-					<p class="guru-text">
-						The Bioinformatics department hosts the Guru cluster from the Biotech building in Logan, Utah.
-						This four blade cluster has 256 CPU cores, 2TB of ram, and 250TB of storage.
-					</p>
-				</div>
-			</section>
+			<div class="col-11 col-md-6 col-lg-6">
+				<p class="guru-text">
+					The Bioinformatics department hosts the Guru cluster from the Biotech building in Logan, Utah.
+					This four blade cluster has 256 CPU cores, 2TB of ram, and 250TB of storage.
+				</p>
+			</div>
+		</section>
 
-			<section class="row">
-				<div class="col-12 text-center">
-					<h2 class="max-header">Guru Cluster</h2>
-					<span>SSH via authorized_user@biocluster.usu.edu</span>
-				</div>
-			</section>
+		<section class="row">
+			<div class="col-12 text-center">
+				<h2 class="max-header">Guru Cluster</h2>
+				<span>SSH via authorized_user@biocluster.usu.edu</span>
+			</div>
+		</section>
 
-			<section class="row mb-5">
-				<div class="col-4">
-					<div class="text-center spec-title">Management Server: Guru</div>
-					<div class="bottom-margin">- 2x AMD EPYC 7601 processors (32 cores each with hyper-threading)</div>
-					<div>- 32X8 GB RAM (256 GB total)</div>
-				</div>
+		<section class="row mb-5">
+			<div class="col-4">
+				<div class="text-center spec-title">Management Server: Guru</div>
+				<div class="bottom-margin">- 2x AMD EPYC 7601 processors (32 cores each with hyper-threading)</div>
+				<div>- 32X8 GB RAM (256 GB total)</div>
+			</div>
 
-				<div class="col-4">
-					<div class="text-center spec-title">Compute Nodes: chela01, chela02, chela03</div>
-					<div class="bottom-margin">- 2x AMD EPYC 7601 processors (32 cores each with hyper-threading)</div>
-					<div>- 32X16 GB RAM (512 GB available per node)</div>
-				</div>
+			<div class="col-4">
+				<div class="text-center spec-title">Compute Nodes: chela01, chela02, chela03</div>
+				<div class="bottom-margin">- 2x AMD EPYC 7601 processors (32 cores each with hyper-threading)</div>
+				<div>- 32X16 GB RAM (512 GB available per node)</div>
+			</div>
 
-				<div class="col-4">
-					<div class="text-center spec-title">Topology: Fiber Channel</div>
-					<div class="bottom-margin">- FDRx4 cabling through an Infiniband switch with speeds up to 54Gb/s</div>
-					<div>- Redundant link to storage array</div>
-				</div>
-			</section>
+			<div class="col-4">
+				<div class="text-center spec-title">Topology: Fiber Channel</div>
+				<div class="bottom-margin">- FDRx4 cabling through an Infiniband switch with speeds up to 54Gb/s</div>
+				<div>- Redundant link to storage array</div>
+			</div>
+		</section>
 
-		</article>
-
-		{% from "universal/_footer-switch.njk" import footer %}
-		{{ footer(bs4=bs4) }}
-		{% import "universal/_scripts-macro.njk" as scriptsMacro %}
-    {{ scriptsMacro.scripts(bs4=bs4, mapsApi=false) }}
-	</body>
-</html>
+	</article>
+{% endblock %}

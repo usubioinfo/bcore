@@ -2,23 +2,20 @@
 {% set bs4 = true %}
 <html lang="en">
 	{% from "universal/_header-macro.njk" import header %}
-	{{ header(bs4=bs4) }}
+	{{ header(bs4=bs4, scss=false) }}
 	<body>
 		{% include "universal/_preload.njk" %}
-		{% from "universal/_navbar-switch.njk" import navbar %}
-		{{ navbar(bs4=bs4) }}
+    {% include "universal/_navbar-bs4.njk" %}
 
-		<div class="container-fluid px-5 mt-4 mb-5">
-			{% block content %}
-			{% endblock %}
-		</div>
+    {% block content %}
+
+    {% endblock %}
 
 		{% include "universal/_footer-bs4.njk" %}
+		
 		{% from "universal/_scripts-macro.njk" import scripts %}
 		{{ scripts(bs4=bs4) }}
+		<script src="js/kbl/contact.js"></script>
 
-		{% block scripts %}
-
-		{% endblock %}
 	</body>
 </html>

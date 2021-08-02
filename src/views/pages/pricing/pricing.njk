@@ -1,129 +1,115 @@
-<!DOCTYPE html>
-{% set bs4 = true %}
-<html lang="en">
-	{% from "universal/_header-macro.njk" import header %}
-	{{ header(bs4=bs4, scss=false) }}
-	<body>
-		{% include "universal/_preload.njk" %}
-		{% from "universal/_navbar-switch.njk" import navbar %}
-		{{ navbar(bs4=bs4) }}
+{% extends "templates/main.template.njk" %}
 
-    <article class="container-fluid my-5">
-      <section class="row justify-content-center">
-        <div class="col-6 text-center">
-          <h4>My Organization Is</h4>
-        </div>
-      </section>
+{% block content %}
+  <article class="container-fluid my-5">
+    <section class="row justify-content-center">
+      <div class="col-6 text-center">
+        <h4>My Organization Is</h4>
+      </div>
+    </section>
 
-      <section class="row justify-content-center mt-3 mb-5">
-        <div class="col-2 text-center">
-          <button class="btn kbl-switch s1 usu">USU-affiliated</button>
-        </div>
-
-        <div class="col-2 text-center">
-          <button class="btn kbl-switch s1 academic">Academic</button>
-        </div>
-
-        <div class="col-2 text-center">
-          <button class="btn kbl-switch s1 commercial">Commercial</button>
-        </div>
-      </section>
-
-      <section class="row justify-content-center">
-        <div class="col-6 text-center">
-          <h2>Our Pricing</h2>
-        </div>
-      </section>
-
-      <section class="row justify-content-center mt-3 mb-5">
-        <div class="col-2 text-center">
-          <button class="btn kbl-switch s2 current pricing">Sequencing</button>
-        </div>
-
-        <div class="col-2 text-center">
-          <button class="btn kbl-switch s2 pricing">Custom</button>
-        </div>
-      </section>
-
-      <div id="sequencing" class="pricing-section">
-        <section class="row justify-content-center mt-4 mb-5">
-          {% from "components/price-item.njk" import priceItem %}
-          {% from "./price-data.njk" import rowOne, rowTwo %}
-
-          {% for service in rowOne %}
-            <div class="col">
-              {{ priceItem(service) }}
-            </div>
-          {% endfor %}
-        </section>
-
-        <section class="row justify-content-center mt-4 mb-5">
-          {% from "components/price-item.njk" import priceItem %}
-          {% from "./price-data.njk" import rowOne, rowTwo %}
-
-          {% for service in rowTwo %}
-            <div class="col">
-              {{ priceItem(service) }}
-            </div>
-          {% endfor %}
-        </section>
-
-        <section class="row mt-5">
-          <div class="col text-center">
-            <h4>Your Price: <span id="price">0</span>$</h4>
-          </div>
-        </section>
+    <section class="row justify-content-center mt-3 mb-5">
+      <div class="col-2 text-center">
+        <button class="btn kbl-switch s1 usu">USU-affiliated</button>
       </div>
 
-      <div id="custom" class="pricing-section d-none">
-        <div class="row justify-content-center">
-          <div class="col-5">
-            <section class="custom-pricing py-3 px-4 text-center">
-              <h4>If you have custom data analysis needs, please fill out the form below.</h4>
+      <div class="col-2 text-center">
+        <button class="btn kbl-switch s1 academic">Academic</button>
+      </div>
 
-              <div class="row mt-5">
-                <div class="col-12">
-                  <input class="form-control" placeholder="Email"/>
-                </div>
-              </div>
+      <div class="col-2 text-center">
+        <button class="btn kbl-switch s1 commercial">Commercial</button>
+      </div>
+    </section>
 
-              <div class="row mt-4">
-                <div class="col-12">
-                  <input class="form-control" placeholder="Name"/>
-                </div>
-              </div>
+    <section class="row justify-content-center">
+      <div class="col-6 text-center">
+        <h2>Our Pricing</h2>
+      </div>
+    </section>
 
-              <div class="row mt-4">
-                <div class="col-6">
-                  <input class="form-control" placeholder="Organization"/>
-                </div>
-                <div class="col-6">
-                  <input class="form-control" placeholder="Phone"/>
-                </div>
-              </div>
+    <section class="row justify-content-center mt-3 mb-5">
+      <div class="col-2 text-center">
+        <button class="btn kbl-switch s2 current pricing">Sequencing</button>
+      </div>
 
-              <div class="row mt-4">
-                <div class="col-12">
-                  <textarea class="form-control" placeholder="Describe your project"/></textarea>
-                </div>
-              </div>
+      <div class="col-2 text-center">
+        <button class="btn kbl-switch s2 pricing">Custom</button>
+      </div>
+    </section>
 
-              <div class="row justify-content-center mt-4">
-                <div class="col-4">
-                  <button class="btn kbl-btn-1">Send</button>
-                </div>
-              </div>
+    <div id="sequencing" class="pricing-section">
+      <section class="row justify-content-center mt-4 mb-5">
+        {% from "components/price-item.njk" import priceItem %}
+        {% from "./price-data.njk" import rowOne, rowTwo %}
 
-            </section>
+        {% for service in rowOne %}
+          <div class="col">
+            {{ priceItem(service) }}
           </div>
+        {% endfor %}
+      </section>
+
+      <section class="row justify-content-center mt-4 mb-5">
+        {% from "components/price-item.njk" import priceItem %}
+        {% from "./price-data.njk" import rowOne, rowTwo %}
+
+        {% for service in rowTwo %}
+          <div class="col">
+            {{ priceItem(service) }}
+          </div>
+        {% endfor %}
+      </section>
+
+      <section class="row mt-5">
+        <div class="col text-center">
+          <h4>Your Price: <span id="price">0</span>$</h4>
+        </div>
+      </section>
+    </div>
+
+    <div id="custom" class="pricing-section d-none">
+      <div class="row justify-content-center">
+        <div class="col-5">
+          <section class="custom-pricing py-3 px-4 text-center">
+            <h4>If you have custom data analysis needs, please fill out the form below.</h4>
+
+            <div class="row mt-5">
+              <div class="col-12">
+                <input class="form-control" placeholder="Email"/>
+              </div>
+            </div>
+
+            <div class="row mt-4">
+              <div class="col-12">
+                <input class="form-control" placeholder="Name"/>
+              </div>
+            </div>
+
+            <div class="row mt-4">
+              <div class="col-6">
+                <input class="form-control" placeholder="Organization"/>
+              </div>
+              <div class="col-6">
+                <input class="form-control" placeholder="Phone"/>
+              </div>
+            </div>
+
+            <div class="row mt-4">
+              <div class="col-12">
+                <textarea class="form-control" placeholder="Describe your project"/></textarea>
+              </div>
+            </div>
+
+            <div class="row justify-content-center mt-4">
+              <div class="col-4">
+                <button class="btn kbl-btn-1">Send</button>
+              </div>
+            </div>
+
+          </section>
         </div>
       </div>
-    </article>
-
-		{% include "universal/_footer-bs4.njk" %}
-		{% from "universal/_scripts-macro.njk" import scripts %}
-		{{ scripts(bs4=bs4) }}
-    <script src="js/kbl/pricing.js"></script>
-
-	</body>
-</html>
+    </div>
+  </article>
+{% endblock %}

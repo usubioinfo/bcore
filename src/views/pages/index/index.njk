@@ -1,271 +1,256 @@
-<!DOCTYPE html>
-{% set bs4 = true %}
-<html lang="en">
-	{% from "universal/_header-macro.njk" import header %}
-	{{ header(bs4=bs4, scss=false) }}
-	<body>
-		{% include "universal/_preload.njk" %}
-		{% from "universal/_navbar-switch.njk" import navbar %}
-		{{ navbar(bs4=bs4) }}
+{% extends "templates/main.template.njk" %}
 
-		<article class="kbl-content-wrapper">
-			<section class="homepage-slider d-none d-lg-block">
-			  <div class="homepage-slider-nav"><a id="homepage-slider-left" href="#"><span class="wicon-iconmonstr-angel-left-circle-thin"></span></a></div>
-			  <div id="homepage-slider" class="owl-theme owl-carousel">
-					{% from "./home-carousel.njk" import homeCarouselImgs %}
-					{% for img in homeCarouselImgs %}
-						<div class="homepage-slider-item"><img src="{{ img.img }}" alt="" class="homepage-slider-item-image">
-							<div class="container-fluid">
-								<div class="row px-5">
-									<div class="col-lg-12 px-5">
-										<div class="homepage-slider-item-content">
-											<div class="text-1">{{ img.txt[0] }}</div>
-											<h3 style="color: #fff;" class="text-2">{{ img.txt[1] }}</h3>
-											<p class="text-3">{{ img.txt[2] }}</p>
-											<p class="homepage-slider-item-link"><a href="/services">Learn more <i class="fa fa-long-arrow-right"></i></a></p>
-										</div>
+{% block content %}
+	<article class="kbl-content-wrapper">
+		<section class="homepage-slider d-none d-lg-block">
+			<div class="homepage-slider-nav"><a id="homepage-slider-left" href="#"><span class="wicon-iconmonstr-angel-left-circle-thin"></span></a></div>
+			<div id="homepage-slider" class="owl-theme owl-carousel">
+				{% from "./home-carousel.njk" import homeCarouselImgs %}
+				{% for img in homeCarouselImgs %}
+					<div class="homepage-slider-item"><img src="{{ img.img }}" alt="" class="homepage-slider-item-image">
+						<div class="container-fluid">
+							<div class="row px-5">
+								<div class="col-lg-12 px-5">
+									<div class="homepage-slider-item-content">
+										<div class="text-1">{{ img.txt[0] }}</div>
+										<h3 style="color: #fff;" class="text-2">{{ img.txt[1] }}</h3>
+										<p class="text-3">{{ img.txt[2] }}</p>
+										<p class="homepage-slider-item-link"><a href="/services">Learn more <i class="fa fa-long-arrow-right"></i></a></p>
 									</div>
 								</div>
 							</div>
 						</div>
-					{% endfor %}
-			  </div>
-			  <div class="homepage-slider-nav right"><a id="homepage-slider-right" href="#"><span class="wicon-iconmonstr-angel-right-circle-thin"></span></a></div>
-			</section><!-- Homepage slider end -->
-			<!-- Intro start -->
-			<section class="content-section">
-			  <div class="container-fluid px-0 px-md-5">
-			    <div class="row px-5">
-			      <div class="col-md-6">
-			        <p class="text-decor-1">Welcome to USU bioinformatics core facility</p>
-			        <p class="text-decor-2 d-none d-sm-block">Ideas and breakthroughs fueled by computational prediction and next generation sequencing.</p>
-			      </div>
-			      <div class="col-md-6">
-			        <p class="intro-text">Our group has been contributing to different research projects by providing support and expertise in programming
-			          and advanced data analysis, focusing primarily on high-throughput genomics technologies. These include
-			          microarrays, genotyping, and next-generation sequencing (RNA-seq, ChIP-seq, SNP-seq, etc.). We also provide virtual
-			          server environments, secure public web portals, a large suite of open source applications, and
-			          hands-on tutorials and workshops on a wide variety of informatics topics, as well as custom data
-			          analysis and consultation services. We commit to the establishment of research collaborations with
-			          scientists from different departments.</p>
-			        <p>
-								<a href="#quote" class="btn kbl-btn-1" data-toggle="modal" data-target="#quoteModal"><i class="fa fa-file"></i> get a quotation</a>
-								<a href="/contact" class="btn kbl-btn-2">Get In Touch</a>
-							</p>
-			      </div>
-			    </div>
-			  </div>
-			</section><!-- Intro end -->
-			<!-- Benefits start -->
-			<section class="container-fluid p-5" style="background: #e9e9e9;">
-				<div class="row px-0 px-md-5">
-
-					<section class="col-12 col-md-4 px-4">
-						<div class="row">
-							<div class="wicon-iconmonstr-globe-thin mstr-icon col-2 text-center"></div>
-							<div class="col-10">
-								<h3 class="heavy">who we are</h3>
-								<p>BioinfoCore is a non-profit facility at Utah State University. </p>
-								<p><a href="#" class="color-link">Read more...</a></p>
-							</div>
-						</div>
-					</section>
-
-					<section class="col-12 col-md-4 px-4">
-						<div class="row">
-							<span class="wicon-iconmonstr-light-bulb-thin mstr-icon col-2 text-center"></span>
-							<div class="col-10">
-								<h3 class="heavy">what we do</h3>
-								<p>We provide multiple pipelines to analyze raw sequencing data. </p>
-								<p><a href="/services" class="color-link">Read more...</a></p>
-							</div>
-						</div>
-					</section>
-
-					<section class="col-12 col-md-4 px-4">
-						<div class="row">
-							<span class="wicon-iconmonstr-database-thin col-2 mstr-icon text-center"></span>
-							<div class="col-10">
-								<h3 class="heavy">how we do it</h3>
-								<p>Learn how BioinfoCore analyzes your <i>Omics</i> data.</p>
-								<p><a href="/resources/hardware" class="color-link">Read more...</a></p>
-							</div>
-						</div>
-					</section>
+					</div>
+				{% endfor %}
+			</div>
+			<div class="homepage-slider-nav right"><a id="homepage-slider-right" href="#"><span class="wicon-iconmonstr-angel-right-circle-thin"></span></a></div>
+		</section><!-- Homepage slider end -->
+		<!-- Intro start -->
+		<section class="content-section">
+			<div class="container-fluid px-0 px-md-5">
+				<div class="row px-5">
+					<div class="col-md-6">
+						<p class="text-decor-1">Welcome to USU bioinformatics core facility</p>
+						<p class="text-decor-2 d-none d-sm-block">Ideas and breakthroughs fueled by computational prediction and next generation sequencing.</p>
+					</div>
+					<div class="col-md-6">
+						<p class="intro-text">Our group has been contributing to different research projects by providing support and expertise in programming
+							and advanced data analysis, focusing primarily on high-throughput genomics technologies. These include
+							microarrays, genotyping, and next-generation sequencing (RNA-seq, ChIP-seq, SNP-seq, etc.). We also provide virtual
+							server environments, secure public web portals, a large suite of open source applications, and
+							hands-on tutorials and workshops on a wide variety of informatics topics, as well as custom data
+							analysis and consultation services. We commit to the establishment of research collaborations with
+							scientists from different departments.</p>
+						<p>
+							<a href="#quote" class="btn kbl-btn-1" data-toggle="modal" data-target="#quoteModal"><i class="fa fa-file"></i> get a quotation</a>
+							<a href="/contact" class="btn kbl-btn-2">Get In Touch</a>
+						</p>
+					</div>
 				</div>
+			</div>
+		</section><!-- Intro end -->
+		<!-- Benefits start -->
+		<section class="container-fluid p-5" style="background: #e9e9e9;">
+			<div class="row px-0 px-md-5">
 
-			</section>
+				<section class="col-12 col-md-4 px-4">
+					<div class="row">
+						<div class="wicon-iconmonstr-globe-thin mstr-icon col-2 text-center"></div>
+						<div class="col-10">
+							<h3 class="heavy">who we are</h3>
+							<p>BioinfoCore is a non-profit facility at Utah State University. </p>
+							<p><a href="#" class="color-link">Read more...</a></p>
+						</div>
+					</div>
+				</section>
 
-			<!-- Services start -->
-			<section class="content-section px-5">
-			  <div class="container-fluid px-5">
-			    <div class="row px-5">
-			      <div class="col-lg-12">
-			        <div class="content-section-header center">
-			          <h2 class="heavy text-center">services we provide</h2>
-			          <p class="description">We can perform a variety of analysis pipelines to mine your next-generation sequencing data.</p>
-			        </div>
-			      </div>
-			    </div>
-			    <div class="row">
-			      <div class="col-lg-12">
-			        <div id="index-1-services" class="owl-theme owl-carousel">
-			          <div class="icon-box v2" style="height:600px;">
-			            <div class="hover"><img src="biocore-images/rna-seq.jpg" alt=""><a href="/services/rnaseq"><span class="wicon-iconmonstr-zoom-in-thin"></span></a></div><span class="wicon-iconmonstr-bar-chart-thin"></span>
-			            <p class="title">RNA-seq</p>
-			            <p>Whole transcriptome shotgun sequencing (WTSS) uses next-generation sequencing (NGS) to reveal the presence and quantity of RNA in a biological sample at a given moment. RNA-Seq is used to analyze a changing cellular transcriptome.</p>
-			          </div>
-			          <div class="icon-box v2" style="height:600px;">
-			            <div class="hover"><img src="biocore-images/chip-seq.jpg" alt=""><a href="/services/chipseq"><span class="wicon-iconmonstr-zoom-in-thin"></span></a></div><span class="wicon-iconmonstr-gear-thin"></span>
-			            <p class="title">ChIP-seq</p>
-			            <p>In order to analyze protein interactions with DNA, ChIP-seq combines chromatin immunoprecipitation (ChIP) with massively parallel DNA sequencing to identify the binding sites of DNA-associated proteins.</p>
-			          </div>
-			          <div class="icon-box v2" style="height:600px;">
-			            <div class="hover"><img src="biocore-images/methyl-seq.jpg" alt=""><a href="/services/methylation"><span class="wicon-iconmonstr-zoom-in-thin"></span></a></div><span class="wicon-iconmonstr-folder-full-thin"></span>
-			            <p class="title">Methyl-seq</p>
-			            <p>Bisulfite sequencing is the use of bisulfite treatment of DNA before routine sequencing to determine the pattern of methylation. DNA methylation was the first discovered epigenetic mark, and remains the most studied.</p>
-			          </div>
-			          <div class="icon-box v2" style="height:600px;">
-			            <div class="hover"><img src="biocore-images/SNP.jpg" alt=""><a href="/services/varseq"><span class="wicon-iconmonstr-zoom-in-thin"></span></a></div><span class="wicon-iconmonstr-briefcase-thin"></span>
-			            <p class="title">SNP genotyping</p>
-			            <p>SNP genotyping is the measurement of genetic variations of single nucleotide polymorphisms (SNPs) between members of a species. It is a form of genotyping, which is the measurement of more general genetic variation.</p>
-			          </div>
-			          <div class="icon-box v2" style="height:600px;">
-			            <div class="hover"><img src="biocore-images/miRNA.jpg" alt=""><a href="/services/mirna"><span class="wicon-iconmonstr-zoom-in-thin"></span></a></div><span class="wicon-iconmonstr-info-thin"></span>
-			            <p class="title">miRNA-seq</p>
-			            <p>MiRNA-seq is the use of next-generation sequencing or massively parallel, high-throughput DNA sequencing to sequence microRNAs. miRNA-seq differs from other forms of RNA-seq in that the input material is enriched for small RNAs.</p>
-			          </div>
-			          <div class="icon-box v2" style="height:600px;">
-			            <div class="hover"><img src="biocore-images/seq.jpg" alt=""><a href="/services/eukassembly"><span class="wicon-iconmonstr-zoom-in-thin"></span></a></div><span class="wicon-iconmonstr-computer-thin"></span>
-			            <p class="title">Sequence assembly</p>
-			            <p>Sequence assembly is the practice of aligning and merging fragments from a longer DNA sequence to reconstruct the original sequence. This is useful because DNA sequencing technology cannot read entire genomes in one run.</p>
-			          </div>
-			        </div>
-			      </div>
-			    </div>
-			    <div class="row">
-			      <div class="col-lg-12">
-			        <div id="index-1-services-nav" class="owl-nav center"></div>
-			      </div>
-			    </div>
-			  </div>
-			</section><!-- Services end -->
-			<!-- CTA start -->
-			<section class="content-section image-bg image-bg-10 cta v1 d-none d-md-block">
-			  <div class="container">
-			    <div class="row">
-			      <div class="col-lg-12">
-			        <p class="text-1">we help our collaborators</p>
-			        <p class="text-2">mine <i>-omics</i> data</p>
-			        <p><a href="#quote" class="btn kbl-btn-1" data-toggle="modal" data-target="#quoteModal"><i class="fa fa-file"></i> get a quotation</a></p>
-			      </div>
-			    </div>
-			  </div>
-			</section><!-- CTA end -->
-			<!-- Quick faq & contact form start -->
-			<section class="content-section palette-4-bg">
-			  <div class="container-fluid px-5">
-			    <div class="row px-5">
-			      <div class="col-md-6 col-lg-7">
-			        <div class="content-section-header left">
-			          <h2 class="heavy">Quick FAQs</h2>
-			          <p class="description">These are answers to commonly asked questions. More information can be found <a href="faq">here</a>.</p>
-			        </div>
-			        <div class="clearfix"></div>
-			        <div data-rt-accordion data-rt-accordion-toggle="on" data-rt-accordion-active="1" class="rt-accordion">
-			          <div data-rt-accordion-item class="rt-accordion-item">
-			            <header>
-			              <p class="title">What kinds of services does BioinfoCore USU provide?</p>
-			            </header>
-			            <div class="content">
-			              <p>Etiam vel leo lacus. Fusce vestibulum viverra justo, vel dictum lorem venenatis at. Sed eleifend, quam sed commodo varius, mauris magna tristique justo, et volutpat leo urna eget justo. Mauris iaculis dolor quis porta finibus. </p>
-			              <p>Donec id molestie nisl. Suspendisse nisi leo, elementum eu suscipit non, mollis id sapien. Nunc at nibh urna. </p>
-			            </div>
-			          </div>
-			          <div data-rt-accordion-item class="rt-accordion-item">
-			            <header>
-			              <p class="title">How do we check the quality and trim/filter low quality reads?</p>
-			            </header>
-			            <div class="content">
-			              <p>One can run FastQC and FASTX tool kit</p>
-			            </div>
-			          </div>
+				<section class="col-12 col-md-4 px-4">
+					<div class="row">
+						<span class="wicon-iconmonstr-light-bulb-thin mstr-icon col-2 text-center"></span>
+						<div class="col-10">
+							<h3 class="heavy">what we do</h3>
+							<p>We provide multiple pipelines to analyze raw sequencing data. </p>
+							<p><a href="/services" class="color-link">Read more...</a></p>
+						</div>
+					</div>
+				</section>
 
-			          <div data-rt-accordion-item class="rt-accordion-item">
-			            <header>
-			              <p class="title">What length of reads are required for RNA-seq?</p>
-			            </header>
-			            <div class="content">
-			              <p>Anywhere between 50 and 75 base pairs is sufficient for simple RNA-Seq analysis</p>
-			              <p></p>
-			            </div>
-			          </div>
-			          <div data-rt-accordion-item class="rt-accordion-item">
-			            <header>
-			              <p class="title">How many replicates are needed for RNA-seq?</p>
-			            </header>
-			            <div class="content">
-			              <p>While collecting replicate data can be expensive, you'll need at least 3 replicates for an accurate analysis</p>
-			              <p></p>
-			            </div>
-			          </div>
-			          <div data-rt-accordion-item class="rt-accordion-item">
-			            <header>
-			              <p class="title">Resources for RNA-Seq analysis:</p>
-			            </header>
-			            <div class="content">
-			              <ul style="list-style-type:disc;">
-			                <li>SEQanswers (<a href="http://seqanswers.com/">http://seqanswers.com/</a>)</li>
-			                <li>BioStars (<a href="https://www.biostars.org/">https://www.biostars.org/</a>)</li>
-			                <li>Bioinformatics, Oxford Journals (<a href="http://www.oxfordjournals.org/our_journals/bioinformatics/nextgenerationsequencing.html">http://www.oxfordjournals.org/our_journals/bioinformatics/nextgenerationsequencing.html</a>)</li>
-			                <li>RNA-Seq Blog (<a href="http://www.rna-seqblog.com/">http://www.rna-seqblog.com/</a>)</li>
-			              </ul>
-			            </div>
-			          </div>
-			        </div>
-			      </div>
-			      <div class="col-md-6 col-lg-5">
-			        <div class="content-block palette-2-bg">
-								<div class="text-center">
-									<h3 class="text-center heavy">request a quotation</h3>
-									<div class="form-group contacts-form-result"><strong></strong></div>
-									<input placeholder="Name" class="form-control my-3 py-4 px-3" id="formName">
-									<input placeholder="Email" class="form-control my-3 py-4 px-3" id="formEmail">
-									<input placeholder="Phone" class="form-control my-3 py-4 px-3" id="formPhone">
-									<textarea rows="10" placeholder="Send us a message!" class="form-control my-3 py-3 px-3" id="formMessage"></textarea>
-									<button class="btn kbl-btn-1 my-2" id="send">Send Your Request</button>
+				<section class="col-12 col-md-4 px-4">
+					<div class="row">
+						<span class="wicon-iconmonstr-database-thin col-2 mstr-icon text-center"></span>
+						<div class="col-10">
+							<h3 class="heavy">how we do it</h3>
+							<p>Learn how BioinfoCore analyzes your <i>Omics</i> data.</p>
+							<p><a href="/resources/hardware" class="color-link">Read more...</a></p>
+						</div>
+					</div>
+				</section>
+			</div>
+
+		</section>
+
+		<!-- Services start -->
+		<section class="content-section px-5">
+			<div class="container-fluid px-5">
+				<div class="row px-5">
+					<div class="col-lg-12">
+						<div class="content-section-header center">
+							<h2 class="heavy text-center">services we provide</h2>
+							<p class="description">We can perform a variety of analysis pipelines to mine your next-generation sequencing data.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<div id="index-1-services" class="owl-theme owl-carousel">
+							<div class="icon-box v2" style="height:600px;">
+								<div class="hover"><img src="biocore-images/rna-seq.jpg" alt=""><a href="/services/rnaseq"><span class="wicon-iconmonstr-zoom-in-thin"></span></a></div><span class="wicon-iconmonstr-bar-chart-thin"></span>
+								<p class="title">RNA-seq</p>
+								<p>Whole transcriptome shotgun sequencing (WTSS) uses next-generation sequencing (NGS) to reveal the presence and quantity of RNA in a biological sample at a given moment. RNA-Seq is used to analyze a changing cellular transcriptome.</p>
+							</div>
+							<div class="icon-box v2" style="height:600px;">
+								<div class="hover"><img src="biocore-images/chip-seq.jpg" alt=""><a href="/services/chipseq"><span class="wicon-iconmonstr-zoom-in-thin"></span></a></div><span class="wicon-iconmonstr-gear-thin"></span>
+								<p class="title">ChIP-seq</p>
+								<p>In order to analyze protein interactions with DNA, ChIP-seq combines chromatin immunoprecipitation (ChIP) with massively parallel DNA sequencing to identify the binding sites of DNA-associated proteins.</p>
+							</div>
+							<div class="icon-box v2" style="height:600px;">
+								<div class="hover"><img src="biocore-images/methyl-seq.jpg" alt=""><a href="/services/methylation"><span class="wicon-iconmonstr-zoom-in-thin"></span></a></div><span class="wicon-iconmonstr-folder-full-thin"></span>
+								<p class="title">Methyl-seq</p>
+								<p>Bisulfite sequencing is the use of bisulfite treatment of DNA before routine sequencing to determine the pattern of methylation. DNA methylation was the first discovered epigenetic mark, and remains the most studied.</p>
+							</div>
+							<div class="icon-box v2" style="height:600px;">
+								<div class="hover"><img src="biocore-images/SNP.jpg" alt=""><a href="/services/varseq"><span class="wicon-iconmonstr-zoom-in-thin"></span></a></div><span class="wicon-iconmonstr-briefcase-thin"></span>
+								<p class="title">SNP genotyping</p>
+								<p>SNP genotyping is the measurement of genetic variations of single nucleotide polymorphisms (SNPs) between members of a species. It is a form of genotyping, which is the measurement of more general genetic variation.</p>
+							</div>
+							<div class="icon-box v2" style="height:600px;">
+								<div class="hover"><img src="biocore-images/miRNA.jpg" alt=""><a href="/services/mirna"><span class="wicon-iconmonstr-zoom-in-thin"></span></a></div><span class="wicon-iconmonstr-info-thin"></span>
+								<p class="title">miRNA-seq</p>
+								<p>MiRNA-seq is the use of next-generation sequencing or massively parallel, high-throughput DNA sequencing to sequence microRNAs. miRNA-seq differs from other forms of RNA-seq in that the input material is enriched for small RNAs.</p>
+							</div>
+							<div class="icon-box v2" style="height:600px;">
+								<div class="hover"><img src="biocore-images/seq.jpg" alt=""><a href="/services/eukassembly"><span class="wicon-iconmonstr-zoom-in-thin"></span></a></div><span class="wicon-iconmonstr-computer-thin"></span>
+								<p class="title">Sequence assembly</p>
+								<p>Sequence assembly is the practice of aligning and merging fragments from a longer DNA sequence to reconstruct the original sequence. This is useful because DNA sequencing technology cannot read entire genomes in one run.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<div id="index-1-services-nav" class="owl-nav center"></div>
+					</div>
+				</div>
+			</div>
+		</section><!-- Services end -->
+		<!-- CTA start -->
+		<section class="content-section image-bg image-bg-10 cta v1 d-none d-md-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<p class="text-1">we help our collaborators</p>
+						<p class="text-2">mine <i>-omics</i> data</p>
+						<p><a href="#quote" class="btn kbl-btn-1" data-toggle="modal" data-target="#quoteModal"><i class="fa fa-file"></i> get a quotation</a></p>
+					</div>
+				</div>
+			</div>
+		</section><!-- CTA end -->
+		<!-- Quick faq & contact form start -->
+		<section class="content-section palette-4-bg">
+			<div class="container-fluid px-5">
+				<div class="row px-5">
+					<div class="col-md-6 col-lg-7">
+						<div class="content-section-header left">
+							<h2 class="heavy">Quick FAQs</h2>
+							<p class="description">These are answers to commonly asked questions. More information can be found <a href="faq">here</a>.</p>
+						</div>
+						<div class="clearfix"></div>
+						<div data-rt-accordion data-rt-accordion-toggle="on" data-rt-accordion-active="1" class="rt-accordion">
+							<div data-rt-accordion-item class="rt-accordion-item">
+								<header>
+									<p class="title">What kinds of services does BioinfoCore USU provide?</p>
+								</header>
+								<div class="content">
+									<p>Etiam vel leo lacus. Fusce vestibulum viverra justo, vel dictum lorem venenatis at. Sed eleifend, quam sed commodo varius, mauris magna tristique justo, et volutpat leo urna eget justo. Mauris iaculis dolor quis porta finibus. </p>
+									<p>Donec id molestie nisl. Suspendisse nisi leo, elementum eu suscipit non, mollis id sapien. Nunc at nibh urna. </p>
 								</div>
+							</div>
+							<div data-rt-accordion-item class="rt-accordion-item">
+								<header>
+									<p class="title">How do we check the quality and trim/filter low quality reads?</p>
+								</header>
+								<div class="content">
+									<p>One can run FastQC and FASTX tool kit</p>
+								</div>
+							</div>
 
-			        </div>
+							<div data-rt-accordion-item class="rt-accordion-item">
+								<header>
+									<p class="title">What length of reads are required for RNA-seq?</p>
+								</header>
+								<div class="content">
+									<p>Anywhere between 50 and 75 base pairs is sufficient for simple RNA-Seq analysis</p>
+									<p></p>
+								</div>
+							</div>
+							<div data-rt-accordion-item class="rt-accordion-item">
+								<header>
+									<p class="title">How many replicates are needed for RNA-seq?</p>
+								</header>
+								<div class="content">
+									<p>While collecting replicate data can be expensive, you'll need at least 3 replicates for an accurate analysis</p>
+									<p></p>
+								</div>
+							</div>
+							<div data-rt-accordion-item class="rt-accordion-item">
+								<header>
+									<p class="title">Resources for RNA-Seq analysis:</p>
+								</header>
+								<div class="content">
+									<ul style="list-style-type:disc;">
+										<li>SEQanswers (<a href="http://seqanswers.com/">http://seqanswers.com/</a>)</li>
+										<li>BioStars (<a href="https://www.biostars.org/">https://www.biostars.org/</a>)</li>
+										<li>Bioinformatics, Oxford Journals (<a href="http://www.oxfordjournals.org/our_journals/bioinformatics/nextgenerationsequencing.html">http://www.oxfordjournals.org/our_journals/bioinformatics/nextgenerationsequencing.html</a>)</li>
+										<li>RNA-Seq Blog (<a href="http://www.rna-seqblog.com/">http://www.rna-seqblog.com/</a>)</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-5">
+						<div class="content-block palette-2-bg">
+							<div class="text-center">
+								<h3 class="text-center heavy">request a quotation</h3>
+								<div class="form-group contacts-form-result"><strong></strong></div>
+								<input placeholder="Name" class="form-control my-3 py-4 px-3" id="formName">
+								<input placeholder="Email" class="form-control my-3 py-4 px-3" id="formEmail">
+								<input placeholder="Phone" class="form-control my-3 py-4 px-3" id="formPhone">
+								<textarea rows="10" placeholder="Send us a message!" class="form-control my-3 py-3 px-3" id="formMessage"></textarea>
+								<button class="btn kbl-btn-1 my-2" id="send">Send Your Request</button>
+							</div>
 
-			      </div>
-			    </div>
-			  </div>
-			</section><!-- Quick faq & contact form end -->
+						</div>
 
-			<!-- CTA start -->
-			<section class="content-section image-bg image-bg-11 cta v1 d-none d-lg-block">
-			  <div class="container">
-			    <div class="row">
-			      <div class="col-lg-12">
-			        <p class="text-1">we're knowledgeable about</p>
-			        <p class="text-2">advancing <i>-Omics</i> Big Data science</p>
-			        <p>A leading provider of Bioinformatics data analysis and consulting.</p>
-			        <p><a href="#quote" class="btn kbl-btn-1" data-toggle="modal" data-target="#quoteModal"><i class="fa fa-file"></i> get a quotation</a></p>
-			      </div>
-			    </div>
-			  </div>
-			</section><!-- CTA end -->
+					</div>
+				</div>
+			</div>
+		</section><!-- Quick faq & contact form end -->
 
-			{% include "./quote-modal.njk" %}
+		<!-- CTA start -->
+		<section class="content-section image-bg image-bg-11 cta v1 d-none d-lg-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<p class="text-1">we're knowledgeable about</p>
+						<p class="text-2">advancing <i>-Omics</i> Big Data science</p>
+						<p>A leading provider of Bioinformatics data analysis and consulting.</p>
+						<p><a href="#quote" class="btn kbl-btn-1" data-toggle="modal" data-target="#quoteModal"><i class="fa fa-file"></i> get a quotation</a></p>
+					</div>
+				</div>
+			</div>
+		</section><!-- CTA end -->
 
-		</article>
+		{% include "./quote-modal.njk" %}
 
-		{% include "universal/_footer-bs4.njk" %}
-		
-		{% from "universal/_scripts-macro.njk" import scripts %}
-		{{ scripts(bs4=bs4) }}
-		<script src="js/kbl/contact.js"></script>
-
-	</body>
-</html>
+	</article>
+{% endblock %}

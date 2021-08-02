@@ -1,34 +1,22 @@
-<!DOCTYPE html>
-{% set bs4 = true %}
-<html lang="en">
-	{% from "universal/_header-macro.njk" import header %}
-	{{ header(bs4=bs4, scss=false) }}
-	<body>
-		{% include "universal/_preload.njk" %}
-		{% from "universal/_navbar-switch.njk" import navbar %}
-		{{ navbar(bs4=bs4) }}
+{% extends "templates/main.template.njk" %}
 
-		<article class="row manual-container">
-			<div class="col-12">
-				<span class="manual-page-title">Manuals</span>
-			</div>
+{% block content %}
+	<article class="row manual-container">
+		<div class="col-12">
+			<span class="manual-page-title">Manuals</span>
+		</div>
 
-			{% setAsync('pdfs', getPDFs, []) %}
-			{% for pdf in pdfs %}
-				<div class="col-sm-6">
-					<div class="col-12 hide-overflow">
-						<a href="{{ pdf.link }}" title="{{ pdf.name }}" target="_blank" rel="noopener noreferrer" class="pdf-title">
-							{{ pdf.name }}
-						</a>
-					</div>
+		{% setAsync('pdfs', getPDFs, []) %}
+		{% for pdf in pdfs %}
+			<div class="col-sm-6">
+				<div class="col-12 hide-overflow">
+					<a href="{{ pdf.link }}" title="{{ pdf.name }}" target="_blank" rel="noopener noreferrer" class="pdf-title">
+						{{ pdf.name }}
+					</a>
 				</div>
-			{% else %}
-				<div>No Manuals</div>
-			{% endfor %}
-		</article>
-
-		{% from "universal/_footer-switch.njk" import footer %}
-		{{ footer(bs4=bs4) }}
-	{% include "universal/_footer-scripts.njk" %}
-	</body>
-</html>
+			</div>
+		{% else %}
+			<div>No Manuals</div>
+		{% endfor %}
+	</article>
+{% endblock %}
