@@ -23,7 +23,8 @@
 					</section>
 
 					<section class="col-md-4">
-						{% include "components/svc-sidebar/svc-sidebar.njk" %}
+						{% from "components/svc-sidebar/svc-sidebar.njk" import serviceSidebar %}
+						{{ serviceSidebar() }}
 					</section>
 				</div>
 			</article>

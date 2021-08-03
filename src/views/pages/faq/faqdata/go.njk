@@ -1,0 +1,12 @@
+{% set faqGo = [
+  {
+    question: "Background Frequency and Sample Frequency",
+    content: "Background frequency is the number of genes annotated to a GO term in the entire background set, while sample frequencyis the number of genes annotated to that GO term in the input list. For example, if the
+                    input  list  contains  10  genes  and  the  enrichment  is  done  for  biological  process  in S.  cerevisiaewhose background  set  contains  6442  genes,  then  if  5  out  of  the  10  input  genes  are  annotated  to  the  GO  term: DNA  repair,  then  the  sample  frequency  for  DNA  repair  will  be  5/10.  Whereas  if  there  are  100  genes annotated  to  DNA  repair  in  all  of  the S.  cerevisiaegenome,  then  the  background  frequency  will  be 100/6442."
+  },
+  {
+    question: "P-value",
+    content: "P-value is the probability or chance of seeing at least x number of genes out of the total n genes in the list annotated to a particular GO term, given the proportion of genes in the whole genome that are annotated to  that  GO  Term.  That  is,  the  GO  terms  shared  by  the  genes  in  the  user's  list  are  compared  to  the background distribution of annotation. The closer the p-value is to zero, the more significant the particular GO term associated with the group of genes is (i.e. the less likely the observed annotation of the particular GO term to a group of genes occurs by chance).
+                    In other words, when searching the process ontology, if all of the genes in a group were associated with DNA  repair,  this  term  would  be  significant.  However,  since  all  genes  in  the  genome  (with  GO annotations)  are  indirectly  associated  with  the  top  level  term  biological_process,  this  would  not  be significant if all the genes in a group were associated with this very high level term."
+  }
+] %}

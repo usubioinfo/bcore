@@ -1,5 +1,14 @@
-<div class="sidebar">
-  {% include "components/other-services/other-services.njk" %}
-  {% include "components/svc-req-quote/svc-req-quote.njk" %}
-  {% include "components/svc-hiring/svc-hiring.njk" %}
-</div>
+{% macro serviceSidebar() %}
+  <div class="sidebar">
+    {% include "components/other-services/other-services.njk" %}
+    {% include "components/svc-req-quote/svc-req-quote.njk" %}
+    {% include "components/svc-hiring/svc-hiring.njk" %}
+  </div>
+{% endmacro %}
+
+{% macro sidebar() %}
+  <div class="sidebar">
+    {% include "components/svc-req-quote/svc-req-quote.njk" %}
+    {% include "components/svc-hiring/svc-hiring.njk" %}
+  </div>
+{% endmacro %}
