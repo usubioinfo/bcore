@@ -2,6 +2,7 @@
   border-radius: 14px;
   overflow: hidden;
   padding: 0;
+  width: 279px;
 
   .no-res {
     pointer-events: none;
@@ -10,5 +11,10 @@
 
   .dropdown-item.result {
     padding: 10px 20px;
+    transition: 0.3s;
+
+    &:hover {
+      background: #daebf3;
+    }
   }
 }

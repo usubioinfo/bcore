@@ -78,6 +78,8 @@
     }
   ];
 
+  let selectedIndex = 0;
+
   const searchPage = (searchTerm) => {
     const results = pages.filter(item => {
       return item.name.toLowerCase().startsWith(searchTerm);
@@ -102,6 +104,7 @@
 
   document.getElementById('nav-searchbar').addEventListener('keyup', e => {
     const searchTerm = document.getElementById('nav-searchbar').value;
+    selectedIndex = 0;
 
     if (searchTerm.length === 0) {
       document.getElementById('nav-search-dropdown').innerText = '';
