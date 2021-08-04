@@ -18,6 +18,28 @@
     }
   }
 
+  .price-alt-container {
+    max-width: 300px;
+  }
+
+  .price-alt {
+    color: var(--text-main);
+    font-size: 80%;
+    font-weight: var(--fw-medium);
+    transition: 0.3s;
+
+    border-radius: 999px;
+
+    &:hover {
+      color: white;
+      background: var(--palette-1);
+    }
+
+    &.selected {
+      background: var(--palette-1);
+    }
+  }
+
   .name {
     font-size: 160%;
     font-weight: 600;

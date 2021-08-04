@@ -1,5 +1,5 @@
 {% macro priceItem(data) %}
-  <div class="kbl-pricing-item text-center pt-3 mx-auto" id="{{ data.id }}">
+  <div class="container-fluid kbl-pricing-item text-center pt-3 mx-auto" id="{{ data.id }}">
     <h4 class="name">{{ data.name }}</h4>
     <p class="subtitle">
       Up to 10 samples
@@ -11,6 +11,18 @@
       <li>{{ data.bullets[2] }}</li>
       <li>{{ data.bullets[3] }}</li>
     </ul>
+
+    <div class="row px-1 price-alt-container">
+      <div class="col-4 px-1">
+        <div class="price-alt">USU</div>
+      </div>
+      <div class="col-4 px-1">
+        <div class="price-alt">Academic</div>
+      </div>
+      <div class="col-4 px-1">
+        <div class="price-alt">Commercial</div>
+      </div>
+    </div>
 
     <h3 class="price">$<span class="price-data">{{ data.price }}</span></h4>
   </div>
