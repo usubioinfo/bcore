@@ -14,15 +14,15 @@
     },
     {
       name: 'Hardware',
-      url: '/hardware'
+      url: '/resources/hardware'
     },
     {
       name: 'Software',
-      url: '/software'
+      url: '/resources/software'
     },
     {
       name: 'Manuals',
-      url: '/manuals'
+      url: '/resources/manuals'
     },
     {
       name: 'FAQ',
