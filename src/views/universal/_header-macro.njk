@@ -1,15 +1,11 @@
-{% macro header(bs4=false, scss=false) %}
+{% macro header(bs5=false) %}
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% from "env.njk" import baseUrl %}
   <base href="{{ baseUrl }}" />
-  <!--
-  <script type="text/javascript">
-    document.write("<base href='http://" + document.location.host + "/biotec/' />");
-  </script>
-  -->
+  
   <title>Utah State University Bioinformatics Facility</title>
   <meta name="Utah State University Bioinformatics Facility" content="Welcome to USU bioinformatics core facility ... BioinfoCore is a non-profit facility at Utah State University. ... Learn how BioinfoCore analyzes your Omics data.">
   <link rel="stylesheet" href="public/css/style.css">
@@ -17,9 +13,12 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,800" rel="stylesheet">
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/style-1.css" id="template-skin">
-  {% if bs4 %}
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  {%  endif %}
+  {% if bs5 %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  {% else %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  {% endif %}
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-{% set bs4 = true %}
 <html lang="en">
 	{% from "universal/_header-macro.njk" import header %}
-	{{ header(bs4=bs4) }}
+	{{ header(bs5=false) }}
 	<body>
 		{% include "universal/_preload.njk" %}
 		{% include "universal/_navbar-bs4.njk" %}
