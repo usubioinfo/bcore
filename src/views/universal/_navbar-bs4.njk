@@ -103,8 +103,14 @@
             </ul>
           </nav><!-- Menu end -->
           <!-- Search start -->
-          <div class="searchbar-container">
-            <input type="search" placeholder="Search here..." id="nav-searchbar"/><i class="fas fa-search search-icon"></i>
+          <div class="dropdown h-100">
+            <div class="searchbar-container dropdown-toggle h-100" data-toggle="dropdown">
+              <input type="search" placeholder="Search here..." id="nav-searchbar"/>
+              <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="dropdown-menu kbl-dropdown" id="nav-search-dropdown" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item no-res" id="no-res" href="#">No Results</a>
+            </div>
           </div>
         </section>
       </div>
