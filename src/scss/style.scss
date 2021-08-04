@@ -176,6 +176,58 @@ h3 + p {
   }
 }
 
+// Navbar stuff
+.sticky-wrapper {
+  .searchbar-container {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s;
+  
+    input {
+      height: 100%;
+      border: none;
+      background: transparent;
+    }
+  
+    .search-icon {
+      padding-right: 14px;
+      align-self: center;
+    }
+  }
+
+
+  &:not(.is-sticky) {
+    .searchbar-container {
+      background: var(--palette-2);
+    
+      input {
+        color: white;
+      }
+    
+      .search-icon {
+        color: white;
+      }
+    }
+  }
+
+  &.is-sticky {
+    $new-color: #686868;
+
+    .searchbar-container {
+      background: #dfdfdf;
+    
+      input {
+        color: $new-color;
+      }
+    
+      .search-icon {
+        color: $new-color;
+      }
+    }
+  }
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }
