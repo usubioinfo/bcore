@@ -4,7 +4,7 @@
 	{{ header(bs5=false) }}
 	<body>
 		{% include "universal/_preload.njk" %}
-    {% include "universal/_navbar-bs4.njk" %}
+		{% include "universal/_new-nav.njk" %}
 
     {% block content %}
 
@@ -15,5 +15,6 @@
 		{% from "universal/_scripts-macro.njk" import scripts %}
 		{{ scripts(bs4=bs4) }}
 		<script src="js/kbl/search.js"></script>
+		<script src="js/kbl/navbar.js"></script>
 	</body>
 </html>
