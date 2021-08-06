@@ -65,14 +65,14 @@
   <article id="sticked-bar" class="bottom-bar">
     <div class="container-fluid h-100">
       <div class="row h-100">
-        <section class="col-9">
+        <section class="col">
           <nav class="bottom-menu h-100">
             <div class="row h-100">
-              <section class="col my-auto">
+              <section class="col text-center my-auto">
                 <div><a href="/" class="menu-item">Home</a></div>
               </section>
 
-              <section class="col my-auto" id="nav-services-col">
+              <section class="col text-center my-auto" id="nav-services-col">
                 <a href="/services" class="menu-item dropdown" id="nav-services" data-toggle="dropdown">Services</a>
                 {% from "./nav/nav.services.njk" import services %}
 
@@ -83,11 +83,11 @@
                 </ul>
               </section>
 
-              <section class="col my-auto">
+              <section class="col text-center my-auto">
                 <a href="/news" class="menu-item">News</a>
               </section>
 
-              <section class="col my-auto" id="nav-res-col">
+              <section class="col text-center my-auto" id="nav-res-col">
                 <a href="/" class="menu-item dropdown" id="nav-res" data-toggle="dropdown">Resources</a>
                 <ul class="dropdown-menu show" id="nav-res-dropdown">
                   <li class="dropdown-item"><a href="resources/hardware">Hardware</a></li>
@@ -96,11 +96,11 @@
                 </ul>
               </section>
 
-              <section class="col my-auto">
+              <section class="col text-center my-auto">
                 <a href="/faq" class="menu-item">FAQ</a>
               </section>
 
-              <section class="col my-auto">
+              <section class="col text-center my-auto">
                 <a href="/pricing" class="menu-item">Pricing</a>
               </section>
             </div>
@@ -109,7 +109,7 @@
           <!-- Search start -->
         </section>
 
-        <section class="col-3">
+        <section class="col-auto">
           <div class="dropdown h-100">
             <div class="searchbar-container dropdown-toggle h-100" data-toggle="dropdown">
               <input type="search" placeholder="Search here..." id="nav-searchbar"/>

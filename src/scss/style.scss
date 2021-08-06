@@ -184,6 +184,7 @@ h3 + p {
     display: flex;
     flex-direction: row;
     transition: 0.3s;
+    max-width: 275px;
   
     input {
       height: 100%;
