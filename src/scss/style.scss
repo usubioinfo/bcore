@@ -177,6 +177,10 @@ h3 + p {
   }
 }
 
+.dropdown-toggle:after {
+  content: none!important;
+}
+
 // Navbar stuff
 .sticky-wrapper {
   .searchbar-container {

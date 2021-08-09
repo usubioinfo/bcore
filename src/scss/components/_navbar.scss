@@ -73,3 +73,15 @@ $nav-padding: 6%;
     }
   }
 }
+
+.kbl-nav .is-sticky .bottom-bar {
+  background: white;
+
+  .menu-item {
+    color: var(--text-main);
+
+    &:hover {
+      color: var(--palette-1);
+    }
+  }
+}
