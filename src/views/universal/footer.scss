@@ -1,6 +1,14 @@
 @import '../../scss/colors';
 @import '../../scss/globals';
 
+.site-footer {
+  background: #f6fbfe;
+
+  .contact-icon {
+    color: var(--palette-2);
+  }
+}
+
 .footer-header {
   font-weight: $font-weight-heavy;
 }

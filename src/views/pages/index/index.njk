@@ -25,30 +25,9 @@
 			</div>
 			<div class="homepage-slider-nav right"><a id="homepage-slider-right" href="#"><span class="wicon-iconmonstr-angel-right-circle-thin"></span></a></div>
 		</section><!-- Homepage slider end -->
-		<!-- Intro start -->
-		<section class="content-section">
-			<div class="container-fluid px-0 px-md-5">
-				<div class="row px-5">
-					<div class="col-md-6">
-						<p class="text-decor-1">WELCOME TO USU BIOINFORMATICS CORE FACILITY</p>
-						<p class="text-decor-2 d-none d-sm-block">Ideas and breakthroughs fueled by computational prediction and next generation sequencing.</p>
-					</div>
-					<div class="col-md-6">
-						<p class="intro-text">Our group has been contributing to different research projects by providing support and expertise in programming
-							and advanced data analysis, focusing primarily on high-throughput genomics technologies. These include
-							microarrays, genotyping, and next-generation sequencing (RNA-seq, ChIP-seq, SNP-seq, etc.). We also provide virtual
-							server environments, secure public web portals, a large suite of open source applications, and
-							hands-on tutorials and workshops on a wide variety of informatics topics, as well as custom data
-							analysis and consultation services. We commit to the establishment of research collaborations with
-							scientists from different departments.</p>
-						<p>
-							<a href="#quote" class="btn kbl-btn-1" data-toggle="modal" data-target="#quoteModal"><i class="fa fa-file"></i> get a quotation</a>
-							<a href="/contact" class="btn kbl-btn-2">Get In Touch</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</section><!-- Intro end -->
+		
+		{% include "components/home/welcome.njk" %}
+		
 		<!-- Benefits start -->
 		<section class="container-fluid p-5 overview">
 			<div class="row px-0 px-md-5">
@@ -57,7 +36,7 @@
 					<div class="row">
 						<div class="col-2 text-center"><i class="fas fa-globe o-icon"></i></div>
 						<div class="col-10">
-							<h3 class="heavy">who we are</h3>
+							<h3 class="heavy">Who We Are</h3>
 							<p>BioinfoCore is a non-profit facility at Utah State University. </p>
 							<p><a href="#" class="color-link">Read more...</a></p>
 						</div>
@@ -68,7 +47,7 @@
 					<div class="row">
 						<div class="col-2 text-center"><i class="far fa-lightbulb o-icon"></i></div>
 						<div class="col-10">
-							<h3 class="heavy">what we do</h3>
+							<h3 class="heavy">What We Do</h3>
 							<p>We provide multiple pipelines to analyze raw sequencing data. </p>
 							<p><a href="/services" class="color-link">Read more...</a></p>
 						</div>
@@ -79,7 +58,7 @@
 					<div class="row">
 						<div class="col-2 text-center"><i class="fas fa-database o-icon"></i></div>
 						<div class="col-10">
-							<h3 class="heavy">how we do it</h3>
+							<h3 class="heavy">How We Do It</h3>
 							<p>Learn how BioinfoCore analyzes your <i>Omics</i> data.</p>
 							<p><a href="/resources/hardware" class="color-link">Read more...</a></p>
 						</div>
@@ -90,13 +69,13 @@
 		</section>
 
 		<!-- Services start -->
-		<section class="content-section px-5">
+		<section class="content-section px-5 services">
 			<div class="container-fluid px-5">
 				<div class="row px-5">
 					<div class="col-lg-12">
 						<div class="content-section-header center">
-							<h2 class="heavy text-center">services we provide</h2>
-							<p class="description">We can perform a variety of analysis pipelines to mine your next-generation sequencing data.</p>
+							<h2 class="heavy text-center">Services We Provide</h2>
+							<p class="description text-center">We can perform a variety of analysis pipelines to mine your next-generation sequencing data.</p>
 						</div>
 					</div>
 				</div>
@@ -143,13 +122,14 @@
 				</div>
 			</div>
 		</section><!-- Services end -->
+
 		<!-- CTA start -->
-		<section class="content-section image-bg image-bg-10 cta v1 d-none d-md-block">
+		<section class="content-section image-bg d-none d-md-block mine-omics">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-12">
-						<p class="text-1">we help our collaborators</p>
-						<p class="text-2">mine <i>-omics</i> data</p>
+					<div class="col-lg-12 text-center">
+						<p class="text-1">We help our collaborators</p>
+						<p class="text-2">MINE <i>-OMICS</i> DATA</p>
 						<p><a href="#quote" class="btn kbl-btn-1" data-toggle="modal" data-target="#quoteModal"><i class="fa fa-file"></i> get a quotation</a></p>
 					</div>
 				</div>
@@ -220,7 +200,7 @@
 					<div class="col-md-6 col-lg-5">
 						<div class="content-block palette-2-bg">
 							<div class="text-center">
-								<h3 class="text-center heavy">request a quotation</h3>
+								<h3 class="text-center heavy">Request a Quotation</h3>
 								<div class="form-group contacts-form-result"><strong></strong></div>
 								<input placeholder="Name" class="form-control my-3 py-4 px-3" id="formName">
 								<input placeholder="Email" class="form-control my-3 py-4 px-3" id="formEmail">
@@ -237,12 +217,12 @@
 		</section><!-- Quick faq & contact form end -->
 
 		<!-- CTA start -->
-		<section class="content-section image-bg image-bg-11 cta v1 d-none d-lg-block">
-			<div class="container">
+		<section class="content-section image-bg d-none d-lg-block adv-omics">
+			<div class="container text-center">
 				<div class="row">
 					<div class="col-lg-12">
 						<p class="text-1">we're knowledgeable about</p>
-						<p class="text-2">advancing <i>-Omics</i> Big Data science</p>
+						<p class="text-2">ADVANCING <i>-OMICS</i> BIG DATA SCIENCE</p>
 						<p>A leading provider of Bioinformatics data analysis and consulting.</p>
 						<p><a href="#quote" class="btn kbl-btn-1" data-toggle="modal" data-target="#quoteModal"><i class="fa fa-file"></i> get a quotation</a></p>
 					</div>
