@@ -129,4 +129,12 @@
       document.getElementById('nav-search-dropdown').appendChild(newAnchor);
     }
   });
+
+  document.getElementById('nav-searchbar').addEventListener('focus', e => {
+    document.getElementById('nav-search-dropdown').classList.add('show');
+  });
+
+  document.getElementById('nav-searchbar').addEventListener('focusout', e => {
+    document.getElementById('nav-search-dropdown').classList.remove('show');
+  });
 })();

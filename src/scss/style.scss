@@ -19,6 +19,8 @@
 
 @import './mobile-nav';
 
+@import './theme';
+
 .no-select {
   pointer-events: none;
 }
@@ -221,7 +223,7 @@ h3 + p {
     $new-color: #686868;
 
     .searchbar-container {
-      background: #dfdfdf;
+      background: #e2e2e2;
     
       input {
         color: $new-color;
