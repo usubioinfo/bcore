@@ -7,6 +7,11 @@
   transition: 0.3s;
   max-width: 300px;
 
+  ul li {
+    line-height: 1.9;
+    font-size: 100%;
+  }
+
   &.selected {
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.12), 0 2px 5px rgba(0, 0, 0, 0.2);
     border-color: transparent;
@@ -23,10 +28,11 @@
   }
 
   .price-alt {
-    color: var(--text-main);
+    color: #515151;
     font-size: 80%;
     font-weight: var(--fw-medium);
     transition: 0.3s;
+    background: var(--palette-1-bg);
 
     border-radius: 999px;
 
