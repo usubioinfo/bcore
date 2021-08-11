@@ -1,0 +1,57 @@
+{% set rnaSeq = {
+  imgLink: "http://bioinfocore.usu.edu/biocore-images/picture5/slide1.jpg",
+  name: "RNA-Seq",
+  content: "Whole transcriptome shotgun sequencing (WTSS), uses next-generation sequencing (NGS) to reveal the presence and quantity of RNA in a biological sample at a given moment. RNA-Seq is used to analyze a changing cellular transcriptome.",
+  learnMore: "/services/rnaseq"
+}
+%}
+
+{% set template = {
+  imgLink: "",
+  name: "",
+  content: "",
+  learnMore: ""
+}
+%}
+
+{% set metSeq = {
+  imgLink: "http://bioinfocore.usu.edu/biocore-images/picture5/slide2.jpg",
+  name: "Methyl-Seq",
+  content: "Bisulfite sequencing is the use of bisulfite treatment of DNA before routine sequencing to determine the pattern of methylation. DNA methylation was the first discovered epigenetic mark, and remains the most studied.",
+  learnMore: "/services/methylation"
+}
+%}
+
+{% set snpSeq = {
+  imgLink: "http://bioinfocore.usu.edu/biocore-images/picture5/slide3.jpg",
+  name: "SNP-Seq",
+  content: "SNP genotyping is the measurement of genetic variations of single nucleotide polymorphisms (SNPs) between members of a species. It is a form of genotyping, which is the measurement of more general genetic variation.",
+  learnMore: "/services/varseq"
+}
+%}
+
+{% set chip = {
+  imgLink: "http://bioinfocore.usu.edu/biocore-images/picture5/slide4.jpg",
+  name: "ChIP-Seq",
+  content: "In order to analyze protein interactions with DNA, ChIP-seq combines chromatin immunoprecipitation (ChIP) with massively parallel DNA sequencing to identify the binding sites of DNA-associated proteins.",
+  learnMore: "/services/chipseq"
+}
+%}
+
+{% set mirna = {
+  imgLink: "http://bioinfocore.usu.edu/biocore-images/picture5/slide5.jpg",
+  name: "miRNA-Seq",
+  content: "miRNA-seq is the use of next-generation sequencing or massively parallel high-throughput DNA sequencing to sequence microRNAs. miRNA-seq differs from other forms of RNA-seq in that input material is enriched for small RNAs.",
+  learnMore: "/services/mirna"
+}
+%}
+
+{% set seqAssembly = {
+  imgLink: "http://bioinfocore.usu.edu/biocore-images/picture5/slide6.jpg",
+  name: "Sequence Assembly",
+  content: "Referring to aligning and merging fragments from a longer DNA sequence in order to reconstruct the original sequence. This is needed as DNA sequencing technology cannot read whole genomes in one go.",
+  learnMore: "/services/prokassembly"
+}
+%}
+
+{% set services = [rnaSeq, metSeq, snpSeq, chip, mirna, seqAssembly] %}

@@ -1,0 +1,19 @@
+.service-card {
+  background: #e7e7e7;
+  border-radius: 14px;
+  max-width: 400px;
+  overflow: hidden;
+
+  a.learn-more {
+    text-decoration: none!important;
+    color: var(--palette-1);
+    font-weight: 600;
+
+    transition: 0.3s;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-color: var(--palette-1);
+    }
+  }
+}
