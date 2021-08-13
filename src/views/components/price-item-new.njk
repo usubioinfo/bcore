@@ -1,0 +1,30 @@
+{% macro priceItem(data) %}
+  <div class="container-fluid kbl-pricing-item text-center pt-3 mx-auto" id="{{ data.id }}">
+    <h4 class="name">{{ data.name }}</h4>
+    <p class="subtitle">
+      <a href="/services/rnaseq">Learn more</a>
+    </p>
+
+    <div class="row justify-content-center">
+      <div class="col-auto pt-1">
+        <span class="fa-stack">
+          <i class="far fa-circle fa-stack-2x"></i>
+          <i class="fas fa-minus fa-stack-1x fa-inverse"></i>
+        </span>
+      </div>
+
+      <div class="col-3 px-0">
+        <input class="form-control price-field" />
+      </div>
+
+      <div class="col-auto pt-1">
+        <span class="fa-stack">
+          <i class="far fa-circle fa-stack-2x"></i>
+          <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
+        </span>
+      </div>
+    </div>
+
+    <h4 class="price mt-4">$<span class="price-data">{{ data.price }}</span></h4>
+  </div>
+{% endmacro %}

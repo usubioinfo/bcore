@@ -21,7 +21,7 @@
 
     <div id="sequencing" class="pricing-section">
       <section class="row justify-content-center mt-4 mb-5">
-        {% from "components/price-item.njk" import priceItem %}
+        {% from "components/price-item-new.njk" import priceItem %}
         {% from "./price-data.njk" import rowOne, rowTwo %}
 
         {% for service in rowOne %}
@@ -32,8 +32,6 @@
       </section>
 
       <section class="row justify-content-center mt-4 mb-5">
-        {% from "components/price-item.njk" import priceItem %}
-        {% from "./price-data.njk" import rowOne, rowTwo %}
 
         {% for service in rowTwo %}
           <div class="col">
