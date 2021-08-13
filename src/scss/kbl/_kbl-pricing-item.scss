@@ -2,32 +2,37 @@
 @import '../colors';
 
 .kbl-pricing-item {
-  border: solid 2px #eaeaea;
   cursor: pointer;
   transition: 0.3s;
   max-width: 300px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+
+  &:hover {
+    border-color: var(--palette-1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.23);
+  }
 
   .fa-minus,
   .fa-plus {
     color: black!important;
   }
 
+  input[type="text"] {
+    font-size: 100px;
+  }
+
   .price-field {
-    background: #e5e5e5;
     color: var(--text-main);
     border-radius: 999px!important;
     border: none!important;
     text-align: center;
     font-weight: 800;
+    font-size: 190%!important;
+  }
 
-    &:focus {
-      background: white;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)!important;
-    }
-
-    &:hover:not(:focus) {
-      background: #eaeaea;
-    }
+  ::placeholder {
+    color: #b7b7b7!important;
   }
 
   ul li {
@@ -36,9 +41,7 @@
   }
 
   &.selected {
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.12), 0 2px 5px rgba(0, 0, 0, 0.2);
     border-color: transparent;
-    border-radius: 4px;
 
     .name,
     .price {
@@ -114,9 +117,5 @@
         
       }
     }
-  }
-
-  &:hover {
-    border-color: var(--palette-1);
   }
 }
