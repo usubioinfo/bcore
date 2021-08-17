@@ -2,4 +2,41 @@
 
 {% block content %}
 
+{% from "components/_person-card.njk" import personCard %}
+
+<article class="container mt-4 text-center">
+  <h2>Our Team</h2>
+
+  <div class="row mt-4">
+    {% set roussie = {
+      name: "Rousselene B. Larson",
+      subtitle: "Bioinformatics Scientist",
+      img: "http://bioinfocore.usu.edu/raikou/image/raw/bioinfo/profile/2.jpg"
+    } %}
+
+    {% set rakesh = {
+      name: "Rakesh Kaundal",
+      subtitle: "Head Honcho Dood",
+      img: "http://bioinfocore.usu.edu/raikou/image/raw/bioinfo/profile/RK_2.jpg"
+    } %}
+
+    {% set shlebs = {
+      name: "Shelby McCowan",
+      subtitle: "Systems Administrator",
+      img: "http://bioinfocore.usu.edu/raikou/image/raw/bioinfo/profile/shelby.jpg"
+    } %}
+    <div class="col-4">
+      {{ personCard(roussie) }}
+    </div>
+
+    <div class="col-4">
+      {{ personCard(rakesh) }}
+    </div>
+
+    <div class="col-4">
+      {{ personCard(shlebs) }}
+    </div>
+  </div>
+</article>
+
 {% endblock %}

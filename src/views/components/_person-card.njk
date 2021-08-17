@@ -1,0 +1,17 @@
+{% macro personCard(person) %}
+
+<div class="kbl-person-card-container mb-3 mx-auto">
+  <div class="kbl-person-card select text-left">
+    <figure class="mb-0">
+      <img class="w-100 mb-2" style="height: 250px;" src="{{ person.img }}">
+      <figcaption class="pb-2 text-start px-2">
+        <div class="text-content">
+          <div class="card-title mb-0">{{ person.name }}</div>
+          <div class="card-subtitle">{{ person.subtitle }}</div>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
+
+{% endmacro %}

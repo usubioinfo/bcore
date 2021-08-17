@@ -1,0 +1,61 @@
+$card-width: 220px;
+
+.kbl-person-card {
+  background: var(--color-bg-gray);
+  border-radius: var(--border-radius);
+  word-wrap: break-word;
+  width: $card-width;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
+
+  cursor: pointer;
+  transition: var(--time-mid);
+
+  &:hover {
+    box-shadow: 0 6px 15px rgba(100, 100, 100, 0.19), 0 3px 6px rgba(100, 100, 100, 0.23);
+  }
+
+  .card-title {
+    font-weight: var(--font-weight-heavy);
+    font-size: 115%;
+    color: var(--color-text-main);
+  }
+
+  .card-subtitle {
+    font-weight: var(--font-weight-medium);
+    font-size: 95%;
+    color: var(--color-text-soft);
+  }
+}
+
+.kbl-person-card-container {
+  width: $card-width;
+
+  &.auto {
+    width: auto!important;
+
+    .kbl-person-card {
+      width: auto!important;
+    }
+  }
+
+  .social-card {
+    background: var(--color-bg-gray);
+    border-radius: var(--border-radius);
+  }
+}
+
+.modal-img {
+  width: 210px;
+  border-radius: var(--border-radius);
+  border: 1px solid transparent;
+  transition: var(--time-mid);
+
+  &:hover {
+    border-color: var(--color-border-gray);
+  }
+}
+
+.modal-subtitle {
+  color: var(--color-text-soft);
+}
