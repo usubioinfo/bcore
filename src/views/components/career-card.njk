@@ -1,0 +1,12 @@
+{% macro careerCard(career) %}
+  <div class="career-card my-3 py-2 mx-auto">
+    <div class="content-container px-3">
+      <header>
+        <h5 class="heavy"><i class="fas fa-tools header-icon"></i> {{ career.name }}</h5>
+      </header>
+      <p class="mt-3 desc">{{ career.desc }}</p>
+
+      <a class="learn-more" href="{{ career.learnMore }}">Learn more</a>
+    </div>
+  </div>
+{% endmacro %}

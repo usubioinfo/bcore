@@ -1,0 +1,23 @@
+{% extends "templates/main.template.njk" %}
+
+{% block content %}
+
+{% from "components/career-card.njk" import careerCard %}
+
+<article class="container mt-4">
+  <h2>Careers</h2>
+
+  <div class="row">
+    <div class="col-4">
+      {% set sysAdmin = {
+        name: "Systems Administrator",
+        learnMore: "/careers/sysadmin",
+        desc: "Manage various aspects of the hardware and software of the HPC."
+      } %}
+
+      {{ careerCard(sysAdmin) }}
+    </div>
+  </div>
+</article>
+
+{% endblock %}

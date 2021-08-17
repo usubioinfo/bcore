@@ -1,0 +1,30 @@
+.career-card {
+  background: #fdfdfd;
+  border-radius: 14px;
+  max-width: 400px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+  header .header-icon {
+    font-size: 85%;
+    margin-right: 3px;
+  }
+
+  .desc {
+    font-weight: 500;
+    color: #888;
+  }
+
+  a.learn-more {
+    text-decoration: none!important;
+    color: var(--palette-1);
+    font-weight: 600;
+
+    transition: 0.3s;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-color: var(--palette-1);
+    }
+  }
+}

@@ -86,6 +86,38 @@ app.get(baseUrl + 'faq', (req, res) => {
   });
 });
 
+app.get(baseUrl + 'careers', (req, res) => {
+  let data = {
+    activeRoute: 'careers'
+  }
+
+  res.render(__dirname + '/views/pages/careers/careers.njk', data, (err, html) => {
+    res.send(html);
+  });
+});
+
+app.get(baseUrl + 'careers/:career', (req, res) => {
+  let data = {
+    activeRoute: 'careers'
+  }
+
+  let filePath = `/views/pages/careers/jobs/${req.params.career}.njk`;
+
+  res.render(__dirname + filePath, data, (err, html) => {
+    res.send(html);
+  });
+});
+
+app.get(baseUrl + 'ourteam', (req, res) => {
+  let data = {
+    activeRoute: 'ourteam'
+  }
+
+  res.render(__dirname + '/views/pages/ourteam/ourteam.njk', data, (err, html) => {
+    res.send(html);
+  });
+});
+
 app.get(baseUrl + 'pricing', (req, res) => {
   let data = {
     activeRoute: 'pricing'
