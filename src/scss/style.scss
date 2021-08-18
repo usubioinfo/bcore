@@ -236,6 +236,11 @@ h3 + p {
   }
 }
 
+.job-header-icon {
+  font-size: 700%;
+  color: var(--palette-1);
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }
