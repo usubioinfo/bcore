@@ -187,15 +187,16 @@ h3 + p {
 .sticky-wrapper {
   .searchbar-container {
     padding-left: 10px;
+    padding-right: 8px;
     display: flex;
     flex-direction: row;
     transition: 0.3s;
-    max-width: 275px;
   
     input {
       height: 100%;
       border: none;
       background: transparent;
+      max-width: 225px;
     }
   
     .search-icon {
