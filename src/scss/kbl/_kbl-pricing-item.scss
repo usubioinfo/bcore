@@ -33,12 +33,17 @@
   }
 
   .price-field {
-    color: var(--text-main);
+    width: 100%;
+    color: var(--text-soft);
     border-radius: 999px!important;
     border: none!important;
     text-align: center;
     font-weight: 800;
     font-size: 190%!important;
+
+    &:focus {
+      color: var(--text-soft);
+    }
   }
 
   ::placeholder {
@@ -64,6 +69,10 @@
 
     .minus,
     .plus {
+      color: var(--text-main);
+    }
+
+    .price-field {
       color: var(--text-main);
     }
   }
