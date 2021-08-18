@@ -5,6 +5,14 @@
       <a href="/services/rnaseq">Learn more</a>
     </div>
 
+    <ul class="bullets">
+
+      {% for bullet in data.bullets %}
+        <li>{{ bullet  }}</li>
+      {% endfor %}
+
+    </ul>
+
     <div>Number of Samples</div>
 
     <div class="row justify-content-center">
