@@ -48,5 +48,48 @@
       priceEl.textContent = price;
     });
   });
+
+  const noSamples = {
+    rnaseq: 10,
+    mirna: 10,
+    snpseq: 10,
+    chipseq: 10,
+    metseq: 10,
+    genome: 10,
+    gbs: 10,
+    amplicon: 10,
+    metagenomics: 10
+  }
+
+  // Plus Minus buttons
+
+  const plusButtons = document.querySelectorAll('.plus');
+  const minusButtons = document.querySelectorAll('.minus');
+
+  plusButtons.forEach(el => {
+    el.addEventListener('click', e => {
+      const id = el.id.split('-')[0];
+
+      noSamples[id] += 1;
+
+      document.getElementById(`${id}-input`).value = noSamples[id];
+    });
+
+  });
+
+  minusButtons.forEach(el => {
+    el.addEventListener('click', e => {
+      const id = el.id.split('-')[0];
+
+      noSamples[id] -= 1;
+
+      if (noSamples[id] < 0) {
+        noSamples[id] = 0;
+      }
+
+      document.getElementById(`${id}-input`).value = noSamples[id];
+    });
+
+  });
 })();
   

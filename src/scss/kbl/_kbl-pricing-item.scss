@@ -13,9 +13,19 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.23);
   }
 
-  .fa-minus,
-  .fa-plus {
-    color: black!important;
+  .bullets {
+    color: var(--text-soft);
+    transition: 0.3s;
+  }
+
+  .minus,
+  .plus {
+    transition: 0.3s;
+    color: var(--text-soft);
+
+    &:hover {
+      color: var(--palette-1)!important;
+    }
   }
 
   input[type="text"] {
@@ -43,9 +53,18 @@
   &.selected {
     border-color: transparent;
 
+    .bullets {
+      color: var(--text-main);
+    }
+
     .name,
     .price {
       color: var(--palette-2);
+    }
+
+    .minus,
+    .plus {
+      color: var(--text-main);
     }
   }
 

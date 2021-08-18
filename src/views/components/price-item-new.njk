@@ -17,20 +17,20 @@
 
     <div class="row justify-content-center">
       <div class="col-auto pt-1 my-auto">
-        <span class="fa-stack">
+        <span class="fa-stack minus" id="{{ data.id }}-minus">
           <i class="far fa-circle fa-stack-2x"></i>
-          <i class="fas fa-minus fa-stack-1x fa-inverse"></i>
+          <i class="fas fa-minus fa-stack-1x"></i>
         </span>
       </div>
 
       <div class="col-3 px-0">
-        <input type="text" class="form-control price-field" placeholder="10" />
+        <input type="text" id="{{ data.id }}-input" class="form-control price-field" placeholder="10" />
       </div>
 
       <div class="col-auto pt-1 my-auto">
-        <span class="fa-stack">
+        <span class="fa-stack plus" id="{{ data.id }}-plus">
           <i class="far fa-circle fa-stack-2x"></i>
-          <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
+          <i class="fas fa-plus fa-stack-1x"></i>
         </span>
       </div>
     </div>
