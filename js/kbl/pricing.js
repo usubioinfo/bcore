@@ -83,8 +83,8 @@
 
       noSamples[id] -= 1;
 
-      if (noSamples[id] < 0) {
-        noSamples[id] = 0;
+      if (noSamples[id] < 1) {
+        noSamples[id] = 1;
       }
 
       document.getElementById(`${id}-input`).value = noSamples[id];
