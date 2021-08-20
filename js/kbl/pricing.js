@@ -13,7 +13,7 @@
   const switches = document.querySelectorAll('.kbl-switch.s2');
   switches[0].classList.add('current');
 
-  let currentPage = switches[0].textContent.trim().toLowerCase();
+  let currentPage = switches[0].id;
   console.log(currentPage);
 
   switches.forEach((el) => {
@@ -23,14 +23,14 @@
       });
 
       el.classList.add('current');
-      currentPage = el.textContent.trim().toLowerCase();
+      currentPage = el.id;
 
       document.querySelectorAll('.pricing-section').forEach((newEl) => {
         newEl.classList.remove('d-none');
         newEl.classList.add('d-none');
       });
   
-      document.getElementById(currentPage).classList.remove('d-none');
+      document.getElementById(`${currentPage}-content`).classList.remove('d-none');
     });
   });
 

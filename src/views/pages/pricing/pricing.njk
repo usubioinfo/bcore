@@ -11,15 +11,15 @@
 
     <section class="row justify-content-center mt-3 mb-5">
       <div class="col-2 text-center">
-        <button class="btn kbl-switch s2 current pricing">Standard</button>
+        <button class="btn kbl-switch s2 current pricing" id="standard">Standard</button>
       </div>
 
       <div class="col-2 text-center">
-        <button class="btn kbl-switch s2 pricing">Other Services</button>
+        <button class="btn kbl-switch s2 pricing" id="other">Other Services</button>
       </div>
     </section>
 
-    <div id="sequencing" class="pricing-section">
+    <div id="standard-content" class="pricing-section">
       <section class="row justify-content-center mt-4 mb-5">
         {% from "components/price-item-new.njk" import priceItem %}
         {% from "./price-data.njk" import rowOne, rowTwo %}
@@ -47,7 +47,7 @@
       </section>
     </div>
 
-    <div id="custom" class="pricing-section d-none">
+    <div id="other-content" class="pricing-section d-none">
       <div class="row justify-content-center">
         <div class="col-5">
           <section class="custom-pricing py-3 px-4 text-center">
