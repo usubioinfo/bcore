@@ -1,7 +1,7 @@
 {% extends "templates/main.template.njk" %}
 
 {% block content %}
-  <div class="row mt-3">
+  <div class="row mt-3 px-3">
     <div class="col-3 text-center">
       <h4 class="fw-heavy">
         General
@@ -9,21 +9,27 @@
 
       <section class="news-card-background px-3 py-2">
         <div class="py-2">
+          <div class="kbl-news-card text-left px-3 py-2 article-card" data-article-id="hpchardware1">
+            <span class="date"><i class="far fa-calendar-alt"></i> Jun 11, 2021</span>
+            <h5 class="fw-medium heading">HPC Hardware Upgrades</h5>
+          </div>
+        </div>
+        <div class="py-2">
           <div class="kbl-news-card text-left px-3 py-2 article-card" data-article-id="node16">
-            <span class="date">Jun 11, 2021</span>
+            <span class="date"><i class="far fa-calendar-alt"></i> Jun 11, 2021</span>
             <span class="float-right tag-update">Update</span>
             <h5 class="fw-medium heading">NodeJS 16.3.0</h5>
           </div>
         </div>
         <div class="py-2">
           <div class="kbl-news-card text-left px-3 py-2 article-card" data-article-id="node">
-            <span class="date">Jan 20, 2021</span>
+            <span class="date"><i class="far fa-calendar-alt"></i> Jan 20, 2021</span>
             <h5 class="fw-medium heading">NodeJS on the Cluster</h5>
           </div>
         </div>
         <div class="py-2">
           <div class="kbl-news-card text-left px-3 py-2 article-card" data-article-id="php7">
-            <span class="date">Jan 4, 2021</span>
+            <span class="date"><i class="far fa-calendar-alt"></i> Jan 4, 2021</span>
             <h5 class="fw-medium heading">PHP 7.3 support ending</h5>
           </div>
         </div>
@@ -36,14 +42,14 @@
       <section class="news-card-background px-3 py-2">
         <div class="py-2">
           <div class="kbl-news-card text-left px-3 py-2">
-            <span class="date">Jan 6, 2021</span>
+            <span class="date"><i class="far fa-calendar-alt"></i> Jan 6, 2021</span>
             <span class="float-right tag-new">New Module</span>
             <h5 class="fw-medium heading">AlignGraph2</h5>
           </div>
         </div>
         <div class="py-2">
           <div class="kbl-news-card text-left px-3 py-2">
-            <span class="date">Dec 30, 2020</span>
+            <span class="date"><i class="far fa-calendar-alt"></i> Dec 30, 2020</span>
             <span class="float-right tag-update">Update</span>
             <h5 class="fw-medium heading">Parallel v20201222</h5>
           </div>
@@ -142,6 +148,22 @@
         <p>
           We try not to break things at the HPC, but when breaking changes are introduced, we're as transparent as possible. Breaking changes for Node 16
           all have to do with <code>process.binding</code>, so if you do low-level work in Node, upgrading could break your software.
+        </p>
+      </div>
+    </section>
+
+    <section class="col-6 text-center px-5 article d-none" id="hpchardware1">
+      <h4 class="fw-heavy">
+        HPC Hardware Upgrades
+      </h4>
+
+      <span class="text-soft">June 11th, 2021</span>
+
+      <div class="text-left mt-4">
+        <p>
+          Our HPC now has a new Ethernet switch along with a set of new Cat8 cables, giving all of our nodes a 10 Gb/s internet connection. While this won't necessarily
+          translate to a massive difference in performance, download speeds are now only limited by USU's internet speed (1 Gb/s). As always, thank you for being patient
+          during the upgrade process.
         </p>
       </div>
     </section>
