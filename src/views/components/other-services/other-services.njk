@@ -1,11 +1,11 @@
 {% from 'universal/nav/nav.services.njk' import services %}
 
-<div class="widget widget-categories">
+<div class="widget widget-categories pb-2">
   <h4 class="widget-title heavy">Other Services</h4>
   <div class="widget-content">
     <ul>
       {% for service in services %}
-        <li>
+        <li class="py-2">
           <a class="palette-2" href="services/{{ service.url }}">{{ service.navName }}</a>
         </li>
       {% endfor %}
