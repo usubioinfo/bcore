@@ -117,6 +117,7 @@
     document.getElementById('nav-search-dropdown').innerText = '';
 
     for (let result of searchResults) {
+      const newListItem = document.createElement('li');
       const newAnchor = document.createElement('a');
       const content = document.createTextNode(result.name);
 
@@ -126,7 +127,14 @@
       newAnchor.classList.add('dropdown-item');
       newAnchor.classList.add('result');
 
-      document.getElementById('nav-search-dropdown').appendChild(newAnchor);
+      newListItem.appendChild(newAnchor);
+
+      newListItem.addEventListener('click', e => {
+        console.log('test')
+        window.location.href = result.url;
+      });
+
+      document.getElementById('nav-search-dropdown').appendChild(newListItem);
     }
   });
 
@@ -134,7 +142,11 @@
     document.getElementById('nav-search-dropdown').classList.add('show');
   });
 
+
+  // Do I get fired for this awful hack?
   document.getElementById('nav-searchbar').addEventListener('focusout', e => {
-    document.getElementById('nav-search-dropdown').classList.remove('show');
+    setTimeout(() => {
+      document.getElementById('nav-search-dropdown').classList.remove('show');
+    }, 100);
   });
 })();

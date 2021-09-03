@@ -1,14 +1,14 @@
 <header class="kbl-nav d-none d-lg-block">
   <!-- Top bar start -->
-  <article class="container-fluid top-bar">
+  <article class="container-fluid top-bar mb-3">
     <div class="row py-2">
-      <section class="d-inline-block col-9 text-left">
+      <section class="d-inline-block col-9">
         <span class="mx-2"><a href="/ourteam" class="navbar-quick-link">Our Team</a></span>
         <span class="mx-2"><a href="/news" class="navbar-quick-link">News</a></span>
         <span class="mx-2"><a href="/careers" class="navbar-quick-link">Careers</a></span>
         <span class="mx-2"><a href="/contact" class="navbar-quick-link">Contact Us</a></span>
       </section>
-      <section class="d-inline-block text-right col-3">
+      <section class="d-inline-block text-end col-3">
         {% set facebookLink = "https://www.facebook.com/BioinfoCore-at-Utah-State-University-102633644416841" %}
         <span class="mx-2"><a href="{{ facebookLink}}" class="navbar-social-media-icon"><i class="fab fa-facebook-f"></i></a></span>
         <span class="mx-2"><a href="https://twitter.com/Bioinfocore2" class="navbar-social-media-icon"><i class="fab fa-twitter"></i></a></span>
@@ -50,7 +50,7 @@
       </section>
 
       <!-- QUOTE BUTTON -->
-      <section class="col my-auto text-right d-none d-sm-block">
+      <section class="col my-auto text-center d-none d-sm-block">
         <a href="/contact" class="btn kbl-btn-1">Contact Us</a>
       </section>
 
@@ -73,7 +73,7 @@
               </section>
 
               <section class="col text-center my-auto" id="nav-services-col">
-                <a href="/services" class="menu-item dropdown disabled" id="nav-services" data-toggle="dropdown">Services</a>
+                <a href="/services" class="menu-item dropdown disabled" id="nav-services" data-bs-toggle="dropdown">Services</a>
                 {% from "./nav/nav.services.njk" import services %}
 
                 <ul class="dropdown-menu show" id="nav-services-dropdown">
@@ -88,7 +88,7 @@
               </section>
 
               <section class="col text-center my-auto" id="nav-res-col">
-                <a href="/" class="menu-item dropdown disabled" id="nav-res" data-toggle="dropdown">Resources</a>
+                <a href="/" class="menu-item dropdown disabled" id="nav-res" data-bs-toggle="dropdown">Resources</a>
                 <ul class="dropdown-menu show" id="nav-res-dropdown">
                   <li class="dropdown-item"><a href="resources/hardware">Hardware</a></li>
                   <li class="dropdown-item"><a href="resources/software">Software</a></li>
@@ -115,9 +115,9 @@
               <input type="search" placeholder="Search here..." id="nav-searchbar"/>
               <i class="fas fa-search search-icon"></i>
             </div>
-            <div class="dropdown-menu kbl-dropdown" id="nav-search-dropdown" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item no-res" id="no-res" href="#">No Results</a>
-            </div>
+            <ul class="dropdown-menu kbl-dropdown" id="nav-search-dropdown" aria-labelledby="dropdownMenuButton" data-bs-auto-close="inside">
+              <li><a class="dropdown-item no-res" id="no-res" href="#">No Results</a></li>
+            </ul>
           </div>
         </section>
       </div>
