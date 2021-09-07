@@ -9,6 +9,7 @@
   background: $btn-color!important;
   font-family: 'Open Sans', sans-serif!important;
   font-weight: $font-weight!important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18), 0 1px 2px rgba(0, 0, 0, 0.28);
   text-transform: capitalize;
 
   &:hover {
