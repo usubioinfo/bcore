@@ -7,6 +7,8 @@
     snpseq: 600,
     chip: 600,
     methyl: 700,
+    gbs: 500,
+
     genome: 50
   }
 
@@ -15,6 +17,8 @@
 
   let currentPage = switches[0].id;
   console.log(currentPage);
+
+  const priceEl = document.querySelector('#price');
 
   switches.forEach((el) => {
     el.addEventListener('click', (e) => {
@@ -44,8 +48,7 @@
 
       const pricingId = el.id;
       const price = document.querySelector(`#${pricingId} .price-data`).textContent;
-      const priceEl = document.querySelector('#price');
-      priceEl.textContent = price;
+      priceEl.textContent = priceCheck(noSamples[pricingId], pricingId);
     });
   });
 
@@ -66,6 +69,22 @@
   const plusButtons = document.querySelectorAll('.plus');
   const minusButtons = document.querySelectorAll('.minus');
 
+  const priceCheck = (numSamples, id) => {
+    const tens = parseInt(numSamples / 10);
+    const ones = numSamples % 10;
+
+    const price = document.querySelector(`#${id} .price-data`).textContent;
+
+    if (tens === 0) {
+      return price;
+    }
+
+    let total = tens * price;
+    total += ones * 50;
+
+    return total;
+  }
+
   plusButtons.forEach(el => {
     el.addEventListener('click', e => {
       const id = el.id.split('-')[0];
@@ -73,6 +92,7 @@
       noSamples[id] += 1;
 
       document.getElementById(`${id}-input`).value = noSamples[id];
+      priceEl.textContent = priceCheck(noSamples[id], id);
     });
 
   });
@@ -88,6 +108,7 @@
       }
 
       document.getElementById(`${id}-input`).value = noSamples[id];
+      priceEl.textContent = priceCheck(noSamples[id], id);
     });
 
   });
