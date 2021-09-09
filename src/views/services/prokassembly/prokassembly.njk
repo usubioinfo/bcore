@@ -14,19 +14,21 @@
     </header>
     <p>
       Genome assembly is the process of taking many individual disconnected graphs (pieces of the DNA)
-      that are processed independently by an assembler and putting them back together to create the original assembly. A high-quality assortment/annotation of genomes has become a vital instrument for
-      improving biological understanding of all species. The biggest challenge in doing genome assembly is
-      “assembly error”. Assembly errors can occur for a variety of reasons. Pieces are frequently discarded
+      that are processed independently by an assembler and putting them back together to create the original assembly. 
+      A high-quality assortment/annotation of genomes has become a vital instrument for
+      improving biological understanding of all species. The biggest challenge of genome assembly is
+      “assembly error”. Assembly errors occur for a variety of reasons. Pieces are frequently discarded
       incorrectly as mistakes or repeats, while others are joined up in the wrong places or orientations. It is
       recommended that you use long, high-quality reads for your analysis to address many of these issues.
     </p>
 
     <p>
-      Single and paired reads are used to assemble a genome. Single reads are simply short sequenced fragments that can be joined together through overlapping regions to form a continuous sequence known
+      Single and paired reads are used to assemble a genome. Single reads are simply short sequenced fragments that can be joined 
+      together through overlapping regions to form a continuous sequence known
       as a 'contig'. Paired reads are roughly the same length as single reads, but they come from opposite
       ends of DNA fragments. Depending on the sequencer used, this distance can range from 200 base
       pairs to several tens of kilobases. Knowing that paired reads were generated from the same piece of
-      DNA can help better to organize contigs into 'scaffolds.' Paired-read data can also be used to determine the size of repetitive regions.
+      DNA can help better to organize contigs into 'scaffolds.' Paired read data can also be used to determine the size of repetitive regions.
     </p>
 
     <p>
@@ -42,16 +44,16 @@
 
     <p>
       The most commonly used metric to evaluate new genome assembly is N50, the smallest scaffold or
-      contig above which 50% of an assembly would be represented. Our De Novo assembly pipeline for
-      Prokaryotes consists of two major parts:
+      contig above which 50% of an assembly would be represented. Our <e>de dovo</e> assembly pipeline for
+      prokaryotes consists of two major parts:
     </p>
 
     <section class="service-steps">
 
       <h5>Pre Assembly Analysis</h5>
       <ul>
-        <li>Raw sub-reads overlapping for error correction</li>
-        <li>Pre-assembly and error correction</li>
+        <li>Raw subreads overlapping for error correction</li>
+        <li>Preassembly and error correction</li>
         <li>Overlapping detection of the error corrected reads</li>
         <li>Overlap filtering</li>
         <li>Construct graph from overlaps</li>
