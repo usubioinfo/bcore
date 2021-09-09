@@ -10,3 +10,14 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: $font-weight-heavy!important;
   }
 }
+
+.kbl-header {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-main);
+  font-weight: 700;
+  letter-spacing: 0;
+
+  &.light {
+    font-weight: 600;
+  }
+}

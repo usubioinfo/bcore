@@ -170,6 +170,15 @@ app.get(baseUrl + 'resources/:rscname', (req, res) => {
   res.render(__dirname + rscString, data);
 });
 
+app.get(baseUrl + 'resources/manuals/:manual', (req, res) => {
+  let data = {
+    activeRoute: 'resources'
+  }
+
+  const rscString = `/views/resources/manuals/${req.params.manual}.njk`;
+  res.render(__dirname + rscString, data);
+});
+
 app.listen(port, () => {
   console.log('Backend started on port ' + port);
 });

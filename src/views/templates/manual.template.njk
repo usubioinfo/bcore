@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% from "universal/_header-macro.njk" import header %}
+	{{ header(bs5=true) }}
+	<body>
+		{% include "universal/_preload.njk" %}
+		{% include "universal/_navbar-bs4.njk" %}
+
+    <div class="container mt-4">
+      <div class="row justify-content-center">
+        <div class="col-8">
+          {% block content %}
+
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+
+		{% include "universal/_footer-bs4.njk" %}
+		
+		{% from "universal/_scripts-macro.njk" import scripts %}
+		{{ scripts(bs4=bs4) }}
+		<script src="js/kbl/search.js"></script>
+		<script src="js/kbl/navbar.js"></script>
+	</body>
+</html>
