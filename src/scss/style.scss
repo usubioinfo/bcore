@@ -277,3 +277,26 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+// Pricing
+// Sometimes I wish this site was just written in React...
+.org-switch {
+
+  .switch {
+    font-size: 130%;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+    letter-spacing: 0.1px;
+
+    border-bottom: 3px solid transparent;
+
+    &:hover:not(.selected) {
+      border-color: var(--palette-1-light);
+    }
+
+    &.selected {
+      border-color: $palette-1;
+    }
+  }
+}

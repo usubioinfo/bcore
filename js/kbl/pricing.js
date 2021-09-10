@@ -13,12 +13,23 @@
   }
 
   const switches = document.querySelectorAll('.kbl-switch.s2');
+  const orgSwitches = document.querySelectorAll('.switch');
   switches[0].classList.add('current');
 
   let currentPage = switches[0].id;
   console.log(currentPage);
 
   const priceEl = document.querySelector('#price');
+
+  orgSwitches.forEach(el => {
+    el.addEventListener('click', e => {
+      document.querySelectorAll('.switch').forEach(newEl => {
+        newEl.classList.remove('selected');
+      });
+
+      el.classList.add('selected');
+    });
+  });
 
   switches.forEach((el) => {
     el.addEventListener('click', (e) => {

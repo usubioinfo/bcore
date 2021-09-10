@@ -4,12 +4,23 @@
   <article class="container-fluid my-5">
 
     <section class="row justify-content-center">
-      <div class="col-6 text-center">
-        <h2>Our Pricing</h2>
+
+      <div class="col-4 my-auto">
+        <section class="row org-switch">
+          <div class="col text-center" id="usu">
+            <span class="switch selected">USU-affiliated</span>
+          </div>
+          <div class="col text-center" id="academic">
+            <span class="switch">Academic</span>
+          </div>
+          <div class="col text-center" id="commercial">
+            <span class="switch">Commercial</span>
+          </div>
+        </section>
       </div>
     </section>
 
-    <section class="row justify-content-center mt-3 mb-5">
+    <section class="row justify-content-center mt-4 mb-4">
       <div class="col-2 text-center">
         <button class="btn kbl-switch s2 current pricing" id="standard">Standard</button>
       </div>
@@ -40,9 +51,21 @@
         {% endfor %}
       </section>
 
-      <section class="row mt-5">
+      <section class="row my-5">
         <div class="col text-center">
           <h4>Your Price: $<span id="price">0</span></h4>
+        </div>
+      </section>
+
+      <section class="row mt-5 py-5 justify-content-center">
+        <div class="col-6">
+          <h2 class="text-center">Co-authorship</h2>
+          <p>
+            We request co-authorship (and will assist with manuscript preparation) if we have developed novel tools, algorithms, or pipelines, 
+            participated in experiment design planning, or have contributed substantially to a biological question addressed in a manuscript 
+            . We ask that, at minimum, you acknowledge us in a publication to which we have contributed routine 
+            analysis, data management or conversion, or data submission services.
+          </p>
         </div>
       </section>
     </div>
