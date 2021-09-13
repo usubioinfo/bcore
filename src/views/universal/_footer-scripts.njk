@@ -1,5 +1,13 @@
 <script src="js/vendor.min.js"></script>
 <script src="js/framework.js"></script>
+
+<script>
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+</script>
+
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpVQEdCmd9aY_-N6920-wilfScyBwS-Lw&amp;callback=initMap"></script>
 <script src="js/template.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
