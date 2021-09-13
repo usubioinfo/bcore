@@ -5,16 +5,27 @@
     rnaseq: 400,
     mirna: 500,
     snpseq: 600,
-    chip: 600,
-    methyl: 700,
+    chipseq: 600,
+    metseq: 700,
     gbs: 500,
-
+    amplicon: 500,
+    metagenomics: 500,
     genome: 50
   }
+
+  const groupPricing = {
+    usu: 1,
+    academic: 1.5,
+    commercial: 2
+  }
+
+  let currentGroup = 'usu';
 
   const switches = document.querySelectorAll('.kbl-switch.s2');
   const orgSwitches = document.querySelectorAll('.switch');
   switches[0].classList.add('current');
+
+  const pricingItems = document.querySelectorAll('.kbl-pricing-item');
 
   let currentPage = switches[0].id;
   console.log(currentPage);
@@ -27,7 +38,18 @@
         newEl.classList.remove('selected');
       });
 
+      for (let priceItem of pricingItems) {
+        if (priceItem.id === 'genome') {
+          continue;
+        }
+
+        const pricingId = priceItem.id;
+        console.log(pricingId);
+        const price = document.querySelector(`#${pricingId} .price-data`).textContent = pricing[pricingId] * groupPricing[el.id];
+      }
+
       el.classList.add('selected');
+      currentGroup = el.id;
     });
   });
 
@@ -49,7 +71,7 @@
     });
   });
 
-  document.querySelectorAll('.kbl-pricing-item').forEach(el => {
+  pricingItems.forEach(el => {
     el.addEventListener('click', e => {
       document.querySelectorAll('.kbl-pricing-item').forEach(newEl => {
         newEl.classList.remove('selected')
@@ -91,7 +113,7 @@
     }
 
     let total = tens * price;
-    total += ones * 50;
+    total += ones * 50 * groupPricing[currentGroup];
 
     return total;
   }
