@@ -2,7 +2,7 @@
   <div class="container-fluid kbl-pricing-item text-center pt-3 mx-auto mt-1 pb-2" id="{{ data.id }}">
     <h4 class="name">{{ data.name }}</h4>
     <div class="subtitle">
-      <a href="/services/rnaseq">Learn more</a>
+      <a href="/services/{{ data.link }}">Learn more</a>
     </div>
 
     <ul class="bullets">
@@ -13,7 +13,11 @@
 
     </ul>
 
-    <div>Number of Samples</div>
+    {% if (data.id == 'genome') %}
+      <div>Gb of Data</div>
+    {% else %}
+      <div>Number of Samples</div>
+    {% endif %}
 
     <div class="row justify-content-center">
       <div class="col-auto pt-1 my-auto">
@@ -24,7 +28,11 @@
       </div>
 
       <div class="col-3 px-0">
-        <input type="number" id="{{ data.id }}-input" class="price-field" placeholder="10" value="10" />
+        {% if (data.id == 'genome') %}
+          <input type="number" id="{{ data.id }}-input" class="price-field" placeholder="4" value="4" />
+        {% else %}
+          <input type="number" id="{{ data.id }}-input" class="price-field" placeholder="10" value="10" />
+        {% endif %}
       </div>
 
       <div class="col-auto pt-1 my-auto">

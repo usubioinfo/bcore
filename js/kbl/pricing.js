@@ -10,7 +10,7 @@
     gbs: 500,
     amplicon: 500,
     metagenomics: 500,
-    genome: 50
+    genome: 1000
   }
 
   const groupPricing = {
@@ -96,10 +96,22 @@
     snpseq: 10,
     chipseq: 10,
     metseq: 10,
-    genome: 10,
+    genome: 4,
     gbs: 10,
     amplicon: 10,
     metagenomics: 10
+  }
+
+  const increments = {
+    rnaseq: 50,
+    mirna: 70,
+    snpseq: 80,
+    chipseq: 80,
+    metseq: 90,
+    genome: 200,
+    gbs: 70,
+    amplicon: 70,
+    metagenomics: 70
   }
 
   // Plus Minus buttons
@@ -107,18 +119,40 @@
   const plusButtons = document.querySelectorAll('.plus');
   const minusButtons = document.querySelectorAll('.minus');
 
+  const genomePriceCheck = (numSamples) => {
+    // This is base 4, variable naming is hard :(
+    const bases = parseInt(numSamples / 4);
+    const ones = numSamples % 4;
+
+    const price = pricing['genome'];
+
+    if (bases === 0) {
+      return price;
+    }
+
+    let total = bases * price;
+    total += ones * increments['genome'] * groupPricing[currentGroup];
+
+    return total;
+  }
+
   const priceCheck = (numSamples, id) => {
+
+    if (id === 'genome') {
+      return genomePriceCheck(numSamples);
+    }
+
     const tens = parseInt(numSamples / 10);
     const ones = numSamples % 10;
 
-    const price = document.querySelector(`#${id} .price-data`).textContent;
+    const price = pricing[id];
 
     if (tens === 0) {
       return price;
     }
 
     let total = tens * price;
-    total += ones * 50 * groupPricing[currentGroup];
+    total += ones * increments[id] * groupPricing[currentGroup];
 
     return total;
   }
@@ -130,7 +164,9 @@
       noSamples[id] += 1;
 
       document.getElementById(`${id}-input`).value = noSamples[id];
-      priceEl.textContent = priceCheck(noSamples[id], id);
+
+      const priceTag = document.querySelector(`#${id} .price-data`);
+      priceTag.textContent = priceCheck(noSamples[id], id);
     });
 
   });
@@ -146,7 +182,8 @@
       }
 
       document.getElementById(`${id}-input`).value = noSamples[id];
-      priceEl.textContent = priceCheck(noSamples[id], id);
+      const priceTag = document.querySelector(`#${id} .price-data`);
+      priceTag.textContent = priceCheck(noSamples[id], id);
     });
 
   });
