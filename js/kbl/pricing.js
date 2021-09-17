@@ -15,8 +15,8 @@
 
   const groupPricing = {
     usu: 1,
-    academic: 1.5,
-    commercial: 2
+    academic: 2,
+    commercial: 2.5
   }
 
   let currentGroup = 'usu';
