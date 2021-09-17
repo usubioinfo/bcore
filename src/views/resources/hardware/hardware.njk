@@ -1,27 +1,32 @@
 {% extends "templates/main.template.njk" %}
 
 {% block content %}
-	<article class="container-fluid kbl-content-wrapper">
 
-		<section class="row mt-4">
-			<div class="col-12">
-				<h3 class="text-center max-header">Welcome to the Bioinformatics Core High-Performance Computing Facility!</h3>
-			</div>
+	<article class="container-fluid px-0">
+		<section class="img-header">
+
+			<section class="row mt-5 pt-5">
+				<div class="col-12">
+					<h3 class="text-center max-header">Welcome to the Bioinformatics Core High-Performance Computing Facility!</h3>
+				</div>
+			</section>
+
+			<section class="row my-4 justify-content-center">
+				<div class="col-11 col-md-6 col-lg-6">
+					<p class="guru-text">
+						The Bioinformatics department hosts the Guru cluster from the Biotech building in Logan, Utah.
+						This 7 blade cluster has 448 CPU cores, 2TB of ram, and 250TB of storage.
+					</p>
+				</div>
+			</section>
 		</section>
+	</article>
 
-		<section class="row my-4 justify-content-center">
-
-			<div class="col-11 col-md-6 col-lg-6">
-				<p class="guru-text">
-					The Bioinformatics department hosts the Guru cluster from the Biotech building in Logan, Utah.
-					This four blade cluster has 256 CPU cores, 2TB of ram, and 250TB of storage.
-				</p>
-			</div>
-		</section>
+	<article class="container-fluid kbl-content-wrapper mt-4">
 
 		<section class="row mb-4">
 			<div class="col-12 text-center">
-				<h2 class="max-header">Guru Cluster</h2>
+				<h2 class="guru-header">Guru Cluster</h2>
 				<span>SSH via authorized_user@biocluster.usu.edu</span>
 			</div>
 		</section>

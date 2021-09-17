@@ -4,7 +4,7 @@
 .guru-text {
   font-weight: 500;
   font-size: 160%;
-  color: #656565;
+  color: #fafafa;
 }
 
 .spec-title {
@@ -15,7 +15,11 @@
 
 .max-header {
   font-weight: $font-weight-heavy;
-  color: $primary-text;
+  color: #fff;
+}
+
+.guru-header {
+  color: var(--color-primary);
 }
 
 .med-header {

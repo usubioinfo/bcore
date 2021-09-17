@@ -278,6 +278,12 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.img-header {
+  min-height: 400px;
+  overflow: hidden;
+  background-image: url("http://bioinfocore.usu.edu/raikou/image/biocore/server2.jpg");
+}
+
 // Pricing
 // Sometimes I wish this site was just written in React...
 .org-switch {
