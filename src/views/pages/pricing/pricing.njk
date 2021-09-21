@@ -5,7 +5,7 @@
 
     <section class="row justify-content-center">
 
-      <div class="col-4 my-auto">
+      <div class="col-12 col-lg-7 my-auto">
         <section class="row org-switch">
           <div class="col text-center">
             <span class="switch selected" id="usu">USU-affiliated</span>
@@ -20,32 +20,46 @@
       </div>
     </section>
 
-    <section class="row justify-content-center mt-4 mb-4">
-      <div class="col-2 text-center">
+    <section class="row justify-content-center my-4">
+      <div class="col-4 col-lg-3 text-center">
         <button class="btn kbl-switch s2 current pricing" id="standard">Standard</button>
       </div>
 
-      <div class="col-2 text-center">
+      <div class="col-4 col-lg-3 text-center">
         <button class="btn kbl-switch s2 pricing" id="other">Other Services</button>
       </div>
     </section>
 
     <div id="standard-content" class="pricing-section">
-      <section class="row justify-content-center mt-4 mb-5">
+      <section class="row justify-content-center d-none d-xxl-flex">
         {% from "components/price-item-new.njk" import priceItem %}
         {% from "./price-data.njk" import rowOne, rowTwo %}
 
         {% for service in rowOne %}
-          <div class="col">
+          <div class="col col-lg-4 col-xl-3 col-xxl mt-4 mb-3">
             {{ priceItem(service) }}
           </div>
         {% endfor %}
       </section>
 
-      <section class="row justify-content-center mt-4 mb-5">
+      <section class="row justify-content-center d-none d-xxl-flex">
 
         {% for service in rowTwo %}
-          <div class="col">
+          <div class="col col-lg-3 col-xxl-3 mt-4 mb-3">
+            {{ priceItem(service) }}
+          </div>
+        {% endfor %}
+      </section>
+
+      <section class="row justify-content-center d-flex d-xxl-none">
+        {% for service in rowOne %}
+          <div class="col col-lg-4 col-xl-3 col-xxl mt-4 mb-3">
+            {{ priceItem(service) }}
+          </div>
+        {% endfor %}
+
+        {% for service in rowTwo %}
+          <div class="col col-lg-4 col-xl-3 col-xxl mt-4 mb-3">
             {{ priceItem(service) }}
           </div>
         {% endfor %}
