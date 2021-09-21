@@ -40,6 +40,7 @@
     text-align: center;
     font-weight: 800;
     font-size: 190%!important;
+    pointer-events: none;
 
     &:focus {
       color: var(--text-soft);
