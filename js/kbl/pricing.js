@@ -20,6 +20,7 @@
   }
 
   let currentGroup = 'usu';
+  let selectedProduct = '';
 
   const switches = document.querySelectorAll('.kbl-switch.s2');
   const orgSwitches = document.querySelectorAll('.switch');
@@ -29,8 +30,6 @@
 
   let currentPage = switches[0].id;
   console.log(currentPage);
-
-  const priceEl = document.querySelector('#price');
 
   orgSwitches.forEach(el => {
     el.addEventListener('click', e => {
@@ -45,11 +44,16 @@
 
         const pricingId = priceItem.id;
         console.log(pricingId);
-        const price = document.querySelector(`#${pricingId} .price-data`).textContent = pricing[pricingId] * groupPricing[el.id];
+        document.querySelector(`#${pricingId} .price-data`).textContent = pricing[pricingId] * groupPricing[el.id];
       }
 
       el.classList.add('selected');
       currentGroup = el.id;
+
+      if (selectedProduct.length) {
+        console.log(currentGroup);
+        document.querySelector('#price').textContent = priceCheck(selectedProduct);
+      }
     });
   });
 
@@ -68,11 +72,6 @@
       });
   
       document.getElementById(`${currentPage}-content`).classList.remove('d-none');
-
-      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-      })
     });
   });
 
@@ -86,7 +85,9 @@
 
       const pricingId = el.id;
       const price = document.querySelector(`#${pricingId} .price-data`).textContent;
-      priceEl.textContent = priceCheck(noSamples[pricingId], pricingId);
+      document.querySelector('#price').textContent = price;
+
+      selectedProduct = el.id;
     });
   });
 
@@ -119,10 +120,10 @@
   const plusButtons = document.querySelectorAll('.plus');
   const minusButtons = document.querySelectorAll('.minus');
 
-  const genomePriceCheck = (numSamples) => {
+  const genomePriceCheck = () => {
     // This is base 4, variable naming is hard :(
-    const bases = parseInt(numSamples / 4);
-    const ones = numSamples % 4;
+    const bases = parseInt(noSamples['genome'] / 4);
+    const ones = noSamples['genome'] % 4;
 
     const price = pricing['genome'];
 
@@ -130,22 +131,22 @@
       return price;
     }
 
-    let total = bases * price;
+    let total = bases * price * groupPricing[currentGroup];
     total += ones * increments['genome'] * groupPricing[currentGroup];
 
     return total;
   }
 
-  const priceCheck = (numSamples, id) => {
+  const priceCheck = (id) => {
 
     if (id === 'genome') {
-      return genomePriceCheck(numSamples);
+      return genomePriceCheck();
     }
 
-    const tens = parseInt(numSamples / 10);
-    const ones = numSamples % 10;
+    const tens = parseInt(noSamples[id] / 10);
+    const ones = noSamples[id] % 10;
 
-    const price = pricing[id];
+    const price = pricing[id] * groupPricing[currentGroup];
 
     if (tens === 0) {
       return price;
@@ -166,7 +167,7 @@
       document.getElementById(`${id}-input`).value = noSamples[id];
 
       const priceTag = document.querySelector(`#${id} .price-data`);
-      priceTag.textContent = priceCheck(noSamples[id], id);
+      priceTag.textContent = priceCheck(id);
     });
 
   });
@@ -183,7 +184,7 @@
 
       document.getElementById(`${id}-input`).value = noSamples[id];
       const priceTag = document.querySelector(`#${id} .price-data`);
-      priceTag.textContent = priceCheck(noSamples[id], id);
+      priceTag.textContent = priceCheck(id);
     });
 
   });

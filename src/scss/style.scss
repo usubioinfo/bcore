@@ -306,3 +306,14 @@ input[type=number] {
     }
   }
 }
+
+.faq-link {
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 120%;
+
+  &:hover {
+    color: #3186d4;
+  }
+}
