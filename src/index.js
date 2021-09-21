@@ -175,7 +175,7 @@ app.get(baseUrl + 'resources/manuals/:manual', (req, res) => {
     activeRoute: 'resources'
   }
 
-  const rscString = `/views/resources/manuals/${req.params.manual}.njk`;
+  const rscString = `/views/resources/manuals/manuals/${req.params.manual}.njk`;
   res.render(__dirname + rscString, data);
 });
 

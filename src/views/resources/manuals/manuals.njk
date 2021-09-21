@@ -1,22 +1,24 @@
 {% extends "templates/main.template.njk" %}
 
 {% block content %}
-	<article class="row manual-container">
-		<div class="col-12">
-			<span class="manual-page-title">Manuals</span>
-		</div>
+	<article class="manual-section">
+		<section class="row">
+			<div class="col-12">
+				<span class="manual-page-title">Manuals</span>
+			</div>
+		</section>
 
-		{% setAsync('pdfs', getPDFs, []) %}
-		{% for pdf in pdfs %}
-			<div class="col-sm-6">
-				<div class="col-12 hide-overflow">
-					<a href="{{ pdf.link }}" title="{{ pdf.name }}" target="_blank" rel="noopener noreferrer" class="pdf-title">
-						{{ pdf.name }}
-					</a>
+		<section class="row manual-container px-4 py-3">
+			<div class="col-6">
+				<div class="manual">
+					<a href="/resources/manuals/getting-started">Getting Started</a>
+				</div>
+
+				<div class="manual">
+					<a href="/resources/manuals/Linux Basics">Linux Basics</a>
 				</div>
 			</div>
-		{% else %}
-			<div>No Manuals</div>
-		{% endfor %}
+		</section>
+		
 	</article>
 {% endblock %}

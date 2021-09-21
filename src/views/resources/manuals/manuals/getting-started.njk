@@ -1,0 +1,35 @@
+{% extends "templates/manual.template.njk" %}
+
+{% block content %}
+  <h2 class="kbl-header mb-5">Getting Started</h2>
+
+  <h4 class="kbl-header light">SSH</h4>
+  <p>
+    To get started on the HPC, you'll need to make sure you have an account. If you don't, send an email to rkaundal@usu.edu to request one. 
+    If you have an account, log in with <code>ssh username@biocluster.usu.edu</code> <br><br>
+    Quick note: you can avoid typing that entire thing out every time by creating an alias.
+  </p>
+
+  <h4 class="kbl-header light">Using the Cluster</h4>
+  <p>
+    We have many nodes available to use on the cluster. Currently there are 5 CPU nodes (chela01-05) and 1 GPU node (chela-g01). We have one head node (guru) that basically serves
+    as a login portal, and from there, you can reach the other nodes. Once you log in to the head node, try logging into a chela node by typing <code>ssh chela01</code>.
+    This shorthand will attempt to log in to the chela node with the current username.
+  </p>
+
+  <h4 class="kbl-header light">Module System</h4>
+  <p>
+    This will serve as a brief introduction to our module system. A more in-depth guide will be available soon. We use Environment Modules to load up our various software
+    packages. To see what packages we have, you can go <a href="http://bioinfocore.usu.edu/resources/software" target="_blank">here</a> or type <code>module avail</code>
+    on any node. Let's try to load R. Go ahead and type <code>module load R</code>. This will load the latest version of R, and after you load the module, just type 
+    <code>R</code> to open R in your terminal. Go ahead and print a message with <code>print("Hello World!")</code>, then you can exit out of R with <code>q()</code>.
+    To unload a module, there are two main methods:
+    <br><br>
+    <code>module unload "modulename"</code> will unload that module only.
+    <br><br>
+    <code>module purge</code> will unload all currently loaded modules.
+
+    <br><br>
+    That will mark the end of this introduction. To keep learning, you can go <a href="/resources/manuals/linux-basics">here</a> to learn about Linux basics.
+  </p>
+{% endblock %}

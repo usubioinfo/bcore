@@ -3,13 +3,17 @@
 @import '../../../scss/mixins/header';
 @import '../../../scss/colors';
 
-.manual-container {
+.manual-section {
   margin-bottom: 40px;
   padding-right: 90px;
   padding-left: 90px;
   margin-top: 40px;
-  background: #efefef;
   text-align: left;
+}
+
+.manual-container {
+  background: #efefef;
+  border-radius: 12px;
 }
 
 .manual-card-container {
