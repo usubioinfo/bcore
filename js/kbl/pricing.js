@@ -37,6 +37,9 @@
         newEl.classList.remove('selected');
       });
 
+      el.classList.add('selected');
+      currentGroup = el.id;
+
       for (let priceItem of pricingItems) {
         if (priceItem.id === 'genome') {
           continue;
@@ -44,11 +47,8 @@
 
         const pricingId = priceItem.id;
         console.log(pricingId);
-        document.querySelector(`#${pricingId} .price-data`).textContent = pricing[pricingId] * groupPricing[el.id];
+        document.querySelector(`#${pricingId} .price-data`).textContent = priceCheck(pricingId);
       }
-
-      el.classList.add('selected');
-      currentGroup = el.id;
 
       if (selectedProduct.length) {
         console.log(currentGroup);
