@@ -122,17 +122,19 @@
 
   const genomePriceCheck = () => {
     // This is base 4, variable naming is hard :(
-    const bases = parseInt(noSamples['genome'] / 4);
-    const ones = noSamples['genome'] % 4;
+    const id = 'genome';
 
-    const price = pricing['genome'];
+    const bases = parseInt(noSamples[id] / 4);
+    const ones = noSamples[id] % 4;
+
+    const price = pricing[id];
 
     if (bases === 0) {
       return price;
     }
 
     let total = bases * price * groupPricing[currentGroup];
-    total += ones * increments['genome'] * groupPricing[currentGroup];
+    total += ones * increments[id] * groupPricing[currentGroup];
 
     return total;
   }
