@@ -1,0 +1,15 @@
+{% extends "templates/service.template.njk" %}
+{%  from "components/svc-titlebar/svc-titlebar.njk" import titlebar %}
+
+{% block title %}
+  {{ titlebar('Single Cell RNA', 'scRNA') }}
+{% endblock %}
+
+{% block content %}
+<article>
+  <figure class="post-thumbnail">
+    <img src="http://bioinfocore.usu.edu/raikou/image/biocore/singlecellrna.png" alt="">
+  </figure>
+  
+</article>
+{% endblock %}

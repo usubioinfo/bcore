@@ -3,6 +3,7 @@
 {% set chipSeq = {navName: 'ChIP-Seq', url: 'chipseq'} %}
 {% set rnaSeq = {navName: 'RNA-Seq', url: 'rnaseq'} %}
 {% set varSeq = {navName: 'VAR-Seq', url: 'varseq'} %}
+{% set scRna = {navName: 'scRNA-Seq', url: 'scrna'} %}
 
 <!-- Assembly -->
 {% set eukAss = {navName: 'Eukaryotes Assembly', url: 'eukassembly'} %}
@@ -18,4 +19,4 @@
 {% set wgbs = {navName: 'Methylation (WGBS)', url: 'wgbs'} %}
 {% set methylation = {navName: 'Methyl-Seq', url: 'methylation'} %}
 
-{% set services = [rnaSeq, varSeq, methylation, mirna, chipSeq, gbs, amplicon, metagenomics, eukAss, prokAss] %}
+{% set services = [rnaSeq, varSeq, scRna, methylation, mirna, chipSeq, gbs, amplicon, metagenomics, eukAss, prokAss] %}
