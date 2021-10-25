@@ -1,0 +1,12 @@
+{% extends "templates/manual.template.njk" %}
+
+{% block content %}
+  <h2 class="kbl-header mb-5">X11 on Macs</h2>
+
+  <h4 class="kbl-header light">XQuartz</h4>
+  <p>
+    Apple devices can use SSH out of the box, but they do not come with support for X11. You'll need to 
+    download <a href="https://www.xquartz.org" target="_blank" rel="noreferrer">XQuartz</a> to do this. Once you install it, you just need to open XQuartz 
+    and run <code>ssh -X yourusername@biocluster.usu.edu</code>. To avoid typing that out every time, you can make an alias in your <code>.bashrc</code>. 
+  </p>
+{% endblock %}
