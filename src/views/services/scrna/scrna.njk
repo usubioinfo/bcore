@@ -59,14 +59,74 @@
     </p>
 
     <ul>
-      <li>Step 1 - Quality control and data preprocessing</li>
-      <li>Step 2 - Data normalization</li>
-      <li>Step 3 - Feature selection</li>
-      <li>Step 4 - Dimensionality reduction</li>
-      <li>Step 5 - Cell clustering</li>
-      <li>Step 6 - Differential expression for expressed features</li>
-      <li>Step 7 - Cell type annotation</li>
-      <li>Step 8 - Data visualization</li>
+      <li>Step 1 - Quality Control and Data Preprocessing</li>
+      <ul>
+        <li>Formatting reads and filtering noisy cellular barcodes</li>
+        <li>Assigning reads to their cellular barcodes and molecules of origin</li>
+        <li>Demultiplexing the samples</li>
+        <li>Generate a file of counts for each cellular barcode</li>
+      </ul>
+      <li>Step 2 - Mapping</li>
+      <ul>
+        <li>Mapping/pseudo-mapping to transcriptome</li>
+        <li>Gene assignment</li>
+        <li>Barcode counts</li>
+      </ul>
+      <li>Step 3 - Post-QC Mapping</li>
+      <ul>
+        <li>Removal of unwanted cells</li>
+        <li>Unique feature counts</li>
+      </ul>
+      <li>Step 4 - Matrix generation</li>
+      <ul>
+        <li>Collapsing UMIs and Quantification of Reads</li>
+        <li>Find which cDNA was the origin of the tag a UMI was attached to</li>
+        <li>Count unique UMIs for (gene, UMI) pairings</li>
+      </ul>
+      <li>Step 5 - Data Normalization</li>
+      <ul>
+        <li>Correct for differing droplets sizes</li>
+        <li>Impute missing values</li>
+        <li>Reduce noise, make it easier to identify the structure of the data</li>
+      </ul>
+      <li>Step 6 - Feature Selection</li>
+      <ul>
+        <li>Calculate Cell-to-cell variation in the dataset (i.e., genes that are highly expressed in some cells and lowly expressed in others)</li>
+        <li>Identify most highly variable gene</li>
+      </ul>
+      <li>Step 7 - Dimensionality Reduction</li>
+      <ul>
+        <li>Perform linear dimensional reduction</li>
+        <li>Perform PCA analysis</li>
+      </ul>
+      <li>Step 8 - cell Clustering</li>
+      <ul>
+        <li>Gene cluster with their assigned p-values, foldchange ratios, p-value adjustments</li>
+      </ul>
+      <li>Step 9 - Differential Expression for Expressed Features</li>
+      <ul>
+        <li>Find markers for differential expression</li>
+        <li>Compare distribution of expression levels</li>
+        <li>Compare values for each gene</li>
+        <li>Comparison of cell from different replicates</li>
+      </ul>
+      <li>Step 10 - Marker Identification</li>
+      <ul>
+        <li>Find markers for each cluster</li>
+        <li>Find all markers distinguishing one cluster from another</li>
+        <li>Find markers for every cluster compared to all remaining cells</li>
+      </ul>
+      <li>Step 11 - Data visualization</li>
+      <ul>
+        <li>Plot variable features</li>
+        <li>Visualize both cells and features based on their PCA score</li>
+        <li>Visualize marker expression based on raw counts or differential expression</li>
+        <li>Venn, elbow, and PCA plots</li>
+      </ul>
+      <li>Step 12 - Functional Annotation</li>
+      <ul>
+        <li>Gene ontology and KEGG pathways</li>
+      </ul>
     </ul>
   </header>
   
