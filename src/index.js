@@ -17,8 +17,14 @@ let nunEnv = nunjucks.configure(__dirname + '/views', {
 
 nunEnv.addGlobal(`RaikouServer`, 'http://bioinfocore.usu.edu/raikou');
 
-const getPDFs = function(callback) {
+/* const getPDFs = function(callback) {
   let fileArray = [];
+
+  fs.access('/../pdf', (error) => {
+  if (error) {
+	 console.error("Error: pdf directory does not exist.");
+  } else {
+
   fs.readdir(path.join(__dirname, '/../pdf'), (err, files) => {
     if (!files) {
       callback(null, []);
@@ -33,9 +39,11 @@ const getPDFs = function(callback) {
     });
     callback(null, fileArray);
   });
-}
+  }
+  });
+} */
 
-nunEnv.addGlobal('getPDFs', getPDFs);
+// nunEnv.addGlobal('getPDFs', getPDFs);
 nunEnv.addExtension('SetAsyncExtension', new SetAsyncExtension());
 
 app.use(cors());
@@ -49,23 +57,36 @@ app.use(baseUrl + 'biocore-images/', express.static(__dirname + '/../biocore-ima
 app.use(baseUrl + 'js/', express.static(__dirname + '/../js'));
 app.use(baseUrl + 'css/', express.static(__dirname + '/../css'));
 app.use(baseUrl + 'fonts/', express.static(__dirname + '/../fonts'));
-app.use(baseUrl + 'pdf/', express.static(__dirname + '/../pdf'));
+// app.use(baseUrl + 'pdf/', express.static(__dirname + '/../pdf'));
 
 // Get PDFs
-app.get(baseUrl + 'pdf/', (req, res) => {
+/* app.get(baseUrl + 'pdf/', (req, res) => {
   let fileArray = [];
+  fs.access('/../pdf', (error) => {
+  if (error) {
+	 console.error("Error: pdf directory does not exist.");
+  } else {
   fs.readdir(path.join(__dirname, '/../pdf'), (err, files) => {
+    if (err) throw err;
     files.forEach(file => {
       fileArray.push(file);
     });
-    res.json({files: fileArray});
+    	res.json({files: fileArray});
+    });
+    }
   });
-});
+}); */
 
-app.get(baseUrl + 'download/pdf/:filename', (req, res) => {
+/* app.get(baseUrl + 'download/pdf/:filename', (req, res) => {
+  fs.access('/../pdf', (error) => {
+  if (error) {
+	 console.error("Error: pdf directory does not exist.");
+  } else {
   const pdfFile = path.join(__dirname, '/../pdf/') + req.params.filename;
   res.download(pdfFile);
-});
+  }
+  });
+}); */
 
 // Pages
 app.get(baseUrl, (req, res) => {
