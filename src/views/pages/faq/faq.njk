@@ -22,16 +22,31 @@
 		<div class="content-section">
 			<div class="container-fluid px-5">
 				<div class="row mb-5 px-5">
-					<section class="col-6">
+					<section class="col-12">
 						<div class="row">
-							<div class="col">
+							<div class="col-2">
 								<a href="/faq#rnaseq" class="faq-link">RNA-seq</a>
 							</div>
-							<div class="col">
+							<div class="col-2">
 								<a href="/faq#go" class="faq-link">GO</a>
 							</div>
-							<div class="col">
-								<a href="/faq#methyl" class="faq-link">Methyl-seq</a>
+							<div class="col-2">
+								<a href="/faq#methyl" class="faq-link">Methyl-Seq</a>
+							</div>
+							<div class="col-2">
+								<a href="/faq#snp" class="faq-link">SNPs</a>
+							</div>
+							<div class="col-2">
+								<a href="/faq#scrna" class="faq-link">scRNA</a>
+							</div>
+							<div class="col-2">
+								<a href="/faq#metagenomics" class="faq-link">Metagenomics</a>
+							</div>
+							<div class="col-2">
+								<a href="/faq#eukassembly" class="faq-link">Eukaryotes Assembly</a>
+							</div>
+							<div class="col-2">
+								<a href="/faq#prokassembly" class="faq-link">Prokaryotes Assembly</a>
 							</div>
 						</div>
 					</section>
@@ -44,54 +59,26 @@
 						{% from "./faqdata/rnaseq.njk" import faqRnaSeq %}
 						{% from "./faqdata/go.njk" import faqGo %}
 						{% from "./faqdata/metseq.njk" import faqMetSeq %}
+						{% from "./faqdata/snp.njk" import faqSnp %}
+						{% from "./faqdata/scrna.njk" import faqScrna %}
+						{% from "./faqdata/metagenomics.njk" import faqMetagenomics %}
+						{% from "./faqdata/eukassembly.njk" import faqEukassembly %}
+						{% from "./faqdata/prokassembly.njk" import faqProkassembly %}
 
-						<h3 class="faq-header" id="rnaseq">RNA-seq</h3>
-						<div class="clearfix"></div>
-						<section data-rt-accordion data-rt-accordion-toggle="on" class="rt-accordion">
+						{% from "components/faq/faqSection.njk" import faqSection %}
+						{{ faqSection(faqRnaSeq,"RNA-seq","rnaseq") }}
 
-							{% for faq in faqRnaSeq %}
-								<div data-rt-accordion-item class="rt-accordion-item">
-									<header>
-										<p class="title">{{ faq.question }}</p>
-									</header>
-									<div class="content">
-										{{ faq.content | safe }}
-									</div>
-								</div>
-							{% endfor %}
-						</section>
+						{{ faqSection(faqGo,"Gene Ontology Enrichment Analysis","go") }}
 
-						<h3 class="faq-header pt-3" id="go">Gene Ontology Enrichment Analysis</h3>
-						<div class="clearfix"></div>
-						<section data-rt-accordion data-rt-accordion-toggle="on" class="rt-accordion">
+						{{ faqSection(faqMetSeq,"Methyl-Seq","methyl") }}
 
-							{% for faq in faqGo %}
-								<div data-rt-accordion-item class="rt-accordion-item">
-									<header>
-										<p class="title">{{ faq.question }}</p>
-									</header>
-									<div class="content">
-										{{ faq.content | safe }}
-									</div>
-								</div>
-							{% endfor %}
-						</section>
+						{{ faqSection(faqSnp,"SNPs","snp") }}
 
-						<h3 class="faq-header pt-3" id="methyl">Methyl-Seq</h3>
-						<div class="clearfix"></div>
-						<section data-rt-accordion data-rt-accordion-toggle="on" class="rt-accordion">
+						{{ faqSection(faqMetagenomics,"Metagenomics","metagenomics") }}
+						
+						{{ faqSection(faqEukassembly,"Eukaryotes Assembly","eukassembly") }}
 
-							{% for faq in faqMetSeq %}
-								<div data-rt-accordion-item class="rt-accordion-item">
-									<header>
-										<p class="title">{{ faq.question }}</p>
-									</header>
-									<div class="content">
-										{{ faq.content | safe }}
-									</div>
-								</div>
-							{% endfor %}
-						</section>
+						{{ faqSection(faqProkassembly,"Prokaryotes Assembly","prokassembly") }}
 
 					</section>
 					<section class="col-md-4">

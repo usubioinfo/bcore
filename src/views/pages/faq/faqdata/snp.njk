@@ -1,3 +1,87 @@
 {% set faqSnp = [
+{
+    question: "What are SNPS?",
+    content: "The measuring of genetic changes of single nucleotide polymorphisms (SNPs) between members of a species is known as SNP genotyping. Single nucleotide polymorphisms (SNPs) are the most common type of genetic variation found in humans. Each SNP represents a variation in the DNA known as a nucleotide. For example, a SNP may replace the nucleotide cytosine (C) with the nucleotide thymine (T) in the DNA. 
+
+SNPs have been used as markers for use in quantitative trait loci (QTL) analyses and association studies in place of microsatellites because they are believed to be conserved throughout evolution. NGS technologies are now being used to reveal the genetic basis of traits, local adaptation, and evolution in non-model animals and plants, including cattle, pigs, rice, maize, soybean, and cucumber etc."
+},
+{
+    question: "What causes single nucleotide polymorphism?",
+    content: "A SNP is defined as a variant in which more than 1% of a population does not carry the same nucleotide at a certain place in the DNA sequence. When an SNP exists within a gene, the gene is referred to as having several alleles. SNPs can cause changes in the amino acid sequence in several circumstances."
+},
+{
+    question: "What coverage (sequenced reads) do I need for my SNP sequenced samples?",
+    content: "It depends on the goals of your experiment and the organism of interest. For <b>short reads</b> it is recommended: <ul>
+<li>Germline variant analysis: 20-50x</li>
+<li>Somatic variants: 100-1000x</li>
+<li>Tumor vs Normal: ≥60x tumor, ≥30x normal</li>
+<li>Population studies: 20-50x</li>
+<li>De novo assembly: 100-1000x</li>
+</ul>
+For long-reads it is recommended:
+<ul>
+<li>Gap filling and scaffolding: 10x</li>
+<li>Large structural variant detection: 10x</li>
+<li>Germline/frequent variant analysis: 20-50x</li>
+<li>De novo assembly: 100-1000x</li></ul>"
+},
+{
+    question: "How do I calculate coverage?",
+    content: "The Lander/Waterman equation is used to calculate genome coverage. The general equation is: C = LN / G <ul>
+<li>C stands for coverage</li>
+<li>G is the haploid genome length</li>
+<li>L is the read length</li>
+<li>N is the number of reads</li>
+</ul>
+Coverage = (read length) x (total number of reads) / (genome size). For example, humans can achieve 30x coverage with 600 million 150 bp reads (or 300M paired-end reads):
+ 30x = (150 bp/read) x (600 x 106reads) / (3 x 109bp)"
+},
+{
+    question: "What alignment tools can I use for SNP analysis?",
+    content: "GATK, DNASTAR, NGSEP, Plink, and bowtie2."
+},
+{
+    question: "What are the filter parameters for determining the genotype for each SNP site?",
+    content: "Two commonly used filter parameters are genotype quality (GQ) >= 20 and read depth (DP) >= 10."
+},
+{
+    question: "What is the best way to visualize my SNP data?",
+    content: "<ol> <li>A Manhattan plot, which plots statistical significance as -log10(p-value) on the y-axis against chromosomes on the x-axis, is an effective way to display millions of genetic variants in a single figure. It is simple to identify regions of the genome that exceed a certain level of significance. Furthermore, it simplifies the identification of regions that can be replicated.
+</li><li>A q-q graph is a good way to see if there is a common distribution between two data sets.</li></ol>"
+},
+{
+    question: "What is the difference between SNV and SNP?",
+    content: "SNVs are sometimes referred to as single nucleotide polymorphisms (SNPs), however the terms are not interchangeable. To be considered an SNP, a variant must be found in at least 1% of the population."
+},
+{
+    question: "What type of variation analysis can I do with my SNP datasets?",
+    content: "Detection and genotyping of Single Nucleotide Variants (SNVs), small and large indels, short tandem repeats (STRs), inversions, and Copy Number Variants (CNVs."
+},
+{
+    question: "What type of files do I need to start my SNP analysis?",
+    content: "You can start with raw reads and use software that are built to start SNP analysis from raw reads to variant detection. Tools such as NGSEP, SystempipeR, and bowtie. Or start with a VCF file generated from your raw reads and use tools such as Plink."
+},
+{
+    question: "What software can I use for structure analysis for my SNP data?",
+    content: '<ul><li>TASSEL: <a href="https://www.maizegenetics.net/tassel">https://www.maizegenetics.net/tassel</a></li>
+<li>Structure:<a href="https://web.stanford.edu/group/pritchardlab/structure_software/release_versions/v2.3.4/html/structure.html"> https://web.stanford.edu/group/pritchardlab/structure_software/release_versions/v2.3.4/html/structure.html </a></li>'
+},
+{
+    question: "Can a single nucleotide polymorphism (SNP) be considered an epigenetic variation?",
+    content: "SNP is not an epigenetic modification; it is a genetic modification, also known as a mutation. However, SNPs have the potential to be an excellent marker for correlating different levels of allele expression and allele structure. Even if the SNP is not directly responsible for the variation in expression level, it can be linked to other mutations on the same allele sequence, allowing the causal relationship to be established."
+},
+{
+    question: "What is GWAS analysis?",
+    content: "The genome wide association study (GWAS) is a new technique for identifying causative genes in the genome for key phenotypes."
+},
+{
+    question: "How do I control false positive in GWAS analysis?",
+    content: "<ol> <li><b>1:</b> Using the Q matrix <ul>
+<li>The systematic difference in allele frequencies between subgroups of a group caused by non-random mating between individuals is referred to as population structure. Using the Q matrix to incorporate the fractions of individuals belonging to a subpopulation can help reduce false positives. It has been reported that the outcome of PCs (Population structure) is like the outcome of Q matrices. As a result, using the Q matrix in GWAS aids in reducing false positives.</li>
+</ul></li><li><b>2:</b> Using a Kinship Matrix <ul> <li>
+Incorporating hidden cryptic relationships between individuals in a mixed linear model can reduce false positives. We can solve this problem by using the Kinship matrix.
+So, by taking population structure and family relatedness into account, the Mixed Liner model (MLM) can help to reduce false positives to some extent.
+MLM methods only consider a single locus and can only test one marker at a time, and these methods fail to match the true genetic model of complex traits that are controlled by multiple loci at the same time. Bonferroni correction, False Discovery Rate (FDR), per-mutation test, and Bayesian approaches can be used to address this issue. As a result, the Multi loci mixed linear model can resolve false positives. </li></ul></li></ol>"
+}
   
 ] %}

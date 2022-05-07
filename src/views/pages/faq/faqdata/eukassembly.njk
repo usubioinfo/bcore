@@ -1,0 +1,43 @@
+{% set faqEukassembly = [
+  {
+    question: "What Eukaryotic assembly?",
+    content: "The process of putting nucleotide sequences in the correct order is referred to as genome assembly. Because sequence read lengths are much shorter than most genomes or even most genes, assembly is required. Organisms with eukaryotic cells are known as eukaryotes. Eukaryotic assembly refers to the genome assembly of prokaryotic organisms. The assembly entails taking a large number of DNA reads, looking for areas where they overlap, and then gradually piecing together the 'jigsaw' puzzle. It's an attempt to rebuild the original genome."
+  },
+  {
+    question: "What are eukaryotic organisms?",
+    content: "Eukaryotes are organisms with a nucleus and other membrane-bound organelles in their cells. Eukaryotic creatures include all mammals, plants, fungi, and protists, as well as the majority of algae. Eukaryotes are multicellular or single-celled organisms."
+  },
+  {
+    question: "When it comes to alignment and assembly, what's the difference?",
+    content: 'The terms "mapping" and "alignment" are interchangeable. Your reads are compared to a known standard. Assembly is the process of taking reads and constructing contigs entirely based on the reads.'
+  },
+  {
+    question: "What is a good coverage for genome assembly?",
+    content: "According to our findings, the optimal read depth for assembling these genomes using almost all assemblers is 50X. Furthermore, de novo assembly from 50X read data only requires 6–40 GB RAM. To put this in context, once a human genome has been fully sequenced, we will have approximately 100 gigabases (100,000,000,000 bases) of sequence data."
+  },
+  {
+    question: "What do we mean by coverage?",
+    content: "So, each nucleotide in the genome must be accounted for in order to account for potential errors? Coverage refers to the amount of times a sequence is repeated. 30 times (30-fold) coverage, for example, meaning that each base is sequenced 30 times."
+  },
+  {
+    question: "What do I need,  paired-end or single-end reads for genome assembly?",
+    content: "The primary advantage of paired-end reads is that scientists can determine the distance between the two ends. This makes assembling them into a continuous DNA sequence easier. Paired-end reads are especially useful when constructing a de novo sequence because they provide long-range information that would otherwise be unavailable in the absence of a gene map."
+  },
+  {
+    question: "What are single-end reads?",
+    content: "Single reads are sequences that cover only one end or the entire length of a DNA fragment. These sequences can then be joined together to form the full DNA sequence by locating overlapping regions in the sequence."
+  },
+  {
+    question: "What are paired-end reads?",
+    content: "Paired-end reads are where both ends of a fragment of DNA are sequenced. The distance between paired-end reads can range between 200 and several thousand base pairs"
+  },
+  {
+    question: "What are software available for eukaryotic assembly?",
+    content: "Velvet, TransABySS, Trinity, SOAPdenovo2"
+  },
+  {
+    question: "What is de novo assembly?",
+    content: "De novo sequencing is the process of sequencing an organism's genome for the first time.
+There is no existing reference genome sequence for that species to use as a template for the assembly of its genome sequence in de novo assembly."
+  }
+] %}

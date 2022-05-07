@@ -1,0 +1,16 @@
+{% macro faqSection(section=[],sectionTitle="",sectionID="") %}
+	<h3 class="faq-header pt-3" id="{{sectionID}}">{{sectionTitle}}</h3>
+	<div class="clearfix"></div>
+	<section data-rt-accordion data-rt-accordion-toggle="on" class="rt-accordion">
+		{% for faq in section %}
+			<div data-rt-accordion-item class="rt-accordion-item">
+				<header>
+					<p class="title">{{ faq.question }}</p>
+				</header>
+				<div class="content">
+			        {{ faq.content | safe }}
+				</div>
+			</div>
+		{% endfor %}
+    </section>
+{% endmacro %}

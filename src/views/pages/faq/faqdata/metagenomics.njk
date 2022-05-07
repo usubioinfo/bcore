@@ -1,0 +1,81 @@
+{% set faqMetagenomics = [
+  {
+    question: "What is metagenomics?",
+    content: "When researching microbial communities where it is impossible to distinguish one microbe from another, metagenomics is commonly used. For example, two bacteria may grow together, so when you take their DNA sequence, you're obtaining the DNA sequence of both bacteria. Metagenomics provide a way to distinguish between the sequences. Metagenomics permits the study of all microorganisms, regardless of whether they can be cultivated or not, by analyzing genomic data extracted directly from an environmental sample, revealing the species present and permitting the extraction of information about microbial functionality."
+  },
+  {
+    question: "Is there a distinction between genomics and metagenomics?",
+    content: "The nature of the sample is the primary distinction between genomics and metagenomics. Genomics examines the complete genetic information of a single organism, whereas metagenomics examines a mixture of DNA from multiple organisms and entities, such as viruses, viroids, and free DNA."
+  },
+  {
+    question: "What are some of the benefits of metagenomics research?",
+    content: "Metagenomics eliminates the requirement to culture organisms in the lab, removing the biases associated with classic cultivation-based approaches such as plate counts."
+  },
+  {
+    question: "What software can I use for metagenomics data analysis?",
+    content: "Mothur, DADA2, and QUIME are very popular."
+  },
+  {
+    question: "What are the reference databases I can use to map my metagenomics data?",
+    content: "SILVA, Greengenes, RDP, and Unite2"
+  },
+  {
+    question: "What is the difference between 16SRNA, 18SRNA, and ITS?",
+    content: "<b>16SRNA</b> is a DNA sequence that encodes the small subunit rRNA of Prokaryotes. It has a length of approximately 1542 bp, a moderate molecular size, and a low mutation rate. In the study of bacterial systematics, 16SRNA is the most commonly used marker. The 16SrDNA sequence is made up of 10 conservative regions and 9 variable regions. Conserved region sequences reflect genetic relationships between species, whereas variable region sequences reflect species differences. 16SRNA is primarily used to investigate the diversity of bacteria and archaea.<br>
+<b>18SRNA</b> is a DNA sequence encoding small subunit rRNA of eukaryotes ribosomes. With the exception of v6, the 18SRNA sequence is made up of conservative and variable sections (v1-v9), similar to 16SRNA. V4 provides the most thorough database information and the best classification effect among variable areas. For 18SRNA gene analysis, it is the most commonly used and best option. The species distinctions among eukaryotic organisms in a given sample are reflected by 18S rDNA sequencing.<br>
+The non-transcriptional portion of the fungal rRNA gene contains <b>ITS (Internal Transcribed Spacer).</b> ITS1 and ITS2 are the most common ITS sequences utilized for fungal identification. Because the rRNA genes 5.8s, 18s, and 28s are substantially conserved in fungi. Due to low natural selection pressure, ITS may tolerate greater variation in the evolutionary process and exhibits highly wide sequence polymorphism in most eukaryotes. Simultaneously, the ITS conservation type is very stable within species, and the discrepancies between species are clear. ITS sequence fragments are short (350 bp to 400 bp) and simple to examine. They've been utilized extensively in fungal phylogenetic analysis."
+  },
+  {
+    question: "What are the information that can be obtained from metagenomics analysis?",
+    content: "<ul><li>Sequence variation</li>
+<li>Specie classification</li> 
+<li>Specie abundance</li>
+<li>Population structure</li>
+<li>Phylogenetic evolution</li>
+<li>Community comparison</li></ul>"
+  },
+  {
+    question: "What are OTUs?",
+    content: "<b>OTUs (Operational Taxonomic Units)</b> are used to classify groups of individuals who are closely related. In general, if the similarity of two rDNA sequences exceeds 97 percent, those sequences can be classified as an OTU. Each OTU corresponds to a different rDNA sequence, implying that each OTU represents a single species. The microbial diversity and abundance of different microorganisms in the sample can be determined using OTU analysis."
+  },
+  {
+    question: "How much DNA is required for 16S metagenomics library preparation?",
+    content: "The standard protocol for the Zymo kit calls for 5-20 ng of total DNA. The Swift kit recommends 1ng, but sufficient yields can be obtained with as little as 10pg-50ng depending on sample type."
+  },
+  {
+    question: "What is the difference between Shotgun vs. Targeted metagenomics?",
+    content: "After collecting samples from the environment, you must prepare libraries so that they can be easily analyzed. The two most recent methods for creating libraries for analysis are:
+
+Targeted metagenomics entails focusing on a specific region of a genome (for example, 16S rRNA and 18S rRNA) that is shared by multiple organisms and samples. It provides more precise and detailed data, but it may result in unequal amplification for specific targeted regions.
+
+Shotgun metagenomics: the ability to sequence everything in a sample. It is suitable for all organisms. It provides higher resolution to genetic content (particularly DNA), but results in extremely complex datasets."
+  },
+  {
+    question: "Shotgun Metagenomics Analysis",
+    content: "When dealing with metagenomic datasets, there are three main approaches: <br>.
+
+<b>Marker gene analysis:</b> sequences are compared to databases of taxonomically or phylogenetically informative sequences known as marker genes, their similarity is examined, and the sequences are taxonomically annotated. The most commonly utilized marker genes are single-copy ribosomal RNA (ribonucleic acid) genes found in all microbial genomes.<br>
+
+<b>Binning</b> divides sequences into comparable groups that correspond to taxonomic categories like species, genus, and higher levels.<br>
+
+<b>Assembly:</b> Put all the tiny sequences in your sample together to generate much longer sequences that represent genomes."
+  },
+  {
+    question: "Targeted Metagenomics Analysis",
+    content: 'To perform targeted metagenomics, genetic material from samples is extracted, and genes of interest are PCR amplified based on regions of interest . The 16S ribosomal RNA gene is the most commonly used gene for this purpose. This gene is referred to as the "universal phylogenetic marker." It is found in all living microorganisms in a single copy. The resulting data is then processed and analyzed with various tools. From there , we can identify operational taxonomic units (OTUs), community structure aspects, and functional roles in microbial communities.'
+  },
+  {
+    question: "What are resources for metagenomics data?",
+    content: '<ul><li>Zymo Research: <a href="https://www.zymoresearch.com/pages/sample-collections">https://www.zymoresearch.com/pages/sample-collections</a>.</li>
+<li>Norgen BioTech: <a href="https://norgenbiotek.com/category/microbiome-collection-preservation-andisolation">https://norgenbiotek.com/category/microbiome-collection-preservation-andisolation</a>.</li>
+<li>BD:<a href="https://www.bd.com/en-us/offerings/capabilities/specimen-collection/swab-based-specimencollection/bd-bbl-cultureswab-ez-collection-and-transport-systems">https://www.bd.com/en-us/offerings/capabilities/specimen-collection/swab-based-specimencollection/bd-bbl-cultureswab-ez-collection-and-transport-systems</a></li>
+<li>PureLink™MicrobiomeDNA\PurificationKit:
+<a href="https://www.thermofisher.com/order/catalog/product/A29790">https://www.thermofisher.com/order/catalog/product/A29790</a>.</li>
+<li>Microbiome DNA Isolation Kit (Cat. 64100): <a href="https://norgenbiotek.com/product/microbiome-dnaisolation-kit">https://norgenbiotek.com/product/microbiome-dnaisolation-kit</a>.
+<li>QIAamp DNA Microbiome Kit: 
+<a href="https://www.qiagen.com/us/products/discovery-and-translationalresearch/dna-rna-purification/dna-purification/microbial-dna/qiaamp-dna-microbiomekit/#orderinginformation">https://www.qiagen.com/us/products/discovery-and-translationalresearch/dna-rna-purification/dna-purification/microbial-dna/qiaamp-dna-microbiomekit/#orderinginformation</a>.</li> 
+<li>QIAamp DNA Stool Mini Kit: <a href="https://www.qiagen.com/us/spotlight-pages/ias/automated-qpcrworkflow/assay-setup/qiaamp-dna-stool-mini-kit/">https://www.qiagen.com/us/spotlight-pages/ias/automated-qpcrworkflow/assay-setup/qiaamp-dna-stool-mini-kit/</a>.</li>
+<li>E.Z.N.A.® Stool DNA Kit: <a href="https://www.omegabiotek.com/product/e-z-n-a-stool-dna-kit/">https://www.omegabiotek.com/product/e-z-n-a-stool-dna-kit/</a>".</li>
+<li>Meta-G-Nome™ DNA Isolation Kit for water: <a href="http://www.epibio.com/applications/nucleic-acidpurification-extraction-kits/dna-purification-genomic/meta-g-nome-dna-isolation-kit?details">http://www.epibio.com/applications/nucleic-acidpurification-extraction-kits/dna-purification-genomic/meta-g-nome-dna-isolation-kit?details</a>.</li>'
+  }
+] %}

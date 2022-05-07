@@ -1,0 +1,82 @@
+{% set faqScrna = [
+  {
+    question: "What is singe cell RNA-Seq?",
+    content: "Measures the <b>distribution of expression levels</b> for each gene across a population of cells"
+  },
+  {
+    question: "What can scRNA analysis address?",
+    content: "Allows researchers to investigate novel biological topics in which cell-specific transcriptome alterations are significant:<ul>
+<li>Identification of cell type</li>
+<li>Cellular response heterogeneity</li>
+<li>Gene expression stochasticity.</li>
+<li>Gene regulatory network inference across cells</li></ul>"
+  },
+  {
+    question: "What is the difference between RNA-seq and Single Cell RNA?",
+    content: "We compare two tissues using RNA-seq by looking at the average expression of each gene detected across both tissues. The differential expression is then calculated as the ratio of a given gene's expression in one tissue versus another. With scRNA, we no longer compare tissues, but rather cells to cells. Each cell is assigned a gene profile, which describes the relative number of genes found within it. A gene profile describes a cell type ideally, and many cells have the same gene profile."
+  },
+  {
+    question: "What are barcodes?",
+    content: "Barcodes are one-of-a-kind sequences added to each RNA molecule. Cell Barcodes tell us which cell the transcript is from. They are not unique to the molecule, but rather to the cell, so that if two RNA molecules exist in the same cell, they will be tagged by the same cell barcode. Cell barcodes will differ between RNA molecules from different cells."
+  },
+  {
+    question: "What are UMIs?",
+    content: "Unique Molecular Identifiers (UMIs) are random barcodes (4-10bp) that are added to transcripts during reverse transcription. They allow individual transcript molecules to be assigned to sequencing reads. By comparing it to other transcripts from the same gene with the same UMI tag, UMIs can tell us how much the transcript was amplified."
+  },
+  {
+    question: "How to read counting with UMIs?",
+    content: "Reads with different UMIs mapping to the same transcript are biological duplicates derived from different molecules, each read should be counted. Reads with the same UMI came from the same molecule and are technically duplicates; the UMIs should be collapsed to count as a single read."
+  },
+  {
+    question: "How many cells should I have in my samples?",
+    content: "Depending on their sequencing platform, researchers can specify the number of cells to be sequenced, ranging from 500 to 10,000 cells per sample. For most experiments, it is recommended that 5,000 cells per sample be used."
+  },
+  {
+    question: "How many reads do I need for my scRNA-Seq?",
+    content: "To find the bulk of low-abundance transcripts, obtaining 1-2 million readings per cell is advised."
+  },
+  {
+    question: "How many samples should I multiplex on a lane?",
+    content: "The number of samples per flowcell is a simple calculation once the number of reads per sample has been determined. Simply divide the number of expected reads by the number of reads required per sample to get the number of reads per flowcell or lane."
+  },
+  {
+    question: "What files do I need for quantification of my scRNA-seq data?",
+    content: "<ul><li><b>The sample index:</b> determines which sample the read came from (Added during library preparation - needs to be documented).</li>
+<li><b>Cellular barcode:</b> identifies which cell the read came from (Each library preparation method has a stock of cellular barcodes used during the library preparation).</li>
+<li><b>The unique molecular identifier (UMI):</b> identifies the transcript molecule from which the read originated (The UMI will be used to collapse PCR duplicates)</li>
+<li><b>Read1:</b> the Read1 Sequence</li>
+<li><b>Read2:</b> the Read2 Sequencing</li></ul>"
+  },
+  {
+    question: "What are the steps to generate a count matrix for my scRNA-seq data?",
+    content: "This procedure consists of four steps: <ul>
+<li>Filtering and formatting noisy cellular barcodes</li>
+<li>Sample demultiplexing</li>
+<li>Transcriptome mapping</li>
+<li>UMI collapsing and read quantification</li></ul>"
+  },
+  {
+    question: "What are some protocols I can for scRNA sequencing?",
+    content: "<ul><li>SMART-seq2 (Picelli et al. 2013)</li>
+<li>CELL-seq (Hashimshony et al. 2012)</li>
+<li>Drop-seq (Macosko et al. 2015)</li>
+<li>InDrop-seq (Klein et al. 2015)</li>
+<li>MARS-seq (Jaitin et al. 2014)</li>
+<li>SCRB-seq (Soumillon et al. 2014)</li>
+<li>Seq-well (Gierahn et al. 2017)</li>
+<li>STRT-seq (Islam et al. 2013)</li></ul>
+Commercial platforms available: <ul>
+<li>Fluidigm C1</li>
+<li>Wafergen ICELL8</li>
+<li>10X Genomics Chromium</li></ul>"
+  },
+  {
+    question: "What are some tools I can use to analyze my scRNA data?",
+    content: 'Several different analysis tools available<ul>
+<li><a href="https://master.bioconductor.org/packages/release/workflows/html/simpleSingleCell.html">Bioconductor</a> is a open-source, open-development software project for the analysis of high-throughput genomics data, including packages for the analysis of single-cell data.</li>
+<li><a href="https://satijalab.org/seurat/">Seurat</a> is an R package used for QC, analysis, and exploration of single cell RNA-seq data.</li>
+<li><a href="https://scanpy.readthedocs.io/en/stable/">scanpy</a> is a Python-based tool for analyzing single-cell gene expression data. It includes preprocessing, visualization, clustering, and differential expression testing.</li>
+<li><a href="https://scanpy.readthedocs.io/en/stable/">Falco</a> a single-cell RNA-seq processing that is on the cloud.</li>
+<li><a href="https://asap.epfl.ch/">ASAP</a> (Automated Single-cell Analysis Pipeline) is an interactive web-based platform for single-cell analysis.</li></ul>'
+  }
+] %}
