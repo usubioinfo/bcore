@@ -17,7 +17,7 @@
 <li>Neuro-degenerative disease</li>
 <li>Auto-immune disease</li>
 </ul>
-DNA methylation presents a good <b>diagnostic</b> and <ul><b>therapeutic</b></ul> target."
+DNA methylation presents a good <b>diagnostic</b> and <b>therapeutic</b> target."
   },
   {
     question: "What are CpG Islands?",
@@ -25,12 +25,12 @@ DNA methylation presents a good <b>diagnostic</b> and <ul><b>therapeutic</b></ul
   },
   {
     question: "What are the different types of Bi-sulfite sequencing?",
-    content: "Targeted Bisulfite Sequencing (TBS): Bisulfite sequencing method to detect base resolution DNA methylation at a targeted region of interest.
-                      Reduced  Representation  Bi-sulfite  Sequencing  (RRBS): Bisulfite  sequencing  method  utilized  to detect nearly all CpG sites across the entiregenome at base resolution detail.
-                      Whole  Genome  Bi-sulfite  Sequencing  (WGBS): Complete  genome  coverage  of  methylation  at every CpG site and less common non-CpG sites such as CNG."
+    content: "<ul><li>Targeted Bisulfite Sequencing (TBS): Bisulfite sequencing method to detect base resolution DNA methylation at a targeted region of interest.</li>
+                      <li>Reduced  Representation  Bi-sulfite  Sequencing  (RRBS): Bisulfite  sequencing  method  utilized  to detect nearly all CpG sites across the entiregenome at base resolution detail.</li>
+                      <li>Whole  Genome  Bi-sulfite  Sequencing  (WGBS): Complete  genome  coverage  of  methylation  at every CpG site and less common non-CpG sites such as CNG.</li></ul>"
   },
   {
-    question: "What is Whole Genome Bisulfite Sequencing (WGBS)?",
+    question: "Whole Genome Bisulfite Sequencing (WGBS)?",
     content: "This method combines the power of high-throughput DNA sequencing with sodium bisulfite treatment of DNA. When DNA is treated with sodium bisulfite, a chemical compound, unmethylated cytosines are converted to uracil."
   },
   {
@@ -84,37 +84,37 @@ DNA methylation presents a good <b>diagnostic</b> and <ul><b>therapeutic</b></ul
   },
   {
     question: "What is good sequencing coverage for Methyl-Seq Sequencing?",
-    content: "Large target regions: Probes should cover several hundred kilobases to several megabases of contiguous  sequence  including  exons,  introns, 5’ regulatory  regions, 3’ regulatory  regions,  and flanking regions.
-                      Great specificity having longer probes (200-300bp)
-                      Coverageof the targeted region including repeats"
+    content: "<ol><li>a. Large target regions: Probes should cover several hundred kilobases to several megabases of 	contiguous sequence including exons, introns, 5’ regulatory regions, 3’ regulatory regions, and flanking regions.</li>
+	<li>b. Great specificity having longer probes (200-300bp)</li>
+	<li>c. Coverage of the targeted region including repeats</li></ol>"
   },
   {
     question: "Non-directional or paired-end RRBS libraries?",
-    content: "Non-directional bisulfite sequencing is less common, but has been performed in a number of studies(Cokus et al. (2008), Popp et al. (2010), Smallwood et al. (2011), Hansen et al. (2011), Kobayashi al.(2012)). In this type of library, sequence reads may originate from all four possible bisulfite DNAstrands (original top (OT), complementary to OT (CTOT), original bottom (OB) or complementary toOB (CTOB)) with roughly the same likelihood.Paired-end reads do by definition contain one read from one of the original strands as well as onecomplementary strand. Please note that the CTOT or CTOB strands in a read pair are reversecomplements of the OT or OB strands, respectively, and thus they carry methylation information for
-                    the exact same strand as their partner read but not for the other original DNA strand. Similar todirectional single-end libraries, the first read of directional paired-end libraries always comes fromeither the OT or OB strand. The first read of non-directional paired-end libraries may originate fromany of the four possible bisulfite strands.(see http://www.bioinformatics.bbsrc.ac.uk/projects/seqmonk)"
+    content: 'Non-directional bisulfite sequencing is less common, but has been performed in a number of studies(Cokus et al. (2008), Popp et al. (2010), Smallwood et al. (2011), Hansen et al. (2011), Kobayashi al.(2012)). In this type of library, sequence reads may originate from all four possible bisulfite DNAstrands (original top (OT), complementary to OT (CTOT), original bottom (OB) or complementary toOB (CTOB)) with roughly the same likelihood.<br> Paired-end reads do by definition contain one read from one of the original strands as well as onecomplementary strand. Please note that the CTOT or CTOB strands in a read pair are reversecomplements of the OT or OB strands, respectively, and thus they carry methylation information for
+                    the exact same strand as their partner read but not for the other original DNA strand. Similar todirectional single-end libraries, the first read of directional paired-end libraries always comes fromeither the OT or OB strand. The first read of non-directional paired-end libraries may originate fromany of the four possible bisulfite strands.(see <a href="http://www.bioinformatics.bbsrc.ac.uk/projects/seqmonk">http://www.bioinformatics.bbsrc.ac.uk/projects/seqmonk</a>)'
   },
   {
     question: "What is CpG methylation?",
-    content: "CpG islands are defined as stretches of DNA 500–1500 bp long with a CG: GC ratio of more than 0.6, and they are normally found at promoters and contain the 5′ end of the transcript (reviewed in Cross and Bird, 1995). From: Advances in Genetics, 2002."
+    content: "CpG islands are defined as stretches of DNA 500-1500 bp long with a CG: GC ratio of more than 0.6, and they are normally found at promoters and contain the 5' end of the transcript (reviewed in Cross and Bird, 1995). From: Advances in Genetics, 2002."
   },
   {
     question: "How do I identify CpG islands?",
     content: "CpG islands are defined as sequence ranges where the Obs/Exp value is greater than 0.6 and the GC content is greater than 50%. The expected number of CpG dimers in a window is calculated as the number of  'C's  in  the  window  multiplied  by  the  number  of  'G's  in  the  window,  divided  by  the  window length
-                    www.sciencedirect.com › topics › neuroscience › cpg-island"
+                    <i>www.sciencedirect.com > topics > neuroscience > cpg-island</i>"
   },
   {
     question: "Resources for methylation Analysis:",
-    content: "https://www.ucl.ac.uk/cancer/medicalgenomics/medusaproject
-                    http://www.ihec-epigenomes.org/
-                    https://groups.google.com/forum/#!forum/methylkit_discussion/
-                    http://www.bioinformatics.bbsrc.ac.uk/projects/seqmonk"
+    content: '<ul><li><a href="https://www.ucl.ac.uk/cancer/medicalgenomics/medusaproject">https://www.ucl.ac.uk/cancer/medicalgenomics/medusaproject</a></li>
+                    <li><a href="http://www.ihec-epigenomes.org/">http://www.ihec-epigenomes.org/</a></li>
+                    <li><a href="https://groups.google.com/forum/#!forum/methylkit_discussion/">https://groups.google.com/forum/#!forum/methylkit_discussion/</a></li>
+                    <li><a href="http://www.bioinformatics.bbsrc.ac.uk/projects/seqmonk">http://www.bioinformatics.bbsrc.ac.uk/projects/seqmonk</a></li></ul>'
   },
   {
     question: "How do we account for bias in Methylation data?",
-    content: "There are several hurdles to cross when analysing Methyl-seq data, particularly during the identification of DMRs. Normalization of read counts contribute to eliminate biases as a result of variability in sequencing depth between samples. While, global read count normalization can help address this problem, it does not account for ‘competition’ effects. For example, in RNA-seq  specific highly expressed genes can lead to a depressed read count in other genes introducing a bias when comparing samples. Same situation can be
+    content: 'There are several hurdles to cross when analysing Methyl-seq data, particularly during the identification of DMRs. Normalization of read counts contribute to eliminate biases as a result of variability in sequencing depth between samples. While, global read count normalization can help address this problem, it does not account for ‘competition’ effects. For example, in RNA-seq  specific highly expressed genes can lead to a depressed read count in other genes introducing a bias when comparing samples. Same situation can be
                     found with MeDIP-seq, where sample-specific repeat methylation could potentially diminish reads in other genomic regions and introduce bias tothe analysis. Methods for calculating methylation have proven to be useful when identifying large global changes, for example hypomethylation, or hypermethylation regions of a given sample. However, these methods have not provided a framework for determining the location of DMRs in a statistically rigorous manner just yet. By using methods such as
-                    DESeq that estimate variance in a local fashion, it is possible to remove potential selection biases. Additionally, DESeq estimates a flexible, mean-dependent local regression rather than attempting to reliably estimate both the variance and mean parameters of the distribution from limited numbers of replicates. Finally, False positive could be included in the  interpretation  of  your  data  by  differences  in  DNA  fragment  size  distributions  between  samples. Performing
-                    fragment length normalization through read sub-sampling to equalize the distributions can eliminate this potential bias. Additional tools such as EdgeR, or methylkit can also be used.
-                    https://www.ncbi.nlm.nih.gov/books/NBK402335/"
+                    <b>DESeq</b> that estimate variance in a local fashion, it is possible to remove potential selection biases. Additionally, DESeq estimates a flexible, mean-dependent local regression rather than attempting to reliably estimate both the variance and mean parameters of the distribution from limited numbers of replicates. Finally, False positive could be included in the  interpretation  of  your  data  by  differences  in  DNA  fragment  size  distributions  between  samples. Performing
+                    <b>fragment length normalization</b> through read sub-sampling to equalize the distributions can eliminate this potential bias. Additional tools such as <b>EdgeR</b>, or <b>methylkit</b> can also be used.
+                    <a href="https://www.ncbi.nlm.nih.gov/books/NBK402335/">https://www.ncbi.nlm.nih.gov/books/NBK402335/</a>'
   }
 ] %}
