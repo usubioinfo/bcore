@@ -10,7 +10,8 @@
     gbs: 500,
     amplicon: 500,
     metagenomics: 500,
-    genome: 1000
+    genome: 1000,
+    scrna: 600
   }
 
   const groupPricing = {
@@ -100,7 +101,8 @@
     genome: 4,
     gbs: 10,
     amplicon: 10,
-    metagenomics: 10
+    metagenomics: 10,
+    scrna: 10
   }
 
   const increments = {
@@ -112,7 +114,8 @@
     genome: 200,
     gbs: 70,
     amplicon: 70,
-    metagenomics: 70
+    metagenomics: 70,
+    scrna: 80
   }
 
   // Plus Minus buttons

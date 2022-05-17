@@ -128,6 +128,19 @@
   price: 500
 }%}
 
-{% set priceData = [rnaseq, mirna, snpseq, chipseq, metseq, gbs, amplicon, metagenomics, genome] %}
+{% set scrna = {
+  name: "scRNA-Seq",
+  link: "scrna",
+  id: "scrna",
+  bullets: [
+    "Pre-processing",
+    "Data normalization",
+    "Gene clusters / Annotation",
+    "Data visualization"
+  ],
+  price: 600
+}%}
+
+{% set priceData = [rnaseq, mirna, snpseq, chipseq, metseq, gbs, amplicon, metagenomics, genome, scrna] %}
 {% set rowOne = [rnaseq, mirna, snpseq, chipseq, metseq] %}
-{% set rowTwo = [gbs, amplicon, metagenomics, genome] %}
+{% set rowTwo = [gbs, amplicon, metagenomics, genome, scrna] %}
