@@ -332,6 +332,8 @@
 			mouseDrag: true,
 			touchDrag: true,
 			nav: true,
+			autoplay: true,
+			autoplayTimeout: 3000,
 			navContainer: '#index-1-services-nav',
 			navText: [
 				'<span class="wicon-iconmonstr-angel-left-circle-thin"></span>',
