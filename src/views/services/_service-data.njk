@@ -1,3 +1,11 @@
+{% set template = {
+  imgLink: "",
+  name: "",
+  content: "",
+  learnMore: ""
+}
+%}
+
 {% set rnaSeq = {
   imgLink: "http://bioinfocore.usu.edu/biocore-images/picture5/slide1.jpg",
   name: "RNA-Seq",
@@ -6,11 +14,19 @@
 }
 %}
 
-{% set template = {
+{% set varSeq = {
+  imgLink: "http://bioinfocore.usu.edu/biocore-images/picture5/slide3.jpg",
+  name: "SNP-Seq",
+  content: "SNP genotyping is the measurement of genetic variations of single nucleotide polymorphisms (SNPs) between members of a species. It is a form of genotyping, which is the measurement of more general genetic variation.",
+  learnMore: "/services/varseq"
+}
+%}
+
+{% set scRNA = {
   imgLink: "",
-  name: "",
+  name: "scRNA",
   content: "",
-  learnMore: ""
+  learnMore: "services/scrna"
 }
 %}
 
@@ -22,11 +38,11 @@
 }
 %}
 
-{% set snpSeq = {
-  imgLink: "http://bioinfocore.usu.edu/biocore-images/picture5/slide3.jpg",
-  name: "SNP-Seq",
-  content: "SNP genotyping is the measurement of genetic variations of single nucleotide polymorphisms (SNPs) between members of a species. It is a form of genotyping, which is the measurement of more general genetic variation.",
-  learnMore: "/services/varseq"
+{% set mirna = {
+  imgLink: "http://bioinfocore.usu.edu/biocore-images/picture5/slide5.jpg",
+  name: "miRNA-Seq",
+  content: "miRNA-seq is the use of next-generation sequencing or massively parallel high-throughput DNA sequencing to sequence microRNAs. miRNA-seq differs from other forms of RNA-seq in that input material is enriched for small RNAs.",
+  learnMore: "/services/mirna"
 }
 %}
 
@@ -38,15 +54,39 @@
 }
 %}
 
-{% set mirna = {
-  imgLink: "http://bioinfocore.usu.edu/biocore-images/picture5/slide5.jpg",
-  name: "miRNA-Seq",
-  content: "miRNA-seq is the use of next-generation sequencing or massively parallel high-throughput DNA sequencing to sequence microRNAs. miRNA-seq differs from other forms of RNA-seq in that input material is enriched for small RNAs.",
-  learnMore: "/services/mirna"
+{% set gbs = {
+  imgLink: "",
+  name: "Genotyping by Sequencing (GBS)",
+  content: "",
+  learnMore: "services/gbs"
 }
 %}
 
-{% set seqAssembly = {
+{% set amplicon = {
+  imgLink: "",
+  name: "Amplicon Analysis",
+  content: "",
+  learnMore: "services/amplicon"
+}
+%}
+
+{% set metagenomics = {
+  imgLink: "",
+  name: "Metagenomics",
+  content: "",
+  learnMore: "services/metagenomics"
+}
+%}
+
+{% set eukassembly = {
+  imgLink: "",
+  name: "Eukaryotes Assembly",
+  content: "",
+  learnMore: "/services/eukassembly"
+}
+%}
+
+{% set prokassembly = {
   imgLink: "http://bioinfocore.usu.edu/biocore-images/picture5/slide6.jpg",
   name: "Sequence Assembly",
   content: "Referring to aligning and merging fragments from a longer DNA sequence in order to reconstruct the original sequence. This is needed as DNA sequencing technology cannot read whole genomes in one go.",
@@ -54,4 +94,4 @@
 }
 %}
 
-{% set services = [rnaSeq, metSeq, snpSeq, chip, mirna, seqAssembly] %}
+{% set services = [rnaSeq, varSeq, scRNA, metSeq, mirna, chip, gbs, amplicon, metagenomics, eukassembly, prokassembly] %}
