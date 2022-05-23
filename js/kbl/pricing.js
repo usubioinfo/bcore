@@ -191,7 +191,32 @@
       const priceTag = document.querySelector(`#${id} .price-data`);
       priceTag.textContent = priceCheck(id);
     });
+  });
 
+  document.getElementById('sendPricing').addEventListener('click', e => {
+    const name = document.getElementById('formName').value;
+    const email = document.getElementById('formEmail').value;
+    const org = document.getElementById('formOrg').value;
+    const phone = document.getElementById('formPhone').value;
+    const message = document.getElementById('formMessage').value;
+    const messageBody = message + '\n\n' + 'Contact me back at ' + email + ' or ' + phone;
+
+    const body = {
+      password: 'rkU56a%e$',
+      subjectLine: `BioinfoCore Custom Data Analysis Request from ${name} from ${org}`,
+      recipient: 'rkaundal@usu.edu',
+      messageBody: messageBody
+    }
+
+    axios.post('http://bioinfocore.usu.edu/api/email/send', body)
+      .then(res => {
+        console.log(res);
+        document.getElementById('formName').value = '';
+        document.getElementById('formEmail').value = '';
+        document.getElementById('formPhone').value = '';
+        document.getElementById('formMessage').value = '';
+        document.getElementById('formOrg').value = '';
+      });
   });
 })();
   
