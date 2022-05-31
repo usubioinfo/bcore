@@ -300,6 +300,8 @@
 					nav: false,
 					dots: false,
 					loop: true,
+					autoplay: true,
+					autoplayTimeout: 6000,
 					animateOut: 'slideOutDown',
 					animateIn: 'fadeIn',
 				} );
