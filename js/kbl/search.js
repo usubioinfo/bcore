@@ -82,7 +82,7 @@
 
   const searchPage = (searchTerm) => {
     const results = pages.filter(item => {
-      return item.name.toLowerCase().startsWith(searchTerm);
+      return item.name.toLowerCase().startsWith(searchTerm.toLowerCase());
     });
 
     return results
