@@ -11,7 +11,7 @@
     amplicon: 500,
     metagenomics: 500,
     genome: 1000,
-    scrna: 600
+    scrna: 800
   }
 
   const groupPricing = {

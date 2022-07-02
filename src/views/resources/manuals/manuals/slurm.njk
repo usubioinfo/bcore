@@ -1,0 +1,51 @@
+{% extends "templates/manual.template.njk" %}
+
+{% block content %}
+  <h2 class="kbl-header mb-5">Using Slurm</h2>
+
+  <h4 class="kbl-header light">What is Slurm?</h4>
+  <p>
+        Slurm is a system on the HPC that helps manage the cluster and schedule jobs. It allocates resources on the cluster to monitor, 
+        execute and start your code. You can find documentation on Slurm <a href="https://slurm.schedmd.com/documentation.html" target="_blank">here</a>
+        and a quick start guide <a href="https://slurm.schedmd.com/quickstart.html" target="_blank">here</a>. The compute nodes, like <code>chela01</code> and <code>chela-g01</code>
+        are split into partitions. We have two partitions on the HPC. <code>guru</code> ranges from <code>chela01</code> to <code>chela05</code>. <code>mahaguru</code> contains the gpu node, <code>chela-g01</code>.
+  </p>
+
+  <h4 class="kbl-header light">Running Slurm Jobs</h4>
+  <p>
+    To submit a job to the job queue, use <code>sbatch</code>. We recommend you use the following format for your batch scripts.
+    <pre>
+    <code>
+#!/bin/bash
+#SBATCH --partition=guru #the partition we're using.
+#SBATCH --nodes=2 #the number of nodes to use.
+#SBATCH --ntasks=4 #the number of tasks to run.
+#SBATCH --ntasks-per-node=2 #the number of tasks on a single node.
+#SBATCH --mem-per-cpu=1gb #the amount of memory to use per cpu.
+#SBATCH --cpus-per-task=1 #The number of cpu cores per task.
+#SBATCH --time=00:05:00 #The time limit of the job.
+#SBATCH --job-name=Template #Job name.
+#SBATCH --output=slurm-%j.out #The standard output of our console logs.
+#SBATCH --error=slurm_error-%j.out #The output of the error log.
+    </code>
+    </pre>
+
+    Next, if you wanted to run a job on the GPU node, make sure you use the following options.
+<pre>
+    <code>
+#SBATCH --partition=mahaguru #The partition of the gpu nodes.
+#SBATCH --gres=gpu:4 #The number of gpus to use.
+    </code>
+    </pre>
+You can also run <code>sbatch</code> with additional options like, <code>--cpus-per-gpu=2</code>, <code>--job-name=test</code>, etc.
+You can find additional documentation for <code>sbatch</code> <a href="https://slurm.schedmd.com/sbatch.html" target="_blank">here</a>.
+
+Finally, you can run an interactive slurm session with <code>salloc</code>. You can find more information on it <a href="https://slurm.schedmd.com/salloc.html" target="_blank">here</a>.
+  </p>
+  <h4 class="kbl-header light">Additional Slurm Commands</h4>
+  <p>
+   You can use <code>sinfo</code> to get a list of partitions on the system, along with their state and the nodes they contain. You can also use <code>squeue</code> to get info on all the
+   queued jobs along with their state. You can use <code>scancel &ltjobId&gt </code> to stop your job. Finally, you can use <code>srun</code> to run a parallel job in Slurm.
+   It uses the same allocation of the environment the command is run in. It is recommended that you use it in a slurm script to run tasks.
+  </p>
+{% endblock %}
