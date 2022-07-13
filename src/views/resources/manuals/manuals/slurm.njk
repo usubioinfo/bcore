@@ -8,7 +8,7 @@
         Slurm is a system on the HPC that helps manage the cluster and schedule jobs. It allocates resources on the cluster to monitor, 
         execute and start your code. You can find documentation on Slurm <a href="https://slurm.schedmd.com/documentation.html" target="_blank">here</a>
         and a quick start guide <a href="https://slurm.schedmd.com/quickstart.html" target="_blank">here</a>. The compute nodes, like <code>chela01</code> and <code>chela-g01</code>
-        are split into partitions. We have two partitions on the HPC. <code>guru</code> ranges from <code>chela01</code> to <code>chela05</code>. <code>mahaguru</code> contains the gpu node, <code>chela-g01</code>.
+        are split into partitions. We have two partitions on the HPC. <code>guru</code> ranges from <code>chela01</code> to <code>chela05</code>.<code>mahaguru</code> contains the gpu node, <code>chela-g01</code>.
   </p>
 
   <h4 class="kbl-header light">Running Slurm Jobs</h4>
@@ -29,23 +29,29 @@
 #SBATCH --error=slurm_error-%j.out #The output of the error log.
     </code>
     </pre>
-
-    Next, if you wanted to run a job on the GPU node, make sure you use the following options.
+Next, if you wanted to run a job on the GPU node, make sure you use the following options.
 <pre>
     <code>
 #SBATCH --partition=mahaguru #The partition of the gpu nodes.
 #SBATCH --gres=gpu:4 #The number of gpus to use.
     </code>
     </pre>
-You can also run <code>sbatch</code> with additional options like, <code>--cpus-per-gpu=2</code>, <code>--job-name=test</code>, etc.
+You can also run <code>sbatch</code> with additional options like, <ul style="list-style-type: inherit;"><li><code>--cpus-per-gpu=2</code></li><li><code>--job-name=test</code></li><li>etc</li></ul> Here is an example for a script named, myScript.sh. <br><br>
+<code>sbatch --cpus-per-gpu=2 --job-name=test myScript.sh</code>
+<br>
+<code>Submitted batch job 48250</code>
+<br><br>
+Afterwards, you can find the terminal output at slurm-48250.out. <br><br>
 You can find additional documentation for <code>sbatch</code> <a href="https://slurm.schedmd.com/sbatch.html" target="_blank">here</a>.
 
-Finally, you can run an interactive slurm session with <code>salloc</code>. You can find more information on it <a href="https://slurm.schedmd.com/salloc.html" target="_blank">here</a>.
+Finally, you can run an interactive slurm session with <ul style="list-style-type: inherit;"> <li><code>salloc</code></li></ul>You can find more information on it <a href="https://slurm.schedmd.com/salloc.html" target="_blank">here</a>.
   </p>
   <h4 class="kbl-header light">Additional Slurm Commands</h4>
-  <p>
-   You can use <code>sinfo</code> to get a list of partitions on the system, along with their state and the nodes they contain. You can also use <code>squeue</code> to get info on all the
-   queued jobs along with their state. You can use <code>scancel &ltjobId&gt </code> to stop your job. Finally, you can use <code>srun</code> to run a parallel job in Slurm.
-   It uses the same allocation of the environment the command is run in. It is recommended that you use it in a slurm script to run tasks.
-  </p>
+   <ul style="list-style-type: inherit;">
+    <li><code>sinfo</code> to get a list of partitions on the system, along with their state and the nodes they contain.</li> 
+    <li><code>squeue</code> to get info on all the queued jobs along with their state. 
+    <li><code>scancel &ltjobId&gt </code> to stop your job. Example: <code>scancel 48250</code></li>
+    <li><code>srun &ltscript&gt</code> to run a parallel job in Slurm.
+   It uses the same allocation of the environment the command is run in. It is recommended that you use it in a slurm script to run tasks. Example: <code>srun myScript.sh</code></li>
+   </ul>
 {% endblock %}
