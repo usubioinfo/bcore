@@ -1,0 +1,33 @@
+{% extends "templates/manual.template.njk" %}
+
+{% block content %}
+  <h2 class="kbl-header mb-5">Intor to Linux Command Line Text Editors</h2>
+
+  <h4 class="kbl-header light">What command line editors are there?</h4>
+  <p>
+        On the HPC, there are a wide variety of text editors that you can use. The most straightforward one is,
+        nano which you can access by typing <code>nano file_name</code>. Next you have VI/VIM, which you can access by typing either,
+        <code>vi file_name</code> or <code>vim file_name</code> on the command line. Next, there is emacs, which can be accessed by typing <code>emacs </code>.
+        Now emacs is the most complicated but is also the most flexible. If you're interested in emacs, we recommend you look at the documentation
+        yourself at, <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html">https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html</a>.
+        There are many more editors, however, these are among the most popular and is confirmed to be on the hpc.
+  </p>
+
+<h4 class="kbl-header light">Intro to Nano</h4>
+<p>
+  Nano is really easy to use. After you start nano, you can make whatever edits you want by simply typing. Afterwards, you can exit and save with "Ctrl-X".
+  You can cut a line of text with "Ctrl-K" and paste it with "Ctrl-U". You can find more info on nano at <a href="https://www.nano-editor.org/docs.php">https://www.nano-editor.org/docs.php</a>.
+</p> 
+
+<h4 class="kbl-header light">Intro to Vi/Vim</h4>
+<p>
+    Vim operations on the concept of modes. You will spend most of your time in either insert mode, or normal mode.
+    You start in normal mode and can enter insert mode by typing 'i'. While in this mode, whatever you type is typed into
+    the file. To get back to normal mode press the 'ESC' key. From here, you can save your changes with ':w'. You can exit with ':q'.
+    You can exit and save with ':wq'. <br><br>
+
+    There is a tutorial you can follow for more help by typing in the command <code>vimtutor</code>. You can also find additional documentation at,
+    <a href="https://vimguide.readthedocs.io/en/latest/vim.html">https://vimguide.readthedocs.io/en/latest/vim.html</a>
+</p>  
+
+{% endblock %}
