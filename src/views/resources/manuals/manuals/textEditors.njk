@@ -16,7 +16,14 @@
 <h4 class="kbl-header light">Intro to Nano</h4>
 <p>
   Nano is really easy to use. After you start nano, you can make whatever edits you want by simply typing. Afterwards, you can exit and save with "Ctrl-X".
-  You can cut a line of text with "Ctrl-K" and paste it with "Ctrl-U". You can find more info on nano at <a href="https://www.nano-editor.org/docs.php">https://www.nano-editor.org/docs.php</a>.
+  You can cut a line of text with "Ctrl-K" and paste it with "Ctrl-U". You can copy with "Alt-6".<br><br>
+
+  You can search with "Ctrl-W", then type the word you want to find. To find and replace press "Ctrl-\" You can also undo your last action with "Alt-U" and redo with "Alt-R".<br><br>
+
+  You can navigate with the arrow keys. You can also specify a file to write out to by "Ctrl-O".<br><br>
+  
+  You can find more info on nano at <a href="https://www.nano-editor.org/docs.php">https://www.nano-editor.org/docs.php</a>. You can get additional help with
+  "Ctrl-G".
 </p> 
 
 <h4 class="kbl-header light">Intro to Vi/Vim</h4>
@@ -25,6 +32,16 @@
     You start in normal mode and can enter insert mode by typing 'i'. While in this mode, whatever you type is typed into
     the file. To get back to normal mode press the 'ESC' key. From here, you can save your changes with ':w'. You can exit with ':q'.
     You can exit and save with ':wq'. <br><br>
+
+    You can enter visual mode by pressing 'v' (for selecting individual characters), and 'V' (for selecting entire lines).
+    You can copy the text you selected by pressing 'y', and to cut the text press 'x'. Next you can paste the text by 
+    pressing 'p' while in normal mode.<br><br>
+
+    You can also jump to a specific line by typing ':(number)'. You can also navigate your cursor left by 'h', right by 'l', up by 'k' and down by 'j'.
+    You can move to the end of the current word with 'e' and the start of the next word with 'w'. You can also move to the beginning of the previous word with 'b'.
+    Next, you can also type a number before any of these movement options to repeat it n number of times. <br><br> 
+
+    You can search the file you're working on with '/(word)' for a foward search and to search with a backward search use '?(word'.<br><br> 
 
     There is a tutorial you can follow for more help by typing in the command <code>vimtutor</code>. You can also find additional documentation at,
     <a href="https://vimguide.readthedocs.io/en/latest/vim.html">https://vimguide.readthedocs.io/en/latest/vim.html</a>
