@@ -1,0 +1,14 @@
+{% extends "templates/manual.template.njk" %}
+
+{% block content %}
+  <h2 class="kbl-header mb-5">Online Sites</h2>
+
+<h4 class="kbl-header light">Sites to Be Aware Of</h4>
+<p>
+On the cluster, there is a .html directory in your account. This is hidden by default and can only be found
+with <code>ls -a</code>. If you include a file like "helloWorld.txt", in it, you will find that it shows up online at
+"biocluster.usu.edu/~user/".<br><br>
+
+There is also a link to rstudio on the server at <a href="bioinfo.usu.edu/rstudio/auth-sign-in">bioinfo.usu.edu/rstudio/</a>
+</p> 
+{% endblock %}
