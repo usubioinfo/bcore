@@ -1,0 +1,35 @@
+{% extends "templates/manual.template.njk" %}
+
+{% block content %}
+  <h2 class="kbl-header mb-5">User Config Files and .Bashrc</h2>
+
+  <h4 class="kbl-header light">Where are your configuration files?</h4>
+  <p>
+      At the base of your home directory, there are often several configuration files that are unique to your account. Some of them includes <i>.bashrc</i>, <i>.condarc</i> and even <i>.vimrc</i>.
+    However, these files are hidden because of the '.' at the start. You can list all your files, including hidden files with, <br></br>
+    <code>
+        ls -a
+    </code>
+  </p>
+
+  <h4 class="kbl-header light">What is .bashrc</h4>
+  <p>
+    ".bashrc" loads your user environment when you first login to the HPC. It contains your aliases, exports, and may even automatically load conda for you. If you want to create an
+    environment variable that will allways be set when you login, just add the following to your .bashrc file. <br></br>
+
+    <code>
+        export (Name of Variable)=(Variable Value)
+    </code>
+<br></br>
+
+To add an alias, just add 
+<br></br>
+<code>
+    alias (aliasname)=(command>)
+        </code>
+<br></br>
+
+If you don't add these lines to your .bashrc file, your exports and aliases will be gone the next time you login to the HPC. There are a lot of other config files that you may edit, and many
+more ways to edit your ".bashrc" file, but that is beyond the scope of this tutorial.
+</p>
+{% endblock %}

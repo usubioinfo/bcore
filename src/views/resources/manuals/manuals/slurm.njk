@@ -34,6 +34,15 @@ Next, if you wanted to run a job on the GPU node, make sure you use the followin
     <code>
 #SBATCH --partition=mahaguru #The partition of the gpu nodes.
 #SBATCH --gres=gpu:4 #The number of gpus to use.
+#SBATCH --nodes=1 #the number of nodes to use.
+#SBATCH --ntasks=4 #the number of tasks to run.
+#SBATCH --ntasks-per-node=4 #the number of tasks on a single node.
+#SBATCH --mem-per-cpu=1gb #the amount of memory to use per cpu.
+#SBATCH --cpus-per-task=1 #The number of cpu cores per task.
+#SBATCH --time=00:05:00 #The time limit of the job.
+#SBATCH --job-name=Template #Job name.
+#SBATCH --output=slurm-%j.out #The standard output of our console logs.
+#SBATCH --error=slurm_error-%j.out #The output of the error log.
     </code>
     </pre>
 You can also run <code>sbatch</code> with additional options like, <ul style="list-style-type: inherit;"><li><code>--cpus-per-gpu=2</code></li><li><code>--job-name=test</code></li><li>etc</li></ul> Here is an example for a script named, myScript.sh. <br><br>
@@ -42,6 +51,8 @@ You can also run <code>sbatch</code> with additional options like, <ul style="li
 <code>Submitted batch job 48250</code>
 <br><br>
 Afterwards, you can find the terminal output at slurm-48250.out. <br><br>
+ Here is another example,
+<code>sbatch blastScript.sh</code><br><br>
 You can find additional documentation for <code>sbatch</code> <a href="https://slurm.schedmd.com/sbatch.html" target="_blank">here</a>.
 
 Finally, you can run an interactive slurm session with <ul style="list-style-type: inherit;"> <li><code>salloc</code></li></ul>You can find more information on it <a href="https://slurm.schedmd.com/salloc.html" target="_blank">here</a>.
@@ -52,6 +63,7 @@ Finally, you can run an interactive slurm session with <ul style="list-style-typ
     <li><code>squeue</code> to get info on all the queued jobs along with their state. 
     <li><code>scancel &ltjobId&gt </code> to stop your job. Example: <code>scancel 48250</code></li>
     <li><code>srun &ltscript&gt</code> to run a parallel job in Slurm.
-   It uses the same allocation of the environment the command is run in. It is recommended that you use it in a slurm script to run tasks. Example: <code>srun myScript.sh</code></li>
+   It uses the same allocation of the environment the command is run in. It is recommended that you use it in a slurm script to run tasks. Example: <code>srun myScript.sh</code>,<br>
+   <code>srun ls</code></li>
    </ul>
 {% endblock %}
