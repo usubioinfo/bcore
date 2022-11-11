@@ -25,6 +25,10 @@
       url: '/resources/manuals'
     },
     {
+      name: 'RStudio',
+      url: 'https://bioinfo.usu.edu/rstudio/'
+    },
+    {
       name: 'FAQ',
       url: '/faq'
     },
