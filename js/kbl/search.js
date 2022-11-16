@@ -25,6 +25,42 @@
       url: '/resources/manuals'
     },
     {
+      name: 'Getting Started',
+      url: '/resources/manuals/getting-started'
+    },
+    {
+      name: 'SSH on Windows',
+      url: '/resources/manuals/ssh-windows'
+    },
+    {
+      name: 'X11 and Mac',
+      url: '/resources/manuals/x-mac'
+    },
+    {
+      name: 'Linux Basics',
+      url: '/resources/manuals/linux-basics'
+    },
+    {
+      name: 'Using Grep',
+      url: '/resources/manuals/linux-searching'
+    },
+    {
+      name: 'Linux Command Line Editors',
+      url: '/resources/manuals/textEditors'
+    },
+    {
+      name: 'Slurm',
+      url: '/resources/manuals/slurm'
+    },
+    {
+      name: 'Online Sites',
+      url: '/resources/manuals/onlineSites'
+    },
+    {
+      name: 'Config Files',
+      url: '/resources/manuals/bashrc'
+    },
+    {
       name: 'RStudio',
       url: 'https://bioinfo.usu.edu/rstudio/'
     },
