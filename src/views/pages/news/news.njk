@@ -1,4 +1,5 @@
 {% extends "templates/main.template.njk" %}
+{% from "components/news/news-card.njk" import generalNewsCard, moduleNewsCard%}
 
 {% block content %}
   <div class="row mt-3 px-3">
@@ -8,45 +9,12 @@
       </h4>
 
       <section class="news-card-background px-3 py-2">
-                <div class="py-2">
-          <div class="kbl-news-card text-start px-3 py-2 article-card" data-article-id="rstudio">
-            <span class="date"><i class="far fa-calendar-alt"></i> Nov 29, 2022</span>
-            <span class="float-end tag-update">Update</span>
-            <h5 class="fw-medium heading">RStudio 2022.07.2</h5>
-          </div>
-        </div>
-        <div class="py-2">
-          <div class="kbl-news-card text-start px-3 py-2 article-card" data-article-id="slurm20">
-            <span class="date"><i class="far fa-calendar-alt"></i> Aug 23, 2021</span>
-            <h5 class="fw-medium heading">Slurm 20</h5>
-          </div>
-        </div>
-        <div class="py-2">
-          <div class="kbl-news-card text-start px-3 py-2 article-card" data-article-id="hpchardware1">
-            <span class="date"><i class="far fa-calendar-alt"></i> Aug 20, 2021</span>
-            <h5 class="fw-medium heading">HPC Hardware Upgrades</h5>
-          </div>
-        </div>
-        <div class="py-2">
-          <div class="kbl-news-card text-start px-3 py-2 article-card" data-article-id="node16">
-            <span class="date"><i class="far fa-calendar-alt"></i> Jun 11, 2021</span>
-            <span class="float-end tag-update">Update</span>
-            <h5 class="fw-medium heading">NodeJS 16.3.0</h5>
-          </div>
-        </div>
-        <div class="py-2">
-          <div class="kbl-news-card text-start px-3 py-2 article-card" data-article-id="node">
-            <span class="date"><i class="far fa-calendar-alt"></i> Jan 20, 2021</span>
-            <h5 class="fw-medium heading">NodeJS on the Cluster</h5>
-          </div>
-        </div>
-        <div class="py-2">
-          <div class="kbl-news-card text-start px-3 py-2 article-card" data-article-id="php7">
-            <span class="date"><i class="far fa-calendar-alt"></i> Jan 4, 2021</span>
-            <h5 class="fw-medium heading">PHP 7.3 support ending</h5>
-          </div>
-        </div>
-      </section>
+        {{generalNewsCard("RStudio 2022.07.2"," Nov 29, 2022","rstudio","Update")}}
+        {{generalNewsCard("Slurm 20"," Aug 23, 2021","slurm20")}}
+        {{generalNewsCard("HPC Hardware Upgrades"," Aug 20, 2021","hpchardware1")}}
+        {{generalNewsCard("NodeJS 16.3.0"," Jun 11, 2021","node16","Update")}}
+        {{generalNewsCard("NodeJS on the Cluster"," Jan 20, 2021","node")}}
+        {{generalNewsCard("PHP 7.3 support ending"," Jan 4, 2021","php7")}}
 
       <h4 class="fw-heavy mt-3">
         Modules

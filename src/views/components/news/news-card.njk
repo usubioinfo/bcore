@@ -1,0 +1,23 @@
+{% macro generalNewsCard(title,date,id,type) %}
+    <div class="py-2">
+      <div class="kbl-news-card text-start px-3 py-2 article-card" data-article-id={{id}}>
+        <span class="date"><i class="far fa-calendar-alt"></i>{{date}}</span>
+        {% if type %}
+            <span class="float-end tag-update">{{type}}</span>
+        {% endif %}
+        <h5 class="fw-medium heading">{{title}}</h5>
+      </div>
+    </div>
+{% endmacro %}
+
+{% macro moduleNewsCard(title,date,type) %}
+<div class="py-2">
+          <div class="kbl-news-card text-start px-3 py-2">
+            <span class="date"><i class="far fa-calendar-alt"></i>{{date}}</span>
+            {% if type %}
+                <span class="float-end tag-new">{{type}}</span>
+            {% endif %}
+            <h5 class="fw-medium heading">{{title}}</h5>
+          </div>
+        </div>
+{% endmacro %}
