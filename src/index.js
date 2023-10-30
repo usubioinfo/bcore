@@ -15,7 +15,7 @@ let nunEnv = nunjucks.configure(__dirname + '/views', {
   express: app
 });
 
-nunEnv.addGlobal(`RaikouServer`, 'http://bioinfocore.usu.edu/raikou');
+nunEnv.addGlobal(`RaikouServer`, 'https://bioinfocore.usu.edu/raikou');
 
 /* const getPDFs = function(callback) {
   let fileArray = [];

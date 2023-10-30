@@ -56,7 +56,7 @@ const createModules = (modules) => {
 (() => {
   const moduleCardContainer = document.getElementById('module-card-container');
 
-  axios.get('http://bioinfocore.usu.edu/api/modfiles/modules').then(res => {
+  axios.get('https://bioinfocore.usu.edu/api/modfiles/modules').then(res => {
     console.log(res.data);
 
     for (let module of res.data.payload) {
