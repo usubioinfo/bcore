@@ -1,191 +1,185 @@
 {% extends "templates/main.template.njk" %}
-{% from "components/news/news-card.njk" import generalNewsCard, moduleNewsCard%}
-
+{% from "components/news/news-card.njk" import generalNewsCard, moduleNewsCard %}
 {% block content %}
   <div class="row mt-3 px-3">
     <div class="col-3 text-center">
       <h4 class="fw-heavy">
         General
       </h4>
-
       <section class="news-card-background px-3 py-2">
-        {{generalNewsCard("RStudio 2022.07.2"," Nov 29, 2022","rstudio","Update")}}
-        {{generalNewsCard("Slurm 20"," Aug 23, 2021","slurm20")}}
-        {{generalNewsCard("HPC Hardware Upgrades"," Aug 20, 2021","hpchardware1")}}
-        {{generalNewsCard("NodeJS 16.3.0"," Jun 11, 2021","node16","Update")}}
-        {{generalNewsCard("NodeJS on the Cluster"," Jan 20, 2021","node")}}
-        {{generalNewsCard("PHP 7.3 support ending"," Jan 4, 2021","php7")}}
-
-      <h4 class="fw-heavy mt-3">
-        Modules
-      </h4>
-
-      <section class="news-card-background px-3 py-2">
-        
-        {{moduleNewsCard("Biovia, Clustalw2, igvTools"," November 29, 2022","New Module")}}
-        {{moduleNewsCard("JACUSA2 and REDItools2"," May 18, 2022","New Module")}}
-        {{moduleNewsCard("AlphaFold"," September 30, 2021","New Module")}}
-        {{moduleNewsCard("Mothur 1.46.1"," September 27, 2021","Update")}}
-        {{moduleNewsCard("AlignGraph2"," Jan 6, 2021","New Module")}}
-        
+        {{ generalNewsCard("HPC Software Update","Oct 18, 2025","hpcsoftware") }}
+        {{ generalNewsCard("RStudio 2022.07.2"," Nov 29, 2022","rstudio","Update") }}
+        {{ generalNewsCard("Slurm 20"," Aug 23, 2021","slurm20") }}
+        {{ generalNewsCard("HPC Hardware Upgrades"," Aug 20, 2021","hpchardware1") }}
+        {{ generalNewsCard("NodeJS 16.3.0"," Jun 11, 2021","node16","Update") }}
+        {{ generalNewsCard("NodeJS on the Cluster"," Jan 20, 2021","node") }}
+        {{ generalNewsCard("PHP 7.3 support ending"," Jan 4, 2021","php7") }}
+        <h4 class="fw-heavy mt-3">
+          Modules
+        </h4>
+        <section class="news-card-background px-3 py-2">
+          {{ moduleNewsCard("Biovia, Clustalw2, igvTools"," November 29, 2022","New Module") }}
+          {{ moduleNewsCard("JACUSA2 and REDItools2"," May 18, 2022","New Module") }}
+          {{ moduleNewsCard("AlphaFold"," September 30, 2021","New Module") }}
+          {{ moduleNewsCard("Mothur 1.46.1"," September 27, 2021","Update") }}
+          {{ moduleNewsCard("AlignGraph2"," Jan 6, 2021","New Module") }}
+        </section>
+      </div>
+      <section class="col-6 text-center px-5 d-none article" id="hpcsoftware">
+        <h4 class="fw-heavy">
+          RStudio 2022.07.2
+        </h4>
+        <span class="text-soft">November 29, 2022</span>
+        <div class="text-left mt-4">
+          <p>
+            We have updated chela02, chela03, chela04, and chela05 to Rocky 8. They can be accessed from guru or their respective
+            ip addresses: 10.1.1.2 (chela02), 129.123.62.89 (chela03), 10.1.1.4 (chela04), and 10.1.1.5 (chela05). 
+          </p>
+          <p>
+            To check which modules are available use the 'module avail' command. Modules can be added with 'module load &lt;name 
+            of module and version&gt;' (use the tab key to autocomplete) and you can unload all modules with 'module purge'
+          </p>
+        </div>
       </section>
-
+      <section class="col-6 text-center px-5 d-none article" id="rstudio">
+        <h4 class="fw-heavy">
+          RStudio 2022.07.2
+        </h4>
+        <span class="text-soft">November 29, 2022</span>
+        <div class="text-left mt-4">
+          <p>
+            We have updated the R Version in RStudio to version 4.2.1. This will support many more R libraries and be much more
+            compatible with various R tools. Along with that we have updated the RStudio version as well to the latest 2022.07.2
+            version.
+          </p>
+          <p>
+            Granted, the devs behind RStudio have announced a transition to Posit, so keep an eye out for future changes once Posit
+            is fully released. It should provide a much more integrated experience. The link to the site is
+            <a href="https://posit.co/">here</a>. Some old libraries in R might have also broke with the update, so let the System
+              Admin know if you are experiencing any issues with any of the R modules.
+          </p>
+        </div>
+      </section>
+      <section class="col-6 text-center px-5 d-none article" id="php7">
+        <h4 class="fw-heavy">
+          PHP 7.3 Support Ending, PHP 8 Available
+        </h4>
+        <span class="text-soft">January 4, 2021</span>
+        <div class="text-left mt-4">
+          <p>
+            Tech is heavily guided by the larger tech companies around us. This can mean many things. The open source software we
+            enjoy can often benefit a lot from the involvement of large tech companies. On the other hand, these companies can
+            decide the fate of a whole software ecosystem. An important aspect of getting hired in tech is familiarity with the tech
+            stacks.
+          </p>
+          <p>
+            Companies hire devs who know their tech stack, which means that as companies move on to newer, more modern stacks, the
+            pool of candidates is going to start looking to those technologies to get hired. Facebook's HHVM has stopped supporting
+            PHP, and in their newest website revamp, they abandoned PHP altogether and opted for ReactJS and GraphQL. Microsoft has
+            recently announced they will not be supporting PHP on Windows. Slack recently converted their entire codebase to
+            Facebook's Hack, which again, runs on the HHVM, which doesn't support PHP anymore.
+          </p>
+          <p>
+            This isn't to say that PHP is dead, or that the KAABiL will stop supporting it. We utilize it pretty heavily here, and
+            it wouldn't make sense to abandon it when we still use it. Instead, we will be taking a more measured and secure
+            approach to PHP. PHP 7.3 has reached end of active support, so we will jump to version 8 of PHP, and from here on out,
+            we will be aggressive with PHP updates. Our PHP update policy will be as follows:
+          </p>
+          <h5 class="fw-medium">Major Versions (1.x.x)</h5>
+          <ul>
+            <li>Starting with PHP 8, the old version will be available until end of active support of the latest minor version</li>
+            <li>The new major version will be available as soon as possible after release</li>
+          </ul>
+          <h5 class="fw-medium">Minor Versions (x.1.x)</h5>
+          <ul>
+            <li>Minor versions will be updated as soon as possible, and the old minor version will be removed 2 weeks after</li>
+            <li>If the new update comes with breaking changes, there will be a longer grace period until the old version is removed.</li>
+          </ul>
+          <h5 class="fw-medium">Patches (x.x.1)</h5>
+          <ul>
+            <li>Patches are almost always non-breaking, so there will be no notice for patch installation.</li>
+          </ul>
+          <p>
+            If you need to use a legacy version of PHP, it is recommended to install it locally in your home directory and use it
+            from there.
+          </p>
+        </div>
+      </section>
+      <section class="col-6 text-center px-5 article d-none" id="node">
+        <h4 class="fw-heavy">
+          NodeJS on the Cluster
+        </h4>
+        <span class="text-soft">January 20, 2021</span>
+        <div class="text-left mt-4">
+          <p>
+            NodeJS powers the websites at the KAABiL, as well as many of our backend services that we use internally. Our immense
+            resources allow us to run clusters of Node instances on deployment to increase the speed of these services by entire
+            orders of magnitude. Because we get so much utility on our backend from Node, we have made it available on the cluster
+            for those who would like to use Node as well.
+          </p>
+          <p>
+            Currently, only Node 14 is supported (14.15.4), but Node 16 releases on April 20th, and will be available sometime
+            during the week of release. Odd-numbered Node versions do not come with LTS, and will not be available as modules per
+            our security policy. Because Node major versions typically don't break anything, expect old Node versions to disappear
+            about 2 weeks after they enter Maintenance LTS or after the newest version is installed on the cluster.
+          </p>
+        </div>
+      </section>
+      <section class="col-6 text-center px-5 article d-none" id="node16">
+        <h4 class="fw-heavy">
+          NodeJS 16.3.0
+        </h4>
+        <span class="text-soft">June 11, 2021</span>
+        <div class="text-left mt-4">
+          <p>
+            Node 16 is here and is available on our HPC! Check out
+            <a href="https://medium.com/the-node-js-collection/node-js-16-available-now-7f5099a97e70" target="_blank">this</a>
+            link to see what's new, and if you're curious about V8 9.0 features,
+            <a href="https://v8.dev/blog/v8-release-90" target="_blank">this</a>
+            is another good resource. Do note that previous versions of Node are still available, but will have to be installed
+            locally. New Node versions don't happen often, as we only do LTS releases. Per the
+            <a href="https://nodejs.org/en/about/releases/">Node Release Schedule</a>, Node 18 will be released in April 2022.
+          </p>
+          <p>
+            We try not to break things at the HPC, but when breaking changes are introduced, we're as transparent as possible.
+            Breaking changes for Node 16 all have to do with
+            <code>process.binding</code>, so if you do low-level work in Node, upgrading could break your software.
+          </p>
+        </div>
+      </section>
+      <section class="col-6 text-center px-5 article d-none" id="hpchardware1">
+        <h4 class="fw-heavy">
+          HPC Hardware Upgrades
+        </h4>
+        <span class="text-soft">August 20, 2021</span>
+        <div class="text-left mt-4">
+          <p>
+            Our HPC now has a new Ethernet switch along with a set of new Cat8 cables, giving all of our nodes a 10 Gb/s internet
+            connection. While this won't necessarily translate to a massive difference in performance, download speeds are now only
+            limited by USU's internet speed (1 Gb/s). As always, thank you for being patient during the upgrade process.
+          </p>
+        </div>
+      </section>
+      <section class="col-6 text-center px-5 article d-none" id="slurm20">
+        <h4 class="fw-heavy">
+          Slurm 20
+        </h4>
+        <span class="text-soft">August 23, 2021</span>
+        <div class="text-left mt-4">
+          <p>
+            We've upgraded from Slurm 17 to Slurm 20 (specifically Slurm 20.11). Check out all the new changes in 
+                      20.11
+            <a href="https://slurm.schedmd.com/news.html">here</a>.
+          </p>
+          <p>
+            Release candidates for Slurm 21 are already starting to come out, so do expect a new major version soon. Any breaking
+            changes will be documented and put into an announcement. To stay on top of these changes,
+            <a href="https://github.com/SchedMD/slurm/blob/master/RELEASE_NOTES">here</a>
+            are the expected changes for Slurm 21.08. With release candidates already out, this document is not likely to change
+            much and can more or less be treated as the final list of changes to Slurm for the next major release.
+          </p>
+        </div>
+      </section>
     </div>
-
-
- <section class="col-6 text-center px-5 d-none article" id="rstudio">
-      <h4 class="fw-heavy">
-        RStudio 2022.07.2
-      </h4>
-
-      <span class="text-soft">November 29, 2022</span>
-
-      <div class="text-left mt-4">
-        <p>
-We have updated the R Version in RStudio to version 4.2.1. This will support many more R libraries and be much more compatible with various R tools. Along with that we have updated the RStudio version as well to the latest 2022.07.2 version. 
-        </p>
-
-        <p>
-            Granted, the devs behind RStudio have announced a transition to Posit, so keep an eye out for future changes once Posit is fully released. It should provide a much more integrated experience. The link to the site is <a href="https://posit.co/">here</a>.
-
-            Some old libraries in R might have also broke with the update, so let the System Admin know if you are experiencing any issues with any of the R modules. 
-        </p>
-      </div>
-    </section>
-
-
-    <section class="col-6 text-center px-5 d-none article" id="php7">
-      <h4 class="fw-heavy">
-        PHP 7.3 Support Ending, PHP 8 Available
-      </h4>
-
-      <span class="text-soft">January 4, 2021</span>
-
-      <div class="text-left mt-4">
-        <p>
-          Tech is heavily guided by the larger tech companies around us. This can mean many things. The open source software we enjoy can often
-          benefit a lot from the involvement of large tech companies. On the other hand, these companies can decide the fate of a whole software ecosystem.
-          An important aspect of getting hired in tech is familiarity with the tech stacks.
-        </p>
-
-        <p>
-          Companies hire devs who know their tech stack, which means that
-          as companies move on to newer, more modern stacks, the pool of candidates is going to start looking to those technologies to get hired.
-          Facebook's HHVM has stopped supporting PHP, and in their newest website revamp, they abandoned PHP altogether and opted for ReactJS and GraphQL.
-          Microsoft has recently announced they will not be supporting PHP on Windows. Slack recently converted their entire codebase to Facebook's Hack,
-          which again, runs on the HHVM, which doesn't support PHP anymore.
-        </p>
-
-        <p>
-          This isn't to say that PHP is dead, or that the KAABiL will stop supporting it. We utilize it pretty heavily here, and it wouldn't make sense to abandon it
-          when we still use it. Instead, we will be taking a more measured and secure approach to PHP. PHP 7.3 has reached end of active support, so we will jump to version 8
-          of PHP, and from here on out, we will be aggressive with PHP updates. Our PHP update policy will be as follows:
-        </p>
-
-        <h5 class="fw-medium">Major Versions (1.x.x)</h5>
-        <ul>
-          <li>Starting with PHP 8, the old version will be available until end of active support of the latest minor version</li>
-          <li>The new major version will be available as soon as possible after release</li>
-        </ul>
-
-        <h5 class="fw-medium">Minor Versions (x.1.x)</h5>
-        <ul>
-          <li>Minor versions will be updated as soon as possible, and the old minor version will be removed 2 weeks after</li>
-          <li>If the new update comes with breaking changes, there will be a longer grace period until the old version is removed.</li>
-        </ul>
-
-        <h5 class="fw-medium">Patches (x.x.1)</h5>
-        <ul>
-          <li>Patches are almost always non-breaking, so there will be no notice for patch installation.</li>
-        </ul>
-
-        <p>
-          If you need to use a legacy version of PHP, it is recommended to install it locally in your home directory and use it from there.
-        </p>
-      </div>
-    </section>
-
-    <section class="col-6 text-center px-5 article d-none" id="node">
-      <h4 class="fw-heavy">
-        NodeJS on the Cluster
-      </h4>
-
-      <span class="text-soft">January 20, 2021</span>
-
-      <div class="text-left mt-4">
-        <p>
-          NodeJS powers the websites at the KAABiL, as well as many of our backend services that we use internally. Our immense resources allow us to
-          run clusters of Node instances on deployment to increase the speed of these services by entire orders of magnitude. Because we get so
-          much utility on our backend from Node, we have made it available on the cluster for those who would like to use Node as well.
-        </p>
-
-        <p>
-          Currently, only Node 14 is supported (14.15.4), but Node 16 releases on April 20th, and will be available sometime during the week of release.
-          Odd-numbered Node versions do not come with LTS, and will not be available as modules per our security policy. Because Node major versions typically
-          don't break anything, expect old Node versions to disappear about 2 weeks after they enter Maintenance LTS or after the newest version is installed on the cluster.
-        </p>
-      </div>
-    </section>
-
-    <section class="col-6 text-center px-5 article d-none" id="node16">
-      <h4 class="fw-heavy">
-        NodeJS 16.3.0
-      </h4>
-
-      <span class="text-soft">June 11, 2021</span>
-
-      <div class="text-left mt-4">
-        <p>
-          Node 16 is here and is available on our HPC! Check out <a href="https://medium.com/the-node-js-collection/node-js-16-available-now-7f5099a97e70" target="_blank">this</a>
-          link to see what's new, and if you're curious about V8 9.0 features, <a href="https://v8.dev/blog/v8-release-90" target="_blank">this</a> is
-          another good resource. Do note that previous versions of Node are still available, but will have to be installed locally. New Node versions don't happen often,
-          as we only do LTS releases. Per the <a href="https://nodejs.org/en/about/releases/">Node Release Schedule</a>, Node 18 will be released in April 2022.
-        </p>
-        <p>
-          We try not to break things at the HPC, but when breaking changes are introduced, we're as transparent as possible. Breaking changes for Node 16
-          all have to do with <code>process.binding</code>, so if you do low-level work in Node, upgrading could break your software.
-        </p>
-      </div>
-    </section>
-
-    <section class="col-6 text-center px-5 article d-none" id="hpchardware1">
-      <h4 class="fw-heavy">
-        HPC Hardware Upgrades
-      </h4>
-
-      <span class="text-soft">August 20, 2021</span>
-
-      <div class="text-left mt-4">
-        <p>
-          Our HPC now has a new Ethernet switch along with a set of new Cat8 cables, giving all of our nodes a 10 Gb/s internet connection. While this won't necessarily
-          translate to a massive difference in performance, download speeds are now only limited by USU's internet speed (1 Gb/s). As always, thank you for being patient
-          during the upgrade process.
-        </p>
-      </div>
-    </section>
-
-    <section class="col-6 text-center px-5 article d-none" id="slurm20">
-      <h4 class="fw-heavy">
-        Slurm 20
-      </h4>
-
-      <span class="text-soft">August 23, 2021</span>
-
-      <div class="text-left mt-4">
-        <p>
-          We've upgraded from Slurm 17 to Slurm 20 (specifically Slurm 20.11). Check out all the new changes in 
-          20.11 <a href="https://slurm.schedmd.com/news.html">here</a>.
-        </p>
-
-        <p>
-          Release candidates for Slurm 21 are already starting to come out, so do expect a new major version soon. Any breaking changes will be documented and put into
-          an announcement. To stay on top of these changes, <a href="https://github.com/SchedMD/slurm/blob/master/RELEASE_NOTES">here</a> are the expected changes for
-          Slurm 21.08. With release candidates already out, this document is not likely to change much and can more or less be treated as the final list of changes to
-          Slurm for the next major release.
-        </p>
-      </div>
-    </section>
-  </div>
-
-  <script src="js/kbl/news.js"></script>
-{% endblock %}
+    <script src="js/kbl/news.js"></script>
+  {% endblock %}
